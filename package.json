@@ -11,7 +11,9 @@
     "core-js": "^3.6.5",
     "fullpage.js": "^3.1.2",
     "highcharts": "^9.3.2",
-    "vue": "^2.6.11"
+    "highcharts-vue": "^1.4.0",
+    "vue": "^2.6.11",
+    "vue-fullpage.js": "^0.1.7"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

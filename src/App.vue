@@ -1,28 +1,54 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <full-page :options="options" id="fullpage">
+    <Header></Header>
+    <Footer></Footer>
+  </full-page>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Header,
+    Footer
+  },
+  data() {
+    return {
+      options: {
+        licenseKey: "YOUR_KEY_HERE",
+        navigation: true,
+        navigationPosition: "left",
+        setAllowScrolling: true,
+        navigationTooltips: [
+          "Startseite",
+          "Seite 1",
+          "Seite 2",
+          "Impressum",
+        ],
+        showActiveTooltip: true,
+        anchors: [
+          "Home",
+          "page1",
+          "page2",
+          "Footer"
+        ],
+        scrollHorizontally: true,
+        onLeave: this.leaveSection,
+        onSlideLeave: this.leaveSlide
+      }
+    };
+  },
+  methods: {
+    },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: red;
 }
 </style>
