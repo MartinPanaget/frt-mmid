@@ -1,6 +1,7 @@
 <template>
   <full-page :options="options" id="fullpage">
     <Header></Header>
+    <SocialAcceptance></SocialAcceptance>
     <Footer></Footer>
   </full-page>
 </template>
@@ -8,11 +9,13 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import SocialAcceptance from './components/SocialAcceptance.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
+    SocialAcceptance,
     Footer
   },
   data() {
@@ -32,7 +35,6 @@ export default {
         anchors: [
           "Home",
           "page1",
-          "page2",
           "Footer"
         ],
         scrollHorizontally: true,

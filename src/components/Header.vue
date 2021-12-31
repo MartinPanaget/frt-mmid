@@ -1,19 +1,13 @@
 <template>
-    <div class="header section">
+    <div class="footer section">
         <img class="banner" src="../assets/logo.png">
-        <PartToWhole></PartToWhole>
     </div>
     
 </template>
 
 <script>
-import PartToWhole from './charts/PartToWhole.vue';
-
 export default {
-  name: 'Header',
-  components: {
-    PartToWhole
-  }
+  name: 'Header'
 }
 </script>
 

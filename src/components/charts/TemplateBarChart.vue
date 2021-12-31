@@ -14,10 +14,10 @@ export default {
             chartOptions: {
                 chart: {
                     type: 'bar',
-                    width: '200'
+                    width: '200',
                 },
                 title: {
-                    text: 'SecondChart'
+                    text: undefined
                 },
                 xAxis: {
                     labels: {
@@ -57,5 +57,6 @@ export default {
 <style>
     .ptwCharts {
         width: 300px;
+        /*margin-left: 100px;*/
     }
 </style>

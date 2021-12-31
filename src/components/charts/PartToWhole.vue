@@ -37,10 +37,10 @@ export default {
             chartOptions: {
                 chart: {
                     type: 'bar',
-                    height: '50%'
+                    width: '300'
                 },
                 title: {
-                    text: 'TestChart'
+                    text: undefined
                 },
                 xAxis: {
                     categories: ['Strongly agree', 'Somewhat agree', 'Neither agree nor oppose', 'Somewhat oppose', 'Strongly oppose'],
@@ -85,6 +85,8 @@ export default {
     .chart {
         display: flex;
         justify-content: space-between;
-        height: 50%
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
     }
 </style>
