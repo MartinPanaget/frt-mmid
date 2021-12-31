@@ -1,18 +1,18 @@
 <template>
     <div class="header section">
         <img class="banner" src="../assets/logo.png">
-        <TestChart></TestChart>
+        <PartToWhole></PartToWhole>
     </div>
     
 </template>
 
 <script>
-import TestChart from './charts/TestChart.vue';
+import PartToWhole from './charts/PartToWhole.vue';
 
 export default {
   name: 'Header',
   components: {
-    TestChart
+    PartToWhole
   }
 }
 </script>
