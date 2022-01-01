@@ -1,6 +1,7 @@
 <template>
   <full-page :options="options" id="fullpage">
     <Header></Header>
+    <PerceptionFrtAreas></PerceptionFrtAreas>
     <SocialAcceptance></SocialAcceptance>
     <Footer></Footer>
   </full-page>
@@ -9,12 +10,14 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import PerceptionFrtAreas from './components/PerceptionFrtAreas.vue'
 import SocialAcceptance from './components/SocialAcceptance.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
+    PerceptionFrtAreas,
     SocialAcceptance,
     Footer
   },
@@ -35,6 +38,7 @@ export default {
         anchors: [
           "Home",
           "page1",
+          "page2",
           "Footer"
         ],
         scrollHorizontally: true,
