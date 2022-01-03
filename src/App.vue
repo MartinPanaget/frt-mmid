@@ -74,6 +74,12 @@ export default {
   src: url('/fonts/Avenir/AvenirNextLTPro-It.otf') format('opentype')
 }
 
+body {
+  background-color:#5F5E5E ;
+  font-family: 'Avenir Condensed','Helvetica', sans-serif;
+  color: white;
+}
+
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     background: white;
@@ -100,13 +106,63 @@ h1{
   text-shadow: rgba(0,255,255,0.9) 0px 0px 9px;
 }
 
-body {
-  background-color:#5F5E5E ;
-  font-family: 'Avenir Condensed','Helvetica', sans-serif;
-  color: white;
+.big{
+  font-size: 85px;
+  color: #00FFFF;
+  text-shadow: rgba(0,255,255,0.9) 0px 0px 9px;
 }
+
+
 
 .fp-tableCell{
   vertical-align: top;
 }
+
+/* highlighted edges */
+.highlight-span{
+  font-size: 22px;
+}
+
+.highlight-green{
+  width: 25%;
+  padding: 2rem;
+  position: relative;
+  margin: 20px;
+  box-sizing: content-box;
+  border: 2px solid transparent;
+
+}
+.highlight-green::before, .highlight-green::after, .highlight-span::before, .highlight-span::after {
+    display: block;
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.highlight-green::before {
+    top: -2px;
+    left: -2px;
+    border-top: 15px solid #00FFFF;
+    border-left: 15px solid #00FFFF;
+}
+.highlight-green::after {
+    top: -2px;
+    right: -2px;
+    border-top: 15px solid #00FFFF;
+    border-right: 15px solid #00FFFF;
+}
+.highlight-span::before {
+    bottom: -2px;
+    left: -2px;
+    border-bottom: 15px solid #00FFFF;
+    border-left: 15px solid #00FFFF;
+}
+.highlight-span::after {
+    bottom: -2px;
+    right: -2px;
+    border-bottom: 15px solid #00FFFF;
+    border-right: 15px solid #00FFFF;
+}
+
 </style>
