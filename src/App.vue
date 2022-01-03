@@ -79,6 +79,15 @@ export default {
     background: white;
 }
 
+#fp-nav ul li .fp-tooltip{
+  border-bottom: 1px solid #00FFFF;
+}
+
+#fp-nav ul li .fp-tooltip.fp-left {
+    left: 10px;
+    padding-left: 10px;
+}
+
 .frame{
   width: 80%;
   margin: auto;
