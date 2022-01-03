@@ -1,0 +1,54 @@
+countries:[
+    {
+        name: 'DE',
+        color: '#23EFEF' //light blue
+    },
+    {
+        name: 'GB',
+        color: '#70E6AB' //green
+    },
+    {
+        name: 'USA',
+        color: '#0CBAF7' //dark blue
+    },
+    {
+        name: 'CH',
+        color: '#C7F700' //light green
+    },
+],
+background:[{
+    color: '#5F5E5E' //dark grey
+}],
+accent:[
+    {
+        name: 'green',
+        color: '#C7F700'
+    },
+    {
+        name: 'blue',
+        color: '#00FFFF'
+    },
+],
+style:[
+    {
+        font-family:'',
+        location:'src/assets/fonts/Avenir',
+        h1:[{
+            font-size: '',
+            color:''
+        }],
+        h2:[{
+            font-size: '',
+            color:''
+        }],
+        h3:[{
+            font-size: '',
+            color:''
+        }],
+        p:[{
+            font-size: '',
+            color:''
+        }],
+
+    }
+]

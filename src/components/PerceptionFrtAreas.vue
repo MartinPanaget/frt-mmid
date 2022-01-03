@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
     h2 {
-        font-family: 'Avenir Next Codensed';
+        /* font-family: 'Avenir Next Codensed'; */
         font-size: 25px;
         font-weight: normal;
         text-align: center;

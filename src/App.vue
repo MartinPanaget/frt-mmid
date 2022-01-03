@@ -53,8 +53,29 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: 'Avenir Regular';
+  src: url('/fonts/Avenir/AvenirNextLTPro-Regular.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'Avenir Bold';
+  src: url('/fonts/Avenir/AvenirNextLTPro-Bold.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'Avenir Italien';
+  src: url('/fonts/Avenir/AvenirNextLTPro-It.otf') format('opentype')
+}
+
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     background: red;
+}
+
+body {
+  background-color:#5F5E5E ;
+  font-family: 'Avenir','Helvetica', sans-serif;
+  color: white;
 }
 </style>

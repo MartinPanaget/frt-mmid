@@ -8,11 +8,11 @@
             <PackedBubbleChart v-bind:series="series.Transport" title="Öffentliche Verkehrsmittel"></PackedBubbleChart>
         </div>
         <div class="BubbleCharts">
-            <PackedBubbleChart v-bind:series="series.Phone" title="Einkaufszentren"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.PersonCheck" title="Öffentliche Straßen"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.SmartDevice" title="Schulen/Universitäten"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.IdCheck" title="Private Haushalte"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.Transport" title="Touristische Attraktionen"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Mall" title="Einkaufszentren"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Street" title="Öffentliche Straßen"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.School" title="Schulen/Universitäten"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Private" title="Private Haushalte"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Tourism" title="Touristische Attraktionen"></PackedBubbleChart>
         </div>
     </div>
 </template>
@@ -32,101 +32,278 @@ export default {
                     showInLegend: false,
                     name: 'Phone',
                     data: [{
+                        visible: false,
+                        name: 'DE',
                         value: 12,
-                        color: 'red'
+                        color: '#23EFEF',
                     },
                     {
-                     value: 60,
-                        color: 'green'
+                        name: 'USA',
+                        value: 60,
+                        color: '#0CBAF7'
                     },
                     {
-                     value: 33,
+                        visible: false,
+                        name: 'GB',
+                        value: 33,
+                        color:'#70E6AB',
                     },
                     {
-                     value: 35,
-                        color: 'blue'
+                        visible: false,
+                        name: 'CH',
+                        value: 35,
+                        color: '#C7F700',
                     }]
                 }],
                 PersonCheck:[{
                     showInLegend: false,
                     name: 'PersonCheck',
                     data: [{
-                        value: 15,
-                        color: 'red'
+                        visible: false,
+                        name: 'DE',
+                        value: 12,
+                        color: '#23EFEF'
                     },
                     {
-                     value: 30,
-                        color: 'green'
+                        name: 'USA',
+                        value: 60,
+                        color: '#0CBAF7'
                     },
                     {
-                     value: 30,
+                        visible: false,
+                        name: 'GB',
+                        value: 33,
+                        color:'#70E6AB',
                     },
                     {
-                     value: 25,
-                        color: 'blue'
+                        visible: false,
+                        name: 'CH',
+                        value: 35,
+                        color: '#C7F700',
                     }]
                 }],
                 SmartDevice:[{
                     showInLegend: false,
                     name: 'SmartDevice',
                     data: [{
-                        value: 25,
-                        color: 'red'
+                        visible: false,
+                        name: 'DE',
+                        value: 12,
+                        color: '#23EFEF'
                     },
                     {
-                     value: 60,
-                        color: 'green'
+                        name: 'USA',
+                        value: 60,
+                        color: '#0CBAF7'
                     },
                     {
-                     value: 15,
+                        visible: false,
+                        name: 'GB',
+                        value: 33,
+                        color:'#70E6AB',
                     },
                     {
-                     value: 5,
-                        color: 'blue'
+                        visible: false,
+                        name: 'CH',
+                        value: 35,
+                        color: '#C7F700',
                     }]
                 }],
                 IdCheck:[{
                     showInLegend: false,
                     name: 'IdCheck',
                     data: [{
-                        value: 80,
-                        color: 'red'
+                        visible: false,
+                        name: 'DE',
+                        value: 12,
+                        color: '#23EFEF'
                     },
                     {
-                     value: 60,
-                        color: 'green'
+                        name: 'USA',
+                        value: 60,
+                        color: '#0CBAF7'
                     },
                     {
-                     value: 15,
+                        visible: false,
+                        name: 'GB',
+                        value: 33,
+                        color:'#70E6AB',
                     },
                     {
-                     value: 17,
-                        color: 'blue'
+                        visible: false,
+                        name: 'CH',
+                        value: 35,
+                        color: '#C7F700',
                     }]
                 }],
                 Transport:[{
                     showInLegend: false,
                     name: 'Transport',
                     data: [{
-                        value: 55,
-                        color: 'red'
+                        visible: false,
+                        name: 'DE',
+                        value: 12,
+                        color: '#23EFEF'
                     },
                     {
-                     value: 14,
-                        color: 'green'
+                        name: 'USA',
+                        value: 60,
+                        color: '#0CBAF7'
                     },
                     {
-                     value: 26,
+                        visible: false,
+                        name: 'GB',
+                        value: 33,
+                        color:'#70E6AB',
                     },
                     {
-                     value: 45,
-                        color: 'blue'
+                        visible: false,
+                        name: 'CH',
+                        value: 35,
+                        color: '#C7F700',
                     }]
                 }],
+                Mall:[{
+                    showInLegend: false,
+                    name: 'Phone',
+                    data: [{
+                        visible: false,
+                        name: 'DE',
+                        value: 12,
+                        color: '#23EFEF',
+                    },
+                    {
+                        name: 'USA',
+                        value: 60,
+                        color: '#0CBAF7'
+                    },
+                    {
+                        visible: false,
+                        name: 'GB',
+                        value: 33,
+                        color:'#70E6AB',
+                    },
+                    {
+                        visible: false,
+                        name: 'CH',
+                        value: 35,
+                        color: '#C7F700',
+                    }]
+                }],
+                Street:[{
+                    showInLegend: false,
+                    name: 'PersonCheck',
+                    data: [{
+                        visible: false,
+                        name: 'DE',
+                        value: 12,
+                        color: '#23EFEF'
+                    },
+                    {
+                        name: 'USA',
+                        value: 60,
+                        color: '#0CBAF7'
+                    },
+                    {
+                        visible: false,
+                        name: 'GB',
+                        value: 33,
+                        color:'#70E6AB',
+                    },
+                    {
+                        visible: false,
+                        name: 'CH',
+                        value: 35,
+                        color: '#C7F700',
+                    }]
+                }],
+                School:[{
+                    showInLegend: false,
+                    name: 'SmartDevice',
+                    data: [{
+                        visible: false,
+                        name: 'DE',
+                        value: 12,
+                        color: '#23EFEF'
+                    },
+                    {
+                        name: 'USA',
+                        value: 60,
+                        color: '#0CBAF7'
+                    },
+                    {
+                        visible: false,
+                        name: 'GB',
+                        value: 33,
+                        color:'#70E6AB',
+                    },
+                    {
+                        visible: false,
+                        name: 'CH',
+                        value: 35,
+                        color: '#C7F700',
+                    }]
+                }],
+                Private:[{
+                    showInLegend: false,
+                    name: 'IdCheck',
+                    data: [{
+                        visible: false,
+                        name: 'DE',
+                        value: 12,
+                        color: '#23EFEF'
+                    },
+                    {
+                        name: 'USA',
+                        value: 60,
+                        color: '#0CBAF7'
+                    },
+                    {
+                        visible: false,
+                        name: 'GB',
+                        value: 33,
+                        color:'#70E6AB',
+                    },
+                    {
+                        visible: false,
+                        name: 'CH',
+                        value: 35,
+                        color: '#C7F700',
+                    }]
+                }],
+                Tourism:[{
+                    showInLegend: false,
+                    name: 'Transport',
+                    data: [{
+                        visible: false,
+                        name: 'DE',
+                        value: 50,
+                        color: '#23EFEF'
+                    },
+                    {
+                        name: 'USA',
+                        value: 60,
+                        color: '#0CBAF7'
+                    },
+                    {
+                        visible: false,
+                        name: 'GB',
+                        value: 33,
+                        color:'#70E6AB',
+                    },
+                    {
+                        visible: false,
+                        name: 'CH',
+                        value: 35,
+                        color: '#C7F700',
+                    }]
+                }],
+                
             },
         }
     }
 }
+
 </script>
 
 <style scoped>
