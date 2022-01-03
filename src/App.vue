@@ -12,6 +12,7 @@ import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import PerceptionFrtAreas from './components/PerceptionFrtAreas.vue'
 import SocialAcceptance from './components/SocialAcceptance.vue'
+import 'fullpage.js/dist/fullpage.css'
 
 export default {
   name: 'App',
