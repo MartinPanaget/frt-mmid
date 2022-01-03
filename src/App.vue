@@ -55,6 +55,11 @@ export default {
 
 <style>
 @font-face {
+  font-family: 'Avenir Condensed';
+  src: url('/fonts/Avenir/CarroisGothic-Regular.otf') format('truetype')
+}
+
+@font-face {
   font-family: 'Avenir Regular';
   src: url('/fonts/Avenir/AvenirNextLTPro-Regular.otf') format('opentype')
 }
@@ -71,12 +76,28 @@ export default {
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    background: red;
+    background: white;
+}
+
+.frame{
+  width: 80%;
+  margin: auto;
+}
+
+h1{
+  padding-top: 180px;
+  font-size: 85px;
+  color: #00FFFF;
+  text-shadow: rgba(0,255,255,0.9) 0px 0px 9px;
 }
 
 body {
   background-color:#5F5E5E ;
-  font-family: 'Avenir','Helvetica', sans-serif;
+  font-family: 'Avenir Condensed','Helvetica', sans-serif;
   color: white;
+}
+
+.fp-tableCell{
+  vertical-align: top;
 }
 </style>
