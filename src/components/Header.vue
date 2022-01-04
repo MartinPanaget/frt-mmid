@@ -1,6 +1,9 @@
 <template>
-    <div class="footer section">
-        <img class="banner" src="../assets/logo.png">
+    <div class="header section">
+      <div class="frame">
+          <h1>FACIAL<br> RECOGNITION</h1>
+          <p>Projektbeschreibung mit <a href="#">Link</a> zur Originalquelle</p>
+      </div>
     </div>
     
 </template>
