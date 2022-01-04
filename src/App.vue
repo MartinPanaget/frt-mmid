@@ -1,7 +1,7 @@
 <template>
   <full-page :options="options" id="fullpage">
     <Header></Header>
-    <PerceptionFrtAreas></PerceptionFrtAreas>
+    <Awareness></Awareness>
     <SocialAcceptance></SocialAcceptance>
     <Footer></Footer>
   </full-page>
@@ -10,7 +10,7 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
-import PerceptionFrtAreas from './components/PerceptionFrtAreas.vue'
+import Awareness from './components/Awareness.vue'
 import SocialAcceptance from './components/SocialAcceptance.vue'
 import 'fullpage.js/dist/fullpage.css'
 
@@ -18,7 +18,7 @@ export default {
   name: 'App',
   components: {
     Header,
-    PerceptionFrtAreas,
+    Awareness,
     SocialAcceptance,
     Footer
   },

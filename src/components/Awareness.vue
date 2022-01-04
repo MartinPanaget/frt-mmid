@@ -11,7 +11,7 @@
 import PackedBubbles from './charts/PackedBubbles.vue';
 
 export default {
-  name: 'PerceptionFrtAreas',
+  name: 'Awareness',
   components: {
     PackedBubbles
   }
