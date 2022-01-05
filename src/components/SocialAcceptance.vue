@@ -1,18 +1,28 @@
 <template>
     <Wrapper>
-        <div class="general">
-            <h3>67%</h3>
-            <h3>38%</h3>
-            <h3>50%</h3>
-            <h3>47%</h3>
+        <h3>Acceptance towards FRT</h3>
+        <div class="buttons">
+            <button v-on:click='change'>Overview</button>
+            <button v-on:click='change'>Detail</button>
         </div>
-        <div class="countries">
-            <img :src='china'/>
-            <img :src='de'/>
-            <img :src='uk'/>
-            <img :src='usa'/>
+        <div class="overview">
+            <div class="general">
+                <h3>67%</h3>
+                <h3>38%</h3>
+                <h3>50%</h3>
+                <h3>47%</h3>
+            </div>
+            <div class="countries">
+                <img :src='china'/>
+                <img :src='de'/>
+                <img :src='uk'/>
+                <img :src='usa'/>
+            </div>
+            <PartToWhole></PartToWhole>
         </div>
-        <PartToWhole></PartToWhole>
+        <div class="detail">
+            <p>detailpage</p>
+        </div>
     </Wrapper>
     
 </template>
@@ -41,12 +51,14 @@ export default {
   },
   methods: {
     change: function (event) {
+      let overview = document.getElementsByClassName('overview')[0].style;
+      let detail = document.getElementsByClassName('detail')[0].style;
       if (event.target.innerHTML === 'Overview') {
-        document.getElementsByClassName('test1')[0].style.display = 'block';
-        document.getElementsByClassName('test2')[0].style.display = 'none';
+        overview.display = 'block';
+        detail.display = 'none';
       } else {
-        document.getElementsByClassName('test1')[0].style.display = 'none';
-        document.getElementsByClassName('test2')[0].style.display = 'block';
+        overview.display = 'none';
+        detail.display = 'block';
       }
     }
   }
@@ -55,29 +67,44 @@ export default {
 
 <style scoped>
 
-    .general {
-        display: flex;
-        justify-content: space-between;
-        width: 85%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     h3 {
         font-family: 'Avenir Next Codensed';
         font-size: 30px;
         font-weight: normal;
     }
 
+    .buttons {
+        text-align: center;
+    }
+
+    .overview {
+        display: block;
+    }
+
+    .detail {
+        display: none;
+    }
+    
+    .general {
+        display: grid;
+        grid-template-columns: repeat(4, 20%);
+        grid-column-gap: 6.7%;
+        height: 5vh;
+    }
+
+    .general h3 {
+        margin: 0 auto;
+    }
+
     .countries {
-        display: flex;
-        justify-content: space-between;
-        width: 85%;
-        margin-left: auto;
-        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 20%);
+        grid-column-gap: 6.7%;
+        height: 20vh;
     }
 
     .countries img {
-        width: 250px
+        height: 15vh;
+        margin: 0 auto;
     }
 </style>

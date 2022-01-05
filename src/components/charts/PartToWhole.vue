@@ -1,9 +1,9 @@
 <template>
     <div class="chart">
         <highcharts :options="chartOptions"></highcharts>
-        <TemplateBarChart v-bind:series="series.DE"></TemplateBarChart>
-        <TemplateBarChart v-bind:series="series.UK"></TemplateBarChart>
-        <TemplateBarChart v-bind:series="series.US"></TemplateBarChart>
+        <TemplateBarChart v-bind:series="series.DE" v-bind:color="DeColor"></TemplateBarChart>
+        <TemplateBarChart v-bind:series="series.UK" v-bind:color="UkColor"></TemplateBarChart>
+        <TemplateBarChart v-bind:series="series.US" v-bind:color="UsColor"></TemplateBarChart>
     </div>
 </template>
 
@@ -17,6 +17,9 @@ export default {
     },
     data() {
         return {
+            DeColor: ['#23EFEF'],
+            UkColor: ['#70E6AB'],
+            UsColor: ['#0CBAF7'],
             series: {
                 DE : [{
                     showInLegend: false,
@@ -37,19 +40,29 @@ export default {
             chartOptions: {
                 chart: {
                     type: 'bar',
-                    width: '300'
+                    width: 200,
+                    backgroundColor: '#5F5E5E'
                 },
                 title: {
                     text: undefined
                 },
                 xAxis: {
+                    lineColor: '#222222',
                     categories: ['Strongly agree', 'Somewhat agree', 'Neither agree nor oppose', 'Somewhat oppose', 'Strongly oppose'],
+                    labels: {
+                        style: {
+                            color: '#F6F6F6'
+                        }
+                    }
                 },
                 yAxis: {
                     min: 0,
                     title: {
                         text: 'Acceptance in percent',
-                        align: 'low'
+                        align: 'low',
+                        style: {
+                            color: '#F6F6F6'
+                        }
                     },
                     labels: {
                         overflow: 'justify',
@@ -64,7 +77,10 @@ export default {
                     bar: {
                         dataLabels: {
                             enabled: true
-                        }
+                        },
+                        borderColor: 'transparent', 
+                        colorByPoint: true,
+                        colors: ['#C7F700']
                     }
                 },
                 credits: {
@@ -83,9 +99,10 @@ export default {
 
 <style scoped>
     .chart {
-        display: flex;
-        justify-content: space-between;
-        width: 85%;
+        display: grid;
+        grid-template-columns: repeat(4, 20%);
+        grid-column-gap: 6.7%;
+        height: 30vh;
         margin-left: auto;
         margin-right: auto;
     }

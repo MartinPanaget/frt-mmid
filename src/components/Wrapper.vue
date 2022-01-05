@@ -18,8 +18,8 @@ export default {
 }
 
 .section {
-    padding-right: 50px;
-    padding-left: 100px;
+    padding-right: 100px;
+    padding-left: 200px;
     position: relative;
 }
 

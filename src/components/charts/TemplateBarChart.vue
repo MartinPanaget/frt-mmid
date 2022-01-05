@@ -7,19 +7,22 @@
 <script>
 export default {
     props: {
-        series: Array
+        series: Array,
+        color: Array
     },
     data() {
         return {
             chartOptions: {
                 chart: {
                     type: 'bar',
-                    width: '200',
+                    width: 200,
+                    backgroundColor: '#5F5E5E'
                 },
                 title: {
                     text: undefined
                 },
                 xAxis: {
+                    lineColor: '#222222',
                     labels: {
                         enabled: false
                     }
@@ -41,7 +44,10 @@ export default {
                     bar: {
                         dataLabels: {
                             enabled: true
-                        }
+                        },
+                        borderColor: 'transparent', 
+                        colorByPoint: true,
+                        colors: this.color
                     }
                 },
                 credits: {
@@ -56,7 +62,6 @@ export default {
 
 <style>
     .ptwCharts {
-        width: 300px;
-        /*margin-left: 100px;*/
+        width: 100%
     }
 </style>
