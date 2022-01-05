@@ -55,11 +55,11 @@ export default {
 
 <style>
 @font-face {
-  font-family: 'Avenir Condensed';
+  font-family: 'Avenir';
   src: url('/fonts/Avenir/CarroisGothic-Regular.otf') format('truetype')
 }
 
-@font-face {
+/*@font-face {
   font-family: 'Avenir Regular';
   src: url('/fonts/Avenir/AvenirNextLTPro-Regular.otf') format('opentype')
 }
@@ -72,11 +72,11 @@ export default {
 @font-face {
   font-family: 'Avenir Italien';
   src: url('/fonts/Avenir/AvenirNextLTPro-It.otf') format('opentype')
-}
+}*/
 
 body {
   background-color:#5F5E5E ;
-  font-family: 'Avenir Condensed','Helvetica', sans-serif;
+  font-family: 'Avenir','Helvetica', sans-serif;
   color: white;
 }
 

@@ -78,7 +78,6 @@ export default {
 <style scoped>
 
     h3 {
-        font-family: 'Avenir Next Codensed';
         font-size: 30px;
         font-weight: normal;
     }
