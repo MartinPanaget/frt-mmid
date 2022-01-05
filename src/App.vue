@@ -1,6 +1,7 @@
 <template>
   <full-page :options="options" id="fullpage">
     <Header></Header>
+    <Perception></Perception>
     <Awareness></Awareness>
     <SocialAcceptance></SocialAcceptance>
     <Footer></Footer>
@@ -10,6 +11,7 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import Perception from './components/Perception.vue'
 import Awareness from './components/Awareness.vue'
 import SocialAcceptance from './components/SocialAcceptance.vue'
 import 'fullpage.js/dist/fullpage.css'
@@ -18,6 +20,7 @@ export default {
   name: 'App',
   components: {
     Header,
+    Perception,
     Awareness,
     SocialAcceptance,
     Footer
@@ -33,6 +36,7 @@ export default {
           "Startseite",
           "Seite 1",
           "Seite 2",
+          "Seite 3",
           "Impressum",
         ],
         showActiveTooltip: true,
@@ -40,6 +44,7 @@ export default {
           "Home",
           "page1",
           "page2",
+          "page3",
           "Footer"
         ],
         scrollHorizontally: true,
@@ -55,11 +60,11 @@ export default {
 
 <style>
 @font-face {
-  font-family: 'Avenir Condensed';
-  src: url('/fonts/Avenir/CarroisGothic-Regular.otf') format('truetype')
+  font-family: 'Avenir';
+  src: url('/fonts/Avenir/CarroisGothic-Regular.ttf') format('truetype')
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Avenir Regular';
   src: url('/fonts/Avenir/AvenirNextLTPro-Regular.otf') format('opentype')
 }
@@ -72,11 +77,11 @@ export default {
 @font-face {
   font-family: 'Avenir Italien';
   src: url('/fonts/Avenir/AvenirNextLTPro-It.otf') format('opentype')
-}
+} */
 
 body {
   background-color:#5F5E5E ;
-  font-family: 'Avenir Condensed','Helvetica', sans-serif;
+  font-family: 'Avenir','Helvetica', sans-serif;
   color: white;
 }
 
