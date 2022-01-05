@@ -1,5 +1,5 @@
 <template>
-    <div class="header section">
+    <Wrapper>
         <div class="general">
             <h3>67%</h3>
             <h3>38%</h3>
@@ -7,23 +7,48 @@
             <h3>47%</h3>
         </div>
         <div class="countries">
-            <img src="../assets/countries/china.png"/>
-            <img src="../assets/countries/germany.png"/>
-            <img src="../assets/countries/united-kingdom.png"/>
-            <img src="../assets/countries/united-states-of-america.png"/>
+            <img :src='china'/>
+            <img :src='de'/>
+            <img :src='uk'/>
+            <img :src='usa'/>
         </div>
         <PartToWhole></PartToWhole>
-    </div>
+    </Wrapper>
     
 </template>
 
 <script>
+import Wrapper from './Wrapper.vue';
 import PartToWhole from './charts/PartToWhole.vue';
+import china from '../assets/countries/china.png';
+import germany from '../assets/countries/de.png';
+import unitedKingdom from '../assets/countries/uk.png';
+import unitedStatesOfAmerica from '../assets/countries/usa.png';
 
 export default {
   name: 'SocialAcceptance',
   components: {
+    Wrapper,
     PartToWhole
+  },
+  data() {
+    return {
+        china: china, 
+        de: germany, 
+        uk: unitedKingdom, 
+        usa: unitedStatesOfAmerica
+    }
+  },
+  methods: {
+    change: function (event) {
+      if (event.target.innerHTML === 'Overview') {
+        document.getElementsByClassName('test1')[0].style.display = 'block';
+        document.getElementsByClassName('test2')[0].style.display = 'none';
+      } else {
+        document.getElementsByClassName('test1')[0].style.display = 'none';
+        document.getElementsByClassName('test2')[0].style.display = 'block';
+      }
+    }
   }
 }
 </script>
