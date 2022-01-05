@@ -1,18 +1,18 @@
 <template>
     <div>
         <div class="BubbleCharts">
-            <PackedBubbleChart v-bind:series="series.Phone" title="Smartphone-Verwendung"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.PersonCheck" title="Personenkontrolle"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.SmartDevice" title="Smarte Geräte"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.IdCheck" title="Identitätskontrolle für finanzielle Belange"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.Transport" title="Öffentliche Verkehrsmittel"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Phone" title="Smartphone Usage"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.PersonCheck" title="People Control"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.SmartDevice" title="Smart Devices"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.IdCheck" title="Identity verification for financial matters"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Transport" title="Railway, Subway Stations"></PackedBubbleChart>
         </div>
         <div class="BubbleCharts">
-            <PackedBubbleChart v-bind:series="series.Mall" title="Einkaufszentren"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.Street" title="Öffentliche Straßen"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.School" title="Schulen/Universitäten"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.Private" title="Private Haushalte"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.Tourism" title="Touristische Attraktionen"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Mall" title="Shopping Malls"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Street" title="Public Street"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.School" title="School Or Universities"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Private" title="Tourist Acttractions"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Tourism" title="Private Household"></PackedBubbleChart>
         </div>
     </div>
 </template>
