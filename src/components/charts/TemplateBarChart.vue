@@ -1,7 +1,5 @@
 <template>
-    <div class="ptwCharts">
-        <highcharts :options="chartOptions"></highcharts>
-    </div>
+    <highcharts :options="chartOptions"></highcharts>
 </template>
 
 <script>
@@ -16,6 +14,7 @@ export default {
                 chart: {
                     type: 'bar',
                     width: 200,
+                    height: '300',
                     backgroundColor: '#5F5E5E'
                 },
                 title: {
@@ -42,6 +41,9 @@ export default {
                 },
                 plotOptions: {
                     bar: {
+                        series: {
+                            groupPadding: 0
+                        },
                         dataLabels: {
                             enabled: true
                         },
@@ -62,6 +64,6 @@ export default {
 
 <style>
     .ptwCharts {
-        width: 100%
+        height: 30vh;
     }
 </style>

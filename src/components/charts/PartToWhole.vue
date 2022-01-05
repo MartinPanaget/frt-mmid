@@ -1,6 +1,6 @@
 <template>
     <div class="chart">
-        <highcharts :options="chartOptions"></highcharts>
+        <highcharts class="china" :options="chartOptions"></highcharts>
         <TemplateBarChart v-bind:series="series.DE" v-bind:color="DeColor"></TemplateBarChart>
         <TemplateBarChart v-bind:series="series.UK" v-bind:color="UkColor"></TemplateBarChart>
         <TemplateBarChart v-bind:series="series.US" v-bind:color="UsColor"></TemplateBarChart>
@@ -40,7 +40,8 @@ export default {
             chartOptions: {
                 chart: {
                     type: 'bar',
-                    width: 200,
+                    width: 300,
+                    height: '300',
                     backgroundColor: '#5F5E5E'
                 },
                 title: {
@@ -58,7 +59,8 @@ export default {
                 yAxis: {
                     min: 0,
                     title: {
-                        text: 'Acceptance in percent',
+                        enabled: false,
+                        //text: 'Acceptance in percent',
                         align: 'low',
                         style: {
                             color: '#F6F6F6'
@@ -75,6 +77,9 @@ export default {
                 },
                 plotOptions: {
                     bar: {
+                        series: {
+                            groupPadding: 0
+                        },
                         dataLabels: {
                             enabled: true
                         },
@@ -100,10 +105,14 @@ export default {
 <style scoped>
     .chart {
         display: grid;
-        grid-template-columns: repeat(4, 20%);
-        grid-column-gap: 6.7%;
-        height: 30vh;
+        grid-template-columns: 25% repeat(3, 21%);
+        grid-column-gap: 4%;
+        /*height: 40vh;*/
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .china {
+        width: 100%;
     }
 </style>
