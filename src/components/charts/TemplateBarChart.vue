@@ -1,25 +1,27 @@
 <template>
-    <div class="ptwCharts">
-        <highcharts :options="chartOptions"></highcharts>
-    </div>
+    <highcharts :options="chartOptions"></highcharts>
 </template>
 
 <script>
 export default {
     props: {
-        series: Array
+        series: Array,
+        color: Array
     },
     data() {
         return {
             chartOptions: {
                 chart: {
                     type: 'bar',
-                    width: '200',
+                    width: 200,
+                    height: '300',
+                    backgroundColor: '#5F5E5E'
                 },
                 title: {
                     text: undefined
                 },
                 xAxis: {
+                    lineColor: '#222222',
                     labels: {
                         enabled: false
                     }
@@ -39,9 +41,15 @@ export default {
                 },
                 plotOptions: {
                     bar: {
+                        series: {
+                            groupPadding: 0
+                        },
                         dataLabels: {
                             enabled: true
-                        }
+                        },
+                        borderColor: 'transparent', 
+                        colorByPoint: true,
+                        colors: this.color
                     }
                 },
                 credits: {
@@ -56,7 +64,6 @@ export default {
 
 <style>
     .ptwCharts {
-        width: 300px;
-        /*margin-left: 100px;*/
+        height: 30vh;
     }
 </style>
