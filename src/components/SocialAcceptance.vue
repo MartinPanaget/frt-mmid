@@ -1,10 +1,14 @@
 <template>
     <Wrapper>
         <h3>Acceptance towards FRT</h3>
-        <div class="buttons">
-            <button id='overview' v-on:click='change'>Overview</button>
-            <button id='detail' v-on:click='change'>Detail</button>
-        </div>
+        <div class="round-dots">
+                <div class="dot">
+                    <a href='#page3' id='overview' v-on:click='change'>OVER_ <br> VIEW</a>
+                </div>
+                <div class="dot">
+                    <a href='#page3' id='detail' v-on:click='change'>DETAIL</a>
+                </div>
+            </div>
         <div class="overview">
             <div class="general">
                 <h3>67%</h3>
@@ -53,20 +57,16 @@ export default {
     change: function (event) {
       let overview = document.getElementsByClassName('overview')[0].style;
       let detail = document.getElementsByClassName('detail')[0].style;
-      let buttonOverview = document.getElementById('overview').style;
-      let buttonDetail = document.getElementById('detail').style;
-      if (event.target.innerHTML === 'Overview') {
-        event.target.style.backgroundColor = '#00FFFF';
-        event.target.style.borderColor = '#00FFFF';
+      let buttonOverview = document.getElementById('overview').parentElement.style;
+      let buttonDetail = document.getElementById('detail').parentElement.style;
+      if (event.target.innerHTML.includes('OVER')) {
+        event.target.parentElement.style.backgroundColor = '#00FFFF';
         buttonDetail.backgroundColor = '#E6E6E6';
-        buttonDetail.borderColor = '#E6E6E6';
         overview.display = 'block';
         detail.display = 'none';
       } else {
-        event.target.style.backgroundColor = '#00FFFF';
-        event.target.style.borderColor = '#00FFFF';
+        event.target.parentElement.style.backgroundColor = '#00FFFF';
         buttonOverview.backgroundColor = '#E6E6E6';
-        buttonOverview.borderColor = '#E6E6E6';
         overview.display = 'none';
         detail.display = 'block';
       }
@@ -82,7 +82,35 @@ export default {
         font-weight: normal;
     }
 
-    .buttons {
+    .dot:first-child{
+        background-color: #00FFFF;
+    }
+
+    .dot{
+        margin: 0 2vw;
+        height: 70px;
+        width: 70px;
+        background-color: #E6E6E6;
+        border-radius: 50%;
+        /* display: inline-block; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .round-dots{
+        display: flex;
+        justify-content: space-between;
+        width: 28%;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+
+    .round-dots a{
+        color: #222222;
+        text-decoration: none;
+    }
+
+    /*.buttons {
         text-align: center;
         margin: 20px
     }
@@ -100,7 +128,7 @@ export default {
         border-radius: 10px;
         border-color: #E6E6E6;
         background-color: #E6E6E6;
-    }
+    }*/
 
     .overview {
         display: block;
