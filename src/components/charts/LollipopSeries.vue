@@ -1,6 +1,5 @@
 <template>
-    <div>
-        <div class="LollipopSeries frame">
+        <div class="LollipopSeries">
             <div class="lollipop-pair">
                 <LollipopChartExpanded v-bind:series="series.Data1" title="Convenience" backgroundColor="rgba(246,246,246,0.5)"></LollipopChartExpanded>
                 <LollipopChartExpanded v-bind:series="series.Data2" title="Privacy Violation" titleAlign="bottom" backgroundColor="rgba(203,203,203,0.3)"></LollipopChartExpanded>
@@ -14,7 +13,6 @@
                 <LollipopChart v-bind:series="series.Data6" title="Surveillance" titleAlign="bottom" backgroundColor="rgba(203,203,203,0.3)"></LollipopChart>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
@@ -291,7 +289,7 @@ export default {
     .LollipopSeries {
         display: flex;
         justify-content: space-between;
-        width: 50%;
+        width: 70%;
         margin-left: auto;
         margin-right: auto;
     }

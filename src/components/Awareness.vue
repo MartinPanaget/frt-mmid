@@ -1,33 +1,35 @@
 <template>
-    <div class="header section">
-        <div class="general">
-            <h2>Wahrnehmung von FRT in ver. Bereichen</h2>
-            <div class="round-dots">
-                <div class="dot">
-                    <a href="#" @click="min">MIN</a>
-                </div>
-                <div class="dot">
-                    <a href="#" @click="max">MAX</a>
-                </div>
-                <div class="dot">
-                    <a href="#" @click="avg">AVG</a>
-                </div>
-                <div class="dot">
-                    <a href="#" @click="all">ALL</a>
+    <Wrapper>
+            <div class="general">
+                <h2>Perceived use of Facial Recognition Technologies</h2>
+                <div class="round-dots">
+                    <div class="dot">
+                        <a href="#" @click="min">MIN</a>
+                    </div>
+                    <div class="dot">
+                        <a href="#" @click="max">MAX</a>
+                    </div>
+                    <div class="dot">
+                        <a href="#" @click="avg">AVG</a>
+                    </div>
+                    <div class="dot">
+                        <a href="#" @click="all">ALL</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <PackedBubbles></PackedBubbles>
-    </div>
+            <PackedBubbles></PackedBubbles>
+    </Wrapper>
 </template>
 
 <script>
+import Wrapper from './Wrapper.vue';
 import PackedBubbles from './charts/PackedBubbles.vue';
 
 export default {
   name: 'Awareness',
   components: {
-    PackedBubbles
+    PackedBubbles,
+    Wrapper
   },
   methods:{
       min:function(){
@@ -77,13 +79,6 @@ export default {
 </script>
 
 <style scoped>
-    h2 {
-        /* font-family: 'Avenir Next Codensed'; */
-        font-size: 25px;
-        font-weight: normal;
-        text-align: center;
-        padding: 3rem 0 3rem 0;
-    }
     .dot {
         margin: 0 1rem;
         height: 70px;

@@ -1,6 +1,6 @@
 <template>
     <Wrapper>
-        <h3>Acceptance towards FRT</h3>
+        <h2>Acceptance towards FRT</h2>
         <div class="round-dots">
                 <div class="dot">
                     <a href='#page3' id='overview' v-on:click='change'>OVER_ <br> VIEW</a>

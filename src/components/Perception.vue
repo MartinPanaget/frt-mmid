@@ -1,10 +1,9 @@
 <template>
-    <div class="header section">
-        <div class="general">
-            <h2>Akzeptanz von FRT in ver. Bereichen</h2>
+    <Wrapper>
+            <h2>Perceived Risks and Benefits of Facial Recognition Technologies</h2>
             <!-- <button @click="test">DE ein</button>
             <button @click="testen">DE aus</button> -->
-            <div style="width:50%; margin:auto;text-align: center;">
+            <div class="country-wrapper">
                 <a href="#" :class="[isActiveCH ? 'ch' : '']" @click="toggleCH">
                     <img src="../assets/images/CH_circle_small.png" style="margin: 0 1rem; padding:1rem">
                 </a>
@@ -18,25 +17,19 @@
                     <img src="../assets/images/DE_circle_small.png" style="margin: 0 1rem; padding:1rem">
                 </a>
             </div>
-
-<!-- 
-            <input type="image" src="../assets/images/USA_circle_small.png" class="ui button toggle" :class="{active:isActive}" @click="toggle">
-            <button class="ui button toggle" :class="{active:isActive}" @click="toggle">EN</button>
-            <button class="ui button toggle" :class="{active:isActive}" @click="toggle">GB</button>
-            <button class="ui button toggle" :class="{active:isActive}" @click="toggle">USA</button> -->
-            <!-- <button class="ui button toggle" :class="[isActive ? 'green' : 'red']" @click="toggle">{{isActive ? 'ON' : 'OFF'}}</button> -->
-        </div>
         <LollipopSeries></LollipopSeries>
-    </div>
+    </Wrapper>
 </template>
 
 <script>
+import Wrapper from './Wrapper.vue';
 import LollipopSeries from './charts/LollipopSeries.vue';
 
 export default {
   name: 'Perception',
   components: {
-    LollipopSeries
+    LollipopSeries,
+    Wrapper
   },
   data(){
       return{
@@ -131,12 +124,10 @@ export default {
 </script>
 
 <style scoped>
-    h2 {
-        /* font-family: 'Avenir Next Codensed'; */
-        font-size: 25px;
-        font-weight: normal;
+    .country-wrapper{
+        width:50%; 
+        margin:auto;
         text-align: center;
-        padding: 3rem 0 3rem 0;
     }
     a.ch img{
         border: 7px solid #C7F700;

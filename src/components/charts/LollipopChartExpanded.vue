@@ -20,8 +20,8 @@ export default{
                     backgroundColor: '#5F5E5E',
                     type: 'lollipop',
                     inverted: false,
-                    width: '250',
-                    height: '250',
+                    width: 350,
+                    height: 300,
                     opacity: '50%',
                     style:{
                         fontFamily: 'Avenir, Helvetica, sans-serif'
@@ -30,6 +30,7 @@ export default{
                 title: {
                     style:{
                         color:'white',
+                        fontSize:'18px'
                     },
                     text: this.title,
                     verticalAlign: this.titleAlign,
