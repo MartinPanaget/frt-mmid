@@ -9,7 +9,7 @@
 export default{
    name: 'LineChart',
    props: {
-        series: Array
+        attributes: Array
     },
     data() {
         return { 
@@ -18,7 +18,9 @@ export default{
                 chart: {
                     type: 'line',
                     inverted: true,
-                    backgroundColor: '#F6F6F6'
+                    backgroundColor: '#F6F6F6',
+                    width: 900,
+                    height: '700'
                 },
                 title: {
                     text: undefined
@@ -57,7 +59,7 @@ export default{
                 },
                 tooltip: {
                     headerFormat: '<b>{series.name}</b><br/>',
-                    pointFormat: '{this.countryCode[(point.x-0.5)]}: {point.y}'
+                    pointFormat: '{point.x}: {point.y}'
                 },
                 plotOptions: {
                         line: {
@@ -75,7 +77,8 @@ export default{
                 credits: {
                     enabled: false
                 },
-                series: [{
+                series: this.attributes
+                /*series: [{
                     name: 'Income',
                     color: '#C7F700',
                     data: [[0.5, 1.3], [1.5, 1.1], [2.5, 2.1], [3.5, 1.6]]
@@ -83,7 +86,7 @@ export default{
                         name: 'Education',
                     color: '#70E6AB',
                     data: [[0.5, 1.7], [1.5, 2.0], [2.5, 2.5], [3.5, 1.8]]
-                }]   
+                }]*/
             }
         }
     }

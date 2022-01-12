@@ -31,7 +31,19 @@
                 <img :src='gb'/>
                 <img :src='us'/>
             </div>
-            <LineChart v-bind:series="series"></LineChart>
+            <LineChart v-bind:attributes="attributes"></LineChart>
+            <div class="country-wrapper">
+                <a href="#" @click='addOrRemove(highIncome)'>
+                    <img src="../assets/images/CH_circle_small.png" style="margin: 0 1rem; padding:1rem">
+                    <p>Income</p>
+                    <!-- High Income -->
+                </a>
+                <a href="#" @click='addOrRemove(highEducation)'>
+                    <img src="../assets/images/GB_circle_small.png" style="margin: 0 1rem; padding:1rem">
+                    <p>Education</p>
+                    <!-- High Education -->
+                </a>
+            </div>
         </div>
     </Wrapper>
     
@@ -60,7 +72,6 @@ export default {
   },
   data() {
     return {
-        series: [],
         china: china, 
         germany: germany, 
         unitedKingdom: unitedKingdom, 
@@ -68,10 +79,26 @@ export default {
         ch: ch,
         de: de,
         gb: gb,
-        us: us
+        us: us,
+        // Hier sind die Daten für die Detailseite
+        attributes: [],
+        highIncome: {name: 'Income', color: '#C7F700', data: [[0.5, 1.3], [1.5, 1.1], [2.5, 2.1], [3.5, 1.6]]},
+        highEducation: {name: 'Education', color: '#70E6AB', data: [[0.5, 1.7], [1.5, 2.0], [2.5, 2.5], [3.5, 1.8]]}
     }
   },
   methods: {
+    addOrRemove : function (attribute) {
+        console.log(this.attributes);
+        let hasAttribute = this.attributes.some( attr => attr.name === attribute.name )
+        console.log(hasAttribute)
+        if (hasAttribute) {
+            let index = this.attributes.findIndex(attr => attr.name === attribute.name);
+            this.attributes.splice(index, 1);
+        } else {
+            this.attributes.push(attribute)
+        }
+        console.log(this.attributes);
+    },
     change: function (event) {
       let overview = document.getElementsByClassName('overview')[0].style;
       let detail = document.getElementsByClassName('detail')[0].style;
@@ -86,7 +113,7 @@ export default {
         event.target.parentElement.style.backgroundColor = '#00FFFF';
         buttonOverview.backgroundColor = '#E6E6E6';
         overview.display = 'none';
-        detail.display = 'block';
+        detail.display = 'grid';
       }
     }
   }
@@ -154,6 +181,8 @@ export default {
 
     .detail {
         display: none;
+        grid-template-columns: 10% 60% 20%;
+        grid-column-gap: 3.3%;
     }
     
     .general {
