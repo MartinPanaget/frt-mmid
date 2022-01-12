@@ -81,23 +81,20 @@ export default {
         gb: gb,
         us: us,
         // Hier sind die Daten für die Detailseite
-        attributes: [],
+        attributes: [{name: 'Income', color: '#C7F700', data: [[0.5, 1.3], [1.5, 1.1], [2.5, 2.1], [3.5, 1.6]]},],
         highIncome: {name: 'Income', color: '#C7F700', data: [[0.5, 1.3], [1.5, 1.1], [2.5, 2.1], [3.5, 1.6]]},
         highEducation: {name: 'Education', color: '#70E6AB', data: [[0.5, 1.7], [1.5, 2.0], [2.5, 2.5], [3.5, 1.8]]}
     }
   },
   methods: {
     addOrRemove : function (attribute) {
-        console.log(this.attributes);
         let hasAttribute = this.attributes.some( attr => attr.name === attribute.name )
-        console.log(hasAttribute)
         if (hasAttribute) {
             let index = this.attributes.findIndex(attr => attr.name === attribute.name);
             this.attributes.splice(index, 1);
         } else {
             this.attributes.push(attribute)
         }
-        console.log(this.attributes);
     },
     change: function (event) {
       let overview = document.getElementsByClassName('overview')[0].style;
