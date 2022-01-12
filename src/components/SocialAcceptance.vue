@@ -18,14 +18,20 @@
             </div>
             <div class="countries">
                 <img :src='china'/>
-                <img :src='de'/>
-                <img :src='uk'/>
-                <img :src='usa'/>
+                <img :src='germany'/>
+                <img :src='unitedKingdom'/>
+                <img :src='unitedStatesOfAmerica'/>
             </div>
             <PartToWhole></PartToWhole>
         </div>
         <div class="detail">
-            <p>detailpage</p>
+            <div class="countries-icon">
+                <img :src='ch'/>
+                <img :src='de'/>
+                <img :src='gb'/>
+                <img :src='us'/>
+            </div>
+            <LineChart v-bind:series="series"></LineChart>
         </div>
     </Wrapper>
     
@@ -34,23 +40,35 @@
 <script>
 import Wrapper from './Wrapper.vue';
 import PartToWhole from './charts/PartToWhole.vue';
+import LineChart from './charts/LineChart.vue';
+
 import china from '../assets/countries/china.png';
 import germany from '../assets/countries/de.png';
 import unitedKingdom from '../assets/countries/uk.png';
 import unitedStatesOfAmerica from '../assets/countries/usa.png';
+import ch from '../assets/images/CH_circle_small.png';
+import de from '../assets/images/DE_circle_small.png';
+import gb from '../assets/images/GB_circle_small.png';
+import us from '../assets/images/USA_circle_small.png';
 
 export default {
   name: 'SocialAcceptance',
   components: {
     Wrapper,
-    PartToWhole
+    PartToWhole,
+    LineChart
   },
   data() {
     return {
+        series: [],
         china: china, 
-        de: germany, 
-        uk: unitedKingdom, 
-        usa: unitedStatesOfAmerica
+        germany: germany, 
+        unitedKingdom: unitedKingdom, 
+        unitedStatesOfAmerica: unitedStatesOfAmerica,
+        ch: ch,
+        de: de,
+        gb: gb,
+        us: us
     }
   },
   methods: {
@@ -160,5 +178,9 @@ export default {
     .countries img {
         height: 25vh;
         margin: 0 auto;
+    }
+
+    .countries-icon {
+        height: 5vh;
     }
 </style>
