@@ -19,6 +19,7 @@ export default{
                     type: 'line',
                     inverted: true,
                     backgroundColor: '#F6F6F6',
+                    //backgroundColor: '#5F5E5E'
                     width: 900,
                     height: '700'
                 },

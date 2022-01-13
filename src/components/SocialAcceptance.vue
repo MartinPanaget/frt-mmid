@@ -32,17 +32,75 @@
                 <img :src='us'/>
             </div>
             <LineChart v-bind:attributes="attributes"></LineChart>
-            <div class="country-wrapper">
-                <a href="#" @click='addOrRemove(highIncome)'>
-                    <img src="../assets/images/CH_circle_small.png" style="margin: 0 1rem; padding:1rem">
+            <div class="attributes">
+                <div class="income">
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_einkommen-low.svg">
+                    </a>
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_einkommen-middle.svg">
+                    </a>
+                    <a href="#" v-on:click='addOrRemove(highIncome, $event)'> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_einkommen-high-active.svg">
+                    </a>
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_einkommen-veryhigh.svg">
+                    </a>
+                </div>
+                <div class="education">
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_bildung-low.svg">
+                    </a>
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_bildung-middle.svg">
+                    </a>
+                    <a href="#" v-on:click='addOrRemove(highEducation, $event)'> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_bildung-high-active.svg">
+                    </a>
+                </div>
+                <div class="age">
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_alter-low.svg">
+                    </a>
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_alter-middle.svg">
+                    </a>
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_alter-high.svg">
+                    </a>
+                </div>
+                <div class="gender">
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_weiblich.svg">
+                    </a>
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_maennlich.svg">
+                    </a>
+                </div>
+                <div class="minorityMajority">
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_minority.svg">
+                    </a>
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_majority.svg">
+                    </a>
+                </div>
+                <div class="ruralCity">
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_ansiedlung.svg">
+                    </a>
+                    <a href="#"> <!-- Methode einfügen -->
+                        <img src="../assets/attributes/icon_city.svg">
+                    </a>
+                </div>
+                <!-- <a href="#" @click='addOrRemove(highIncome)'>
+                    <img src="../assets/attributes/icon_einkommen-high-active.svg" style="margin: 0 1rem; padding:1rem">
                     <p>Income</p>
-                    <!-- High Income -->
                 </a>
                 <a href="#" @click='addOrRemove(highEducation)'>
-                    <img src="../assets/images/GB_circle_small.png" style="margin: 0 1rem; padding:1rem">
+                    <img src="../assets/attributes/icon_bildung-high-active.svg" style="margin: 0 1rem; padding:1rem">
                     <p>Education</p>
-                    <!-- High Education -->
-                </a>
+                </a> -->
             </div>
         </div>
     </Wrapper>
@@ -81,7 +139,7 @@ export default {
         gb: gb,
         us: us,
         // Hier sind die Daten für die Detailseite
-        attributes: [{name: 'Income', color: '#C7F700', data: [[0.5, 1.3], [1.5, 1.1], [2.5, 2.1], [3.5, 1.6]]},],
+        attributes: [{name: 'Income', color: '#C7F700', data: [[0.5, 1.3], [1.5, 1.1], [2.5, 2.1], [3.5, 1.6]]}, {name: 'Education', color: '#70E6AB', data: [[0.5, 1.7], [1.5, 2.0], [2.5, 2.5], [3.5, 1.8]]}],
         highIncome: {name: 'Income', color: '#C7F700', data: [[0.5, 1.3], [1.5, 1.1], [2.5, 2.1], [3.5, 1.6]]},
         highEducation: {name: 'Education', color: '#70E6AB', data: [[0.5, 1.7], [1.5, 2.0], [2.5, 2.5], [3.5, 1.8]]}
     }
@@ -95,6 +153,14 @@ export default {
         } else {
             this.attributes.push(attribute)
         }
+    },
+    changeImageSrc : function (src, add) {
+        if(add) {
+            src = src.replace('.svg','-active.svg')
+        } else {
+            src = src.replace('-active', '')
+        }
+        return src
     },
     change: function (event) {
       let overview = document.getElementsByClassName('overview')[0].style;
@@ -206,7 +272,17 @@ export default {
         margin: 0 auto;
     }
 
-    .countries-icon {
-        height: 5vh;
+    .countries-icon img {
+        height: 7vh;
+        margin: 45px 0 45px 80px;
+    }
+
+    .attributes div {
+        margin: 20px 0;
+    }
+
+    .attributes div a img {
+        height: 6vh;
+        margin: 0 5px;
     }
 </style>
