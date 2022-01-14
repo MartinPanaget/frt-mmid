@@ -18,8 +18,9 @@ export default{
                 chart: {
                     type: 'line',
                     inverted: true,
-                    backgroundColor: '#F6F6F6',
-                    //backgroundColor: '#5F5E5E'
+                    plotBackgroundColor: '#999999',
+                    //backgroundColor: '#F6F6F6',
+                    backgroundColor: '#5F5E5E',
                     width: 900,
                     height: '700'
                 },
@@ -38,8 +39,14 @@ export default{
                     },
                     lineWidth: 0,
                     gridLineColor: '#5F5E5E',
-                    gridLineWidth: 1.5,
-                    tickColor: undefined
+                    gridLineWidth: 2,
+                    tickColor: undefined,
+                    endOnTick: false,
+                    /*plotLines: [{
+                        color: '#FF0000',
+                        width: 2,
+                        value: 1
+                    }]*/
                 },
                 yAxis: {
                     min: 0,
@@ -49,11 +56,16 @@ export default{
                         enabled: false
                     },
                     labels: {
+                        style: {
+                            color: '#F6F6F6',
+                            fontSize: '20px'
+                        },
                         format: '{value}.0'
                     },
                     lineWidth: 0,
                     gridLineColor: '#5F5E5E',
-                    gridLineWidth: 1.5,
+                    gridLineWidth: 2,
+                    endOnTick: false,
                 },
                 legend: {
                     enabled: false
@@ -66,7 +78,7 @@ export default{
                         line: {
                             marker: {
                                 symbol: 'circle',
-                            radius: 10
+                            radius: 15
                         }
                     },
                     series: {

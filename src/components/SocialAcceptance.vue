@@ -40,7 +40,7 @@
                     <a href="#"> <!-- Methode einfügen -->
                         <img src="../assets/attributes/icon_einkommen-middle.svg">
                     </a>
-                    <a href="#" v-on:click='addOrRemove(highIncome, $event)'> <!-- Methode einfügen -->
+                    <a href="#" v-on:click='addOrRemove(highIncome, $event)'>
                         <img src="../assets/attributes/icon_einkommen-high-active.svg">
                     </a>
                     <a href="#"> <!-- Methode einfügen -->
@@ -54,7 +54,7 @@
                     <a href="#"> <!-- Methode einfügen -->
                         <img src="../assets/attributes/icon_bildung-middle.svg">
                     </a>
-                    <a href="#" v-on:click='addOrRemove(highEducation, $event)'> <!-- Methode einfügen -->
+                    <a href="#" v-on:click='addOrRemove(highEducation, $event)'>
                         <img src="../assets/attributes/icon_bildung-high-active.svg">
                     </a>
                 </div>
@@ -62,7 +62,7 @@
                     <a href="#"> <!-- Methode einfügen -->
                         <img src="../assets/attributes/icon_alter-low.svg">
                     </a>
-                    <a href="#"> <!-- Methode einfügen -->
+                    <a href="#" v-on:click='addOrRemove(middleAge, $event)'>
                         <img src="../assets/attributes/icon_alter-middle.svg">
                     </a>
                     <a href="#"> <!-- Methode einfügen -->
@@ -139,9 +139,10 @@ export default {
         gb: gb,
         us: us,
         // Hier sind die Daten für die Detailseite
-        attributes: [{name: 'Income', color: '#C7F700', data: [[0.5, 1.3], [1.5, 1.1], [2.5, 2.1], [3.5, 1.6]]}, {name: 'Education', color: '#70E6AB', data: [[0.5, 1.7], [1.5, 2.0], [2.5, 2.5], [3.5, 1.8]]}],
-        highIncome: {name: 'Income', color: '#C7F700', data: [[0.5, 1.3], [1.5, 1.1], [2.5, 2.1], [3.5, 1.6]]},
-        highEducation: {name: 'Education', color: '#70E6AB', data: [[0.5, 1.7], [1.5, 2.0], [2.5, 2.5], [3.5, 1.8]]}
+        attributes: [{name: 'High income', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}, {name: 'High education', color: '#70E6AB', data: [[0.3, 1.7], [1.3, 2.0], [2.3, 2.5], [3.3, 1.8]]}],
+        highIncome: {name: 'High income', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]},
+        highEducation: {name: 'High education', color: '#70E6AB', data: [[0.3, 1.7], [1.3, 2.0], [2.3, 2.5], [3.3, 1.8]]},
+        middleAge: {name: '31-40', color: '#BBFEFE', data: [[0.45, 0.4], [1.45, 0.8], [2.45, 1.1], [3.45, 0.9]]}
     }
   },
   methods: {
@@ -155,12 +156,19 @@ export default {
         }
     },
     changeImageSrc : function (src, add) {
+        let modifiedSrc = '';
+        const regex = /\/icon_(\w{1,10}-\w{1,8}|\w{1,10})/g;
         if(add) {
-            src = src.replace('.svg','-active.svg')
+            modifiedSrc = src.match(regex)//eslint-disable-line
+            console.log(modifiedSrc)
+            modifiedSrc = `../assets/attributes${modifiedSrc[0]}-active.svg`
         } else {
-            src = src.replace('-active', '')
+            modifiedSrc = src.match(regex)//eslint-disable-line
+            console.log(modifiedSrc)
+            modifiedSrc = modifiedSrc.replace('-active', '')
+            modifiedSrc = `../assets/attributes${modifiedSrc[0]}.svg`
         }
-        return src
+        return modifiedSrc
     },
     change: function (event) {
       let overview = document.getElementsByClassName('overview')[0].style;
