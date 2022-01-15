@@ -19,7 +19,6 @@ export default{
                     type: 'line',
                     inverted: true,
                     plotBackgroundColor: '#999999',
-                    //backgroundColor: '#F6F6F6',
                     backgroundColor: '#5F5E5E',
                     width: 900,
                     height: '700'
@@ -91,15 +90,6 @@ export default{
                     enabled: false
                 },
                 series: this.attributes
-                /*series: [{
-                    name: 'Income',
-                    color: '#C7F700',
-                    data: [[0.5, 1.3], [1.5, 1.1], [2.5, 2.1], [3.5, 1.6]]
-                }, {
-                        name: 'Education',
-                    color: '#70E6AB',
-                    data: [[0.5, 1.7], [1.5, 2.0], [2.5, 2.5], [3.5, 1.8]]
-                }]*/
             }
         }
     }

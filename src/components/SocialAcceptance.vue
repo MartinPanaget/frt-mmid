@@ -93,14 +93,11 @@
                         <img src="../assets/attributes/icon_city.svg">
                     </a>
                 </div>
-                <!-- <a href="#" @click='addOrRemove(highIncome)'>
-                    <img src="../assets/attributes/icon_einkommen-high-active.svg" style="margin: 0 1rem; padding:1rem">
-                    <p>Income</p>
-                </a>
-                <a href="#" @click='addOrRemove(highEducation)'>
-                    <img src="../assets/attributes/icon_bildung-high-active.svg" style="margin: 0 1rem; padding:1rem">
-                    <p>Education</p>
-                </a> -->
+                <div class="garbage">
+                    <a href="#" v-on:click='deleteAttributes'>
+                        <img src="../assets/attributes/icon_garbage.svg">
+                    </a>
+                </div>
             </div>
         </div>
     </Wrapper>
@@ -155,6 +152,10 @@ export default {
             this.attributes.push(attribute)
         }
     },
+    deleteAttributes : function () {
+        this.attributes.splice(0, this.attributes.length);
+        
+    },
     changeImageSrc : function (src, add) {
         let modifiedSrc = '';
         const regex = /\/icon_(\w{1,10}-\w{1,8}|\w{1,10})/g;
@@ -208,7 +209,6 @@ export default {
         width: 70px;
         background-color: #E6E6E6;
         border-radius: 50%;
-        /* display: inline-block; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -225,26 +225,6 @@ export default {
         color: #222222;
         text-decoration: none;
     }
-
-    /*.buttons {
-        text-align: center;
-        margin: 20px
-    }
-
-    .buttons button:first-child {
-        border-color: #00FFFF;
-        background-color: #00FFFF;
-    }
-
-    .buttons button {
-        padding: 10px;
-        margin: 0 2vw;
-        color: #222222;
-        font-size: 17px;
-        border-radius: 10px;
-        border-color: #E6E6E6;
-        background-color: #E6E6E6;
-    }*/
 
     .overview {
         display: block;
@@ -272,7 +252,6 @@ export default {
         display: grid;
         grid-template-columns: repeat(4, 24%);
         grid-column-gap: 1%;
-        /*height: 20vh;*/
     }
 
     .countries img {
@@ -282,7 +261,7 @@ export default {
 
     .countries-icon img {
         height: 7vh;
-        margin: 45px 0 45px 80px;
+        margin: 43px 0 43px 80px;
     }
 
     .attributes div {
@@ -292,5 +271,10 @@ export default {
     .attributes div a img {
         height: 6vh;
         margin: 0 5px;
+    }
+
+    .garbage a{
+        margin-right: 0;
+        margin-left: 224.4px;
     }
 </style>
