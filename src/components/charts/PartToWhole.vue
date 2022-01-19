@@ -22,16 +22,19 @@ export default {
             UsColor: ['#0CBAF7'],
             series: {
                 DE : [{
+                    borderColor: '#5F5E5E',
                     showInLegend: false,
                     name: 'DE',
                     data: [8, 30, 31, 18, 14]
                 }],
                 UK : [{
+                    borderColor: '#5F5E5E',
                     showInLegend: false,
                     name: 'UK',
                     data: [15, 35, 28, 14, 9]
                 }],
                 US : [{
+                    borderColor: '#5F5E5E',
                     showInLegend: false,
                     name: 'US',
                     data: [16, 31, 28, 17, 8]
@@ -81,7 +84,10 @@ export default {
                             groupPadding: 0
                         },
                         dataLabels: {
-                            enabled: true
+                            enabled: true,
+                            style: {
+                                'border-style' : 0
+                            }
                         },
                         borderColor: 'transparent', 
                         colorByPoint: true,

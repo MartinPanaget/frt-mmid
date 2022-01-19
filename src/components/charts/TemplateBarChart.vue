@@ -24,7 +24,8 @@ export default {
                     lineColor: '#222222',
                     labels: {
                         enabled: false
-                    }
+                    },
+                    tickColor: undefined
                 },
                 yAxis: {
                     min: 0,
