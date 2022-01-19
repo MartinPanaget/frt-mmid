@@ -16,6 +16,8 @@ import Awareness from './components/Awareness.vue'
 import SocialAcceptance from './components/SocialAcceptance.vue'
 import 'fullpage.js/dist/fullpage.css'
 
+// import bg from '/assez'
+
 
 export default {
   name: 'App',
@@ -91,7 +93,8 @@ export default {
 
 body {
   /* background-color:#5F5E5E ; */
-  background-color: #3C3C3C;
+  /* background-color: #3C3C3C; */
+  background-image: url('./assets/images/hg-infodesign.png');
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
