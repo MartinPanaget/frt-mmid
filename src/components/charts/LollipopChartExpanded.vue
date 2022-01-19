@@ -24,7 +24,7 @@ export default{
                     height: 300,
                     opacity: '50%',
                     style:{
-                        fontFamily: 'Avenir, Helvetica, sans-serif'
+                        fontFamily: 'Montserrat, sans-serif'
                     }
                 },
                 title: {

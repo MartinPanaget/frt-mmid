@@ -16,6 +16,7 @@ import Awareness from './components/Awareness.vue'
 import SocialAcceptance from './components/SocialAcceptance.vue'
 import 'fullpage.js/dist/fullpage.css'
 
+
 export default {
   name: 'App',
   components: {
@@ -59,16 +60,25 @@ export default {
 </script>
 
 <style>
-@font-face {
-  font-family: 'Avenir';
-  src: url('/fonts/Avenir/CarroisGothic-Regular.ttf') format('truetype')
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 
 /* @font-face {
-  font-family: 'Avenir Regular';
-  src: url('/fonts/Avenir/AvenirNextLTPro-Regular.otf') format('opentype')
+  font-family: 'Avenir2';
+  src: url('/fonts/Avenir/CarroisGothic-Regular.ttf') format('ttf')
 }
 
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/Avenir/Metropolis-Regular.otf') format('otf')
+} */
+
+ /* @font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/Avenir/AvenirNextLTPro-Regular.otf') format('opentype')
+} */
+
+/*
 @font-face {
   font-family: 'Avenir Bold';
   src: url('/fonts/Avenir/AvenirNextLTPro-Bold.otf') format('opentype')
@@ -80,8 +90,9 @@ export default {
 } */
 
 body {
-  background-color:#5F5E5E ;
-  font-family: 'Avenir','Helvetica', sans-serif;
+  /* background-color:#5F5E5E ; */
+  background-color: #3C3C3C;
+  font-family: 'Montserrat', sans-serif;
   color: white;
 }
 

@@ -8,7 +8,9 @@
 export default {
     props: {
         series: Array,
-        title: String
+        title: String,
+        minSize: Number,
+        maxSize: Number
     },
     methods:{
         expose: function(){
@@ -25,15 +27,16 @@ export default {
                     type: 'packedbubble',
                     width: '250',
                     height: '300',
-                    backgroundColor: '#5F5E5E',
+                    // backgroundColor: '#5F5E5E',
+                    backgroundColor: '#3C3C3C',
                     style:{
-                        fontFamily: 'Avenir, Helvetica, sans-serif'
+                        fontFamily: 'Montserrat, sans-serif'
                     }
                 },
                 plotOptions: {
                     packedbubble: {
-                        minSize: 20,
-                        maxSize: 80,
+                        minSize: this.minSize,
+                        maxSize: this.maxSize,
                         marker:{
                             fillOpacity:1
                         },

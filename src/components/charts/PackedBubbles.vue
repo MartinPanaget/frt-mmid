@@ -1,18 +1,18 @@
 <template>
     <div>
         <div class="BubbleCharts">
-            <PackedBubbleChart v-bind:series="series.Phone" title="Smartphone Usage"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.PersonCheck" title="People Control"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.SmartDevice" title="Smart Devices"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.IdCheck" title="Identity verification for financial matters"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.Transport" title="Railway, Subway Stations"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Phone" title="Smartphone Usage" minSize="74" maxSize="108"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.PersonCheck" title="People Control" minSize="57" maxSize="78"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.SmartDevice" title="Smart Devices" minSize="48" maxSize="77"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.IdCheck" title="Identity verification for financial matters" minSize="49" maxSize="63"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Transport" title="Railway, Subway Stations" minSize="43" maxSize="75"></PackedBubbleChart>
         </div>
         <div class="BubbleCharts">
-            <PackedBubbleChart v-bind:series="series.Mall" title="Shopping Malls"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.Street" title="Public Street"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.School" title="School Or Universities"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.Private" title="Tourist Acttractions"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.Tourism" title="Private Household"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Mall" title="Shopping Malls" minSize="74" maxSize="108"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Street" title="Public Street" minSize="74" maxSize="108"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.School" title="School Or Universities" minSize="74" maxSize="108"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Private" title="Tourist Acttractions" minSize="74" maxSize="108"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Tourism" title="Private Household" minSize="74" maxSize="108"></PackedBubbleChart>
         </div>
     </div>
 </template>
@@ -54,7 +54,7 @@ export default {
                     visible: true,
                     name: 'Phone CH',
                     color: '#C7F700',
-                    data:[30],
+                    data:[50],
                     }
                 ],
                 PersonCheck:[{
