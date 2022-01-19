@@ -9,8 +9,8 @@ export default {
     props: {
         series: Array,
         title: String,
-        minSize: Number,
-        maxSize: Number
+        minSize: String,
+        maxSize: String
     },
     methods:{
         expose: function(){

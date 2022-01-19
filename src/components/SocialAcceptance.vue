@@ -33,9 +33,9 @@
             </div>
             <LineChart v-bind:attributes="attributes"></LineChart>
             <div class="attributes">
-                <div v-for="(attr, attrName) in attributeList" :key="attrName" :class="index" class="test">
+                <div v-for="(attr, attrName) in attributeList" :key="attrName" :class="attrName" class="test">
                     <div v-for="(item, index) in attr" :key="index">
-                        <a v-for="entry in item" :key="entry" href="#" v-on:click='addOrRemove(entry.attribute, $event)'>
+                        <a v-for="entry in item" :key="entry.name" href="#" v-on:click='addOrRemove(entry.attribute, $event)'>
                             <img @click="$set(entry, 'selected', !entry.selected)" :src="entry.selected ? entry.imgActive : entry.img" :class="{active:!entry.selected}">
                         </a>
                     </div>
