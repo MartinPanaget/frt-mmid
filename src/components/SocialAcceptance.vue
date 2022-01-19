@@ -33,65 +33,12 @@
             </div>
             <LineChart v-bind:attributes="attributes"></LineChart>
             <div class="attributes">
-                <div class="income">
-                    <a href="#"> <!-- Methode einfügen -->
-                        <img src="../assets/attributes/icon_einkommen-low.svg">
-                    </a>
-                    <a href="#"> <!-- Methode einfügen -->
-                        <img src="../assets/attributes/icon_einkommen-middle.svg">
-                    </a>
-                    <a href="#" v-on:click='addOrRemove(highIncome, $event)'>
-                        <img src="../assets/attributes/icon_einkommen-high-active.svg">
-                    </a>
-                    <a href="#"> <!-- Methode einfügen -->
-                        <img src="../assets/attributes/icon_einkommen-veryhigh.svg">
-                    </a>
-                </div>
-                <div class="education">
-                    <a href="#"> <!-- Methode einfügen -->
-                        <img src="../assets/attributes/icon_bildung-low.svg">
-                    </a>
-                    <a href="#"> <!-- Methode einfügen -->
-                        <img src="../assets/attributes/icon_bildung-middle.svg">
-                    </a>
-                    <a href="#" v-on:click='addOrRemove(highEducation, $event)'>
-                        <img src="../assets/attributes/icon_bildung-high-active.svg">
-                    </a>
-                </div>
-                <div class="age">
-                    <a href="#"> <!-- Methode einfügen -->
-                        <img src="../assets/attributes/icon_alter-low.svg">
-                    </a>
-                    <a href="#" v-on:click='addOrRemove(middleAge, $event)'>
-                        <img src="../assets/attributes/icon_alter-middle.svg">
-                    </a>
-                    <a href="#"> <!-- Methode einfügen -->
-                        <img src="../assets/attributes/icon_alter-high.svg">
-                    </a>
-                </div>
-                <div class="gender">
-                    <a href="#"> <!-- Methode einfügen -->
-                        <img src="../assets/attributes/icon_weiblich.svg">
-                    </a>
-                    <a href="#"> <!-- Methode einfügen -->
-                        <img src="../assets/attributes/icon_maennlich.svg">
-                    </a>
-                </div>
-                <div class="minorityMajority">
-                    <a href="#"> <!-- Methode einfügen -->
-                        <img src="../assets/attributes/icon_minority.svg">
-                    </a>
-                    <a href="#"> <!-- Methode einfügen -->
-                        <img src="../assets/attributes/icon_majority.svg">
-                    </a>
-                </div>
-                <div class="ruralCity">
-                    <a href="#"> <!-- Methode einfügen -->
-                        <img src="../assets/attributes/icon_ansiedlung.svg">
-                    </a>
-                    <a href="#"> <!-- Methode einfügen -->
-                        <img src="../assets/attributes/icon_city.svg">
-                    </a>
+                <div v-for="(attr, attrName) in attributeList" :key="attrName" :class="index" class="test">
+                    <div v-for="(item, index) in attr" :key="index">
+                        <a v-for="entry in item" :key="entry" href="#" v-on:click='addOrRemove(entry.attribute, $event)'>
+                            <img @click="$set(entry, 'selected', !entry.selected)" :src="entry.selected ? entry.imgActive : entry.img" :class="{active:!entry.selected}">
+                        </a>
+                    </div>
                 </div>
                 <div class="garbage">
                     <a href="#" v-on:click='deleteAttributes'>
@@ -109,14 +56,177 @@ import Wrapper from './Wrapper.vue';
 import PartToWhole from './charts/PartToWhole.vue';
 import LineChart from './charts/LineChart.vue';
 
+// countries
 import china from '../assets/countries/china.png';
 import germany from '../assets/countries/de.png';
 import unitedKingdom from '../assets/countries/uk.png';
 import unitedStatesOfAmerica from '../assets/countries/usa.png';
+
+// country round icon
 import ch from '../assets/images/CH_circle_small.png';
 import de from '../assets/images/DE_circle_small.png';
 import gb from '../assets/images/GB_circle_small.png';
 import us from '../assets/images/USA_circle_small.png';
+
+// attribute icons
+import incomeLow from '../assets/attributes/icon_einkommen-low.svg';
+import incomeMiddle from '../assets/attributes/icon_einkommen-middle.svg';
+import incomeHigh from '../assets/attributes/icon_einkommen-high.svg';
+import incomeVeryHigh from '../assets/attributes/icon_einkommen-veryhigh.svg';
+
+import educationLow from '../assets/attributes/icon_bildung-low.svg';
+import educationMiddle from '../assets/attributes/icon_bildung-middle.svg';
+import educationHigh from '../assets/attributes/icon_bildung-high.svg';
+
+import ageYoung from '../assets/attributes/icon_alter-low.svg';
+import ageMiddle from '../assets/attributes/icon_alter-middle.svg';
+import ageOld from '../assets/attributes/icon_alter-high.svg';
+
+import genderMale from '../assets/attributes/icon_maennlich.svg';
+import genderFemale from '../assets/attributes/icon_weiblich.svg';
+
+import raceMinority from '../assets/attributes/icon_minority.svg';
+import raceMajority from '../assets/attributes/icon_majority.svg';
+
+import lifeRural from '../assets/attributes/icon_ansiedlung.svg';
+import lifeCity from '../assets/attributes/icon_city.svg';
+
+// attribute icons active
+import incomeLowActive from '../assets/attributes/icon_einkommen-low-active.svg';
+import incomeMiddleActive from '../assets/attributes/icon_einkommen-middle-active.svg';
+import incomeHighActive from '../assets/attributes/icon_einkommen-high-active.svg';
+import incomeVeryHighActive from '../assets/attributes/icon_einkommen-veryhigh-active.svg';
+
+import educationLowActive from '../assets/attributes/icon_bildung-low-active.svg';
+import educationMiddleActive from '../assets/attributes/icon_bildung-middle-active.svg';
+import educationHighActive from '../assets/attributes/icon_bildung-high-active.svg';
+
+import ageYoungActive from '../assets/attributes/icon_alter-low-active.svg';
+import ageMiddleActive from '../assets/attributes/icon_alter-middle-active.svg';
+import ageOldActive from '../assets/attributes/icon_alter-high-active.svg';
+
+import genderMaleActive from '../assets/attributes/icon_maennlich-active.svg';
+import genderFemaleActive from '../assets/attributes/icon_weiblich-active.svg';
+
+import raceMinorityActive from '../assets/attributes/icon_minority-active.svg';
+import raceMajorityActive from '../assets/attributes/icon_majority-active.svg';
+
+import lifeRuralActive from '../assets/attributes/icon_ansiedlung-active.svg';
+import lifeCityActive from '../assets/attributes/icon_city-active.svg';
+
+
+var attributeList = [
+    {income:[
+        {
+            name: 'incomeLow',
+            imgActive:incomeLowActive,
+            img:incomeLow,
+            attribute:{name: 'Low income', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+        },
+        {
+            name:'incomeMiddle',
+            imgActive:incomeMiddleActive,
+            img:incomeMiddle,
+            attribute:{name: 'Middle income', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+        },
+        {
+            name:'incomeHigh',
+            imgActive:incomeHighActive,
+            img:incomeHigh,
+            selected: true,
+            attribute:{name: 'High income', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+        },
+        {
+            name:'incomeVeryHigh',
+            imgActive:incomeVeryHighActive,
+            img:incomeVeryHigh,
+            attribute:{name: 'Very high income', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+        },
+    ]},
+    {education:[
+        {
+            name: 'educationLow',
+            imgActive :educationLowActive,
+            img :educationLow,
+            attribute:{name: 'Low education', color: '#70E6AB', data: [[0.3, 1.7], [1.3, 2.0], [2.3, 2.5], [3.3, 1.8]]}
+        },
+        {
+            name: 'educationMiddle',
+            imgActive :educationMiddleActive,
+            img :educationMiddle,
+            attribute:{name: 'Middle education', color: '#70E6AB', data: [[0.3, 1.7], [1.3, 2.0], [2.3, 2.5], [3.3, 1.8]]}
+        },
+        {
+            name: 'educationHigh',
+            imgActive :educationHighActive,
+            img :educationHigh,
+            selected: true,
+            attribute:{name: 'High education', color: '#70E6AB', data: [[0.3, 1.7], [1.3, 2.0], [2.3, 2.5], [3.3, 1.8]]}
+        },   
+    ]},
+    {age:[
+        {
+            name:'ageYoung',
+            imgActive:ageYoungActive,
+            img:ageYoung,
+            attribute:{name: 'Lower age', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+        },
+        {
+            name: 'ageMiddle',
+            imgActive:ageMiddleActive,
+            img:ageMiddle,
+            attribute:{name: 'Medium age', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+        },
+        {
+            name: 'ageOld',
+            imgActive:ageOldActive,
+            img:ageOld,
+            attribute:{name: 'Higher age', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+        }
+    ]},
+    {gender:[
+        {
+            name:'genderMale',
+            imgActive:genderMaleActive,
+            img:genderMale,
+            attribute:{name: 'Male', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+        },
+        {
+            name: 'genderFemale',
+            imgActive:genderFemaleActive,
+            img:genderFemale,
+            attribute:{name: 'Female', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+        }
+    ]},
+    {race:[
+        {
+            name:'raceMinority',
+            imgActive:raceMinorityActive,
+            img:raceMinority,
+            attribute:{name: 'Minority', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+        },
+        {
+            name: 'raceMajority',
+            imgActive:raceMajorityActive,
+            img:raceMajority,
+            attribute:{name: 'Majority', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+        }
+    ]},
+    {life:[
+        {
+            name:'lifeRural',
+            imgActive:lifeRuralActive,
+            img:lifeRural,
+            attribute:{name: 'Rural', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+        },
+        {
+            name: 'lifeCity',
+            imgActive:lifeCityActive,
+            img:lifeCity,
+            attribute:{name: 'City', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+        }
+    ]},
+    ]
 
 export default {
   name: 'SocialAcceptance',
@@ -127,10 +237,48 @@ export default {
   },
   data() {
     return {
+        attributeList,
+        // attriute icons: 
+        incomeLow: incomeLow,
+        incomeMiddle:incomeMiddle,
+        incomeHigh:incomeHigh,
+        incomeVeryHigh:incomeVeryHigh,
+        educationLow:educationLow ,
+        educationMiddle :educationMiddle,
+        educationHigh:educationHigh,
+        ageYoung:ageYoung,
+        ageMiddle:ageMiddle,
+        ageOld : ageOld,
+        genderMale : genderMale,
+        genderFemale : genderFemale,
+        raceMinority:raceMinority,
+        raceMajority :raceMajority,
+        lifeRural :lifeRural,
+        lifeCity :lifeCity,
+        //attribute icons active
+        incomeLowActive: incomeLowActive,
+        incomeMiddleActive:incomeMiddleActive,
+        incomeHighActive:incomeHighActive,
+        incomeVeryHighActive:incomeVeryHighActive,
+        educationLowActive:educationLowActive ,
+        educationMiddleActive :educationMiddleActive,
+        educationHighActive:educationHighActive,
+        ageYoungActive:ageYoungActive,
+        ageMiddleActive:ageMiddleActive,
+        ageOldActive : ageOldActive,
+        genderMaleActive : genderMaleActive,
+        genderFemaleActive : genderFemaleActive,
+        raceMinorityActive:raceMinorityActive,
+        raceMajorityActive :raceMajorityActive,
+        lifeRuralActive :lifeRuralActive,
+        lifeCityActive :lifeCityActive,
+        selected: undefined,
+        //countries
         china: china, 
         germany: germany, 
         unitedKingdom: unitedKingdom, 
         unitedStatesOfAmerica: unitedStatesOfAmerica,
+        //country circle
         ch: ch,
         de: de,
         gb: gb,
@@ -151,6 +299,7 @@ export default {
         } else {
             this.attributes.push(attribute)
         }
+        console.log(attributeList)
     },
     deleteAttributes : function () {
         this.attributes.splice(0, this.attributes.length);
