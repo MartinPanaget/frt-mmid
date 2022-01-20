@@ -126,8 +126,7 @@ h2 {
       /* font-family: 'Avenir Next Codensed'; */
       font-size: 25px;
       font-weight: normal;
-      text-align: center;
-      padding: 3rem 0 3rem 0;
+      padding: 3rem 0 3rem 3rem;
       text-transform:uppercase;
   }
 
