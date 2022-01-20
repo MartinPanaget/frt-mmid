@@ -18,7 +18,7 @@ export default{
             chartOptions:{
                 chart: {
                     plotBackgroundColor: this.backgroundColor,
-                    backgroundColor: '#5F5E5E',
+                    backgroundColor: '#3C3C3C',
                     type: 'lollipop',
                     inverted: false,
                     width: 350,

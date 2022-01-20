@@ -1,6 +1,7 @@
 <template>
   <full-page :options="options" id="fullpage">
     <Header></Header>
+    <InfoView></InfoView>
     <Perception></Perception>
     <Awareness></Awareness>
     <SocialAcceptance></SocialAcceptance>
@@ -10,17 +11,21 @@
 
 <script>
 import Header from './components/Header.vue'
+import InfoView from './components/InfoView.vue'
 import Footer from './components/Footer.vue'
 import Perception from './components/Perception.vue'
 import Awareness from './components/Awareness.vue'
 import SocialAcceptance from './components/SocialAcceptance.vue'
 import 'fullpage.js/dist/fullpage.css'
 
+// import bg from '/assez'
+
 
 export default {
   name: 'App',
   components: {
     Header,
+    InfoView,
     Perception,
     Awareness,
     SocialAcceptance,
@@ -38,6 +43,7 @@ export default {
           "Seite 1",
           "Seite 2",
           "Seite 3",
+          "Seite 4",
           "Impressum",
         ],
         showActiveTooltip: true,
@@ -46,6 +52,7 @@ export default {
           "page1",
           "page2",
           "page3",
+          "page4",
           "Footer"
         ],
         scrollHorizontally: true,
@@ -62,40 +69,38 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-
-/* @font-face {
-  font-family: 'Avenir2';
-  src: url('/fonts/Avenir/CarroisGothic-Regular.ttf') format('ttf')
+/* background section */
+#section1{
+  background-image: url("./assets/backgrounds/hg-infodesign-v1.png");
+}
+#section2{
+  background-image: url("./assets/backgrounds/hg-infodesign-v2.png");
+}
+#section3{
+  background-image: url("./assets/backgrounds/hg-infodesign-v3.png");
+}
+#section4{
+  background-image: url("./assets/backgrounds/hg-infodesign-v4.png");
+}
+#section5{
+  background-image: url("./assets/backgrounds/hg-infodesign-v5.png");
+}
+#section6{
+  background-image: url("./assets/backgrounds/hg-infodesign-v6.png");
+}
+.section{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
-@font-face {
-  font-family: 'Avenir';
-  src: url('/fonts/Avenir/Metropolis-Regular.otf') format('otf')
-} */
-
- /* @font-face {
-  font-family: 'Avenir';
-  src: url('/fonts/Avenir/AvenirNextLTPro-Regular.otf') format('opentype')
-} */
-
-/*
-@font-face {
-  font-family: 'Avenir Bold';
-  src: url('/fonts/Avenir/AvenirNextLTPro-Bold.otf') format('opentype')
-}
-
-@font-face {
-  font-family: 'Avenir Italien';
-  src: url('/fonts/Avenir/AvenirNextLTPro-It.otf') format('opentype')
-} */
-
+/* body */
 body {
-  /* background-color:#5F5E5E ; */
-  background-color: #3C3C3C;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
 
+/* navigation */
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     background: white;
@@ -110,11 +115,6 @@ body {
     padding-left: 10px;
 }
 
-.frame{
-  width: 80%;
-  margin: auto;
-}
-
 h1{
   padding-top: 180px;
   font-size: 85px;
@@ -126,8 +126,7 @@ h2 {
       /* font-family: 'Avenir Next Codensed'; */
       font-size: 25px;
       font-weight: normal;
-      text-align: center;
-      padding: 3rem 0 3rem 0;
+      padding: 3rem 0 3rem 3rem;
       text-transform:uppercase;
   }
 
@@ -136,8 +135,6 @@ h2 {
   color: #00FFFF;
   text-shadow: rgba(0,255,255,0.9) 0px 0px 9px;
 }
-
-
 
 .fp-tableCell{
   vertical-align: top;

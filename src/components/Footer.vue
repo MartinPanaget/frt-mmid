@@ -1,5 +1,5 @@
 <template>
-    <div class="footer section">
+    <Wrapper id="section6" class="footer">
       <div class="frame">
           <p class="big">IMPRESSUM<p>
           <p> Ein Projekt des Studiengang Onlinemedien der dhbw Mosbach, <br> des Moduls P3 interaktives Informationsdesign</p>
@@ -9,12 +9,14 @@
             </span>
           </div>
       </div>
-    </div>
+    </Wrapper>
     
 </template>
 
 <script>
+import Wrapper from './Wrapper.vue'
 export default {
+  components: { Wrapper },
   name: 'Footer'
 }
 </script>

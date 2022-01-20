@@ -1,5 +1,5 @@
 <template>
-    <Wrapper>
+    <Wrapper id="section3">
             <h2>Perceived Risks and Benefits of Facial Recognition Technologies</h2>
             <!-- <button @click="test">DE ein</button>
             <button @click="testen">DE aus</button> -->

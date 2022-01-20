@@ -1,12 +1,12 @@
 <template>
-    <Wrapper>
+    <Wrapper id="section5">
         <h2>Acceptance towards FRT</h2>
         <div class="round-dots">
                 <div class="dot">
-                    <a href='#page3' id='overview' v-on:click='change'>OVER_ <br> VIEW</a>
+                    <a href='#page4' id='overview' v-on:click='change'>OVER_ <br> VIEW</a>
                 </div>
                 <div class="dot">
-                    <a href='#page3' id='detail' v-on:click='change'>DETAIL</a>
+                    <a href='#page5' id='detail' v-on:click='change'>DETAIL</a>
                 </div>
             </div>
         <div class="overview">
@@ -299,7 +299,6 @@ export default {
         } else {
             this.attributes.push(attribute)
         }
-        console.log(attributeList)
     },
     deleteAttributes : function () {
         this.attributes.splice(0, this.attributes.length);

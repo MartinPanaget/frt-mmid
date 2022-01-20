@@ -1,9 +1,45 @@
 <template>
-    <Wrapper>
+    <Wrapper id="section4">
             <div class="general">
-                <h2>Perceived use of Facial Recognition Technologies</h2>
+                <h2>Perceived Occurrences of FRTS</h2>            
+                
                 <div class="round-dots">
-                    <div class="dot">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 587.04 105.03">
+                    <!-- <defs>
+                        <style>.cls-1{fill:#e6e6e6;}.cls-2{fill:none;stroke:#e6e6e6;stroke-width:3px;}</style>
+                    </defs> -->
+                    <g id="Ebene_2" data-name="Ebene 2">
+                        <g id="Ebene_1-2" data-name="Ebene 1">
+                            <polyline class="cls-2" points="574.22 15.31 506.22 52.31 88.22 52.31 13.22 74.31"/>
+                            <g id="Gruppe_514" data-name="Gruppe 514">
+                                    <circle fill="#e6e6e6" id="Ellipse_555" data-name="Ellipse 546" class="cls-1" cx="160.04" cy="53" r="10"/>
+                                    <circle fill="#e6e6e6" id="Ellipse_519" data-name="Ellipse 519" class="cls-1" cx="14.5" cy="75.11" r="14.5"/>
+                                    <circle fill="#e6e6e6" id="Ellipse_518" data-name="Ellipse 518" class="cls-1" cx="572.54" cy="14.5" r="14.5"/>
+                                    <circle fill="#e6e6e6" id="Ellipse_444" data-name="Ellipse 520" class="cls-1" cx="438.04" cy="53" r="10"/>
+                                    <circle fill="#e6e6e6" id="Ellipse_548" data-name="Ellipse 548" class="cls-1" cx="297.04" cy="53" r="10"/>
+
+
+                                    <circle @click="min" id="c-min" :class="{active:minActive}" data-name="Ellipse 545" class="cls-1" cx="90.06" cy="53.03" r="42"/>
+                                    <text x="90.06" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">MIN</text>
+
+                                    <circle @click="max" id="c-max" :class="{active:maxActive}" data-name="Ellipse 545" class="cls-1" cx="228.05" cy="53.03" r="42"/>
+                                    <text x="228.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">MAX</text>
+
+                                    <circle @click="avg" id="c-avrg" :class="{active:avrgActive}" data-name="Ellipse 547" class="cls-1" cx="366.05" cy="53.03" r="42"/>
+                                    <text x="366.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">AVRG</text>
+
+                                    <circle @click="all" id="c-all" :class="{active:allActive}" data-name="Ellipse 517" class="cls-1" cx="504.04" cy="53.03" r="42"/>
+                                    <text x="504.04" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">ALL</text>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+
+
+
+
+                    <!-- <div class="dot">
                         <a href="#" @click="min">MIN</a>
                     </div>
                     <div class="dot">
@@ -14,7 +50,7 @@
                     </div>
                     <div class="dot">
                         <a href="#" @click="all">ALL</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <PackedBubbles></PackedBubbles>
@@ -31,6 +67,14 @@ export default {
     PackedBubbles,
     Wrapper
   },
+  data() {
+    return {
+        maxActive:false,
+        minActive:false,
+        avrgActive:false,
+        allActive: true
+    }
+  },
   methods:{
       min:function(){
         var i;
@@ -44,7 +88,11 @@ export default {
                 chart[i].__vue__.chart.series[k].hide();
             }
         }
-          
+        this.maxActive = false;
+        this.avrgActive = false;
+        this.allActive = false;
+        this.minActive = !this.minActive; 
+       
       },
       max:function(){
         var i;
@@ -59,9 +107,17 @@ export default {
                 chart[i].__vue__.chart.series[k].hide();
             }
         }
+        this.minActive = false;
+        this.avrgActive = false;
+        this.allActive = false;
+        this.maxActive = !this.maxActive;
       },
       avg:function(){
-        alert('avg');
+
+        this.maxActive = false;
+        this.minActive = false;
+        this.allActive = false;
+        this.avrgActive = !this.avrgActive;
       },
       all:function(){
         var i;
@@ -73,34 +129,67 @@ export default {
                 chart[i].__vue__.chart.series[k].show();
             }
         }
+        this.maxActive = false;
+        this.avrgActive = false;
+        this.minActive = false;
+        this.allActive = !this.allActive;
       }
   }
 }
+
+var maxButton = document.getElementById('c-max');
+// var minButton = document.getElementById('c-min');
+// var avrgButton = document.getElementById('c-avrg');
+// var allButton = document.getElementById('c-all');
+
+console.log(maxButton);
+
+
 </script>
 
 <style scoped>
-    .dot {
-        margin: 0 1rem;
-        height: 70px;
-        width: 70px;
-        background-color: #E6E6E6;
-        border-radius: 50%;
-        /* display: inline-block; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+
+.cls-1{
+    fill:#e6e6e6;
+    cursor: pointer;
     }
-    .round-dots{
-        display: flex;
-        justify-content: space-between;
-        width: 28%;
-        margin: auto;
-        padding-bottom: 50px;
+.cls-1.active{
+    fill:rgb(0, 255, 255); 
+    filter: drop-shadow(0 0 6px rgb(0 255 255 / 0.8));
+    }
+.cls-2{
+    fill:none;
+    stroke:#e6e6e6;stroke-width:3px;
     }
 
-    .round-dots a{
-        color: #222222;
-        text-decoration: none;
-    }
+text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    pointer-events: none;
+}
+
+.dot {
+    margin: 0 1rem;
+    height: 70px;
+    width: 70px;
+    background-color: #E6E6E6;
+    border-radius: 50%;
+    /* display: inline-block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.round-dots{
+    display: flex;
+    justify-content: space-between;
+    width: 28%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.round-dots a{
+    color: #222222;
+    text-decoration: none;
+}
 </style>
