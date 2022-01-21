@@ -25,13 +25,15 @@
             <PartToWhole></PartToWhole>
         </div>
         <div class="detail">
-            <div class="countries-icon">
-                <img :src='ch'/>
-                <img :src='de'/>
-                <img :src='gb'/>
-                <img :src='us'/>
+            <div class="chart-detail">
+                <div class="countries-icon">
+                    <img :src='ch'/>
+                    <img :src='de'/>
+                    <img :src='gb'/>
+                    <img :src='us'/>
+                </div>
+                <LineChart v-bind:attributes="attributes"></LineChart>
             </div>
-            <LineChart v-bind:attributes="attributes"></LineChart>
             <div class="attributes">
                 <div v-for="(attr, attrName) in attributeList" :key="attrName" :class="attrName" class="test">
                     <div v-for="(item, index) in attr" :key="index">
@@ -380,8 +382,14 @@ export default {
 
     .detail {
         display: none;
-        grid-template-columns: 10% 60% 20%;
+        /*grid-template-columns: 10% 60% 20%;*/
+        grid-template-columns: 70% 20%;
         grid-column-gap: 3.3%;
+    }
+
+    .chart-detail {
+        display: grid;
+        grid-template-columns: 15% 80%;
     }
     
     .general {
