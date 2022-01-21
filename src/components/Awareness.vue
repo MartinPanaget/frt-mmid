@@ -91,7 +91,7 @@ export default {
         this.maxActive = false;
         this.avrgActive = false;
         this.allActive = false;
-        this.minActive = !this.minActive; 
+        this.minActive = true; 
        
       },
       max:function(){
@@ -110,14 +110,14 @@ export default {
         this.minActive = false;
         this.avrgActive = false;
         this.allActive = false;
-        this.maxActive = !this.maxActive;
+        this.maxActive = true;
       },
       avg:function(){
 
         this.maxActive = false;
         this.minActive = false;
         this.allActive = false;
-        this.avrgActive = !this.avrgActive;
+        this.avrgActive = true;
       },
       all:function(){
         var i;
@@ -132,7 +132,7 @@ export default {
         this.maxActive = false;
         this.avrgActive = false;
         this.minActive = false;
-        this.allActive = !this.allActive;
+        this.allActive = true;
       }
   }
 }

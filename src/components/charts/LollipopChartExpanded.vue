@@ -59,7 +59,7 @@ export default{
                         useHTML: true,
                         allowOverlap: true,
                         formatter: function(){
-                            return '<img src="../../assets/images/USA_circle_small.png">';
+                            return '<img src="../../assets/icons/flagge-usa.png" style="width:10px">';
                         }
                     }
                 },

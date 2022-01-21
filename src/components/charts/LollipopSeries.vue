@@ -292,6 +292,7 @@ export default {
         width: 70%;
         margin-left: auto;
         margin-right: auto;
+        padding-top: 100px;
     }
 </style>
 

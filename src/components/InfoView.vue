@@ -1,5 +1,6 @@
 <template>
    <Wrapper id="section2">
+     <h2>Scientific Model of acceptance of FRTs</h2>
    </Wrapper>
     
 </template>

@@ -1,7 +1,6 @@
 <template>
     <div class="LollipopChart">
         <highcharts class="lollipop-chart" :options="chartOptions"></highcharts>
-        <!-- <img src="../../assets/images/USA_circle_small.png" style="width:10px"> -->
     </div>
 </template>
 
@@ -58,7 +57,7 @@ export default{
                         useHTML: true,
                         allowOverlap: true,
                         formatter: function(){
-                            return '<img src="../../assets/images/USA_circle_small.png" style="width:10px">';
+                            return '<img src="../../assets/icons/flagge-usa.png" style="width:10px">';
                         }
                     }
                 },

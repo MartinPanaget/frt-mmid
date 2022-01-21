@@ -70,11 +70,20 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* background section */
+
+.section{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 #section1{
   background-image: url("./assets/backgrounds/hg-infodesign-v1.png");
+  background-position: bottom;
+
 }
 #section2{
   background-image: url("./assets/backgrounds/hg-infodesign-v2.png");
+  background-position: bottom;
+
 }
 #section3{
   background-image: url("./assets/backgrounds/hg-infodesign-v3.png");
@@ -88,11 +97,7 @@ export default {
 #section6{
   background-image: url("./assets/backgrounds/hg-infodesign-v6.png");
 }
-.section{
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-}
+
 
 /* body */
 body {
@@ -124,10 +129,11 @@ h1{
 
 h2 {
       /* font-family: 'Avenir Next Codensed'; */
-      font-size: 25px;
+      font-size: 36px;
       font-weight: normal;
-      padding: 3rem 0 3rem 3rem;
+      padding: 1rem 0 1rem 3rem;
       text-transform:uppercase;
+      text-shadow: 0 0 50px #00FFFF;
   }
 
 .big{

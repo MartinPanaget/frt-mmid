@@ -2,13 +2,41 @@
     <Wrapper id="section5">
         <h2>Acceptance towards FRT</h2>
         <div class="round-dots">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 323.04 105.03">
+                <!-- <defs>
+                    <style>.cls-1{fill:#e6e6e6;}.cls-2{fill:none;stroke:#e6e6e6;stroke-width:3px;}</style>
+                </defs> -->
+                <g id="Ebene_2" data-name="Ebene 2">
+                    <g id="Ebene_1-2" data-name="Ebene 1">
+                        <polyline class="cls-2" points="308.22 15.31 240.22 52.31 88.22 52.31 13.22 74.31"/>
+                        <g id="Gruppe_514" data-name="Gruppe 514">
+                            <circle id="Ellipse_546" data-name="Ellipse 546" class="cls-1" cx="160.04" cy="53" r="10"/>
+                            <circle id="Ellipse_519" data-name="Ellipse 519" class="cls-1" cx="14.5" cy="75.11" r="14.5"/>
+                            <circle id="Ellipse_518" data-name="Ellipse 518" class="cls-1" cx="308.54" cy="14.5" r="14.5"/>
+
+                            <circle id="c-detail" v-on:click="change('toOverview')" :class="{active:detailActive}" data-name="Ellipse 545" class="cls-1" cx="228.05" cy="53.03" r="42"/>
+                            <text x="228.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">DETAIL</text>
+                            <circle id="c-overview" v-on:click="change('toDetail')" :class="{active:overviewActive}" data-name="Ellipse 545" class="cls-1" cx="90.06" cy="53.03" r="42"/>
+                            <text x="90.06" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">
+                                <tspan x="90.06" dy="0">OVER-</tspan>
+                                <tspan x="90.06" dy="20">VIEW</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+
+
+
+<!-- 
                 <div class="dot">
                     <a href='#page4' id='overview' v-on:click='change'>OVER_ <br> VIEW</a>
                 </div>
                 <div class="dot">
                     <a href='#page5' id='detail' v-on:click='change'>DETAIL</a>
-                </div>
-            </div>
+                </div> -->
+        </div>
         <div class="overview">
             <div class="general">
                 <h3>67%</h3>
@@ -63,10 +91,10 @@ import unitedKingdom from '../assets/countries/uk.png';
 import unitedStatesOfAmerica from '../assets/countries/usa.png';
 
 // country round icon
-import ch from '../assets/images/CH_circle_small.png';
-import de from '../assets/images/DE_circle_small.png';
-import gb from '../assets/images/GB_circle_small.png';
-import us from '../assets/images/USA_circle_small.png';
+import ch from '../assets/icons/flagge-china.png';
+import de from '../assets/icons/flagge-de.png';
+import gb from '../assets/icons/flagge-uk.png';
+import us from '../assets/icons/flagge-usa.png';
 
 // attribute icons
 import incomeLow from '../assets/attributes/icon_einkommen-low.svg';
@@ -237,6 +265,9 @@ export default {
   },
   data() {
     return {
+        // toggle
+        overviewActive:true,
+        detailActive:false,
         attributeList,
         // attriute icons: 
         incomeLow: incomeLow,
@@ -319,21 +350,20 @@ export default {
         }
         return modifiedSrc
     },
-    change: function (event) {
+    change: function (page) {
       let overview = document.getElementsByClassName('overview')[0].style;
       let detail = document.getElementsByClassName('detail')[0].style;
-      let buttonOverview = document.getElementById('overview').parentElement.style;
-      let buttonDetail = document.getElementById('detail').parentElement.style;
-      if (event.target.innerHTML.includes('OVER')) {
-        event.target.parentElement.style.backgroundColor = '#00FFFF';
-        buttonDetail.backgroundColor = '#E6E6E6';
+
+      if(page == 'toDetail'){
         overview.display = 'block';
         detail.display = 'none';
-      } else {
-        event.target.parentElement.style.backgroundColor = '#00FFFF';
-        buttonOverview.backgroundColor = '#E6E6E6';
+        this.overviewActive = true;
+        this.detailActive = false;
+      }else{
         overview.display = 'none';
         detail.display = 'grid';
+        this.detailActive = true;
+        this.overviewActive = false;
       }
     }
   }
@@ -341,6 +371,25 @@ export default {
 </script>
 
 <style scoped>
+
+    .cls-1{
+        fill:#e6e6e6;
+        cursor: pointer;
+        }
+    .cls-1.active{
+        fill:rgb(0, 255, 255); 
+        filter: drop-shadow(0 0 6px rgb(0 255 255 / 0.8));
+        }
+    .cls-2{
+        fill:none;
+        stroke:#e6e6e6;stroke-width:3px;
+        }
+
+    text{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        pointer-events: none;
+    }
 
     h3 {
         font-size: 30px;
@@ -364,7 +413,7 @@ export default {
     .round-dots{
         display: flex;
         justify-content: space-between;
-        width: 28%;
+        width: 18%;
         margin: auto;
         padding-bottom: 50px;
     }
