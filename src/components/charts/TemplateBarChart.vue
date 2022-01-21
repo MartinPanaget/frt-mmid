@@ -15,7 +15,7 @@ export default {
                     type: 'bar',
                     width: 200,
                     height: '300',
-                    backgroundColor: '#5F5E5E'
+                    backgroundColor: '#3C3C3C'
                 },
                 title: {
                     text: undefined
