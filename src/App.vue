@@ -1,15 +1,19 @@
 <template>
-  <full-page :options="options" id="fullpage">
-    <Header></Header>
-    <InfoView></InfoView>
-    <Perception></Perception>
-    <Awareness></Awareness>
-    <SocialAcceptance></SocialAcceptance>
-    <Footer></Footer>
-  </full-page>
+  <div>
+    <Navbar></Navbar>
+    <full-page :options="options" id="fullpage">
+      <Header></Header>
+      <InfoView></InfoView>
+      <Perception></Perception>
+      <Awareness></Awareness>
+      <SocialAcceptance></SocialAcceptance>
+      <Footer></Footer>
+    </full-page>
+  </div>
 </template>
 
 <script>
+import Navbar from './components/navbar.vue'
 import Header from './components/Header.vue'
 import InfoView from './components/InfoView.vue'
 import Footer from './components/Footer.vue'
@@ -24,6 +28,7 @@ import 'fullpage.js/dist/fullpage.css'
 export default {
   name: 'App',
   components: {
+    Navbar,
     Header,
     InfoView,
     Perception,
@@ -35,26 +40,13 @@ export default {
     return {
       options: {
         licenseKey: "YOUR_KEY_HERE",
-        navigation: true,
+        navigation: false,
         navigationPosition: "left",
         setAllowScrolling: true,
-        navigationTooltips: [
-          "Startseite",
-          "Seite 1",
-          "Seite 2",
-          "Seite 3",
-          "Seite 4",
-          "Impressum",
-        ],
+        navigationTooltips: ['Start', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'Impressum'],
         showActiveTooltip: true,
-        anchors: [
-          "Home",
-          "page1",
-          "page2",
-          "page3",
-          "page4",
-          "Footer"
-        ],
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
+        menu: '#navbar',
         scrollHorizontally: true,
         onLeave: this.leaveSection,
         onSlideLeave: this.leaveSlide
