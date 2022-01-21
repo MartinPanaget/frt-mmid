@@ -1,7 +1,9 @@
 <template>
    <Wrapper id="section1">
           <h1>FACIAL<br> RECOGNITION</h1>
-          <p>Projektbeschreibung mit <a href="#">Link</a> zur Originalquelle</p>
+          <p class="sub-title">Subjective acceptance and perception of <br> Facial Recognition technologies (FRT) <br> by Citizens of China, UK, US and Germany</p>
+          <p class="project-info">A student project  based on the paper <br>“Between security and convenience” (Gostka et al. 2021)</p>
+
    </Wrapper>
     
 </template>

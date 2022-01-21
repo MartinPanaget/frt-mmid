@@ -77,7 +77,7 @@ export default {
 }
 #section1{
   background-image: url("./assets/backgrounds/hg-infodesign-v1.png");
-  background-position: bottom;
+  background-position: center;
 
 }
 #section2{
@@ -121,10 +121,24 @@ body {
 }
 
 h1{
-  padding-top: 180px;
+  padding-top: 140px;
   font-size: 85px;
   color: #00FFFF;
   text-shadow: rgba(0,255,255,0.9) 0px 0px 9px;
+  margin-bottom: 0px;
+}
+
+.sub-title{
+  font-size: 26px;
+  text-transform:uppercase;
+  margin-top: 5px;
+  text-shadow: rgba(0,0,0,0.2) 0px 5px 5px;
+}
+
+.project-info{
+  font-size: 20px;
+  text-transform:uppercase;
+  margin-top: 80px;
 }
 
 h2 {
