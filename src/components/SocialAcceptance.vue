@@ -2,36 +2,13 @@
     <Wrapper id="section5">
         <h2>Acceptance towards FRT</h2>
         <div class="round-dots">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 323.04 95.03">
-            <g id="Ebene_2" data-name="Ebene 2">
-                <g id="Ebene_1-2" data-name="Ebene 1">
-                    <polyline class="cls-2" points="308.22 15.31 240.22 52.31 88.22 52.31 13.22 74.31"/>
-                    <g id="Gruppe_514" data-name="Gruppe 514">
-                        <circle fill="#e6e6e6" id="Ellipse_545" data-name="Ellipse 545" class="cls-1" cx="228.05" cy="53.03" r="42"/>
-                        <circle fill="#e6e6e6" id="Ellipse_546" data-name="Ellipse 546" class="cls-1" cx="160.04" cy="53" r="10"/>
-                        <circle fill="#e6e6e6" id="Ellipse_519" data-name="Ellipse 519" class="cls-1" cx="14.5" cy="75.11" r="14.5"/>
-                        <circle fill="#e6e6e6" id="Ellipse_518" data-name="Ellipse 518" class="cls-1" cx="308.54" cy="14.5" r="14.5"/>
-                        <circle fill="#e6e6e6" id="Ellipse_545-2" data-name="Ellipse 545" class="cls-1" cx="90.06" cy="53.03" r="42"/>
-
-                        <circle v-on:click='change' id="overview" :class="{active:overActive}" data-name="Ellipse 545" class="cls-1" cx="90.06" cy="53.03" r="42"/>
-                        <text style="whitespace: pre-line" x="90.06" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">
-                            <tspan x="90.06" y="53.03">OVER_</tspan>
-                            <tspan x="90.06" y="73.03">VIEW</tspan>
-                        </text>
-
-                        <circle v-on:click='change' id="detail" :class="{active:detailActive}" data-name="Ellipse 545" class="cls-1" cx="228.05" cy="53.03" r="42"/>
-                        <text x="228.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">DETAIL</text>
-                    </g>
-                </g>
-            </g>
-            </svg>
-                <!--<div class="dot">
+                <div class="dot">
                     <a href='#page4' id='overview' v-on:click='change'>OVER_ <br> VIEW</a>
                 </div>
                 <div class="dot">
                     <a href='#page5' id='detail' v-on:click='change'>DETAIL</a>
-                </div>-->
-        </div>
+                </div>
+            </div>
         <div class="overview">
             <div class="general">
                 <h3>67%</h3>
@@ -260,8 +237,6 @@ export default {
   },
   data() {
     return {
-        overActive: true,
-        detailActive: false,
         attributeList,
         // attriute icons: 
         incomeLow: incomeLow,
@@ -347,20 +322,16 @@ export default {
     change: function (event) {
       let overview = document.getElementsByClassName('overview')[0].style;
       let detail = document.getElementsByClassName('detail')[0].style;
-      /*let buttonOverview = document.getElementById('overview').parentElement.style;
-      let buttonDetail = document.getElementById('detail').parentElement.style;*/
-      if (event.target.getAttribute('id') === 'overview') {
-        /*event.target.parentElement.style.backgroundColor = '#00FFFF';
-        buttonDetail.backgroundColor = '#E6E6E6';*/
-        this.overActive = true;
-        this.detailActive = false;
+      let buttonOverview = document.getElementById('overview').parentElement.style;
+      let buttonDetail = document.getElementById('detail').parentElement.style;
+      if (event.target.innerHTML.includes('OVER')) {
+        event.target.parentElement.style.backgroundColor = '#00FFFF';
+        buttonDetail.backgroundColor = '#E6E6E6';
         overview.display = 'block';
         detail.display = 'none';
       } else {
-        /*event.target.parentElement.style.backgroundColor = '#00FFFF';
-        buttonOverview.backgroundColor = '#E6E6E6';*/
-        this.overActive = false;
-        this.detailActive = true;
+        event.target.parentElement.style.backgroundColor = '#00FFFF';
+        buttonOverview.backgroundColor = '#E6E6E6';
         overview.display = 'none';
         detail.display = 'grid';
       }
@@ -370,19 +341,6 @@ export default {
 </script>
 
 <style scoped>
-
-    .cls-1{
-        fill:#e6e6e6;
-        cursor: pointer;
-        }
-    .cls-1.active{
-        fill:rgb(0, 255, 255); 
-        filter: drop-shadow(0 0 6px rgb(0 255 255 / 0.8));
-        }
-    .cls-2{
-        fill:none;
-        stroke:#e6e6e6;stroke-width:3px;
-    }
 
     h3 {
         font-size: 30px;

@@ -45,7 +45,7 @@ export default {
                     type: 'bar',
                     width: 300,
                     height: '300',
-                    backgroundColor: '#3C3C3C'
+                    backgroundColor: '#5F5E5E'
                 },
                 title: {
                     text: undefined

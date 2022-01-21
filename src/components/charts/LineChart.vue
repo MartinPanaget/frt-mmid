@@ -19,7 +19,7 @@ export default{
                     type: 'line',
                     inverted: true,
                     plotBackgroundColor: '#999999',
-                    backgroundColor: '#3C3C3C',
+                    backgroundColor: '#5F5E5E',
                     width: 900,
                     height: '700'
                 },
@@ -37,7 +37,7 @@ export default{
                         enabled: false
                     },
                     lineWidth: 0,
-                    gridLineColor: '#3C3C3C',
+                    gridLineColor: '#5F5E5E',
                     gridLineWidth: 2,
                     tickColor: undefined,
                     endOnTick: false,
@@ -62,7 +62,7 @@ export default{
                         format: '{value}.0'
                     },
                     lineWidth: 0,
-                    gridLineColor: '#3C3C3C',
+                    gridLineColor: '#5F5E5E',
                     gridLineWidth: 2,
                     endOnTick: false,
                 },
