@@ -15,7 +15,29 @@ export default {
                     type: 'bar',
                     width: 200,
                     height: '300',
-                    backgroundColor: '#3C3C3C'
+                    backgroundColor: '#3C3C3C',
+                    events: {
+                        load: function() {
+                            const chart = this,
+                            points = chart.series[0].data,
+                            options = {
+                                dataLabels: {
+                                inside: false,
+                                style: {
+                                    color: '#E6E6E6'
+                                }
+                                }
+                            };
+
+                            points.forEach(function(point) {
+                            if (point.shapeArgs.height < 50) {
+                                point.update(options, false);
+                            }
+                            });
+
+                            chart.redraw();
+                        }
+                    }
                 },
                 title: {
                     text: undefined
@@ -46,7 +68,11 @@ export default {
                             groupPadding: 0
                         },
                         dataLabels: {
-                            enabled: true
+                            enabled: true,
+                            inside: true,
+                            style: {
+                                color: '#222222'
+                            }
                         },
                         borderColor: 'transparent', 
                         colorByPoint: true,
