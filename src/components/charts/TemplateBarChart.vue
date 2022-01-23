@@ -60,20 +60,38 @@ export default {
                     gridLineColor: 'transparent',
                 },
                 tooltip: {
-                    valueSuffix: '%'
+                    valueSuffix: '%',
+                    shared: true,
+                    useHTML: true,
+                    formatter: function() {
+                        let categories = ['Strongly agree', 'Somewhat agree', 'Neither agree nor oppose', 'Somewhat oppose', 'Strongly oppose'];
+                        let points = this.points;
+                        let result = '<span style="font-size:10px">' + categories[points[0].key] + '</span><table>';
+
+                        points.forEach(p => {
+                            result += '<tr><td style="padding:0">' + p.series.name + ': </td>' +
+                            '<td style="padding:0"><b>' + p.y + '%</b></td></tr>';
+                        });
+
+                        result += '</table>';
+
+                        return result;
+                    }
                 },
                 plotOptions: {
                     bar: {
                         series: {
-                            groupPadding: 0
+                            groupPadding: 0,
                         },
                         dataLabels: {
                             enabled: true,
                             inside: true,
                             style: {
+                                'border-style' : 0,
                                 color: '#222222'
                             }
                         },
+                        borderWidth: 0,
                         borderColor: 'transparent', 
                         colorByPoint: true,
                         colors: this.color
