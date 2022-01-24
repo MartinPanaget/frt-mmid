@@ -8,7 +8,7 @@
 // color: Farbe des Balken-Abschnitts der dazugehörigen Datagroup (in unserem Fall die Farbe des Landes in verschiedenen Sättigungen)
 // data: der tatsächliche Wert in eckigen Klammern
 // visible: ist das Balkendiagramm per default sichtbar
-    // wenn ja --> visible:true, sond visible: false
+    // wenn ja --> visible:true, sonst visible: false
 
 // WICHTIG
 // Es gibt die Gruppen: Convenience, Efficiency, Security, PrivacyViolation, Discrimination und Surveillance.
