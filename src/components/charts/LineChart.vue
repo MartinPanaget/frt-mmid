@@ -143,7 +143,4 @@ export default{
 </script>
 
 <style scoped>
-    .LollipopChart {
-        padding-bottom: 0.25rem;
-    }
 </style>

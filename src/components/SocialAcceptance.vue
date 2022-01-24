@@ -199,19 +199,19 @@ var attributeList = [
             name:'ageYoung',
             imgActive:ageYoungActive,
             img:ageYoung,
-            attribute:{name: 'Lower age', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+            attribute:{name: 'Lower age', color: '#BBFEFE', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
         },
         {
             name: 'ageMiddle',
             imgActive:ageMiddleActive,
             img:ageMiddle,
-            attribute:{name: 'Medium age', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+            attribute:{name: 'Medium age', color: '#BBFEFE', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
         },
         {
             name: 'ageOld',
             imgActive:ageOldActive,
             img:ageOld,
-            attribute:{name: 'Higher age', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+            attribute:{name: 'Higher age', color: '#BBFEFE', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
         }
     ]},
     {gender:[
@@ -219,13 +219,13 @@ var attributeList = [
             name:'genderMale',
             imgActive:genderMaleActive,
             img:genderMale,
-            attribute:{name: 'Male', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+            attribute:{name: 'Male', color: '#23EFEF', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
         },
         {
             name: 'genderFemale',
             imgActive:genderFemaleActive,
             img:genderFemale,
-            attribute:{name: 'Female', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+            attribute:{name: 'Female', color: '#23EFEF', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
         }
     ]},
     {race:[
@@ -233,13 +233,13 @@ var attributeList = [
             name:'raceMinority',
             imgActive:raceMinorityActive,
             img:raceMinority,
-            attribute:{name: 'Minority', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+            attribute:{name: 'Minority', color: '#0CBAF7', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
         },
         {
             name: 'raceMajority',
             imgActive:raceMajorityActive,
             img:raceMajority,
-            attribute:{name: 'Majority', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+            attribute:{name: 'Majority', color: '#0CBAF7', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
         }
     ]},
     {life:[
@@ -247,13 +247,13 @@ var attributeList = [
             name:'lifeRural',
             imgActive:lifeRuralActive,
             img:lifeRural,
-            attribute:{name: 'Rural', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+            attribute:{name: 'Rural', color: '#222222', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
         },
         {
             name: 'lifeCity',
             imgActive:lifeCityActive,
             img:lifeCity,
-            attribute:{name: 'City', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
+            attribute:{name: 'City', color: '#222222', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
         }
     ]},
     ]
@@ -347,7 +347,13 @@ export default {
     },
     deleteAttributes : function () {
         this.attributes.splice(0, this.attributes.length);
-        
+        this.attributeList.forEach((attribute) => {
+            attribute[Object.keys(attribute)[0]].forEach((specificAttribute) => {
+                if(specificAttribute.selected) {
+                    specificAttribute.selected = false;
+                }
+            })
+        });
     },
     changeImageSrc : function (src, add) {
         let modifiedSrc = '';
