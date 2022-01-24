@@ -1,12 +1,14 @@
 // V3: PERCENTAGE STACKED BAR CHART
 
 // ANMERKUNG
-// 'showInLegend' und nicht beachten/so lassen
+// 'showInLegend' nicht beachten/so lassen
 
 // ERKLÄRUNG (Attribute zum Anpassen)
 // name : erscheint beim Tooltip
 // color: Farbe des Balken-Abschnitts der dazugehörigen Datagroup (in unserem Fall die Farbe des Landes in verschiedenen Sättigungen)
 // data: der tatsächliche Wert in eckigen Klammern
+// visible: ist das Balkendiagramm per default sichtbar
+    // wenn ja --> visible:true, sond visible: false
 
 // WICHTIG
 // Es gibt die Gruppen: Convenience, Efficiency, Security, PrivacyViolation, Discrimination und Surveillance.
