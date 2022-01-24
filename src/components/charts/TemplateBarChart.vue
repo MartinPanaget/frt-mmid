@@ -1,5 +1,5 @@
 <template>
-    <highcharts :options="chartOptions"></highcharts>
+    <highcharts :options="chartOptions" ref="highcharts"></highcharts>
 </template>
 
 <script>
@@ -18,28 +18,6 @@ export default {
                     width: 200,
                     height: '300',
                     backgroundColor: '#3C3C3C',
-                    events: {
-                        load: function() {
-                            const chart = this,
-                            points = chart.series[0].data,
-                            options = {
-                                dataLabels: {
-                                inside: false,
-                                style: {
-                                    color: '#E6E6E6'
-                                }
-                                }
-                            };
-
-                            points.forEach(function(point) {
-                            if (point.shapeArgs.height < 50) {
-                                point.update(options, false);
-                            }
-                            });
-
-                            chart.redraw();
-                        }
-                    }
                 },
                 title: {
                     text: undefined
@@ -109,7 +87,7 @@ export default {
     created() {
         EventBus.$on('sectionChange', value => {
             if(value.destination === 'fifthPage') {
-                this.chartOptions.series = this.series
+                this.chartOptions.series = this.series;
             }else if(value.origin === 'fifthPage') {
                 const x = this
                 setTimeout(function(){ 
