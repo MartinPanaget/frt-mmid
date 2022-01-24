@@ -9,6 +9,7 @@
 
 <script>
 import TemplateBarChart from './TemplateBarChart.vue';
+import { EventBus } from '../../others/eventBus';
 
 export default {
     name: 'PartToWhole',
@@ -128,6 +129,22 @@ export default {
                 }]
             },
         }
+    },
+    created() {
+        EventBus.$on('sectionChange', value => {
+            if(value.destination === 'fifthPage') {
+                this.chartOptions.series = [{
+                    showInLegend: false,
+                    name: 'China',
+                    data: [18, 49, 25, 7, 1]
+                }]
+            }else if(value.origin === 'fifthPage') {
+                const x = this
+                setTimeout(function(){ 
+                    x.chartOptions.series = []
+                }, 700);
+            }
+        })
     }
 }
 </script>

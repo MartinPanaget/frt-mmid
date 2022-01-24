@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import { EventBus } from '../../others/eventBus';
+
 export default {
     props: {
         series: Array,
@@ -103,6 +105,18 @@ export default {
                 series: this.series
             },
         }
+    },
+    created() {
+        EventBus.$on('sectionChange', value => {
+            if(value.destination === 'fifthPage') {
+                this.chartOptions.series = this.series
+            }else if(value.origin === 'fifthPage') {
+                const x = this
+                setTimeout(function(){ 
+                    x.chartOptions.series = []
+                }, 700);
+            }
+        })
     }
 }
 </script>

@@ -21,6 +21,7 @@ import Perception from './components/Perception.vue'
 import Awareness from './components/Awareness.vue'
 import SocialAcceptance from './components/SocialAcceptance.vue'
 import 'fullpage.js/dist/fullpage.css'
+import { EventBus } from './others/eventBus'
 
 // import bg from '/assez'
 
@@ -54,7 +55,23 @@ export default {
     };
   },
   methods: {
+    leaveSection(origin, destination) {
+			const event = {
+				origin: origin.anchor, 
+				destination: destination.anchor
+			}
+			EventBus.$emit('sectionChange', event)
     },
+    leaveSlide(section, origin, destination, direction) {
+      const event = {
+        section: section.anchor,
+        origin: origin.index,
+        destination: destination.index
+      }
+			EventBus.$emit('slideChange', event)
+			/*eslint no-unused-vars: 0*/
+    }
+  },
 }
 </script>
 
