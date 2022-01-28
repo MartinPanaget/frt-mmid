@@ -68,8 +68,10 @@ export default {
                             inside: true,
                             style: {
                                 'border-style' : 0,
-                                color: '#222222'
-                            }
+                                color: '#222222',
+                                textOutline: "0px",
+                            },
+                            format: '{y}%'
                         },
                         borderWidth: 0,
                         borderColor: 'transparent', 

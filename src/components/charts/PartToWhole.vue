@@ -1,9 +1,9 @@
 <template>
     <div class="chart">
         <highcharts class="china" :options="chartOptions"></highcharts>
-        <TemplateBarChart v-bind:series="series.DE" v-bind:color="DeColor"></TemplateBarChart>
         <TemplateBarChart v-bind:series="series.UK" v-bind:color="UkColor"></TemplateBarChart>
         <TemplateBarChart v-bind:series="series.US" v-bind:color="UsColor"></TemplateBarChart>
+        <TemplateBarChart v-bind:series="series.DE" v-bind:color="DeColor"></TemplateBarChart>
     </div>
 </template>
 
@@ -22,12 +22,6 @@ export default {
             UkColor: ['#70E6AB'],
             UsColor: ['#0CBAF7'],
             series: {
-                DE : [{
-                    borderColor: '#5F5E5E',
-                    showInLegend: false,
-                    name: 'DE',
-                    data: [{dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 8}, {y:30}, {y:31}, {y:18}, {y:14}]
-                }],
                 UK : [{
                     borderColor: '#5F5E5E',
                     showInLegend: false,
@@ -39,6 +33,12 @@ export default {
                     showInLegend: false,
                     name: 'US',
                     data: [16, 31, 28, 17, {dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 8}]
+                }],
+                DE : [{
+                    borderColor: '#5F5E5E',
+                    showInLegend: false,
+                    name: 'DE',
+                    data: [{dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 8}, {y:30}, {y:31}, {y:18}, {y:14}]
                 }],
             },
             chartOptions: {
@@ -89,8 +89,10 @@ export default {
                             inside: true,
                             style: {
                                 'border-style' : 0,
-                                color: '#222222'
-                            }
+                                color: '#222222',
+                                textOutline: "0px",
+                            },
+                            format: '{y}%'
                         },
                         borderColor: 'transparent', 
                         colorByPoint: true,

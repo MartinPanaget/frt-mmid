@@ -39,16 +39,16 @@
         </div>
         <div class="overview">
             <div class="general">
-                <h3 @mouseover='changeColor(0, $event)' @mouseleave='changeColorBack(0, $event)'>67%</h3>
-                <h3 @mouseover='changeColor(1, $event)' @mouseleave='changeColorBack(1, $event)'>38%</h3>
-                <h3 @mouseover='changeColor(2, $event)' @mouseleave='changeColorBack(2, $event)'>50%</h3>
-                <h3 @mouseover='changeColor(3, $event)' @mouseleave='changeColorBack(3, $event)'>47%</h3>
+                <h3 @mouseover='changeColor(0, $event)' @mouseleave='changeColorBack(0, $event)'>CH 67%</h3>
+                <h3 @mouseover='changeColor(1, $event)' @mouseleave='changeColorBack(1, $event)'>UK 50%</h3>
+                <h3 @mouseover='changeColor(2, $event)' @mouseleave='changeColorBack(2, $event)'>US 47%</h3>
+                <h3 @mouseover='changeColor(3, $event)' @mouseleave='changeColorBack(3, $event)'>DE 38%</h3>
             </div>
             <div class="countries">
                 <img :src='china'/>
-                <img :src='germany'/>
                 <img :src='unitedKingdom'/>
                 <img :src='unitedStatesOfAmerica'/>
+                <img :src='germany'/>
             </div>
             <PartToWhole id="ptw-chart"></PartToWhole>
         </div>
@@ -324,17 +324,21 @@ export default {
     }
   },
   methods: {
-    changeColor : function (number, event) {
-        //insert four colors
-        event.target.style.color = '#000095';
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[0].setAttribute('fill', '#000095');
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[1].setAttribute('fill', '#000095');
+    changeColor : function (number) {
+        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[2].setAttribute('opacity', '0.3');
+        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[3].setAttribute('opacity', '0.3');
+        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[4].setAttribute('opacity', '0.3');
+        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-data-labels')[0].children[2].children[0].setAttribute('opacity', '0.3');
+        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-data-labels')[0].children[3].children[0].setAttribute('opacity', '0.3');
+        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-data-labels')[0].children[4].children[0].setAttribute('opacity', '0.3');
     },
-    changeColorBack : function (number, event) {
-        const color = ['#C7F700', '#23EFEF', '#70E6AB', '#0CBAF7'];
-        event.target.style.color = '#F6F6F6';
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[0].setAttribute('fill', color[number]);
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[1].setAttribute('fill', color[number]);
+    changeColorBack : function (number) {
+        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[2].setAttribute('opacity', '1');
+        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[3].setAttribute('opacity', '1');
+        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[4].setAttribute('opacity', '1');
+        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-data-labels')[0].children[2].children[0].setAttribute('opacity', '1');
+        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-data-labels')[0].children[3].children[0].setAttribute('opacity', '1');
+        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-data-labels')[0].children[4].children[0].setAttribute('opacity', '1');
     },
     addOrRemove : function (attribute) {
         let hasAttribute = this.attributes.some( attr => attr.name === attribute.name )
