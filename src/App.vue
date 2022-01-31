@@ -152,7 +152,7 @@ h1{
 
 h2 {
       /* font-family: 'Avenir Next Codensed'; */
-      font-size: 36px;
+      font-size: 40px;
       font-weight: normal;
       padding: 1rem 0 1rem 3rem;
       text-transform:uppercase;

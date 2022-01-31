@@ -1,6 +1,6 @@
 <template>
     <Wrapper id="section3">
-            <h2>Perceived Benefits<br/>and Risks of FRTS</h2>
+            <h2>Perceived Benefits and Risks of Facial Recognition Technologies</h2>
             <!-- <button @click="test">DE ein</button>
             <button @click="testen">DE aus</button> -->
             <div class="country-wrapper">
@@ -46,11 +46,14 @@ export default {
         if (!this.isActiveCH) {
             this.isActiveCH = true;
             for(i=0; i<6; i++){
+                // console.log(chart[i].__vue__.chart.series[0].dataMax);
                 chart[i].__vue__.chart.series[0].show();
+                // chart[i].__vue__.chart.series[0].setData([20]);
             }
         } else {
             this.isActiveCH = false;
             for(i=0; i<6; i++){
+                // chart[i].__vue__.chart.series[0].setData([0]);
                 chart[i].__vue__.chart.series[0].hide();
             }
         }
@@ -125,14 +128,17 @@ export default {
 
 <style scoped>
     .country-wrapper{
-        width:50%; 
         position: absolute;
-        top: 147px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 240px;
-        right: 0;
-        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        left: 0; 
+        right: 0; 
+        top: 150px;
+        margin-left: auto; 
+        margin-right: auto; 
+        z-index: 20;
+        /* padding-top: 100px; */
     }
 
     a img{

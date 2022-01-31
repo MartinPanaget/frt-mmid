@@ -21,16 +21,17 @@ export default{
                     type: 'lollipop',
                     inverted: false,
                     width: 350,
-                    height: 300,
+                    height: 340,
                     opacity: '50%',
                     style:{
-                        fontFamily: 'Montserrat, sans-serif'
+                        fontFamily: 'futura-pt-condensed, sans-serif'
                     }
                 },
                 title: {
                     style:{
-                        color:'white',
-                        fontSize:'18px'
+                        color:'#00FFFF',
+                        fontSize:'28px',
+                        fontWeight: 'bolder'
                     },
                     text: this.title,
                     verticalAlign: this.titleAlign,
