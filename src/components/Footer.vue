@@ -15,8 +15,8 @@
             </div>
             <div class="highlight-blue">
               <span class="highlight-span">
-              <p class="sub-title">ABOUT THE STUDY:</p> 
-              BETWEEN SECURITY AND CONVENIENCE <br> 
+              <p class="sub-title">ABOUT THE STUDY:</p>
+              <a href="https://doi.org/10.1177/09636625211001555" target="_blank" rel="external">BETWEEN SECURITY AND CONVENIENCE</a> <br> 
               PUBLIC UNDERSTANDING OF SCIENCE <br>
               2021, VOL. 30(6) 671-690
               </span>
@@ -38,6 +38,10 @@ export default {
 <style scoped>
   .highlight-green p{
     text-align: center;
+  }
+  
+  a {
+    color: inherit;
   }
 
   /*.highlight-green {
