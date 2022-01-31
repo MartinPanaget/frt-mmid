@@ -1,4 +1,5 @@
 <template>
+    <div>
         <div class="LollipopSeries">
             <div class="lollipop-pair">
                 <LollipopChartExpanded v-bind:series="series.Data1" title="Convenience" backgroundColor="rgba(246,246,246,0.5)"></LollipopChartExpanded>
@@ -13,6 +14,9 @@
                 <LollipopChart v-bind:series="series.Data6" title="Surveillance" titleAlign="bottom" backgroundColor="rgba(203,203,203,0.3)"></LollipopChart>
             </div>
         </div>
+        <div class="glow-div">
+        </div>
+    </div>
 </template>
 
 <script>
@@ -42,7 +46,7 @@ export default {
                     visible: false,
                     name:'GB',
                     color: '#70E6AB',
-                    data:[20],
+                    data:[0],
                     marker: {
                         symbol: 'circle',
                         radius: 10
@@ -287,12 +291,31 @@ export default {
 
 <style scoped>
     .LollipopSeries {
+        position: absolute;
         display: flex;
         justify-content: space-between;
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 50%;
+        left: 0; 
+        right: 0; 
+        top: 199px;
+        margin-left: auto; 
+        margin-right: auto; 
         padding-top: 100px;
+    }
+    .glow-div {
+         pointer-events: none;
+        background-image: url('../../assets/v3-glow-ecken.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        top: 268px;
+        /* bottom: 113px; */
+        /* left: 354px; */
+        height: 850px;
+        width: 1465px;
     }
 </style>
 

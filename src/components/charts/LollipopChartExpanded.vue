@@ -20,17 +20,18 @@ export default{
                     backgroundColor: '#3C3C3C',
                     type: 'lollipop',
                     inverted: false,
-                    width: 350,
-                    height: 300,
+                    width: 430,
+                    height: 340,
                     opacity: '50%',
                     style:{
-                        fontFamily: 'Montserrat, sans-serif'
+                        fontFamily: 'futura-pt-condensed, sans-serif'
                     }
                 },
                 title: {
                     style:{
-                        color:'white',
-                        fontSize:'18px'
+                       color:'#00FFFF',
+                        fontSize:'28px',
+                        fontWeight: 'bolder'
                     },
                     text: this.title,
                     verticalAlign: this.titleAlign,
@@ -40,10 +41,23 @@ export default{
                     shared: true
                 },
                 yAxis:{
+                    lineWidth: 2,
+                    lineColor: '#F6F6F6',
+                    offset: 50,
                     labels:{
                         enabled: true,
+                        formatter: function() { 
+                            if(Math.abs(this.value) == 80){
+                                return Math.abs(this.value)+"%";
+                            }else{
+                                return Math.abs(this.value);
+                            }   
+                                                    
+                        },
                         style:{
                             color:'white',
+                            fontSize:'24px',
+                            fontWeight: 'bolder'
                     },
                     },
                     title:{
