@@ -39,16 +39,18 @@
         </div>
         <div class="overview">
             <div class="general">
-                <h3 @mouseover='changeColor(0, $event)' @mouseleave='changeColorBack(0, $event)'>CH 67%</h3>
-                <h3 @mouseover='changeColor(1, $event)' @mouseleave='changeColorBack(1, $event)'>UK 50%</h3>
-                <h3 @mouseover='changeColor(2, $event)' @mouseleave='changeColorBack(2, $event)'>US 47%</h3>
-                <h3 @mouseover='changeColor(3, $event)' @mouseleave='changeColorBack(3, $event)'>DE 38%</h3>
+                <p>ACCEPTANCE RATE</p>
+                <h3 @mouseover='changeColor(1, $event)' @mouseleave='changeColorBack(1, $event)' style="color: #C7F700">CH 67%</h3>
+                <h3 @mouseover='changeColor(2, $event)' @mouseleave='changeColorBack(2, $event)' style="color: #70E6AB">UK 50%</h3>
+                <h3 @mouseover='changeColor(3, $event)' @mouseleave='changeColorBack(3, $event)' style="color: #0CBAF7">US 47%</h3>
+                <h3 @mouseover='changeColor(4, $event)' @mouseleave='changeColorBack(4, $event)' style="color: #23EFEF">DE 38%</h3>
             </div>
             <div class="countries">
-                <img :src='china'/>
-                <img :src='unitedKingdom'/>
-                <img :src='unitedStatesOfAmerica'/>
-                <img :src='germany'/>
+                <div/>
+                <img @mouseover='changeColor(1, $event)' @mouseleave='changeColorBack(1, $event)' :src='china'/>
+                <img @mouseover='changeColor(2, $event)' @mouseleave='changeColorBack(2, $event)' :src='unitedKingdom'/>
+                <img @mouseover='changeColor(3, $event)' @mouseleave='changeColorBack(3, $event)' :src='unitedStatesOfAmerica'/>
+                <img @mouseover='changeColor(4, $event)' @mouseleave='changeColorBack(4, $event)' :src='germany'/>
             </div>
             <PartToWhole id="ptw-chart"></PartToWhole>
         </div>
@@ -465,9 +467,13 @@ export default {
     
     .general {
         display: grid;
-        grid-template-columns:  repeat(4, 22%);
-        grid-column-gap: 4%;
+        grid-template-columns: 10% repeat(4, 20%);
+        grid-column-gap: 1%;
         height: 7vh;
+    }
+
+    .general p {
+        text-align: right;
     }
 
     .general h3 {
@@ -477,12 +483,12 @@ export default {
 
     .countries {
         display: grid;
-        grid-template-columns: repeat(4, 24%);
+        grid-template-columns: 10% repeat(4, 20%);
         grid-column-gap: 1%;
     }
 
     .countries img {
-        height: 25vh;
+        height: 20vh;
         margin: 0 auto;
     }
 

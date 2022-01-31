@@ -1,6 +1,14 @@
 <template>
     <div class="chart">
-        <highcharts class="china" :options="chartOptions"></highcharts>
+        <div class="labels">
+            <p>Strongly agree</p>
+            <p>Somewhat agree</p>
+            <p>Neither agree nor oppose</p>
+            <p>Somewhat oppose</p>
+            <p>Strongly oppose</p>
+        </div>
+        <!--<highcharts class="china" :options="chartOptions"></highcharts>-->
+        <TemplateBarChart v-bind:series="series.CH" v-bind:color="ChColor"></TemplateBarChart>
         <TemplateBarChart v-bind:series="series.UK" v-bind:color="UkColor"></TemplateBarChart>
         <TemplateBarChart v-bind:series="series.US" v-bind:color="UsColor"></TemplateBarChart>
         <TemplateBarChart v-bind:series="series.DE" v-bind:color="DeColor"></TemplateBarChart>
@@ -9,7 +17,7 @@
 
 <script>
 import TemplateBarChart from './TemplateBarChart.vue';
-import { EventBus } from '../../others/eventBus';
+//import { EventBus } from '../../others/eventBus';
 
 export default {
     name: 'PartToWhole',
@@ -18,10 +26,17 @@ export default {
     },
     data() {
         return {
+            ChColor: ['#C7F700'],
             DeColor: ['#23EFEF'],
             UkColor: ['#70E6AB'],
             UsColor: ['#0CBAF7'],
             series: {
+                CH : [{
+                    borderColor: '#5F5E5E',
+                    showInLegend: false,
+                    name: 'CH',
+                    data: [18, 49, 25, {dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 7}, {dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 1}]
+                }],
                 UK : [{
                     borderColor: '#5F5E5E',
                     showInLegend: false,
@@ -41,7 +56,7 @@ export default {
                     data: [{dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 8}, {y:30}, {y:31}, {y:18}, {y:14}]
                 }],
             },
-            chartOptions: {
+            /*chartOptions: {
                 chart: {
                     type: 'bar',
                     width: 300,
@@ -57,7 +72,8 @@ export default {
                     labels: {
                         style: {
                             color: '#F6F6F6'
-                        }
+                        },
+                        enabled: false
                     }
                 },
                 yAxis: {
@@ -107,10 +123,10 @@ export default {
                     name: 'China',
                     data: [18, 49, 25, {dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 7}, {dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 1}]
                 }]
-            },
+            },*/
         }
     },
-    created() {
+    /*created() {
         EventBus.$on('sectionChange', value => {
             if(value.destination === 'fifthPage') {
                 this.chartOptions.series = [{
@@ -125,21 +141,32 @@ export default {
                 }, 700);
             }
         })
-    }
+    }*/
 }
 </script>
 
 <style scoped>
     .chart {
         display: grid;
-        grid-template-columns: 25% repeat(3, 21%);
-        grid-column-gap: 4%;
+        grid-template-columns: 10% repeat(4, 20%);
+        grid-column-gap: 2%;
         /*height: 40vh;*/
         margin-left: auto;
         margin-right: auto;
+        margin-top: 50px;
+    }
+
+    .labels {
+        padding-top: 10px;
+        text-align: right;
+    }
+
+    .labels p{
+        margin: 20px auto 30px;
     }
 
     .china {
         width: 100%;
+        padding-left: 0 auto 0;
     }
 </style>

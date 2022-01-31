@@ -15,7 +15,7 @@ export default {
             chartOptions: {
                 chart: {
                     type: 'bar',
-                    width: 200,
+                    width: 300,
                     height: '300',
                     backgroundColor: '#3C3C3C',
                 },
