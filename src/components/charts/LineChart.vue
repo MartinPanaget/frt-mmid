@@ -120,8 +120,10 @@ export default{
                 },
                 plotOptions: {
                         line: {
+                            // lineWidth: 0,
                             marker: {
                                 symbol: 'circle',
+                                // symbol: 'url(marker2.png)',
                             radius: 15
                         }
                     },
