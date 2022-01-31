@@ -76,7 +76,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://use.typekit.net/mqc1poj.css');
 
 /* background section */
 
@@ -110,7 +110,7 @@ export default {
 
 /* body */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'futura-pt-condensed', sans-serif;
   color: white;
 }
 
