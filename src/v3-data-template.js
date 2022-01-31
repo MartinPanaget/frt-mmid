@@ -1,350 +1,276 @@
-// V3: PERCENTAGE STACKED BAR CHART
+// V3: LOLLIPOP CHART
 
 // ANMERKUNG
 // 'showInLegend' nicht beachten/so lassen
 
 // ERKLÄRUNG (Attribute zum Anpassen)
-// name : erscheint beim Tooltip
-// color: Farbe des Balken-Abschnitts der dazugehörigen Datagroup (in unserem Fall die Farbe des Landes in verschiedenen Sättigungen)
-// data: der tatsächliche Wert in eckigen Klammern
-// visible: ist das Balkendiagramm per default sichtbar
-    // wenn ja --> visible:true, sonst visible: false
+// name (STRING): erscheint beim Tooltip
+// color (STRING, Hex oder RGB): Farbe der Kugel (in unserem Fall dei Länderfarben)
+// data (INTEGER/FLOAT): der tatsächliche Wert in eckigen Klammern
+// visible (BOLLEAN): Die Balken, die von Anfang an per default sichtbar sein sollen müssen auf true gesetzt werden, sonst auf false
+// radius (INTEGER): Radius der Kugel. Müsset passen wenn man den Wert aus XD übernimmt
 
 // WICHTIG
-// Es gibt die Gruppen: Convenience, Efficiency, Security, PrivacyViolation, Discrimination und Surveillance.
-// Innerhalb dieser Gruppen gibt es immer 1 Datensatz mit 4 Werte-Farbe-Kombos (je für ein Land) 
-// und 3 Datagroups ('Strongly Accept', 'Middle', 'Strongly Oppose' --> in dieser Reihenfolge).
-// Bedeutet: 
-    // 1. Die erste Datagroup ( hier: 'Strongly Accept') definiert immer den äußersten Wert über die vier Balken (Datensätze) hinweg.
-    //      Die letzte Datagroup den untersten Wert.
-    // 2. innderhalb des 'data'-Attributs gehört der erste Wert zum Balken ganz links (in unserem Fall China), 
-    //      der zweite gehört dem zweiten Balken von links (England) usw.
-    //      ACHTUNG: Wenn also die Reihenfolge der x achse geändert wird, müssen die Werte analog angepasst werden
+// Es gibt 6 Gruppen: Convenience, Efficiency, Security, PrivacyViolation, Discrimination und Surveillance.
+// Jede dieser Gruppen hat je 4 Datagroups (1 pro Land). Die Reihenfolge entspricht der x-Achse.
+
+// WICHTIGES FÜR ENTWICKLER
+// Einheit: 
+
 
 series:{
-    Convenience:[
-        { //start Datagroup
-        showInLegend: false,
+    Convinience:[//start Gruppe
+        {//start Datagroup
+        showInLegend:false,
+        visible: true, //wenn per default sichtbar, dann auf true setzen
+        name:'CH', //erscheint im Tooltip
+        color: '#C7F700', //Farbe der Kugel
+        data:[20], //erscheint im Tooltip
+        marker: {
+            symbol: 'circle',
+            radius: 10 //Radius der Kugel in mm
+        }
+        }, //ende Datagroup
+        {
+        showInLegend:false,
+        visible: false,
+        name:'GB',
+        color: '#70E6AB',
+        data:[20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }, {
+        showInLegend:false,
+        visible: false,
+        name:'USA',
+        color: '#0CBAF7',
+        data:[20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        },{
+        showInLegend:false,
         visible: true,
-        name: 'Strongly Accept', //Tooltip
-        data: [{ //start Datensatz
-            y: 2, // Wert 'Strongly accept' CH
-            color: '#ff0000' // höchste Sättigung
-            }, {
-            y: 3,// Wert 'Strongly accept' GB
-            color: '#00ff00' // höchste Sättigung
-            },{
-            y: 3,// Wert 'Strongly accept' USA
-            color: '#00ff00' // höchste Sättigung
-            },{
-            y: 1,// Wert 'Strongly accept' DE
-            color: '#0000ff' // höchste Sättigung
-            }
-        ] //ende Datensatz
-    }, //ende Datagroup
-    {
-        name: 'Middle', //Tooltip
-        data: [{
-            y: 2, // Wert 'middle' CH
-            color: '#ff0000' // mittlere Sättigung
-            }, {
-            y: 3,// Wert 'middle' GB
-            color: '#00ff00' // mittlere Sättigung
-            },{
-            y: 3,// Wert 'middle' USA
-            color: '#00ff00' // mittlere Sättigung
-            },{
-            y: 1,// Wert 'middle' DE
-            color: '#0000ff' // mittlere Sättigung
-            }
-        ]
-    },
-    {
-        name: 'Strongly Oppose', //Tooltip
-        data: [{
-            y: 2, // Wert 'Strongly Oppose' CH
-            color: '#ff0000' // geringste Sättigung
-            }, {
-            y: 3,// Wert 'Strongly Oppose' GB
-            color: '#00ff00' // geringste Sättigung
-            },{
-            y: 3,// Wert 'Strongly Oppose' USA
-            color: '#00ff00' // geringste Sättigung
-            },{
-            y: 1,// Wert 'Strongly Oppose' DE
-            color: '#0000ff' // geringste Sättigung
-            }
-        ]
-
-    }];
-    Efficiency:[{ 
-        showInLegend: false,
+        name:'DE',
+        color: '#23EFEF',
+        data:[20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }
+    ];//ende Gruppe
+    Efficiency:[{
+        showInLegend:false,
         visible: true,
-        name: 'Strongly Accept', 
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-    },
-    {
-        name: 'Middle', 
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-    },
-    {
-        name: 'Strongly Oppose', 
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff'
-            }
-        ]
-
-    }];
-    Security:[{ 
-        showInLegend: false,
+        name:'CH',
+        color: '#C7F700',
+        data:[-20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }, {
+        showInLegend:false,
+        visible: false,
+        name:'GB',
+        color: '#70E6AB',
+        data:[-20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }, {
+        showInLegend:false,
+        visible: false,
+        name:'USA',
+        color: '#0CBAF7',
+        data:[-20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        },{
+        showInLegend:false,
         visible: true,
-        name: 'Strongly Accept', 
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-    },
-    {
-        name: 'Middle',
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-    },
-    {
-        name: 'Strongly Oppose', 
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-
-    }];
-    PrivacyViolation:[{ 
-        showInLegend: false,
+        name:'DE',
+        color: '#23EFEF',
+        data:[-20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }
+    ];
+    Security:[{
+        showInLegend:false,
         visible: true,
-        name: 'Strongly Accept', 
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-    },
-    {
-        name: 'Middle', 
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-    },
-    {
-        name: 'Strongly Oppose', 
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-
-    }];
-    Discrimination:[{ 
-        showInLegend: false,
+        name:'CH',
+        color: '#C7F700',
+        data:[20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }, {
+        showInLegend:false,
+        visible: false,
+        name:'GB',
+        color: '#70E6AB',
+        data:[20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }, {
+        showInLegend:false,
+        visible: false,
+        name:'USA',
+        color: '#0CBAF7',
+        data:[20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        },{
+        showInLegend:false,
         visible: true,
-        name: 'Strongly Accept', 
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-    },
-    {
-        name: 'Middle', 
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-    },
-    {
-        name: 'Strongly Oppose',
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-
-    }];
-    Surveillance:[{ 
-        showInLegend: false,
+        name:'DE',
+        color: '#23EFEF',
+        data:[20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }
+    ];
+    PrivacyViolation:[{
+        showInLegend:false,
         visible: true,
-        name: 'Strongly Accept',
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-    },
-    {
-        name: 'Middle', 
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-    },
-    {
-        name: 'Strongly Oppose', 
-        data: [{
-            y: 2, 
-            color: '#ff0000' 
-            }, {
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 3,
-            color: '#00ff00' 
-            },{
-            y: 1,
-            color: '#0000ff' 
-            }
-        ]
-
-    }]
+        name:'CH',
+        color: '#C7F700',
+        data:[-20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }, {
+        showInLegend:false,
+        visible: false,
+        name:'GB',
+        color: '#70E6AB',
+        data:[-20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }, {
+        showInLegend:false,
+        visible: false,
+        name:'USA',
+        color: '#0CBAF7',
+        data:[-20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        },{
+        showInLegend:false,
+        visible: true,
+        name:'DE',
+        color: '#23EFEF',
+        data:[-20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }
+    ];
+    Discrimination:[{
+        showInLegend:false,
+        visible: true,
+        name:'CH',
+        color: '#C7F700',
+        data:[20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }, {
+        showInLegend:false,
+        visible: false,
+        name:'GB',
+        color: '#70E6AB',
+        data:[20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }, {
+        showInLegend:false,
+        visible: false,
+        name:'USA',
+        color: '#0CBAF7',
+        data:[20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        },{
+        showInLegend:false,
+        visible: true,
+        name:'DE',
+        color: '#23EFEF',
+        data:[20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }
+    ];
+    Surveillance:[{
+        showInLegend:false,
+        visible: true,
+        name:'CH',
+        color: '#C7F700',
+        data:[-20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }, {
+        showInLegend:false,
+        visible: false,
+        name:'GB',
+        color: '#70E6AB',
+        data:[-20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }, {
+        showInLegend:false,
+        visible: false,
+        name:'USA',
+        color: '#0CBAF7',
+        data:[-20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        },{
+        showInLegend:false,
+        visible: true,
+        name:'DE',
+        color: '#23EFEF',
+        data:[-20],
+        marker: {
+            symbol: 'circle',
+            radius: 10
+        }
+        }
+    ]
 }

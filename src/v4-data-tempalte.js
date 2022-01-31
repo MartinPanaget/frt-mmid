@@ -15,6 +15,9 @@
 // Bedeutet: Die erste Datagroup muss den Datensatz mit dem kleinsten Wert besitzen, 
 // die letzte (also vierte) den Datensatz mit dem größten Wert.
 
+// WICHTIGES FÜR ENTWICKLER
+// Einheit: 
+
 
 
 series:{
