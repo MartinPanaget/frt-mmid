@@ -27,15 +27,6 @@
                 </g>
             </svg>
 
-
-
-<!-- 
-                <div class="dot">
-                    <a href='#page4' id='overview' v-on:click='change'>OVER_ <br> VIEW</a>
-                </div>
-                <div class="dot">
-                    <a href='#page5' id='detail' v-on:click='change'>DETAIL</a>
-                </div> -->
         </div>
         <div class="overview">
             <div class="general">
@@ -361,21 +352,6 @@ export default {
             })
         });
     },
-    changeImageSrc : function (src, add) {
-        let modifiedSrc = '';
-        const regex = /\/icon_(\w{1,10}-\w{1,8}|\w{1,10})/g;
-        if(add) {
-            modifiedSrc = src.match(regex)//eslint-disable-line
-            console.log(modifiedSrc)
-            modifiedSrc = `../assets/attributes${modifiedSrc[0]}-active.svg`
-        } else {
-            modifiedSrc = src.match(regex)//eslint-disable-line
-            console.log(modifiedSrc)
-            modifiedSrc = modifiedSrc.replace('-active', '')
-            modifiedSrc = `../assets/attributes${modifiedSrc[0]}.svg`
-        }
-        return modifiedSrc
-    },
     change: function (page) {
       let overview = document.getElementsByClassName('overview')[0].style;
       let detail = document.getElementsByClassName('detail')[0].style;
@@ -474,6 +450,7 @@ export default {
 
     .general p {
         text-align: right;
+        text-shadow: rgba(0,255,255,0.9) 0px 0px 9px;
     }
 
     .general h3 {

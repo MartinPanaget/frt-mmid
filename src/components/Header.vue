@@ -1,8 +1,14 @@
 <template>
    <Wrapper id="section1">
-          <h1>FACIAL<br> RECOGNITION</h1>
-          <p class="sub-title">Subjective acceptance and perception of <br> Facial Recognition technologies (FRT) <br> by Citizens of China, UK, US and Germany</p>
-          <p class="project-info">A student project  based on the paper <br>“Between security and convenience” (Gostka et al. 2021)</p>
+          <h1>FACIAL<br> RECOGNITION <br> TECHNOLOGIES</h1>
+          <p class="sub-title">AN INTERNATIONAL COMPARISON</p>
+          <p class="project-info">
+            Semester Project “Interactive Informationdesign” <br>
+            Lecturer Dipl.-Des. Lothar B. Blum <br>
+            Alischa Thomas, Katharina Barth, Larissa Eirich, Martin Panaget <br>
+            DHBW Mosbach Faculty of Online Media <br>
+            11.02.2022 
+          </p>
 
    </Wrapper>
     

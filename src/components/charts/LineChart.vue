@@ -41,13 +41,13 @@ export default{
                     tickColor: undefined,
                     endOnTick: false,
                     plotLines: [
-                        {color: '#3C3C3C',width: 2,value: 0.0},
+                        {color: '#3C3C3C',width: 4,value: 0.0},
                         {color: '#3C3C3C',width: 1,value: 0.14},{color: '#3C3C3C',width: 1,value: 0.28},{color: '#3C3C3C',width: 1,value: 0.42},{color: '#3C3C3C',width: 1,value: 0.56},{color: '#3C3C3C',width: 1,value: 0.7},{color: '#3C3C3C',width: 1,value: 0.84},
-                        {color: '#3C3C3C',width: 2,value: 1.0},
+                        {color: '#3C3C3C',width: 4,value: 1.0},
                         {color: '#3C3C3C',width: 1,value: 1.14},{color: '#3C3C3C',width: 1,value: 1.28},{color: '#3C3C3C',width: 1,value: 1.42},{color: '#3C3C3C',width: 1,value: 1.56},{color: '#3C3C3C',width: 1,value: 1.7},{color: '#3C3C3C',width: 1,value: 1.84},
-                        {color: '#3C3C3C',width: 2,value: 2.0, },
+                        {color: '#3C3C3C',width: 4,value: 2.0, },
                         {color: '#3C3C3C',width: 1,value: 2.14},{color: '#3C3C3C',width: 1,value: 2.28},{color: '#3C3C3C',width: 1,value: 2.42},{color: '#3C3C3C',width: 1,value: 2.56},{color: '#3C3C3C',width: 1,value: 2.7},{color: '#3C3C3C',width: 1,value: 2.84},
-                        {color: '#3C3C3C',width: 2,value: 3.0},
+                        {color: '#3C3C3C',width: 4,value: 3.0},
                         {color: '#3C3C3C',width: 1,value: 3.14},{color: '#3C3C3C',width: 1,value: 3.28},{color: '#3C3C3C',width: 1,value: 3.42},{color: '#3C3C3C',width: 1,value: 3.56},{color: '#3C3C3C',width: 1,value: 3.7},{color: '#3C3C3C',width: 1,value: 3.84},
                     ],
                     plotBands: [{

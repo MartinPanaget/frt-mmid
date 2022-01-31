@@ -174,9 +174,9 @@ h2 {
   font-size: 22px;
 }
 
-.highlight-green{
-  width: 25%;
-  padding: 2rem;
+/*.highlight-green{
+  width: 95%;
+  padding: 3rem 4rem 3rem;
   position: relative;
   margin: 20px;
   box-sizing: content-box;
@@ -194,26 +194,26 @@ h2 {
 .highlight-green::before {
     top: -2px;
     left: -2px;
-    border-top: 15px solid #00FFFF;
-    border-left: 15px solid #00FFFF;
+    border-top: 15px solid #D6E637;
+    border-left: 15px solid #D6E637;
 }
 .highlight-green::after {
     top: -2px;
     right: -2px;
-    border-top: 15px solid #00FFFF;
-    border-right: 15px solid #00FFFF;
+    border-top: 15px solid #D6E637;
+    border-right: 15px solid #D6E637;
 }
-.highlight-span::before {
+.highlight-green .highlight-span::before {
     bottom: -2px;
     left: -2px;
-    border-bottom: 15px solid #00FFFF;
-    border-left: 15px solid #00FFFF;
+    border-bottom: 15px solid #D6E637;
+    border-left: 15px solid #D6E637;
 }
-.highlight-span::after {
+.highlight-green .highlight-span::after {
     bottom: -2px;
     right: -2px;
-    border-bottom: 15px solid #00FFFF;
-    border-right: 15px solid #00FFFF;
-}
+    border-bottom: 15px solid #D6E637;
+    border-right: 15px solid #D6E637;
+} */
 
 </style>
