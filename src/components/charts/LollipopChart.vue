@@ -10,7 +10,9 @@ export default{
         series: Array,
         titleAlign: String,
         title:String,
-        backgroundColor: String
+        backgroundColor: String,
+        min: String,
+        max: String,
     },
     data() {
         return { 
@@ -42,6 +44,8 @@ export default{
                 },
                 yAxis:{
                     visible: true,
+                    min: this.min,
+                    max: this.max,
                     labels:{
                         enabled: false
                     },

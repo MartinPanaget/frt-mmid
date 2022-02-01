@@ -10,7 +10,9 @@ export default{
         series: Array,
         titleAlign: String,
         title:String,
-        backgroundColor: String
+        backgroundColor: String,
+        min: String,
+        max: String
     },
     data() {
         return {
@@ -44,6 +46,8 @@ export default{
                     lineWidth: 2,
                     lineColor: '#F6F6F6',
                     offset: 50,
+                    min: this.min,
+                    max: this.max,
                     labels:{
                         enabled: true,
                         formatter: function() { 

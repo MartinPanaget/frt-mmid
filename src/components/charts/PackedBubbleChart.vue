@@ -30,7 +30,7 @@ export default {
                     // backgroundColor: '#5F5E5E',
                     backgroundColor: '#3C3C3C',
                     style:{
-                        fontFamily: 'Montserrat, sans-serif'
+                        fontFamily: 'futura-pt-condensed, sans-serif',
                     }
                 },
                 plotOptions: {
@@ -43,6 +43,14 @@ export default {
                         layoutAlgorithm:{
                             bubblePadding: 5
                         },
+                        dataLabels:{
+                            enabled: true,
+                            style: {
+                                color: 'black',
+                                textOutline: 'none',
+                                fontWeight: 'normal'
+                            }
+                        }
                         // point:{
                         //     events:{
                         //         // mouseOver: function(){
@@ -74,8 +82,8 @@ export default {
                 title: {
                     text: this.title,
                     style:{
-                        color:'white',
-                        fontSize:'18px'
+                        color:'#F6F6F6',
+                        fontSize:'28px',
                     },
                 },
                 tooltip: {

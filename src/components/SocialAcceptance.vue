@@ -11,9 +11,9 @@
                     <g id="Ebene_1-2" data-name="Ebene 1">
                         <polyline class="cls-2" points="308.22 15.31 240.22 52.31 88.22 52.31 13.22 74.31"/>
                         <g id="Gruppe_514" data-name="Gruppe 514">
-                            <circle id="Ellipse_546" data-name="Ellipse 546" class="cls-1" cx="160.04" cy="53" r="10"/>
-                            <circle id="Ellipse_519" data-name="Ellipse 519" class="cls-1" cx="14.5" cy="75.11" r="14.5"/>
-                            <circle id="Ellipse_518" data-name="Ellipse 518" class="cls-1" cx="308.54" cy="14.5" r="14.5"/>
+                            <circle id="Ellipse_546" data-name="Ellipse 546" class="cls-1 op" cx="160.04" cy="53" r="10"/>
+                            <circle id="Ellipse_519" data-name="Ellipse 519" class="cls-1 op" cx="14.5" cy="75.11" r="14.5"/>
+                            <circle id="Ellipse_518" data-name="Ellipse 518" class="cls-1 op" cx="308.54" cy="14.5" r="14.5"/>
 
                             <circle id="c-detail" v-on:click="change('toOverview')" :class="{active:detailActive}" data-name="Ellipse 545" class="cls-1" cx="228.05" cy="53.03" r="42"/>
                             <text x="228.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">DETAIL</text>
@@ -384,8 +384,11 @@ export default {
         }
     .cls-2{
         fill:none;
-        stroke:#e6e6e6;stroke-width:3px;
+        stroke:#4d4d4d;stroke-width:3px;
         }
+    .op{
+    fill:#4d4d4d;
+    }
 
     text{
         font-family: 'Montserrat', sans-serif;

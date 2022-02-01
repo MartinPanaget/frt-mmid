@@ -2,8 +2,8 @@
     <div>
         <div class="BubbleCharts">
             <PackedBubbleChart v-bind:series="series.Phone" title="Smartphone Usage" minSize="74" maxSize="108"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.PersonCheck" title="People Control" minSize="57" maxSize="78"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.SmartDevice" title="Smart Devices" minSize="48" maxSize="77"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.PersonCheck" title="Custom Control, security checks at airport" minSize="57" maxSize="78"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.SmartDevice" title="Smart devices and gadgets" minSize="48" maxSize="77"></PackedBubbleChart>
             <PackedBubbleChart v-bind:series="series.IdCheck" title="Identity verification for financial matters" minSize="49" maxSize="63"></PackedBubbleChart>
             <PackedBubbleChart v-bind:series="series.Transport" title="Railway, Subway Stations" minSize="43" maxSize="75"></PackedBubbleChart>
         </div>
@@ -33,7 +33,7 @@ export default {
                     visible: true,
                     name: 'Phone DE',
                     color: '#23EFEF',
-                    data:[12],
+                    data:[6],
                     },
                     {
                     showInLegend: false,

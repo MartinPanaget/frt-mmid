@@ -2,16 +2,16 @@
     <div>
         <div class="LollipopSeries">
             <div class="lollipop-pair">
-                <LollipopChartExpanded v-bind:series="series.Data1" title="Convenience" backgroundColor="rgba(246,246,246,0.5)"></LollipopChartExpanded>
-                <LollipopChartExpanded v-bind:series="series.Data2" title="Privacy Violation" titleAlign="bottom" backgroundColor="rgba(203,203,203,0.3)"></LollipopChartExpanded>
+                <LollipopChartExpanded v-bind:series="series.Data1" min="0" max ="80" title="Convenience" backgroundColor="rgba(246,246,246,0.5)"></LollipopChartExpanded>
+                <LollipopChartExpanded v-bind:series="series.Data2" min="-80" max ="0" title="Privacy Violation" titleAlign="bottom" backgroundColor="rgba(203,203,203,0.3)"></LollipopChartExpanded>
             </div>
             <div class="lollipop-pair">
-                <LollipopChart v-bind:series="series.Data3" title="Efficiency" backgroundColor="rgba(246,246,246,0.5)" ></LollipopChart>
-                <LollipopChart v-bind:series="series.Data4" title="Discrimination" titleAlign="bottom" backgroundColor="rgba(203,203,203,0.3)"></LollipopChart>
+                <LollipopChart v-bind:series="series.Data3" min="0" max ="80" title="Efficiency" backgroundColor="rgba(246,246,246,0.5)" ></LollipopChart>
+                <LollipopChart v-bind:series="series.Data4" min="-80" max ="0" title="Discrimination" titleAlign="bottom" backgroundColor="rgba(203,203,203,0.3)"></LollipopChart>
             </div>
             <div class="lollipop-pair">
-                <LollipopChart v-bind:series="series.Data5" title="Security" backgroundColor="rgba(246,246,246,0.5)" ></LollipopChart>
-                <LollipopChart v-bind:series="series.Data6" title="Surveillance" titleAlign="bottom" backgroundColor="rgba(203,203,203,0.3)"></LollipopChart>
+                <LollipopChart v-bind:series="series.Data5" min="0" max ="80" title="Security" backgroundColor="rgba(246,246,246,0.5)" ></LollipopChart>
+                <LollipopChart v-bind:series="series.Data6" min="-80" max ="0" title="Surveillance" titleAlign="bottom" backgroundColor="rgba(203,203,203,0.3)"></LollipopChart>
             </div>
         </div>
         <div class="glow-div">

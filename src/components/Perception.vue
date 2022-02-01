@@ -37,6 +37,7 @@ export default {
           isActiveDE: true,
           isActiveUSA: false,
           isActiveGB: false,
+          dataArray: Array,
       }
   },
   methods:{
@@ -45,16 +46,17 @@ export default {
         var i;
         if (!this.isActiveCH) {
             this.isActiveCH = true;
+            this.dataArray = [20, -25,30,-20,25,-30];
             for(i=0; i<6; i++){
                 // console.log(chart[i].__vue__.chart.series[0].dataMax);
-                chart[i].__vue__.chart.series[0].show();
-                // chart[i].__vue__.chart.series[0].setData([20]);
+                // chart[i].__vue__.chart.series[0].show();
+                chart[i].__vue__.chart.series[0].setData([this.dataArray[i]]);
             }
         } else {
             this.isActiveCH = false;
             for(i=0; i<6; i++){
-                // chart[i].__vue__.chart.series[0].setData([0]);
-                chart[i].__vue__.chart.series[0].hide();
+                chart[i].__vue__.chart.series[0].setData([0]);
+                // chart[i].__vue__.chart.series[0].hide();
             }
         }
       },
