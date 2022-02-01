@@ -47,27 +47,60 @@
         </div>
         <div class="detail">
             <div class="chart-detail">
-                <div class="countries-icon">
+                <!--<div class="countries-icon">
                     <img :src='ch'/>
                     <img :src='de'/>
                     <img :src='gb'/>
                     <img :src='us'/>
-                </div>
-                <LineChart v-bind:attributes="attributes"></LineChart>
-            </div>
-            <div class="attributes">
-                <div v-for="(attr, attrName) in attributeList" :key="attrName" :class="attrName" class="test">
-                    <div v-for="(item, index) in attr" :key="index">
-                        <a v-for="entry in item" :key="entry.name" href="#" v-on:click='addOrRemove(entry.attribute, $event)'>
-                            <img @click="$set(entry, 'selected', !entry.selected)" :src="entry.selected ? entry.imgActive : entry.img" :class="{active:!entry.selected}">
-                        </a>
-                    </div>
-                </div>
-                <div class="garbage">
-                    <a href="#" v-on:click='deleteAttributes'>
-                        <img src="../assets/attributes/icon_garbage.svg">
-                    </a>
-                </div>
+                </div>-->
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="1252" height="42.133" viewBox="0 0 1252 42.133">
+                    <g id="Gruppe_877" data-name="Gruppe 877" transform="translate(10464.5 -10987.367)">
+                        <g id="Gruppe_869" data-name="Gruppe 869" transform="translate(-10891 10797)" opacity="0.1">
+                        <line id="Linie_572" data-name="Linie 572" x2="1252" transform="translate(426.5 210.368)" fill="none" stroke="#e6e6e6" stroke-width="2"/>
+                        <circle id="Ellipse_687" data-name="Ellipse 687" cx="5.5" cy="5.5" r="5.5" transform="translate(636 205)" fill="#fff"/>
+                        <circle id="Ellipse_688" data-name="Ellipse 688" cx="5.5" cy="5.5" r="5.5" transform="translate(801 205)" fill="#fff"/>
+                        <circle id="Ellipse_689" data-name="Ellipse 689" cx="5.5" cy="5.5" r="5.5" transform="translate(965 205)" fill="#fff"/>
+                        <circle id="Ellipse_690" data-name="Ellipse 690" cx="5.5" cy="5.5" r="5.5" transform="translate(1133 205)" fill="#fff"/>
+                        <circle id="Ellipse_692" data-name="Ellipse 692" cx="5.5" cy="5.5" r="5.5" transform="translate(1300 205)" fill="#fff"/>
+                        <circle id="Ellipse_693" data-name="Ellipse 693" cx="5.5" cy="5.5" r="5.5" transform="translate(1466 205)" fill="#fff"/>
+                        </g>
+                        <g id="Gruppe_870" data-name="Gruppe 870" transform="translate(-12068 10589.463)">
+                        <rect id="v5-button-1" width="125" height="42" rx="21" transform="translate(1673 398)" fill="#eff3ff" v-on:click="addOrRemove(age)"/>
+                        <text id="Age" transform="translate(1725 426)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Age</tspan></text>
+                        </g>
+                        <g id="Gruppe_871" data-name="Gruppe 871" transform="translate(-11903 10536.463)">
+                        <rect id="v5-button-2" width="125" height="42" rx="21" transform="translate(1673 451)" fill="#b2dbff" v-on:click="addOrRemove(gender)"/>
+                        <text id="Gender" transform="translate(1715.5 479)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Gender</tspan></text>
+                        </g>
+                        <g id="Gruppe_872" data-name="Gruppe 872" transform="translate(-11729 10482.463)">
+                        <rect id="v5-button-3" width="125" height="42" rx="21" transform="translate(1664 505)" fill="#6c93ed"/>
+                        <text id="Income" transform="translate(1706.5 533)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Income</tspan></text>
+                        </g>
+                        <g id="Gruppe_873" data-name="Gruppe 873" transform="translate(-11564 10428.367)">
+                        <rect id="v5-button-4" width="125" height="42" rx="21" transform="translate(1664 559)" fill="#4dd1f0"/>
+                        <text id="Education_" data-name="Education " transform="translate(1697 587)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Education </tspan></text>
+                        </g>
+                        <g id="Gruppe_874" data-name="Gruppe 874" transform="translate(-11372 10374.463)">
+                        <rect id="Rechteck_334" data-name="Rechteck 334" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#9d9d9d"/>
+                        <text id="Minority_City" data-name="Minority/City" transform="translate(1663 643)" fill="#222" font-size="24" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Minority/City</tspan></text>
+                        <rect id="v5-button-5" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#39decd"/>
+                        <text id="Ethnical_minority" data-name="Ethnical minority" transform="translate(1655.5 641)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Ethnical minority</tspan></text>
+                        </g>
+                        <g id="Gruppe_875" data-name="Gruppe 875" transform="translate(-11062 10482.463)">
+                        <path id="v5-button-7" d="M21,0h83a21,21,0,0,1,0,42H21A21,21,0,0,1,21,0Z" transform="translate(1664 505)" fill="#086dd3"/>
+                        <text id="Exposure" transform="translate(1706.5 533)" fill="#f6f6f6" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Exposure</tspan></text>
+                        </g>
+                        <g id="Gruppe_876" data-name="Gruppe 876" transform="translate(-11207 10374.5)">
+                        <rect id="Rechteck_334-2" data-name="Rechteck 334" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#9d9d9d"/>
+                        <text id="Minority_City-2" data-name="Minority/City" transform="translate(1663 643)" fill="#222" font-size="24" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Minority/City</tspan></text>
+                        <rect id="v5-button-6" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#00a5c3"/>
+                        <text id="City" transform="translate(1693 641.5)" fill="#f6f6f6" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">City</tspan></text>
+                        </g>
+                    </g>
+                </svg>
+                
+                <ForestChart v-bind:attributes="attributes"></ForestChart>
             </div>
         </div>
     </Wrapper>
@@ -77,7 +110,7 @@
 <script>
 import Wrapper from './Wrapper.vue';
 import PartToWhole from './charts/PartToWhole.vue';
-import LineChart from './charts/LineChart.vue';
+import ForestChart from './charts/ForestChart.vue';
 
 // countries
 import china from '../assets/countries/china.png';
@@ -91,179 +124,20 @@ import de from '../assets/icons/flagge-de.png';
 import gb from '../assets/icons/flagge-uk.png';
 import us from '../assets/icons/flagge-usa.png';
 
-// attribute icons
-import incomeLow from '../assets/attributes/icon_einkommen-low.svg';
-import incomeMiddle from '../assets/attributes/icon_einkommen-middle.svg';
-import incomeHigh from '../assets/attributes/icon_einkommen-high.svg';
-import incomeVeryHigh from '../assets/attributes/icon_einkommen-veryhigh.svg';
-
-import educationLow from '../assets/attributes/icon_bildung-low.svg';
-import educationMiddle from '../assets/attributes/icon_bildung-middle.svg';
-import educationHigh from '../assets/attributes/icon_bildung-high.svg';
-
-import ageYoung from '../assets/attributes/icon_alter-low.svg';
-import ageMiddle from '../assets/attributes/icon_alter-middle.svg';
-import ageOld from '../assets/attributes/icon_alter-high.svg';
-
-import genderMale from '../assets/attributes/icon_maennlich.svg';
-import genderFemale from '../assets/attributes/icon_weiblich.svg';
-
-import raceMinority from '../assets/attributes/icon_minority.svg';
-import raceMajority from '../assets/attributes/icon_majority.svg';
-
-import lifeRural from '../assets/attributes/icon_ansiedlung.svg';
-import lifeCity from '../assets/attributes/icon_city.svg';
-
-// attribute icons active
-import incomeLowActive from '../assets/attributes/icon_einkommen-low-active.svg';
-import incomeMiddleActive from '../assets/attributes/icon_einkommen-middle-active.svg';
-import incomeHighActive from '../assets/attributes/icon_einkommen-high-active.svg';
-import incomeVeryHighActive from '../assets/attributes/icon_einkommen-veryhigh-active.svg';
-
-import educationLowActive from '../assets/attributes/icon_bildung-low-active.svg';
-import educationMiddleActive from '../assets/attributes/icon_bildung-middle-active.svg';
-import educationHighActive from '../assets/attributes/icon_bildung-high-active.svg';
-
-import ageYoungActive from '../assets/attributes/icon_alter-low-active.svg';
-import ageMiddleActive from '../assets/attributes/icon_alter-middle-active.svg';
-import ageOldActive from '../assets/attributes/icon_alter-high-active.svg';
-
-import genderMaleActive from '../assets/attributes/icon_maennlich-active.svg';
-import genderFemaleActive from '../assets/attributes/icon_weiblich-active.svg';
-
-import raceMinorityActive from '../assets/attributes/icon_minority-active.svg';
-import raceMajorityActive from '../assets/attributes/icon_majority-active.svg';
-
-import lifeRuralActive from '../assets/attributes/icon_ansiedlung-active.svg';
-import lifeCityActive from '../assets/attributes/icon_city-active.svg';
-
-
-var attributeList = [
-    {income:[
-        {
-            name: 'incomeLow',
-            imgActive:incomeLowActive,
-            img:incomeLow,
-            attribute:{name: 'Low income', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
-        },
-        {
-            name:'incomeMiddle',
-            imgActive:incomeMiddleActive,
-            img:incomeMiddle,
-            attribute:{name: 'Middle income', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
-        },
-        {
-            name:'incomeHigh',
-            imgActive:incomeHighActive,
-            img:incomeHigh,
-            selected: true,
-            attribute:{name: 'High income', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
-        },
-        {
-            name:'incomeVeryHigh',
-            imgActive:incomeVeryHighActive,
-            img:incomeVeryHigh,
-            attribute:{name: 'Very high income', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
-        },
-    ]},
-    {education:[
-        {
-            name: 'educationLow',
-            imgActive :educationLowActive,
-            img :educationLow,
-            attribute:{name: 'Low education', color: '#70E6AB', data: [[0.3, 1.7], [1.3, 2.0], [2.3, 2.5], [3.3, 1.8]]}
-        },
-        {
-            name: 'educationMiddle',
-            imgActive :educationMiddleActive,
-            img :educationMiddle,
-            attribute:{name: 'Middle education', color: '#70E6AB', data: [[0.3, 1.7], [1.3, 2.0], [2.3, 2.5], [3.3, 1.8]]}
-        },
-        {
-            name: 'educationHigh',
-            imgActive :educationHighActive,
-            img :educationHigh,
-            selected: true,
-            attribute:{name: 'High education', color: '#70E6AB', data: [[0.3, 1.7], [1.3, 2.0], [2.3, 2.5], [3.3, 1.8]]}
-        },   
-    ]},
-    {age:[
-        {
-            name:'ageYoung',
-            imgActive:ageYoungActive,
-            img:ageYoung,
-            attribute:{name: 'Lower age', color: '#BBFEFE', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
-        },
-        {
-            name: 'ageMiddle',
-            imgActive:ageMiddleActive,
-            img:ageMiddle,
-            attribute:{name: 'Medium age', color: '#BBFEFE', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
-        },
-        {
-            name: 'ageOld',
-            imgActive:ageOldActive,
-            img:ageOld,
-            attribute:{name: 'Higher age', color: '#BBFEFE', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
-        }
-    ]},
-    {gender:[
-        {
-            name:'genderMale',
-            imgActive:genderMaleActive,
-            img:genderMale,
-            attribute:{name: 'Male', color: '#23EFEF', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
-        },
-        {
-            name: 'genderFemale',
-            imgActive:genderFemaleActive,
-            img:genderFemale,
-            attribute:{name: 'Female', color: '#23EFEF', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
-        }
-    ]},
-    {race:[
-        {
-            name:'raceMinority',
-            imgActive:raceMinorityActive,
-            img:raceMinority,
-            attribute:{name: 'Minority', color: '#0CBAF7', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
-        },
-        {
-            name: 'raceMajority',
-            imgActive:raceMajorityActive,
-            img:raceMajority,
-            attribute:{name: 'Majority', color: '#0CBAF7', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
-        }
-    ]},
-    {life:[
-        {
-            name:'lifeRural',
-            imgActive:lifeRuralActive,
-            img:lifeRural,
-            attribute:{name: 'Rural', color: '#222222', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
-        },
-        {
-            name: 'lifeCity',
-            imgActive:lifeCityActive,
-            img:lifeCity,
-            attribute:{name: 'City', color: '#222222', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}
-        }
-    ]},
-    ]
-
 export default {
   name: 'SocialAcceptance',
   components: {
     Wrapper,
     PartToWhole,
-    LineChart
+    //LineChart,
+    ForestChart
   },
   data() {
     return {
         // toggle
         overviewActive:true,
         detailActive:false,
-        attributeList,
+        /*attributeList,
         // attriute icons: 
         incomeLow: incomeLow,
         incomeMiddle:incomeMiddle,
@@ -298,7 +172,7 @@ export default {
         raceMajorityActive :raceMajorityActive,
         lifeRuralActive :lifeRuralActive,
         lifeCityActive :lifeCityActive,
-        selected: undefined,
+        selected: undefined,*/
         //countries
         china: china, 
         germany: germany, 
@@ -310,10 +184,27 @@ export default {
         gb: gb,
         us: us,
         // Hier sind die Daten für die Detailseite
-        attributes: [{name: 'High income', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}, {name: 'High education', color: '#70E6AB', data: [[0.3, 1.7], [1.3, 2.0], [2.3, 2.5], [3.3, 1.8]]}],
+        attributes: [[{name: 'CH',data: [{x: 0,y:1,color: '#EFF3FF'}, {x: 1,y: 2,color: '#B2DBFF',}, {x: 2,y: 3,color: '#6C93ED',}, {x: 3,y: 1,color: '#6C93ED',}]}, 
+                      {color: '#EFF3FF',data: [[0.5, 2]],}, {color: '#B2DBFF',data: [null, [1.5, 2.3]],}, {color: '#6C93ED',data: [null, null, [2.8,3.1]],}, {color: '#6C93ED',data: [null, null, null,[0.9,1.5]],}],
+                      [{name: 'UK',data: [{x: 0,y:1,color: '#EFF3FF'}, {x: 1,y: 2,color: '#B2DBFF',}, {x: 2,y: 3,color: '#6C93ED',}, {x: 3,y: 1,color: '#6C93ED',}]}, 
+                      {color: '#EFF3FF',data: [[0.5, 2]],}, {color: '#B2DBFF',data: [null, [1.5, 2.3]],}, {color: '#6C93ED',data: [null, null, [2.8,3.1]],}, {color: '#6C93ED',data: [null, null, null,[0.9,1.5]],}],
+                      [{name: 'US',data: [{x: 0,y:1,color: '#EFF3FF'}, {x: 1,y: 2,color: '#B2DBFF',}, {x: 2,y: 3,color: '#6C93ED',}, {x: 3,y: 1,color: '#6C93ED',}]}, 
+                      {color: '#EFF3FF',data: [[0.5, 2]],}, {color: '#B2DBFF',data: [null, [1.5, 2.3]],}, {color: '#6C93ED',data: [null, null, [2.8,3.1]],}, {color: '#6C93ED',data: [null, null, null,[0.9,1.5]],}],
+                      [{name: 'DE',data: [{x: 0,y:1,color: '#EFF3FF'}, {x: 1,y: 2,color: '#B2DBFF',}, {x: 2,y: 3,color: '#6C93ED',}, {x: 3,y: 1,color: '#6C93ED',}]}, 
+                      {color: '#EFF3FF',data: [[0.5, 2]],}, {color: '#B2DBFF',data: [null, [1.5, 2.3]],}, {color: '#6C93ED',data: [null, null, [2.8,3.1]],}, {color: '#6C93ED',data: [null, null, null,[0.9,1.5]],}],
+                      [{name: 'CH',data: [{x: 0,y:1,color: '#CDF2D8'}, {x: 1,y: 2,color: '#8EE5A9',}, {x: 2,y: 3,color: '#8BFFBC',}, {x: 3,y: 1,color: '#67EB68',}]}, 
+                      {color: '#CDF2D8',data: [[0.5, 2]],}, {color: '#8EE5A9',data: [null, [1.5, 2.3]],}, {color: '#8BFFBC',data: [null, null, [2.8,3.1]],}, {color: '#67EB68',data: [null, null, null,[0.9,1.5]],}],
+                      [{name: 'UK',data: [{x: 0,y:1,color: '#CDF2D8'}, {x: 1,y: 2,color: '#8EE5A9',}, {x: 2,y: 3,color: '#8BFFBC',}, {x: 3,y: 1,color: '#67EB68',}]}, 
+                      {color: '#CDF2D8',data: [[0.5, 2]],}, {color: '#8EE5A9',data: [null, [1.5, 2.3]],}, {color: '#8BFFBC',data: [null, null, [2.8,3.1]],}, {color: '#67EB68',data: [null, null, null,[0.9,1.5]],}],
+                      [{name: 'US',data: [{x: 0,y:1,color: '#CDF2D8'}, {x: 1,y: 2,color: '#8EE5A9',}, {x: 2,y: 3,color: '#8BFFBC',}, {x: 3,y: 1,color: '#67EB68',}]}, 
+                      {color: '#CDF2D8',data: [[0.5, 2]],}, {color: '#8EE5A9',data: [null, [1.5, 2.3]],}, {color: '#8BFFBC',data: [null, null, [2.8,3.1]],}, {color: '#67EB68',data: [null, null, null,[0.9,1.5]],}],
+                      [{name: 'DE',data: [{x: 0,y:1,color: '#CDF2D8'}, {x: 1,y: 2,color: '#8EE5A9',}, {x: 2,y: 3,color: '#8BFFBC',}, {x: 3,y: 1,color: '#67EB68',}]}, 
+                      {color: '#CDF2D8',data: [[0.5, 2]],}, {color: '#8EE5A9',data: [null, [1.5, 2.3]],}, {color: '#8BFFBC',data: [null, null, [2.8,3.1]],}, {color: '#67EB68',data: [null, null, null,[0.9,1.5]],}]],
+        age: [[{x: 0,y:1,color: '#EFF3FF'}, {color: '#EFF3FF',data: [[0.5, 2]],}], [{x: 0,y:1,color: '#EFF3FF'}, {color: '#EFF3FF',data: [[0.5, 2]],}], [{x: 0,y:1,color: '#EFF3FF'}, {color: '#EFF3FF',data: [[0.5, 2]],}], [{x: 0,y:1,color: '#EFF3FF'}, {color: '#EFF3FF',data: [[0.5, 2]],}]],
+        /*attributes: [{name: 'High income', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]}, {name: 'High education', color: '#70E6AB', data: [[0.3, 1.7], [1.3, 2.0], [2.3, 2.5], [3.3, 1.8]]}],
         highIncome: {name: 'High income', color: '#C7F700', data: [[0.15, 1.3], [1.15, 1.1], [2.15, 2.1], [3.15, 1.6]]},
         highEducation: {name: 'High education', color: '#70E6AB', data: [[0.3, 1.7], [1.3, 2.0], [2.3, 2.5], [3.3, 1.8]]},
-        middleAge: {name: '31-40', color: '#BBFEFE', data: [[0.45, 0.4], [1.45, 0.8], [2.45, 1.1], [3.45, 0.9]]}
+        middleAge: {name: '31-40', color: '#BBFEFE', data: [[0.45, 0.4], [1.45, 0.8], [2.45, 1.1], [3.45, 0.9]]}*/
     }
   },
   methods: {
@@ -334,13 +225,21 @@ export default {
         document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-data-labels')[0].children[4].children[0].setAttribute('opacity', '1');
     },
     addOrRemove : function (attribute) {
-        let hasAttribute = this.attributes.some( attr => attr.name === attribute.name )
+        let hasAttribute = this.attributes[0][0].data.some( attr => attr.color === attribute[0][0].color )
         if (hasAttribute) {
-            let index = this.attributes.findIndex(attr => attr.name === attribute.name);
-            this.attributes.splice(index, 1);
+            let indexData = this.attributes[0][0].data.findIndex(attr => attr.color === attribute[0][0].color);
+            let indexColor = this.attributes[0].findIndex(attr => attr.color === attribute[0][1].color);
+            for (let i = 0; i < 4; i++) {
+                this.attributes[i][0].data.splice(indexData, 1);
+                this.attributes[i].splice(indexColor, 1);
+            }
         } else {
-            this.attributes.push(attribute)
+            for (let i = 0; i < 4; i++) {
+                this.attributes[i][0].data.push(attribute[i][0]);
+                this.attributes[i].push(attribute[i][1]);
+            }
         }
+        console.log(this.attributes);
     },
     deleteAttributes : function () {
         this.attributes.splice(0, this.attributes.length);
@@ -417,7 +316,7 @@ export default {
         justify-content: space-between;
         width: 18%;
         margin: auto;
-        padding-bottom: 50px;
+        padding-bottom: 20px;
     }
 
     .round-dots a{
@@ -431,7 +330,11 @@ export default {
 
     .detail {
         display: none;
-        /*grid-template-columns: 10% 60% 20%;*/
+    }
+
+    /*.detail {
+        display: none;
+        grid-template-columns: 10% 60% 20%;
         grid-template-columns: 70% 20%;
         grid-column-gap: 3.3%;
     }
@@ -439,7 +342,7 @@ export default {
     .chart-detail {
         display: grid;
         grid-template-columns: 15% 80%;
-    }
+    }*/
     
     .general {
         display: grid;

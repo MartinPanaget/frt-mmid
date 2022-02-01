@@ -1,0 +1,198 @@
+<template>
+    <div class="TemplateForestChartBottom">
+        <highcharts class="template-forest-chart" :options="chartOptions"></highcharts>
+    </div>
+</template>
+
+<script>
+
+export default{
+    name: 'TemplateForestChartBottom',
+    props: {
+        attributesBottom: Array,
+    },
+    data() {
+        return {
+            chartOptions: {
+                chart: {
+                    type: 'scatter',
+                    width: 370,
+                    height: '240',
+                    inverted: true,
+                    plotBackgroundColor: '#999999',
+                    backgroundColor: '#3C3C3C',
+                    zoomType: 'xy',
+                    events: {
+                    drilldown: function(e) {
+                        this.addSingleSeriesAsDrilldown(e.point, e.seriesOptions);
+                        this.addSingleSeriesAsDrilldown(e.point, this.options.series[e.seriesOptions.index+1]);
+                        this.applyDrilldown();
+                    }
+                    },
+                    style: {
+                        fontFamily: 'futura-pt-condensed'
+                    }
+                },
+                title: {
+                    text: undefined
+                },
+                subtitle: {
+                    text: undefined
+                },
+                xAxis: {
+                    min: 0,
+                    max: 5,
+                    title: {
+                        enabled: false,
+                    },
+                    tickColor: undefined,
+                    lineWidth: 0,
+                    showLastLabel: true,
+                    labels: {
+                        enabled: false,
+                    },
+                    plotLines: [
+                    {color: 'white',width: 1,value: 0},
+                    {color: 'white',width: 1,value: 1},
+                    {color: 'white',width: 1,value: 2},
+                    {color: 'white',width: 1,value: 3},
+                    {color: 'white',width: 1,value: 4},
+                    {color: 'white',width: 1,value: 5},
+                    {color: 'white',width: 1,value: 6},
+                    {color: 'white',width: 1,value: 7},
+                    {color: 'white',width: 1,value: 8},
+                    {color: 'white',width: 1,value: 9},
+                    {color: 'white',width: 1,value: 10},
+                    {color: 'white',width: 1,value: 11},
+                    {color: 'white',width: 1,value: 12}
+                    ]
+                },
+                yAxis: {
+                    opposite: true,
+                    min: 0,
+                    max: 5,
+                    title: {
+                    text: undefined
+                    },
+                    tickColor: 'white',
+                    tickWidth:2,
+                    tickLength: 8,
+                    tickInterval: 1,
+                    lineWidth: 0,
+                    gridLineColor: '',
+                    plotLines: [
+                    {color: 'white',width: 2,value: 1},
+                    ],
+                    labels: {
+                        enabled: false
+                    },
+                },
+                plotOptions: {
+                    scatter: {
+                    marker: {
+                        radius: 8,
+                        states: {
+                        hover: {
+                            enabled: true,
+                            lineColor: 'rgb(100,100,100)'
+                        }
+                        }
+                    },
+                    states: {
+                        hover: {
+                        marker: {
+                            enabled: false
+                        }
+                        }
+                    },
+                    tooltip: {
+                        headerFormat: '<b>{series.name}</b><br>',
+                        pointFormat: '<strong>{point.name}</strong> <br>{point.x} Match <br>{point.y} CSAT'
+                    }
+                    },
+                    errorbar: {
+                    tooltip: {
+                        enabled: false
+                    }
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    //name: 'Macro matches',
+                    name: this.attributesBottom[0].name,
+                    colorByPoint: true,
+                    showInLegend: false,
+                    /*data: [{
+                    x: 0,
+                    y:1,
+                    color: '#CC3300',
+                    }, {
+                    x: 1,
+                    y: 2,
+                    color: '#FF9933',
+                    }, {
+                    x: 2,
+                    y: 3,
+                    color: '#33FF00',
+                    }, {
+                    x: 3,
+                    y: 1,
+                    color: '#0000FF',
+                    }]*/
+                    data: this.attributesBottom[0].data,
+                }, {
+                    type: 'errorbar',
+                    //color: '#CC3300',
+                    color: this.attributesBottom[1].color,
+                    stemWidth: 3,
+                    whiskerLength: 0,
+                    //data: [[0.5, 2]],
+                    data: this.attributesBottom[1].data,
+                    tooltip: {
+                    pointFormat: undefined
+                    }
+                }, {
+                    type: 'errorbar',
+                    stemWidth: 3,
+                    whiskerLength: 0,
+                    //color: '#FF9933',
+                    //data: [null, [1.5, 2.3]],
+                    color: this.attributesBottom[2].color,
+                    data: this.attributesBottom[2].data,
+                    tooltip: {
+                    pointFormat: undefined
+                    }
+                }, {
+                    type: 'errorbar',
+                    stemWidth: 3,
+                    whiskerLength: 0,
+                    //color: '#33FF00',
+                    //data: [null, null, [2.8,3.1]],
+                    color: this.attributesBottom[3].color,
+                    data: this.attributesBottom[3].data,
+                    tooltip: {
+                    pointFormat: undefined
+                    }
+                }, {
+                    type: 'errorbar',
+                    stemWidth: 3,
+                    whiskerLength: 0,
+                    //color: '#0000FF',
+                    //data: [null, null, null,[0.9,1.5]],
+                    color: this.attributesBottom[4].color,
+                    data: this.attributesBottom[4].data,
+                    tooltip: {
+                    pointFormat: undefined
+                    }
+                }],
+            }
+        }
+    }
+}
+
+</script>
+
+<style scoped>
+</style>
