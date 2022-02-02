@@ -41,8 +41,8 @@ export default{
                     text: undefined
                 },
                 xAxis: {
-                    min: 0,
-                    max: 12,
+                    /*min: 0,
+                    max: 12,*/
                     title: {
                         enabled: false,
                     },
@@ -132,12 +132,6 @@ export default{
                     series.push(errorbar);
                 }
             })
-            /*for (let i = 1; i < this.attributesTop.length; i++) {
-                let errorbar = {type: 'errorbar', stemWidth: 3, whiskerLength: 0};
-                errorbar["color"] = this.attributesTop[i].color;
-                errorbar["data"] = this.attributesTop[i].data;
-                series.push(errorbar);
-            }*/
             return series;
         }
     }

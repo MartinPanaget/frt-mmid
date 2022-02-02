@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="chart-top">
-            <div class="categories-top">
+            <!--<div class="categories-top">
                 <p>Age</p>
                 <p>Gender</p>
                 <p>Income Medium</p>
@@ -15,21 +15,21 @@
                 <p>Exposure frequency private</p>
                 <p>Exposure & frequency public</p>
                 <p>Exposure & frequency private</p>
-            </div>
+            </div>-->
             <highcharts :options="chartOptionsTop"></highcharts>
             <TemplateForestChart v-bind:attributesTop="attributes[1]"></TemplateForestChart>
             <TemplateForestChart v-bind:attributesTop="attributes[2]"></TemplateForestChart>
             <TemplateForestChart v-bind:attributesTop="attributes[3]"></TemplateForestChart>
         </div>
         <div class="chart-bottom">
-            <div class="categories-bottom">
+            <!--<div class="categories-bottom">
                 <p>Convenience</p>
                 <p>Privacy violations</p>
                 <p>Efficiency</p>
                 <p>Discrimination</p>
                 <p>Security</p>
                 <p>Surveillance</p>
-            </div>
+            </div>-->
             <highcharts :options="chartOptionsBottom"></highcharts>
             <TemplateForestChartBottom v-bind:attributesBottom="attributes[5]"></TemplateForestChartBottom>
             <TemplateForestChartBottom v-bind:attributesBottom="attributes[6]"></TemplateForestChartBottom>
@@ -56,7 +56,7 @@ export default {
             chartOptionsTop: {
                 chart: {
                     type: 'scatter',
-                    width: 350,
+                    width: 400,
                     height: '400',
                     marginBottom: 27,
                     inverted: true,
@@ -81,8 +81,9 @@ export default {
                     text: undefined
                 },
                 xAxis: {
-                    min: 0,
-                    max: 12,
+                    /*min: 0,
+                    max: 12,*/
+                    categories: ['Age', 'Gender', 'Income Medium', 'Income High', 'Education medium', 'Education high', 'Ethnical minority', 'City', 'Exposure', 'Exposure frequency public', 'Exposure frequency private', 'Exposure & frequency public', 'Exposure & frequency private'],
                     title: {
                         enabled: false,
                     },
@@ -95,7 +96,12 @@ export default {
                     lineWidth: 0,
                     showLastLabel: true,
                     labels: {
-                        enabled: false
+                        enabled: true,
+                        reserveSpace: true,
+                        style: {
+                            color: '#F6F6F6',
+                            fontSize: '17px',
+                        }
                     },
                     plotLines: [
                     {color: 'white',width: 1,value: 0},
@@ -172,7 +178,7 @@ export default {
             chartOptionsBottom: {
                 chart: {
                     type: 'scatter',
-                    width: 350,
+                    width: 400,
                     height: '200',
                     inverted: true,
                     plotBackgroundColor: '#999999',
@@ -196,8 +202,9 @@ export default {
                     text: undefined
                 },
                 xAxis: {
-                    min: 0,
-                    max: 5,
+                    /*min: 0,
+                    max: 5,*/
+                    categories: ['Convenience', 'Privacy violations', 'Efficiency', 'Discrimination', 'Security', 'Surveillance',],
                     title: {
                     enabled: false,
                     },
@@ -210,7 +217,12 @@ export default {
                     lineWidth: 0,
                     showLastLabel: true,
                     labels: {
-                        enabled: false
+                        enabled: true,
+                        reserveSpace: true,
+                        style: {
+                            color: '#F6F6F6',
+                            fontSize: '17px',
+                        }
                     },
                     plotLines: [
                     {color: 'white',width: 1,value: 0},
@@ -302,7 +314,7 @@ export default {
 <style scoped>
     .chart-top {
         display: grid;
-        grid-template-columns: 10% repeat(4, 21.5%);
+        grid-template-columns: 24.5% repeat(3, 21.5%);
     }
 
     .categories-top {
@@ -317,7 +329,7 @@ export default {
 
     .chart-bottom {
         display: grid;
-        grid-template-columns: 10% repeat(4, 21.5%);
+        grid-template-columns: 24.5% repeat(3, 21.5%);
     }
 
     .categories-bottom {

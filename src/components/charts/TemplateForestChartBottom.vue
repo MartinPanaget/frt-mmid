@@ -40,8 +40,8 @@ export default{
                     text: undefined
                 },
                 xAxis: {
-                    min: 0,
-                    max: 5,
+                    /*min: 0,
+                    max: 5,*/
                     title: {
                         enabled: false,
                     },

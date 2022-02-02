@@ -1,36 +1,9 @@
 <template>
     <Wrapper id="section5">
         <h2>Acceptance towards FRT</h2>
-        <div class="round-dots">
-
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 323.04 105.03">
-                <!-- <defs>
-                    <style>.cls-1{fill:#e6e6e6;}.cls-2{fill:none;stroke:#e6e6e6;stroke-width:3px;}</style>
-                </defs> -->
-                <g id="Ebene_2" data-name="Ebene 2">
-                    <g id="Ebene_1-2" data-name="Ebene 1">
-                        <polyline class="cls-2" points="308.22 15.31 240.22 52.31 88.22 52.31 13.22 74.31"/>
-                        <g id="Gruppe_514" data-name="Gruppe 514">
-                            <circle id="Ellipse_546" data-name="Ellipse 546" class="cls-1" cx="160.04" cy="53" r="10"/>
-                            <circle id="Ellipse_519" data-name="Ellipse 519" class="cls-1" cx="14.5" cy="75.11" r="14.5"/>
-                            <circle id="Ellipse_518" data-name="Ellipse 518" class="cls-1" cx="308.54" cy="14.5" r="14.5"/>
-
-                            <circle id="c-detail" v-on:click="change('toOverview')" :class="{active:detailActive}" data-name="Ellipse 545" class="cls-1" cx="228.05" cy="53.03" r="42"/>
-                            <text x="228.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">DETAIL</text>
-                            <circle id="c-overview" v-on:click="change('toDetail')" :class="{active:overviewActive}" data-name="Ellipse 545" class="cls-1" cx="90.06" cy="53.03" r="42"/>
-                            <text x="90.06" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">
-                                <tspan x="90.06" dy="0">OVER-</tspan>
-                                <tspan x="90.06" dy="20">VIEW</tspan>
-                            </text>
-                        </g>
-                    </g>
-                </g>
-            </svg>
-
-        </div>
         <div class="overview">
             <div class="general">
-                <p>ACCEPTANCE RATE</p>
+                <p v-on:click="change('toOverview')">ACCEPTANCE RATE</p>
                 <h3 @mouseover='changeColor(1, $event)' @mouseleave='changeColorBack(1, $event)' style="color: #C7F700">CH 67%</h3>
                 <h3 @mouseover='changeColor(2, $event)' @mouseleave='changeColorBack(2, $event)' style="color: #70E6AB">UK 50%</h3>
                 <h3 @mouseover='changeColor(3, $event)' @mouseleave='changeColorBack(3, $event)' style="color: #0CBAF7">US 47%</h3>
