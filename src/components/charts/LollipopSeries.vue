@@ -347,17 +347,17 @@ export default {
         width: 50%;
         left: -160px; 
         right: 0; 
-        top: 140px;
+        top: 125px;
         margin-left: auto; 
         margin-right: auto; 
         padding-top: 100px;
     }
     .glow-div {
-         pointer-events: none;
-        background-image: url('../../assets/v3-glow-ecken.svg');
+        pointer-events: none;
+        background-image: url('../../assets/data/v3/v3-glow-ecken-mit-schrift.svg');
         background-repeat: no-repeat;
         position: absolute;
-        left: 0; 
+        left: 146px; 
         right: 0; 
         margin-left: auto; 
         margin-right: auto; 
@@ -367,6 +367,8 @@ export default {
         height: 850px;
         width: 1451px;
     }
+
+    /* .st1{font-family:'futura-pt-condensed',sans-serif;} */
 </style>
 
 

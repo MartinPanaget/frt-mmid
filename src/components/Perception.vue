@@ -147,7 +147,7 @@ export default {
         width: 30%;
         left: 0; 
         right: 0; 
-        top: 130px;
+        top: 120px;
         margin-left: auto; 
         margin-right: auto; 
         z-index: 20;
