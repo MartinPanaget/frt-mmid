@@ -16,8 +16,8 @@ export default{
             chartOptions: {
                 chart: {
                     type: 'scatter',
-                    width: 370,
-                    height: '450',
+                    width: 350,
+                    height: '400',
                     marginBottom: 27,
                     inverted: true,
                     plotBackgroundColor: '#676767',
@@ -118,66 +118,26 @@ export default{
                     enabled: false
                 },
                 series: this.addErrorbars()
-                /*[{
-                    name: this.attributesTop[0].name,
-                    colorByPoint: true,
-                    showInLegend: false,
-                    data: this.attributesTop[0].data,
-                }, {
-                    type: 'errorbar',
-                    color: this.attributesTop[1].color,
-                    stemWidth: 3,
-                    whiskerLength: 0,
-                    data: this.attributesTop[1].data,
-                    tooltip: {
-                    pointFormat: undefined
-                    }
-                }, {
-                    type: 'errorbar',
-                    stemWidth: 3,
-                    whiskerLength: 0,
-                    //color: '#FF9933',
-                    //data: [null, [1.5, 2.3]],
-                    color: this.attributesTop[2].color,
-                    data: this.attributesTop[2].data,
-                    tooltip: {
-                    pointFormat: undefined
-                    }
-                }, {
-                    type: 'errorbar',
-                    stemWidth: 3,
-                    whiskerLength: 0,
-                    //color: '#33FF00',
-                    //data: [null, null, [2.8,3.1]],
-                    color: this.attributesTop[3].color,
-                    data: this.attributesTop[3].data,
-                    tooltip: {
-                    pointFormat: undefined
-                    }
-                }, {
-                    type: 'errorbar',
-                    stemWidth: 3,
-                    whiskerLength: 0,
-                    //color: '#0000FF',
-                    //data: [null, null, null,[0.9,1.5]],
-                    color: this.attributesTop[4].color,
-                    data: this.attributesTop[4].data,
-                    tooltip: {
-                    pointFormat: undefined
-                    }
-                }],*/
             }
         }
     },
     methods: {
         addErrorbars: function () {
             let series = [{name: this.attributesTop[0].name, colorByPoint: true, showInLegend: false, data: this.attributesTop[0].data,}];
-            for (let i = 1; i < this.attributesTop.length; i++) {
+            this.attributesTop.forEach((element, index) => {
+                if (index !== 0) {
+                    let errorbar = {type: 'errorbar', stemWidth: 3, whiskerLength: 0};
+                    errorbar["color"] = element.color;
+                    errorbar["data"] = element.data;
+                    series.push(errorbar);
+                }
+            })
+            /*for (let i = 1; i < this.attributesTop.length; i++) {
                 let errorbar = {type: 'errorbar', stemWidth: 3, whiskerLength: 0};
                 errorbar["color"] = this.attributesTop[i].color;
                 errorbar["data"] = this.attributesTop[i].data;
                 series.push(errorbar);
-            }
+            }*/
             return series;
         }
     }

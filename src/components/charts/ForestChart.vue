@@ -49,15 +49,15 @@ export default {
         TemplateForestChartBottom
     },
     props: {
-        attributes: Array
+        attributes: Array,
     },
     data() {
         return {
             chartOptionsTop: {
                 chart: {
                     type: 'scatter',
-                    width: 370,
-                    height: '450',
+                    width: 350,
+                    height: '400',
                     marginBottom: 27,
                     inverted: true,
                     plotBackgroundColor: '#676767',
@@ -168,61 +168,12 @@ export default {
                     enabled: false
                 },
                 series: this.addErrorbars(0)
-                /*[{
-                    name: this.attributes[0][0].name,
-                    colorByPoint: true,
-                    showInLegend: false,
-                    data: this.attributes[0][0].data
-                }, {
-                    type: 'errorbar',
-                    color: this.attributes[0][1].color,
-                    stemWidth: 3,
-                    whiskerLength: 0,
-                    //data: [[0.5, 2]],
-                    data: this.attributes[0][1].data,
-                    tooltip: {
-                    pointFormat: undefined
-                    }
-                }, {
-                    type: 'errorbar',
-                    stemWidth: 3,
-                    whiskerLength: 0,
-                    //color: '#FF9933',
-                    //data: [null, [1.5, 2.3]],
-                    color: this.attributes[0][2].color,
-                    data: this.attributes[0][2].data,
-                    tooltip: {
-                    pointFormat: undefined
-                    }
-                }, {
-                    type: 'errorbar',
-                    stemWidth: 3,
-                    whiskerLength: 0,
-                    //color: '#33FF00',
-                    //data: [null, null, [2.8,3.1]],
-                    color: this.attributes[0][3].color,
-                    data: this.attributes[0][3].data,
-                    tooltip: {
-                    pointFormat: undefined
-                    }
-                }, {
-                    type: 'errorbar',
-                    stemWidth: 3,
-                    whiskerLength: 0,
-                    //color: '#0000FF',
-                    //data: [null, null, null,[0.9,1.5]],
-                    color: this.attributes[0][4].color,
-                    data: this.attributes[0][4].data,
-                    tooltip: {
-                    pointFormat: undefined
-                    }
-                }],*/
             },
             chartOptionsBottom: {
                 chart: {
                     type: 'scatter',
-                    width: 370,
-                    height: '240',
+                    width: 350,
+                    height: '200',
                     inverted: true,
                     plotBackgroundColor: '#999999',
                     backgroundColor: '#3C3C3C',
@@ -330,56 +281,6 @@ export default {
                     enabled: false
                 },
                 series: this.addErrorbars(4)
-                /*[{
-                    name: this.attributes[4][0].name,
-                    colorByPoint: true,
-                    showInLegend: false,
-                    data: this.attributes[4][0].data
-                }, {
-                    type: 'errorbar',
-                    //color: '#CC3300',
-                    color: this.attributes[4][1].color,
-                    stemWidth: 3,
-                    whiskerLength: 0,
-                    //data: [[0.5, 2]],
-                    data: this.attributes[4][1].data,
-                    tooltip: {
-                    pointFormat: undefined
-                    }
-                }, {
-                    type: 'errorbar',
-                    stemWidth: 3,
-                    whiskerLength: 0,
-                    //color: '#FF9933',
-                    //data: [null, [1.5, 2.3]],
-                    color: this.attributes[4][2].color,
-                    data: this.attributes[4][2].data,
-                    tooltip: {
-                    pointFormat: undefined
-                    }
-                }, {
-                    type: 'errorbar',
-                    stemWidth: 3,
-                    whiskerLength: 0,
-                    //color: '#33FF00',
-                    //data: [null, null, [2.8,3.1]],
-                    color: this.attributes[4][3].color,
-                    data: this.attributes[4][3].data,
-                    tooltip: {
-                    pointFormat: undefined
-                    }
-                }, {
-                    type: 'errorbar',
-                    stemWidth: 3,
-                    whiskerLength: 0,
-                    //color: '#0000FF',
-                    //data: [null, null, null,[0.9,1.5]],
-                    color: this.attributes[4][4].color,
-                    data: this.attributes[4][4].data,
-                    tooltip: {
-                    pointFormat: undefined
-                    }
-                }],*/
             }
         }
     },
@@ -401,7 +302,7 @@ export default {
 <style scoped>
     .chart-top {
         display: grid;
-        grid-template-columns: 10% repeat(4, 22.5%);
+        grid-template-columns: 10% repeat(4, 21.5%);
     }
 
     .categories-top {
@@ -410,22 +311,22 @@ export default {
     }
 
     .categories-top p {
-        font-size: 20px;
-        margin: 5.5px auto 5.5px;
+        font-size: 17px;
+        margin: 5.7px auto 5.7px;
     }
 
     .chart-bottom {
         display: grid;
-        grid-template-columns: 10% repeat(4, 22.5%);
+        grid-template-columns: 10% repeat(4, 21.5%);
     }
 
     .categories-bottom {
-        padding-top: 13px;
+        padding-top: 12px;
         text-align: right;
     }
 
     .categories-bottom p {
-        font-size: 20px;
-        margin: 8.5px auto 8.5px;
+        font-size: 17px;
+        margin: 6.2px auto 6.2px;
     }
 </style>
