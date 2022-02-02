@@ -40,9 +40,20 @@ export default{
                 },
 
                 tooltip: {
-                    shared: false
+                    shared: false,
+                    formatter: function(){
+                        if(this.y < 0 || this.y > 0){
+                            return '<strong>'+this.series.name+'</strong>'+': '+Math.abs(this.y)+'%'
+                        }else{
+                            return 'inactive'
+                        }
+                    },
+                    style:{
+                        fontSize: '18px'
+                    },
                 },
                 yAxis:{
+                    gridLineColor: '#3C3C3C',
                     visible: true,
                     min: this.min,
                     max: this.max,
@@ -67,6 +78,21 @@ export default{
                     }
                 },
                 plotOptions:{
+                    lollipop:{
+                        zones: [{
+                            value: -1, // Values up to 10 (not including) ...
+                            color: this.color // ... have the color blue.
+                        },
+                        {
+                            value: 1,
+                            color: 'transparent'
+
+                        },
+                        {
+                            color: this.color // Values from 10 (including) and up have the color red
+                        }
+                        ]
+                    }
                 },
                 credits: {
                     enabled: false

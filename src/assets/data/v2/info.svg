@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="277.611" height="219.445" viewBox="0 0 277.611 219.445">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #c7f700;
+        stroke-width: 8px;
+      }
+
+      .cls-2 {
+        fill: #f6f6f6;
+        font-size: 22px;
+        font-family: 'futura-pt-condensed', sans-serif;
+      }
+
+      .cls-3 {
+        stroke: #f6f6f6;
+      }
+
+      .cls-4 {
+        filter: url(#Pfad_53);
+      }
+
+      .cls-5 {
+        filter: url(#Pfad_52);
+      }
+
+      .cls-6 {
+        filter: url(#Pfad_51);
+      }
+
+      .cls-7 {
+        filter: url(#Pfad_50);
+      }
+    </style>
+    <filter id="Pfad_50" x="183.062" y="0" width="94.55" height="106" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-color="#c7f700"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_51" x="183.062" y="113.445" width="94.55" height="106" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-2"/>
+      <feFlood flood-color="#c7f700"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_52" x="0" y="0" width="94.55" height="106" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-3"/>
+      <feFlood flood-color="#c7f700"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_53" x="0" y="113.445" width="94.55" height="106" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-4"/>
+      <feFlood flood-color="#c7f700"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Gruppe_433" data-name="Gruppe 433" transform="translate(-1442.294 -374.401)">
+    <g id="Gruppe_432" data-name="Gruppe 432">
+      <g id="Gruppe_430" data-name="Gruppe 430" transform="translate(1468.794 400.901)">
+        <g id="Gruppe_93" data-name="Gruppe 93" transform="translate(0 0)">
+          <g class="cls-7" transform="matrix(1, 0, 0, 1, -26.5, -26.5)">
+            <path id="Pfad_50-2" data-name="Pfad 50" class="cls-1" d="M0,0V57H45.55" transform="translate(251.11 83.5) rotate(180)"/>
+          </g>
+          <g class="cls-6" transform="matrix(1, 0, 0, 1, -26.5, -26.5)">
+            <path id="Pfad_51-2" data-name="Pfad 51" class="cls-1" d="M0,57V0H45.55" transform="translate(251.11 192.95) rotate(180)"/>
+          </g>
+          <g class="cls-5" transform="matrix(1, 0, 0, 1, -26.5, -26.5)">
+            <path id="Pfad_52-2" data-name="Pfad 52" class="cls-1" d="M0,57V0H45.55" transform="translate(26.5 26.5)"/>
+          </g>
+          <g class="cls-4" transform="matrix(1, 0, 0, 1, -26.5, -26.5)">
+            <path id="Pfad_53-2" data-name="Pfad 53" class="cls-1" d="M0,0V57H45.55" transform="translate(26.5 135.95)"/>
+          </g>
+        </g>
+      </g>
+      <text id="Hier_kommen_Detailinfos_rein" data-name="Hier kommen
+Detailinfos
+rein" class="cls-2" transform="translate(1497.001 461.624)"><tspan x="0" y="0">Hier kommen</tspan><tspan x="0" y="35">Detailinfos</tspan><tspan x="0" y="70">rein</tspan></text>
+    </g>
+    <g id="Gruppe_561" data-name="Gruppe 561" transform="translate(1044.02 -1276.762) rotate(45)">
+      <line id="Linie_291" data-name="Linie 291" class="cls-3" y2="26.383" transform="translate(1648.692 749.5)"/>
+      <line id="Linie_292" data-name="Linie 292" class="cls-3" y1="26.383" transform="translate(1661.883 762.692) rotate(90)"/>
+    </g>
+  </g>
+</svg>

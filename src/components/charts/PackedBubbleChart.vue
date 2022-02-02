@@ -10,11 +10,13 @@ export default {
         series: Array,
         title: String,
         minSize: String,
-        maxSize: String
+        maxSize: String,
+        height: String
     },
     methods:{
         expose: function(){
             var i;
+            this.$children[0].chart.series[4].hide();
             for(i=0; i<4; i++){
                 this.$children[0].chart.series[i].show();
             }
@@ -25,9 +27,10 @@ export default {
             chartOptions: {
                 chart: {
                     type: 'packedbubble',
-                    width: '250',
-                    height: '300',
+                    width: '300',
+                    height: this.height,
                     // backgroundColor: '#5F5E5E',
+                    margin: [10,0],
                     backgroundColor: '#3C3C3C',
                     style:{
                         fontFamily: 'futura-pt-condensed, sans-serif',
@@ -46,9 +49,18 @@ export default {
                         dataLabels:{
                             enabled: true,
                             style: {
-                                color: 'black',
+                                color: '#222222',
                                 textOutline: 'none',
-                                fontWeight: 'normal'
+                                fontWeight: 'normal',
+                                fontSize: '18px'
+                            },
+                            formatter:function(){
+                                if(this.series.name != 'Average'){
+                                    var name = this.series.name.slice(-3); 
+                                    return "<strong>"+name +"<br>"+ this.y+"%"+"</strong>"
+                                }else{
+                                    return "<strong>"+"&#8709; "+ this.y+"%"+"</strong>"
+                                }
                             }
                         }
                         // point:{
@@ -87,7 +99,11 @@ export default {
                     },
                 },
                 tooltip: {
-                    valueSuffix: '%'
+                    enabled: false,
+                    valueSuffix: '%',
+                    style:{
+                        fontSize: '18px'
+                    },
                 },
                 credits: {
                     enabled: false
