@@ -149,8 +149,6 @@ export default {
         left: 588px; 
         right: 0; 
         top: 549.5px;
-        /* margin-left: auto; 
-        margin-right: auto;  */
         z-index: 20;
     }
     .second{
@@ -161,8 +159,6 @@ export default {
         left: 939px; 
         right: 0; 
         top: 549.5px;
-        /* margin-left: auto; 
-        margin-right: auto;  */
         z-index: 20;
     }
     .third{
@@ -173,8 +169,6 @@ export default {
         left: 1289px; 
         right: 0; 
         top: 549.5px;
-        /* margin-left: auto; 
-        margin-right: auto;  */
         z-index: 20;
     }
     .country-wrapper{
@@ -188,7 +182,6 @@ export default {
         margin-left: auto; 
         margin-right: auto; 
         z-index: 20;
-        /* padding-top: 100px; */
     }
 
     a img{
