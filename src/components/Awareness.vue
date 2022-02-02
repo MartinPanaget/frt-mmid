@@ -9,48 +9,32 @@
                     <!-- <defs>
                         <style>.cls-1{fill:#e6e6e6;}.cls-2{fill:none;stroke:#e6e6e6;stroke-width:3px;}</style>
                     </defs> -->
-                    <g id="Ebene_2" data-name="Ebene 2">
-                        <g id="Ebene_1-2" data-name="Ebene 1">
-                            <polyline class="cls-2" points="574.22 15.31 506.22 52.31 88.22 52.31 13.22 74.31"/>
-                            <g id="Gruppe_514" data-name="Gruppe 514">
-                                    <circle fill="#e6e6e6" id="Ellipse_555" data-name="Ellipse 546" class="cls-1 op" cx="160.04" cy="53" r="10"/>
-                                    <circle fill="#e6e6e6" id="Ellipse_519" data-name="Ellipse 519" class="cls-1 op" cx="14.5" cy="75.11" r="14.5"/>
-                                    <circle fill="#e6e6e6" id="Ellipse_518" data-name="Ellipse 518" class="cls-1 op" cx="572.54" cy="14.5" r="14.5"/>
-                                    <circle fill="#e6e6e6" id="Ellipse_444" data-name="Ellipse 520" class="cls-1 op" cx="438.04" cy="53" r="10"/>
-                                    <circle fill="#e6e6e6" id="Ellipse_548" data-name="Ellipse 548" class="cls-1 op" cx="297.04" cy="53" r="10"/>
+                        <g id="Ebene_2" data-name="Ebene 2">
+                            <g id="Ebene_1-2" data-name="Ebene 1">
+                                <polyline class="cls-2" points="574.22 15.31 506.22 52.31 88.22 52.31 13.22 74.31"/>
+                                <g id="Gruppe_514" data-name="Gruppe 514">
+                                        <circle fill="#e6e6e6" id="Ellipse_555" data-name="Ellipse 546" class="cls-1 op" cx="160.04" cy="53" r="10"/>
+                                        <circle fill="#e6e6e6" id="Ellipse_519" data-name="Ellipse 519" class="cls-1 op" cx="14.5" cy="75.11" r="14.5"/>
+                                        <circle fill="#e6e6e6" id="Ellipse_518" data-name="Ellipse 518" class="cls-1 op" cx="572.54" cy="14.5" r="14.5"/>
+                                        <circle fill="#e6e6e6" id="Ellipse_444" data-name="Ellipse 520" class="cls-1 op" cx="438.04" cy="53" r="10"/>
+                                        <circle fill="#e6e6e6" id="Ellipse_548" data-name="Ellipse 548" class="cls-1 op" cx="297.04" cy="53" r="10"/>
 
 
-                                    <circle @click="all" id="c-all" :class="{bactive:allActive}" data-name="Ellipse 545" class="cls-1" cx="90.06" cy="53.03" r="42"/>
-                                    <text x="90.06" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">ALL</text>
+                                        <circle @click="all" id="c-all" :class="{bactive:allActive}" data-name="Ellipse 545" class="cls-1" cx="90.06" cy="53.03" r="42"/>
+                                        <text x="90.06" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">ALL</text>
 
-                                    <circle @click="min" id="c-min" :class="{bactive:minActive}" data-name="Ellipse 545" class="cls-1" cx="228.05" cy="53.03" r="42"/>
-                                    <text x="228.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">MIN.</text>
+                                        <circle @click="min" id="c-min" :class="{bactive:minActive}" data-name="Ellipse 545" class="cls-1" cx="228.05" cy="53.03" r="42"/>
+                                        <text x="228.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">MIN.</text>
 
-                                    <circle @click="max" id="c-max" :class="{bactive:maxActive}" data-name="Ellipse 547" class="cls-1" cx="366.05" cy="53.03" r="42"/>
-                                    <text x="366.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">MAX.</text>
+                                        <circle @click="max" id="c-max" :class="{bactive:maxActive}" data-name="Ellipse 547" class="cls-1" cx="366.05" cy="53.03" r="42"/>
+                                        <text x="366.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">MAX.</text>
 
-                                    <circle @click="avrg" id="c-avrg" :class="{bactive:avrgActive}" data-name="Ellipse 517" class="cls-1" cx="504.04" cy="53.03" r="42"/>
-                                    <text x="504.04" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">AVRG</text>
+                                        <circle @click="avrg" id="c-avrg" :class="{bactive:avrgActive}" data-name="Ellipse 517" class="cls-1" cx="504.04" cy="53.03" r="42"/>
+                                        <text x="504.04" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">AVRG</text>
+                                </g>
                             </g>
                         </g>
-                    </g>
-                </svg>
-
-
-
-
-                    <!-- <div class="dot">
-                        <a href="#" @click="min">MIN</a>
-                    </div>
-                    <div class="dot">
-                        <a href="#" @click="max">MAX</a>
-                    </div>
-                    <div class="dot">
-                        <a href="#" @click="avg">AVG</a>
-                    </div>
-                    <div class="dot">
-                        <a href="#" @click="all">ALL</a>
-                    </div> -->
+                    </svg>
                 </div>
             </div>
             <PackedBubbles></PackedBubbles>
@@ -232,11 +216,11 @@ text{
 #reset{
     position: absolute;
     /* right: 50px; */
-    bottom: 20px;
-     left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto;
+    bottom: 25px;
+     /* left: 0;  */
+    right: 50px; 
+    /* margin-left: auto; 
+    margin-right: auto; */
     border: 0px solid transparent;
     border-radius: 50%;
 }

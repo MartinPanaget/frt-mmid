@@ -2,15 +2,15 @@
     <div>
         <div class="LollipopSeries">
             <div class="lollipop-pair">
-                <LollipopChartExpanded v-bind:series="series.Convinience" min="0" max ="80" title="Convenience" backgroundColor="rgba(246,246,246,0.5)"></LollipopChartExpanded>
+                <LollipopChartExpanded style="margin-bottom:7px" v-bind:series="series.Convinience" min="0" max ="80" title="Convenience" backgroundColor="rgba(246,246,246,0.5)"></LollipopChartExpanded>
                 <LollipopChartExpanded v-bind:series="series.PrivacyViolation" min="-80" max ="0" title="Privacy Violation" titleAlign="bottom" backgroundColor="rgba(203,203,203,0.3)"></LollipopChartExpanded>
             </div>
             <div class="lollipop-pair">
-                <LollipopChart v-bind:series="series.Efficiency" min="0" max ="80" title="Efficiency" backgroundColor="rgba(246,246,246,0.5)" ></LollipopChart>
+                <LollipopChart style="margin-bottom:7px" v-bind:series="series.Efficiency" min="0" max ="80" title="Efficiency" backgroundColor="rgba(246,246,246,0.5)" ></LollipopChart>
                 <LollipopChart v-bind:series="series.Discrimination " min="-80" max ="0" title="Discrimination" titleAlign="bottom" backgroundColor="rgba(203,203,203,0.3)"></LollipopChart>
             </div>
             <div class="lollipop-pair">
-                <LollipopChart v-bind:series="series.Security" min="0" max ="80" title="Security" backgroundColor="rgba(246,246,246,0.5)" ></LollipopChart>
+                <LollipopChart style="margin-bottom:7px" v-bind:series="series.Security" min="0" max ="80" title="Security" backgroundColor="rgba(246,246,246,0.5)" ></LollipopChart>
                 <LollipopChart v-bind:series="series.Surveillance" min="-80" max ="0" title="Surveillance" titleAlign="bottom" backgroundColor="rgba(203,203,203,0.3)"></LollipopChart>
             </div>
         </div>

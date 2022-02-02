@@ -7,6 +7,7 @@
       <Perception></Perception>
       <Awareness></Awareness>
       <SocialAcceptance></SocialAcceptance>
+      <SocialAcceptance></SocialAcceptance>
       <Footer></Footer>
     </full-page>
   </div>
@@ -44,9 +45,9 @@ export default {
         navigation: false,
         navigationPosition: "left",
         setAllowScrolling: true,
-        navigationTooltips: ['Start', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'Impressum'],
+        navigationTooltips: ['Start', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage','Imprint'],
         showActiveTooltip: true,
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
         menu: '#navbar',
         scrollHorizontally: true,
         onLeave: this.leaveSection,

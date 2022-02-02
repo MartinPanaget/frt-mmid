@@ -23,7 +23,7 @@ export default{
                     type: 'lollipop',
                     inverted: false,
                     width: 350,
-                    height: 340,
+                    height: 335,
                     opacity: '50%',
                     style:{
                         fontFamily: 'futura-pt-condensed, sans-serif'
