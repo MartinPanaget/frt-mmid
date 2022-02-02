@@ -290,8 +290,11 @@ export default {
         }
     .cls-2{
         fill:none;
-        stroke:#e6e6e6;stroke-width:3px;
+        stroke:#4d4d4d;stroke-width:3px;
         }
+    .op{
+    fill:#4d4d4d;
+    }
 
     text{
         font-family: 'Montserrat', sans-serif;

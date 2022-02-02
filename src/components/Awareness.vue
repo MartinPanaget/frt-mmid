@@ -1,7 +1,7 @@
 <template>
     <Wrapper id="section4">
             <div class="general">
-                <h2>Perceived Occurrences of FRTS</h2>            
+                <h2>Perceived Occurrences of Facial Recognition Technologies</h2>            
                 
                 <div class="round-dots">
 
@@ -9,57 +9,43 @@
                     <!-- <defs>
                         <style>.cls-1{fill:#e6e6e6;}.cls-2{fill:none;stroke:#e6e6e6;stroke-width:3px;}</style>
                     </defs> -->
-                    <g id="Ebene_2" data-name="Ebene 2">
-                        <g id="Ebene_1-2" data-name="Ebene 1">
-                            <polyline class="cls-2" points="574.22 15.31 506.22 52.31 88.22 52.31 13.22 74.31"/>
-                            <g id="Gruppe_514" data-name="Gruppe 514">
-                                    <circle fill="#e6e6e6" id="Ellipse_555" data-name="Ellipse 546" class="cls-1" cx="160.04" cy="53" r="10"/>
-                                    <circle fill="#e6e6e6" id="Ellipse_519" data-name="Ellipse 519" class="cls-1" cx="14.5" cy="75.11" r="14.5"/>
-                                    <circle fill="#e6e6e6" id="Ellipse_518" data-name="Ellipse 518" class="cls-1" cx="572.54" cy="14.5" r="14.5"/>
-                                    <circle fill="#e6e6e6" id="Ellipse_444" data-name="Ellipse 520" class="cls-1" cx="438.04" cy="53" r="10"/>
-                                    <circle fill="#e6e6e6" id="Ellipse_548" data-name="Ellipse 548" class="cls-1" cx="297.04" cy="53" r="10"/>
+                        <g id="Ebene_2" data-name="Ebene 2">
+                            <g id="Ebene_1-2" data-name="Ebene 1">
+                                <polyline class="cls-2" points="574.22 15.31 506.22 52.31 88.22 52.31 13.22 74.31"/>
+                                <g id="Gruppe_514" data-name="Gruppe 514">
+                                        <circle fill="#e6e6e6" id="Ellipse_555" data-name="Ellipse 546" class="cls-1 op" cx="160.04" cy="53" r="10"/>
+                                        <circle fill="#e6e6e6" id="Ellipse_519" data-name="Ellipse 519" class="cls-1 op" cx="14.5" cy="75.11" r="14.5"/>
+                                        <circle fill="#e6e6e6" id="Ellipse_518" data-name="Ellipse 518" class="cls-1 op" cx="572.54" cy="14.5" r="14.5"/>
+                                        <circle fill="#e6e6e6" id="Ellipse_444" data-name="Ellipse 520" class="cls-1 op" cx="438.04" cy="53" r="10"/>
+                                        <circle fill="#e6e6e6" id="Ellipse_548" data-name="Ellipse 548" class="cls-1 op" cx="297.04" cy="53" r="10"/>
 
 
-                                    <circle @click="min" id="c-min" :class="{active:minActive}" data-name="Ellipse 545" class="cls-1" cx="90.06" cy="53.03" r="42"/>
-                                    <text x="90.06" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">MIN</text>
+                                        <circle @click="all" id="c-all" :class="{bactive:allActive}" data-name="Ellipse 545" class="cls-1" cx="90.06" cy="53.03" r="42"/>
+                                        <text x="90.06" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">ALL</text>
 
-                                    <circle @click="max" id="c-max" :class="{active:maxActive}" data-name="Ellipse 545" class="cls-1" cx="228.05" cy="53.03" r="42"/>
-                                    <text x="228.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">MAX</text>
+                                        <circle @click="min" id="c-min" :class="{bactive:minActive}" data-name="Ellipse 545" class="cls-1" cx="228.05" cy="53.03" r="42"/>
+                                        <text x="228.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">MIN.</text>
 
-                                    <circle @click="avg" id="c-avrg" :class="{active:avrgActive}" data-name="Ellipse 547" class="cls-1" cx="366.05" cy="53.03" r="42"/>
-                                    <text x="366.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">AVRG</text>
+                                        <circle @click="max" id="c-max" :class="{bactive:maxActive}" data-name="Ellipse 547" class="cls-1" cx="366.05" cy="53.03" r="42"/>
+                                        <text x="366.05" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">MAX.</text>
 
-                                    <circle @click="all" id="c-all" :class="{active:allActive}" data-name="Ellipse 517" class="cls-1" cx="504.04" cy="53.03" r="42"/>
-                                    <text x="504.04" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">ALL</text>
+                                        <circle @click="avrg" id="c-avrg" :class="{bactive:avrgActive}" data-name="Ellipse 517" class="cls-1" cx="504.04" cy="53.03" r="42"/>
+                                        <text x="504.04" y="53.03" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">AVRG</text>
+                                </g>
                             </g>
                         </g>
-                    </g>
-                </svg>
-
-
-
-
-                    <!-- <div class="dot">
-                        <a href="#" @click="min">MIN</a>
-                    </div>
-                    <div class="dot">
-                        <a href="#" @click="max">MAX</a>
-                    </div>
-                    <div class="dot">
-                        <a href="#" @click="avg">AVG</a>
-                    </div>
-                    <div class="dot">
-                        <a href="#" @click="all">ALL</a>
-                    </div> -->
+                    </svg>
                 </div>
             </div>
             <PackedBubbles></PackedBubbles>
+            <img id="reset" :src='reset' @click="resetBtn">
     </Wrapper>
 </template>
 
 <script>
 import Wrapper from './Wrapper.vue';
 import PackedBubbles from './charts/PackedBubbles.vue';
+import reset from '../assets/icons/v4-reset.svg';
 
 export default {
   name: 'Awareness',
@@ -72,7 +58,8 @@ export default {
         maxActive:false,
         minActive:false,
         avrgActive:false,
-        allActive: true
+        allActive: true,
+        reset: reset
     }
   },
   methods:{
@@ -84,7 +71,7 @@ export default {
             chart[i].__vue__.chart.series[0].show();
         }
         for(i=0; i<10; i++){
-            for(k=1; k<4; k++){
+            for(k=1; k<5; k++){
                 chart[i].__vue__.chart.series[k].hide();
             }
         }
@@ -103,6 +90,7 @@ export default {
             chart[i].__vue__.chart.series[3].show();
         }
         for(i=0; i<10; i++){
+            chart[i].__vue__.chart.series[4].hide();
             for(k=0; k<3; k++){
                 chart[i].__vue__.chart.series[k].hide();
             }
@@ -112,7 +100,19 @@ export default {
         this.allActive = false;
         this.maxActive = true;
       },
-      avg:function(){
+      avrg:function(){
+        var i;
+        var k;
+        var chart = document.getElementsByClassName('bubble-chart');
+
+        for(i=0; i<10; i++){
+            for(k=0; k<4; k++){
+                chart[i].__vue__.chart.series[k].hide();
+                }
+        }
+        for(i=0; i<10; i++){
+            chart[i].__vue__.chart.series[4].show();
+        }
 
         this.maxActive = false;
         this.minActive = false;
@@ -125,6 +125,7 @@ export default {
         var chart = document.getElementsByClassName('bubble-chart');
 
         for(i=0; i<10; i++){
+            chart[i].__vue__.chart.series[4].hide();
             for(k=0; k<4; k++){
                 chart[i].__vue__.chart.series[k].show();
             }
@@ -133,6 +134,22 @@ export default {
         this.avrgActive = false;
         this.minActive = false;
         this.allActive = true;
+      },
+      resetBtn:function(){
+          switch (document.getElementsByClassName('bactive')[0].id){
+                case "c-all": 
+                    this.all();
+                    break;
+                case "c-min":
+                    this.min();
+                    break;
+                case "c-max":
+                    this.max();
+                    break;
+                case "c-avrg":
+                    this.avrg();
+                    break;
+          }
       }
   }
 }
@@ -153,18 +170,21 @@ console.log(maxButton);
     fill:#e6e6e6;
     cursor: pointer;
     }
-.cls-1.active{
+.cls-1.bactive{
     fill:rgb(0, 255, 255); 
     filter: drop-shadow(0 0 6px rgb(0 255 255 / 0.8));
     }
 .cls-2{
     fill:none;
-    stroke:#e6e6e6;stroke-width:3px;
+    stroke:#4d4d4d;stroke-width:3px;
     }
+.op{
+    fill:#4d4d4d;
+}
 
 text{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-family: 'futura-pt-condensed', sans-serif;
+    font-size: 32px;
     pointer-events: none;
 }
 
@@ -191,5 +211,23 @@ text{
 .round-dots a{
     color: #222222;
     text-decoration: none;
+}
+
+#reset{
+    position: absolute;
+    /* right: 50px; */
+    bottom: 25px;
+     /* left: 0;  */
+    right: 50px; 
+    /* margin-left: auto; 
+    margin-right: auto; */
+    border: 0px solid transparent;
+    border-radius: 50%;
+}
+
+#reset:hover{
+    /* border: 5px solid rgb(0, 255, 255); */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0, 255, 255);
 }
 </style>

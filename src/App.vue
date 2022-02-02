@@ -7,6 +7,7 @@
       <Perception></Perception>
       <Awareness></Awareness>
       <SocialAcceptance></SocialAcceptance>
+      <SocialAcceptance></SocialAcceptance>
       <Footer></Footer>
     </full-page>
   </div>
@@ -44,9 +45,9 @@ export default {
         navigation: false,
         navigationPosition: "left",
         setAllowScrolling: true,
-        navigationTooltips: ['Start', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'Impressum'],
+        navigationTooltips: ['Start', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage','Imprint'],
         showActiveTooltip: true,
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
         menu: '#navbar',
         scrollHorizontally: true,
         onLeave: this.leaveSection,
@@ -76,7 +77,9 @@ export default {
 </script>
 
 <style>
-@import url('https://use.typekit.net/mqc1poj.css');
+/* @import url('https://use.typekit.net/mqc1poj.css'); */
+@import url('https://use.typekit.net/zez5hmn.css');
+
 
 /* background section */
 
@@ -110,7 +113,9 @@ export default {
 
 /* body */
 body {
-  font-family: 'futura-pt-condensed', sans-serif;
+  font-family: 'futura-pt-condensed',sans-serif;
+  font-weight: 500;
+  font-style: normal;
   color: white;
 }
 
@@ -130,15 +135,16 @@ body {
 }
 
 h1{
-  padding-top: 140px;
-  font-size: 85px;
+  padding-top: 100px;
+  line-height: 120px;
+  font-size: 130px;
   color: #00FFFF;
-  text-shadow: rgba(0,255,255,0.9) 0px 0px 9px;
+  /* text-shadow: rgba(0,255,255,0.9) 0px 0px 9px; */
   margin-bottom: 0px;
 }
 
 .sub-title{
-  font-size: 26px;
+  font-size: 61px;
   text-transform:uppercase;
   margin-top: 5px;
   text-shadow: rgba(0,0,0,0.2) 0px 5px 5px;
