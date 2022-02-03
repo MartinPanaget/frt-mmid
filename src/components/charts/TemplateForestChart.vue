@@ -92,32 +92,39 @@ export default{
                 },
                 plotOptions: {
                     scatter: {
-                    marker: {
-                        radius: 8,
+                        marker: {
+                            radius: 8,
+                            states: {
+                            hover: {
+                                enabled: true,
+                                lineColor: 'rgb(100,100,100)'
+                            }
+                            }
+                        },
                         states: {
-                        hover: {
-                            enabled: true,
-                            lineColor: 'rgb(100,100,100)'
-                        }
+                            hover: {
+                            marker: {
+                                enabled: false
+                            }
+                            }
+                        },
+                        tooltip: {
+                            headerFormat: '<b>{series.name}</b><br>',
+                            pointFormat: '<strong>{point.name}</strong> <br>{point.x} Match <br>{point.y} CSAT'
                         }
                     },
-                    states: {
-                        hover: {
-                        marker: {
+                    errorbar: {
+                        stemWidth: 3, 
+                        whiskerLength: 0,
+                        tooltip: {
                             enabled: false
                         }
-                        }
-                    },
-                    tooltip: {
-                        headerFormat: '<b>{series.name}</b><br>',
-                        pointFormat: '<strong>{point.name}</strong> <br>{point.x} Match <br>{point.y} CSAT'
                     }
-                    },
                 },
                 credits: {
                     enabled: false
                 },
-                series: this.addErrorbars()
+                series: this.attributesTop
             }
         }
     },
