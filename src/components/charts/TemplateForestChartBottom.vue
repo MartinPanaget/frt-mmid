@@ -109,8 +109,8 @@ export default{
                         }
                     },
                     tooltip: {
-                        headerFormat: '<b>{series.name}</b><br>',
-                        pointFormat: '<strong>{point.name}</strong> <br>{point.x} Match <br>{point.y} CSAT'
+                        headerFormat: '<strong>{series.name}</strong><br>',
+                        pointFormat: '<br>Wert: {point.y}{point.name}'
                     }
                     },
                     errorbar: {
