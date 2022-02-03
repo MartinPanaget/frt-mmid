@@ -104,20 +104,27 @@ export default {
 .cls-1{
     fill:#fff;
     filter: drop-shadow(0 0 6px rgb(0 255 255 / 0));
+    transition-property: fill, filter;
+    transition-duration: .5s;
+    transition-timing-function: linear;
     }
 .cls-1.active{
     fill:aqua;
-    filter: drop-shadow(0 0 6px rgb(0 255 255 / 0.8));
-    transition: filter 0.1s ease-in-out;
-    
+    filter: drop-shadow(0 0 6px rgb(0 255 255 / 0.8));    
 }
 
 .cls-2{opacity:0.1;}
 .cls-3{opacity:0.75;}
-.cls-4{fill:aqua;}
+
+/* info button  */
+.cls-4{
+    fill:aqua;
+    filter: drop-shadow(0 0 6px rgb(0 255 255 / 0));
+    transition: filter 0.5s linear;
+}
 
 #more:hover{
     filter: drop-shadow(0 0 6px rgb(0 255 255 / 0.8));
-    transition: filter 0.1s ease-in-out;
+    
 }
 </style>

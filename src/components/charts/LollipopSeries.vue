@@ -367,8 +367,6 @@ export default {
         height: 850px;
         width: 1451px;
     }
-
-    /* .st1{font-family:'futura-pt-condensed',sans-serif;} */
 </style>
 
 

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="786.766" height="432.529" viewBox="0 0 786.766 432.529">
+  <defs>
+    <filter id="Pfad_71" x="3.663" y="286.06" width="143.755" height="146.469" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#d6e637"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_72" x="0" y="0" width="146.469" height="143.755" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-color="#d6e637"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_73" x="640.297" y="287.417" width="146.469" height="143.755" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-3"/>
+      <feFlood flood-color="#d6e637"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_74" x="643.011" y="0" width="143.755" height="146.469" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-4"/>
+      <feFlood flood-color="#d6e637"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Gruppe_478" data-name="Gruppe 478" transform="translate(-843.027 -335.457)">
+    <g transform="matrix(1, 0, 0, 1, 843.03, 335.46)" filter="url(#Pfad_71)">
+      <path id="Pfad_71-2" data-name="Pfad 71" d="M2961.776-5446.584v75.969h73.255" transform="translate(-2917.61 5762.64)" fill="none" stroke="#d6e637" stroke-width="21"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 843.03, 335.46)" filter="url(#Pfad_72)">
+      <path id="Pfad_72-2" data-name="Pfad 72" d="M0,0V75.969H73.255" transform="translate(116.47 40.5) rotate(90)" fill="none" stroke="#d6e637" stroke-width="21"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 843.03, 335.46)" filter="url(#Pfad_73)">
+      <path id="Pfad_73-2" data-name="Pfad 73" d="M0,0V75.969H73.255" transform="translate(670.3 390.67) rotate(-90)" fill="none" stroke="#d6e637" stroke-width="21"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 843.03, 335.46)" filter="url(#Pfad_74)">
+      <path id="Pfad_74-2" data-name="Pfad 74" d="M0,0V75.969H73.255" transform="translate(746.27 116.47) rotate(180)" fill="none" stroke="#d6e637" stroke-width="21"/>
+    </g>
+  </g>
+</svg>
