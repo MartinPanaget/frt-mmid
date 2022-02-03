@@ -1,23 +1,6 @@
 <template>
-    <Wrapper id="section5">
+    <Wrapper id="section6">
         <h2>Acceptance towards FRT</h2>
-        <div class="overview">
-            <div class="general">
-                <p v-on:click="change('toOverview')">ACCEPTANCE RATE</p>
-                <h3 @mouseover='changeColor(1, $event)' @mouseleave='changeColorBack(1, $event)' style="color: #C7F700">CH 67%</h3>
-                <h3 @mouseover='changeColor(2, $event)' @mouseleave='changeColorBack(2, $event)' style="color: #70E6AB">UK 50%</h3>
-                <h3 @mouseover='changeColor(3, $event)' @mouseleave='changeColorBack(3, $event)' style="color: #0CBAF7">US 47%</h3>
-                <h3 @mouseover='changeColor(4, $event)' @mouseleave='changeColorBack(4, $event)' style="color: #23EFEF">DE 38%</h3>
-            </div>
-            <div class="countries">
-                <div/>
-                <img @mouseover='changeColor(1, $event)' @mouseleave='changeColorBack(1, $event)' :src='china'/>
-                <img @mouseover='changeColor(2, $event)' @mouseleave='changeColorBack(2, $event)' :src='unitedKingdom'/>
-                <img @mouseover='changeColor(3, $event)' @mouseleave='changeColorBack(3, $event)' :src='unitedStatesOfAmerica'/>
-                <img @mouseover='changeColor(4, $event)' @mouseleave='changeColorBack(4, $event)' :src='germany'/>
-            </div>
-            <PartToWhole id="ptw-chart"></PartToWhole>
-        </div>
         <div class="detail">
             <div class="chart-detail">
                 <!--<div class="countries-icon">
@@ -133,14 +116,7 @@
 
 <script>
 import Wrapper from './Wrapper.vue';
-import PartToWhole from './charts/PartToWhole.vue';
 import ForestChart from './charts/ForestChart.vue';
-
-// countries
-import china from '../assets/countries/china.png';
-import germany from '../assets/countries/de.png';
-import unitedKingdom from '../assets/countries/uk.png';
-import unitedStatesOfAmerica from '../assets/countries/usa.png';
 
 // country round icon
 import ch from '../assets/icons/flagge-china.png';
@@ -149,23 +125,13 @@ import gb from '../assets/icons/flagge-uk.png';
 import us from '../assets/icons/flagge-usa.png';
 
 export default {
-  name: 'SocialAcceptance',
+  name: 'SocialAcceptanceD',
   components: {
     Wrapper,
-    PartToWhole,
-    //LineChart,
     ForestChart
   },
   data() {
     return {
-        // toggle
-        overviewActive:true,
-        detailActive:false,
-        //countries
-        china: china, 
-        germany: germany, 
-        unitedKingdom: unitedKingdom, 
-        unitedStatesOfAmerica: unitedStatesOfAmerica,
         //country circle
         ch: ch,
         de: de,
@@ -198,22 +164,6 @@ export default {
     }
   },
   methods: {
-    changeColor : function (number) {
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[2].setAttribute('opacity', '0.3');
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[3].setAttribute('opacity', '0.3');
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[4].setAttribute('opacity', '0.3');
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-data-labels')[0].children[2].children[0].setAttribute('opacity', '0.3');
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-data-labels')[0].children[3].children[0].setAttribute('opacity', '0.3');
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-data-labels')[0].children[4].children[0].setAttribute('opacity', '0.3');
-    },
-    changeColorBack : function (number) {
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[2].setAttribute('opacity', '1');
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[3].setAttribute('opacity', '1');
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-series-group')[0].children[0].children[4].setAttribute('opacity', '1');
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-data-labels')[0].children[2].children[0].setAttribute('opacity', '1');
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-data-labels')[0].children[3].children[0].setAttribute('opacity', '1');
-        document.getElementById('ptw-chart').children[number].children[0].children[0].getElementsByClassName('highcharts-data-labels')[0].children[4].children[0].setAttribute('opacity', '1');
-    },
     addOrRemoveTop : function (attribute, event) {
         let hasAttribute = this.attributes[0][0].data.some( attr => attr.color + attr.y === attribute[0][0].color + attribute[0][0].y )
         if (hasAttribute) {
@@ -259,50 +209,12 @@ export default {
                 }
             })
         });
-    },
-    change: function (page) {
-      let overview = document.getElementsByClassName('overview')[0].style;
-      let detail = document.getElementsByClassName('detail')[0].style;
-
-      if(page == 'toDetail'){
-        overview.display = 'block';
-        detail.display = 'none';
-        this.overviewActive = true;
-        this.detailActive = false;
-      }else{
-        overview.display = 'none';
-        detail.display = 'grid';
-        this.detailActive = true;
-        this.overviewActive = false;
-      }
     }
   }
 }
 </script>
 
 <style scoped>
-
-    .cls-1{
-        fill:#e6e6e6;
-        cursor: pointer;
-        }
-    .cls-1.active{
-        fill:rgb(0, 255, 255); 
-        filter: drop-shadow(0 0 6px rgb(0 255 255 / 0.8));
-        }
-    .cls-2{
-        fill:none;
-        stroke:#4d4d4d;stroke-width:3px;
-        }
-    .op{
-    fill:#4d4d4d;
-    }
-
-    text{
-        font-family: 'Montserrat', sans-serif;
-        font-size: 20px;
-        pointer-events: none;
-    }
 
     #Sociodemographics {
         font-family: 'futura-pt-condensed';
@@ -339,101 +251,11 @@ export default {
         font-weight: normal;
     }
 
-    .dot:first-child{
-        background-color: #00FFFF;
-    }
-
-    .dot{
-        margin: 0 2vw;
-        height: 70px;
-        width: 70px;
-        background-color: #E6E6E6;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .round-dots{
-        display: flex;
-        justify-content: space-between;
-        width: 18%;
-        margin: auto;
-        padding-bottom: 10px;
-    }
-
-    .round-dots a{
-        color: #222222;
-        text-decoration: none;
-    }
-
-    .overview {
+    .detail {
         display: block;
     }
 
-    .detail {
-        display: none;
-    }
-
-    /*.detail {
-        display: none;
-        grid-template-columns: 10% 60% 20%;
-        grid-template-columns: 70% 20%;
-        grid-column-gap: 3.3%;
-    }
-
-    .chart-detail {
-        display: grid;
-        grid-template-columns: 15% 80%;
-    }*/
-
     .chart-detail {
         text-align: center;
-    }
-    
-    .general {
-        display: grid;
-        grid-template-columns: 10% repeat(4, 20%);
-        grid-column-gap: 1%;
-        height: 7vh;
-    }
-
-    .general p {
-        text-align: right;
-        text-shadow: rgba(0,255,255,0.9) 0px 0px 9px;
-    }
-
-    .general h3 {
-        margin: 0 auto;
-        margin-bottom: 10px; 
-    }
-
-    .countries {
-        display: grid;
-        grid-template-columns: 10% repeat(4, 20%);
-        grid-column-gap: 1%;
-    }
-
-    .countries img {
-        height: 20vh;
-        margin: 0 auto;
-    }
-
-    .countries-icon img {
-        height: 7vh;
-        margin: 43px 0 43px 80px;
-    }
-
-    .attributes div {
-        margin: 20px 0;
-    }
-
-    .attributes div a img {
-        height: 6vh;
-        margin: 0 5px;
-    }
-
-    .garbage a{
-        margin-right: 0;
-        margin-left: 224.4px;
     }
 </style>
