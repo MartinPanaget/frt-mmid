@@ -1,15 +1,14 @@
 <template>
     <Wrapper id="section6">
-        <h2>Acceptance towards FRT</h2>
+        <h2 id="headline6">Acceptance towards FRT</h2>
         <div class="detail">
-            <div class="chart-detail">
                 <!--<div class="countries-icon">
                     <img :src='ch'/>
                     <img :src='de'/>
                     <img :src='gb'/>
                     <img :src='us'/>
                 </div>-->
-
+            <div class="top">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1542.386" height="85.517" viewBox="0 0 1542.386 85.517" id="buttonsTop">
                     <path id="Pfad_74" data-name="Pfad 74" d="M0,0V37.377H77.115" transform="translate(1538.386 85.517) rotate(180)" fill="none" stroke="aqua" stroke-width="8"/>
                     <path id="Pfad_101" data-name="Pfad 101" d="M0,37.376V0H218.646" transform="translate(4 48.14)" fill="none" stroke="aqua" stroke-width="8"/>
@@ -24,19 +23,19 @@
                         <circle id="Ellipse_693" data-name="Ellipse 693" cx="5.5" cy="5.5" r="5.5" transform="translate(1466 205)" fill="#fff"/>
                     </g>
                     <g id="Gruppe_871" data-name="Gruppe 871" transform="translate(-1390.497 -369.778)">
-                        <rect id="v5-button-1" width="125" height="42" rx="21" transform="translate(1673 398)" fill="#eff3ff" v-on:click="addOrRemoveTop(age, $event)"/>
-                        <text id="Age" transform="translate(1725 426)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Age</tspan></text>
+                        <rect id="v5-button-1" width="125" height="42" rx="21" transform="translate(1673 398)" fill="#eff3ff" v-on:click="addOrRemoveTop(age, 'ageButton')" ref="ageButton"/>
+                        <text id="Age" transform="translate(1725 426)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" v-on:click="addOrRemoveTop(age, 'ageButton')">Age</tspan></text>
                     </g>
                     <g id="Gruppe_872" data-name="Gruppe 872" transform="translate(-1225.497 -422.778)">
-                        <rect id="v5-button-2" width="125" height="42" rx="21" transform="translate(1673 451)" fill="#b2dbff" v-on:click="addOrRemoveTop(gender, $event)"/>
-                        <text id="Gender" transform="translate(1715.5 479)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Gender</tspan></text>
+                        <rect id="v5-button-2" width="125" height="42" rx="21" transform="translate(1673 451)" fill="#b2dbff" v-on:click="addOrRemoveTop(gender, 'genderButton')" ref="genderButton"/>
+                        <text id="Gender" transform="translate(1715.5 479)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500" v-on:click="addOrRemoveTop(gender, 'genderButton')"><tspan x="0" y="0">Gender</tspan></text>
                     </g>
                     <g id="Gruppe_873" data-name="Gruppe 873" transform="translate(-1051.497 -476.778)">
-                        <rect id="v5-button-3" width="125" height="42" rx="21" transform="translate(1664 505)" fill="#6c93ed" v-on:click="addOrRemoveTop(incomeHigh, $event); addOrRemoveTop(incomeMedium, $event);"/>
-                        <text id="Income" transform="translate(1706.5 533)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Income</tspan></text>
+                        <rect id="v5-button-3" width="125" height="42" rx="21" transform="translate(1664 505)" fill="#6c93ed" v-on:click="addOrRemoveTop(incomeHigh, 'incomeButton'); addOrRemoveTop(incomeMedium, 'incomeButton');" ref="incomeButton"/>
+                        <text id="Income" transform="translate(1706.5 533)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500" ><tspan x="0" y="0" v-on:click="addOrRemoveTop(incomeHigh, 'incomeButton'); addOrRemoveTop(incomeMedium, 'incomeButton');">Income</tspan></text>
                     </g>
                     <g id="Gruppe_874" data-name="Gruppe 874" transform="translate(-886.497 -530.874)">
-                        <rect id="v5-button-4" width="125" height="42" rx="21" transform="translate(1664 559)" fill="#4dd1f0" v-on:click="addOrRemoveTop(incomeMedium, $event); addOrRemoveTop(incomeHigh, $event);"/>
+                        <rect id="v5-button-4" width="125" height="42" rx="21" transform="translate(1664 559)" fill="#4dd1f0"/>
                         <text id="Education_" data-name="Education " transform="translate(1697 587)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Education </tspan></text>
                     </g>
                     <g id="Gruppe_875" data-name="Gruppe 875" transform="translate(-694.497 -584.778)">
@@ -56,9 +55,11 @@
                         <text id="City" transform="translate(1693 641.5)" fill="#f6f6f6" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">City</tspan></text>
                     </g>
                 </svg>
+            </div>
                 
-                <ForestChart v-bind:attributes="attributes"></ForestChart>
+            <ForestChart v-bind:attributes="attributes"></ForestChart>
 
+            <div class="bottom">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1547.771" height="93.771" viewBox="0 0 1547.771 93.771" id="buttonsBottom">
                     <g id="Gruppe_883" data-name="Gruppe 883" transform="translate(10516.473 -11873.805)">
                         <g id="Gruppe_880" data-name="Gruppe 880" transform="translate(-10722.107 11709.517)" opacity="0.1">
@@ -75,8 +76,8 @@
                         <g id="Gruppe_882" data-name="Gruppe 882" transform="translate(-10722.244 10968.941)">
                         <g id="Gruppe_866" data-name="Gruppe 866">
                             <g id="Gruppe_839" data-name="Gruppe 839" transform="translate(-1100.746 531.576)">
-                            <path id="v5-button-8" d="M21,0h83a21,21,0,0,1,0,42H21A21,21,0,0,1,21,0Z" transform="translate(1673 398)" fill="#cdf2d8" v-on:click="addOrRemoveBottom(convenience, $event)"/>
-                            <text id="Convenience" transform="translate(1701 426)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Convenience</tspan></text>
+                            <path id="v5-button-8" d="M21,0h83a21,21,0,0,1,0,42H21A21,21,0,0,1,21,0Z" transform="translate(1673 398)" fill="#cdf2d8" v-on:click="addOrRemoveBottom(convenience, 'convenienceButton')" ref="convenienceButton"/>
+                            <text id="Convenience" transform="translate(1701 426)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" v-on:click="addOrRemoveBottom(convenience, 'convenienceButton')">Convenience</tspan></text>
                             </g>
                             <g id="Gruppe_840" data-name="Gruppe 840" transform="translate(-936.746 478.744)">
                             <rect id="v5-button-9" width="125" height="42" rx="21" transform="translate(1673 451)" fill="#8ee5a9"/>
@@ -107,7 +108,6 @@
                         <text id="textBottom" data-name="*p &lt; .10, **p &lt; .05, ***p &lt; .01." transform="translate(-9128.701 11946.076)" fill="aqua" font-size="16" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">*p &lt; .10, **p &lt; .05, ***p &lt; .01.</tspan></text>
                     </g>
                 </svg>
-
             </div>
         </div>
     </Wrapper>
@@ -138,21 +138,21 @@ export default {
         gb: gb,
         us: us,
         // Hier sind die Daten für die Detailseite
-        attributes: [[{showInLegend:false, name: 'CH',data: [{x: 0,y:1,color: '#EFF3FF'}, {x: 1,y: 2,color: '#B2DBFF',}, {x: 2,y: 3,color: '#6C93ED',}, {x: 3,y: 1,color: '#6C93ED',}]}, 
+        attributes: [[{showInLegend:false, name: 'CH',data: [{x: 0,y:1,color: '#EFF3FF'}, {x: 1,y: 2,color: '#B2DBFF',}, {x: 2,y: 3,color: '#6C93ED',}, {x: 3,y: 1,color: '#6C93ED',}, {x: 4,y:1,color: '#4DD1F0'}, {x: 5,y:3,color: '#4DD1F0'}, {x: 6,y:0.5,color: '#39DECD'}, {x: 7,y:4,color: '#00A5C3'}, {x: 8,y:4,color: '#086DD3'}, {x: 9,y:4,color: '#086DD3'}, {x: 10,y:4,color: '#086DD3'}, {x: 11,y:4,color: '#086DD3'}, {x: 12,y:4,color: '#086DD3'},]}, 
                       {type: 'errorbar',color: '#EFF3FF',data: [[0.5, 2]],}, {type: 'errorbar',color: '#B2DBFF',data: [null, [1.5, 2.3]],}, {type: 'errorbar', color: '#6C93ED',data: [null, null, [2.8,3.1]],}, {type: 'errorbar', color: '#6C93ED',data: [null, null, null,[0.9,1.5]],}],
-                      [{showInLegend:false,name: 'UK',data: [{x: 0,y:1,color: '#EFF3FF'}, {x: 1,y: 2,color: '#B2DBFF',}, {x: 2,y: 3,color: '#6C93ED',}, {x: 3,y: 1,color: '#6C93ED',}]}, 
+                      [{showInLegend:false,name: 'UK',data: [{x: 0,y:1,color: '#EFF3FF'}, {x: 1,y: 2,color: '#B2DBFF',}, {x: 2,y: 3,color: '#6C93ED',}, {x: 3,y: 1,color: '#6C93ED',}, {x: 4,y:1,color: '#4DD1F0'}, {x: 5,y:3,color: '#4DD1F0'}, {x: 6,y:0.5,color: '#39DECD'}, {x: 7,y:4,color: '#00A5C3'}, {x: 8,y:4,color: '#086DD3'}, {x: 9,y:4,color: '#086DD3'}, {x: 10,y:4,color: '#086DD3'}, {x: 11,y:4,color: '#086DD3'}, {x: 12,y:4,color: '#086DD3'},]}, 
                       {type: 'errorbar',color: '#EFF3FF',data: [[0.5, 2]],}, {type: 'errorbar',color: '#B2DBFF',data: [null, [1.5, 2.3]],}, {type: 'errorbar',color: '#6C93ED',data: [null, null, [2.8,3.1]],}, {type: 'errorbar',color: '#6C93ED',data: [null, null, null,[0.9,1.5]],}],
-                      [{showInLegend:false,name: 'US',data: [{x: 0,y:1,color: '#EFF3FF'}, {x: 1,y: 2,color: '#B2DBFF',}, {x: 2,y: 3,color: '#6C93ED',}, {x: 3,y: 1,color: '#6C93ED',}]}, 
+                      [{showInLegend:false,name: 'US',data: [{x: 0,y:1,color: '#EFF3FF'}, {x: 1,y: 2,color: '#B2DBFF',}, {x: 2,y: 3,color: '#6C93ED',}, {x: 3,y: 1,color: '#6C93ED',}, {x: 4,y:1,color: '#4DD1F0'}, {x: 5,y:3,color: '#4DD1F0'}, {x: 6,y:0.5,color: '#39DECD'}, {x: 7,y:4,color: '#00A5C3'}, {x: 8,y:4,color: '#086DD3'}, {x: 9,y:4,color: '#086DD3'}, {x: 10,y:4,color: '#086DD3'}, {x: 11,y:4,color: '#086DD3'}, {x: 12,y:4,color: '#086DD3'},]}, 
                       {type: 'errorbar',color: '#EFF3FF',data: [[0.5, 2]],}, {type: 'errorbar',color: '#B2DBFF',data: [null, [1.5, 2.3]],}, {type: 'errorbar',color: '#6C93ED',data: [null, null, [2.8,3.1]],}, {type: 'errorbar',color: '#6C93ED',data: [null, null, null,[0.9,1.5]],}],
-                      [{showInLegend:false,name: 'DE',data: [{x: 0,y:1,color: '#EFF3FF'}, {x: 1,y: 2,color: '#B2DBFF',}, {x: 2,y: 3,color: '#6C93ED',}, {x: 3,y: 1,color: '#6C93ED',}]}, 
+                      [{showInLegend:false,name: 'DE',data: [{x: 0,y:1,color: '#EFF3FF'}, {x: 1,y: 2,color: '#B2DBFF',}, {x: 2,y: 3,color: '#6C93ED',}, {x: 3,y: 1,color: '#6C93ED',}, {x: 4,y:1,color: '#4DD1F0'}, {x: 5,y:3,color: '#4DD1F0'}, {x: 6,y:0.5,color: '#39DECD'}, {x: 7,y:4,color: '#00A5C3'}, {x: 8,y:4,color: '#086DD3'}, {x: 9,y:4,color: '#086DD3'}, {x: 10,y:4,color: '#086DD3'}, {x: 11,y:4,color: '#086DD3'}, {x: 12,y:4,color: '#086DD3'},]}, 
                       {type: 'errorbar',color: '#EFF3FF',data: [[0.5, 2]],}, {type: 'errorbar',color: '#B2DBFF',data: [null, [1.5, 2.3]],}, {type: 'errorbar',color: '#6C93ED',data: [null, null, [2.8,3.1]],}, {type: 'errorbar',color: '#6C93ED',data: [null, null, null,[0.9,1.5]],}],
-                      [{showInLegend:false,name: 'CH',data: [{x: 0,y:1,color: '#CDF2D8'}, {x: 1,y: 2,color: '#8EE5A9',}, {x: 2,y: 3,color: '#8BFFBC',}, {x: 3,y: 1,color: '#67EB68',}]}, 
+                      [{showInLegend:false,name: 'CH',data: [{x: 0,y:1,color: '#CDF2D8'}, {x: 1,y: 2,color: '#8EE5A9',}, {x: 2,y: 3,color: '#8BFFBC',}, {x: 3,y: 1,color: '#67EB68',}, {x: 4,y: 1,color: '#00881F',}, {x: 5,y: 1,color: '#016228',}]}, 
                       {type: 'errorbar',color: '#CDF2D8',data: [[0.5, 2]],}, {type: 'errorbar',color: '#8EE5A9',data: [null, [1.5, 2.3]],}, {type: 'errorbar',color: '#8BFFBC',data: [null, null, [2.8,3.1]],}, {type: 'errorbar',color: '#67EB68',data: [null, null, null,[0.9,1.5]],}],
-                      [{showInLegend:false,name: 'UK',data: [{x: 0,y:1,color: '#CDF2D8'}, {x: 1,y: 2,color: '#8EE5A9',}, {x: 2,y: 3,color: '#8BFFBC',}, {x: 3,y: 1,color: '#67EB68',}]}, 
+                      [{showInLegend:false,name: 'UK',data: [{x: 0,y:1,color: '#CDF2D8'}, {x: 1,y: 2,color: '#8EE5A9',}, {x: 2,y: 3,color: '#8BFFBC',}, {x: 3,y: 1,color: '#67EB68',}, {x: 4,y: 1,color: '#00881F',}, {x: 5,y: 1,color: '#016228',}]}, 
                       {type: 'errorbar',color: '#CDF2D8',data: [[0.5, 2]],}, {type: 'errorbar',color: '#8EE5A9',data: [null, [1.5, 2.3]],}, {type: 'errorbar',color: '#8BFFBC',data: [null, null, [2.8,3.1]],}, {type: 'errorbar',color: '#67EB68',data: [null, null, null,[0.9,1.5]],}],
-                      [{showInLegend:false,name: 'US',data: [{x: 0,y:1,color: '#CDF2D8'}, {x: 1,y: 2,color: '#8EE5A9',}, {x: 2,y: 3,color: '#8BFFBC',}, {x: 3,y: 1,color: '#67EB68',}]}, 
+                      [{showInLegend:false,name: 'US',data: [{x: 0,y:1,color: '#CDF2D8'}, {x: 1,y: 2,color: '#8EE5A9',}, {x: 2,y: 3,color: '#8BFFBC',}, {x: 3,y: 1,color: '#67EB68',}, {x: 4,y: 1,color: '#00881F',}, {x: 5,y: 1,color: '#016228',}]}, 
                       {type: 'errorbar',color: '#CDF2D8',data: [[0.5, 2]],}, {type: 'errorbar',color: '#8EE5A9',data: [null, [1.5, 2.3]],}, {type: 'errorbar',color: '#8BFFBC',data: [null, null, [2.8,3.1]],}, {type: 'errorbar',color: '#67EB68',data: [null, null, null,[0.9,1.5]],}],
-                      [{showInLegend:false,name: 'DE',data: [{x: 0,y:1,color: '#CDF2D8'}, {x: 1,y: 2,color: '#8EE5A9',}, {x: 2,y: 3,color: '#8BFFBC',}, {x: 3,y: 1,color: '#67EB68',}]}, 
+                      [{showInLegend:false,name: 'DE',data: [{x: 0,y:1,color: '#CDF2D8'}, {x: 1,y: 2,color: '#8EE5A9',}, {x: 2,y: 3,color: '#8BFFBC',}, {x: 3,y: 1,color: '#67EB68',}, {x: 4,y: 1,color: '#00881F',}, {x: 5,y: 1,color: '#016228',}]}, 
                       {type: 'errorbar',color: '#CDF2D8',data: [[0.5, 2]],}, {type: 'errorbar',color: '#8EE5A9',data: [null, [1.5, 2.3]],}, {type: 'errorbar',color: '#8BFFBC',data: [null, null, [2.8,3.1]],}, {type: 'errorbar',color: '#67EB68',data: [null, null, null,[0.9,1.5]],}]],
         age: [[{x: 0,y:1,color: '#EFF3FF'}, {type: 'errorbar',color: '#EFF3FF',data: [[0.5, 2]],}], [{x: 0,y:1,color: '#EFF3FF'}, {type: 'errorbar',color: '#EFF3FF',data: [[0.5, 2]],}], [{x: 0,y:1,color: '#EFF3FF'}, {type: 'errorbar',color: '#EFF3FF',data: [[0.5, 2]],}], [{x: 0,y:1,color: '#EFF3FF'}, {type: 'errorbar',color: '#EFF3FF',data: [[0.5, 2]],}]],
         gender: [[{x: 1,y: 2,color: '#B2DBFF',}, {type: 'errorbar',color: '#B2DBFF',data: [null, [1.5, 2.3]],}], [{x: 1,y: 2,color: '#B2DBFF',}, {type: 'errorbar',color: '#B2DBFF',data: [null, [1.5, 2.3]],}], [{x: 1,y: 2,color: '#B2DBFF',}, {type: 'errorbar',color: '#B2DBFF',data: [null, [1.5, 2.3]],}], [{x: 1,y: 2,color: '#B2DBFF',}, {type: 'errorbar',color: '#B2DBFF',data: [null, [1.5, 2.3]],}]],
@@ -164,10 +164,22 @@ export default {
     }
   },
   methods: {
-    addOrRemoveTop : function (attribute, event) {
+    addOrRemoveColorCategory: function (addOrRemove, ref) {
+        let categoryName = ref.replace('Button', '');
+        let occurences = document.getElementsByClassName(categoryName);
+        for (let element of occurences) {
+            if (addOrRemove) {
+                element.style.color = '#676767';
+            } else {
+                element.style.color = 'white';
+            }
+        }
+    },
+    addOrRemoveTop : function (attribute, ref) {
         let hasAttribute = this.attributes[0][0].data.some( attr => attr.color + attr.y === attribute[0][0].color + attribute[0][0].y )
         if (hasAttribute) {
-            event.target.setAttribute('fill', '#9D9D9D');
+            this.addOrRemoveColorCategory(hasAttribute, ref);
+            this.$refs[ref].setAttribute('fill', '#9D9D9D');
             let indexData = this.attributes[0][0].data.findIndex(attr => attr.color === attribute[0][0].color);
             let indexColor = this.attributes[0].findIndex(attr => attr.color === attribute[0][1].color);
             for (let i = 0; i < 4; i++) {
@@ -175,17 +187,19 @@ export default {
                 this.attributes[i].splice(indexColor, 1);
             }
         } else {
-            event.target.setAttribute('fill', attribute[0][0].color);
+            this.addOrRemoveColorCategory(hasAttribute, ref);
+            this.$refs[ref].setAttribute('fill', attribute[0][0].color);
             for (let i = 0; i < 4; i++) {
                 this.attributes[i][0].data.push(attribute[i][0]);
                 this.attributes[i].push(attribute[i][1]);
             }
         }
     },
-    addOrRemoveBottom : function (attribute, event) {
+    addOrRemoveBottom : function (attribute, ref) {
         let hasAttribute = this.attributes[4][0].data.some( attr => attr.color + attr.y === attribute[0][0].color + attribute[0][0].y )
         if (hasAttribute) {
-            event.target.setAttribute('fill', '#9D9D9D');
+            this.addOrRemoveColorCategory(hasAttribute, ref);
+            this.$refs[ref].setAttribute('fill', '#9D9D9D');
             let indexData = this.attributes[4][0].data.findIndex(attr => attr.color === attribute[0][0].color);
             let indexColor = this.attributes[4].findIndex(attr => attr.color === attribute[0][1].color);
             for (let i = 4; i < 8; i++) {
@@ -193,7 +207,8 @@ export default {
                 this.attributes[i].splice(indexColor, 1);
             }
         } else {
-            event.target.setAttribute('fill', attribute[0][0].color);
+            this.addOrRemoveColorCategory(hasAttribute, ref);
+            this.$refs[ref].setAttribute('fill', attribute[0][0].color);
             for (let i = 4; i < 8; i++) {
                 this.attributes[i][0].data.push(attribute[i-4][0]);
                 this.attributes[i].push(attribute[i-4][1]);
@@ -215,6 +230,10 @@ export default {
 </script>
 
 <style scoped>
+
+    #headline6 {
+        margin-bottom: 20px;
+    }
 
     #Sociodemographics {
         font-family: 'futura-pt-condensed';
@@ -253,9 +272,16 @@ export default {
 
     .detail {
         display: block;
+        text-align: center;
     }
 
-    .chart-detail {
-        text-align: center;
+    .top svg{
+        display: block;
+        width: 95%
+    }
+
+    .bottom svg{
+        display: block;
+        width: 95%
     }
 </style>

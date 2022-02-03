@@ -16,8 +16,10 @@ export default{
             chartOptions: {
                 chart: {
                     type: 'scatter',
-                    width: 350,
-                    height: '200',
+                    //width: 320,
+                    //height: '210',
+                    width: 300,
+                    height: '210',
                     inverted: true,
                     plotBackgroundColor: '#999999',
                     backgroundColor: '#3C3C3C',
@@ -40,8 +42,9 @@ export default{
                     text: undefined
                 },
                 xAxis: {
-                    /*min: 0,
-                    max: 5,*/
+                    min: 0,
+                    max: 5,
+                    categories: ['Convenience', 'Privacy violations', 'Efficiency', 'Discrimination', 'Security', 'Surveillance',],
                     title: {
                         enabled: false,
                     },

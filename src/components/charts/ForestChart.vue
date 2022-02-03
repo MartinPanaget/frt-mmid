@@ -1,35 +1,35 @@
 <template>
     <div>
         <div class="chart-top">
-            <!--<div class="categories-top">
-                <p>Age</p>
-                <p>Gender</p>
-                <p>Income Medium</p>
-                <p>Income High</p>
-                <p>Education medium</p>
-                <p>Education high</p>
-                <p>Ethnical minority</p>
-                <p>City</p>
-                <p>Exposure</p>
-                <p>Exposure frequency public</p>
-                <p>Exposure frequency private</p>
-                <p>Exposure & frequency public</p>
-                <p>Exposure & frequency private</p>
-            </div>-->
+            <div class="categories-top">
+                <p class="age">Age</p>
+                <p class="gender">Gender</p>
+                <p class="income">Income Medium</p>
+                <p class="income">Income High</p>
+                <p class="education">Education medium</p>
+                <p class="education">Education high</p>
+                <p class="ethnic">Ethnical minority</p>
+                <p class="city">City</p>
+                <p class="exposure">Exposure</p>
+                <p class="exposure">Exposure frequency public</p>
+                <p class="exposure">Exposure frequency private</p>
+                <p class="exposure">Exposure & frequency public</p>
+                <p class="exposure">Exposure & frequency private</p>
+            </div>
             <highcharts :options="chartOptionsTop"></highcharts>
             <TemplateForestChart v-bind:attributesTop="attributes[1]"></TemplateForestChart>
             <TemplateForestChart v-bind:attributesTop="attributes[2]"></TemplateForestChart>
             <TemplateForestChart v-bind:attributesTop="attributes[3]"></TemplateForestChart>
         </div>
         <div class="chart-bottom">
-            <!--<div class="categories-bottom">
-                <p>Convenience</p>
-                <p>Privacy violations</p>
-                <p>Efficiency</p>
-                <p>Discrimination</p>
-                <p>Security</p>
-                <p>Surveillance</p>
-            </div>-->
+            <div class="categories-bottom">
+                <p class="convenience">Convenience</p>
+                <p class="privacy">Privacy violations</p>
+                <p class="efficiency">Efficiency</p>
+                <p class="discrimination">Discrimination</p>
+                <p class="security">Security</p>
+                <p class="surveillance">Surveillance</p>
+            </div>
             <highcharts :options="chartOptionsBottom"></highcharts>
             <TemplateForestChartBottom v-bind:attributesBottom="attributes[5]"></TemplateForestChartBottom>
             <TemplateForestChartBottom v-bind:attributesBottom="attributes[6]"></TemplateForestChartBottom>
@@ -56,8 +56,10 @@ export default {
             chartOptionsTop: {
                 chart: {
                     type: 'scatter',
-                    width: 400,
-                    height: '400',
+                    //width: 440,
+                    //height: '380',
+                    width: 300,
+                    height: '390',
                     marginBottom: 27,
                     inverted: true,
                     plotBackgroundColor: '#676767',
@@ -81,8 +83,8 @@ export default {
                     text: undefined
                 },
                 xAxis: {
-                    /*min: 0,
-                    max: 12,*/
+                    min: 0,
+                    max: 12,
                     categories: ['Age', 'Gender', 'Income Medium', 'Income High', 'Education medium', 'Education high', 'Ethnical minority', 'City', 'Exposure', 'Exposure frequency public', 'Exposure frequency private', 'Exposure & frequency public', 'Exposure & frequency private'],
                     title: {
                         enabled: false,
@@ -96,12 +98,18 @@ export default {
                     lineWidth: 0,
                     showLastLabel: true,
                     labels: {
-                        enabled: true,
-                        reserveSpace: true,
-                        style: {
+                        /*useHTML:true,
+                        style:{
+                            width:'146px',
+                            whiteSpace:'normal',
                             color: '#F6F6F6',
                             fontSize: '17px',
-                        }
+                        },
+                        step: 1,
+                        formatter: function () {
+                            return '<div align="center" style="word-wrap: break-word;word-break: break-all;width:146px;text-align:right">' + this.value + '</div>';
+                        },*/
+                        enabled: false,
                     },
                     plotLines: [
                     {color: 'white',width: 1,value: 0},
@@ -180,8 +188,10 @@ export default {
             chartOptionsBottom: {
                 chart: {
                     type: 'scatter',
-                    width: 400,
-                    height: '200',
+                    //width: 440,
+                    //height: '210',
+                    width: 300,
+                    height: '210',
                     inverted: true,
                     plotBackgroundColor: '#999999',
                     backgroundColor: '#3C3C3C',
@@ -204,8 +214,8 @@ export default {
                     text: undefined
                 },
                 xAxis: {
-                    /*min: 0,
-                    max: 5,*/
+                    min: 0,
+                    max: 5,
                     categories: ['Convenience', 'Privacy violations', 'Efficiency', 'Discrimination', 'Security', 'Surveillance',],
                     title: {
                     enabled: false,
@@ -219,12 +229,18 @@ export default {
                     lineWidth: 0,
                     showLastLabel: true,
                     labels: {
-                        enabled: true,
-                        reserveSpace: true,
-                        style: {
+                        enabled: false,
+                        /*useHTML:true,
+                        style:{
+                            width:'145px',
+                            whiteSpace:'normal',
                             color: '#F6F6F6',
                             fontSize: '17px',
-                        }
+                        },
+                        step: 1,
+                        formatter: function () {
+                            return '<div align="center" style="word-wrap: break-word;word-break: break-all;width:145px;text-align:right">' + this.value + '</div>';
+                        },*/
                     },
                     plotLines: [
                     {color: 'white',width: 1,value: 0},
@@ -300,49 +316,39 @@ export default {
             }
         }
     },
-    methods: {
-        addErrorbars: function (index) {
-            let series = [{name: this.attributes[index][0].name, colorByPoint: true, showInLegend: false, data: this.attributes[index][0].data,}];
-            for (let i = 1; i < this.attributes[index].length; i++) {
-                let errorbar = {type: 'errorbar', stemWidth: 3, whiskerLength: 0};
-                errorbar["color"] = this.attributes[index][i].color;
-                errorbar["data"] = this.attributes[index][i].data;
-                series.push(errorbar);
-            }
-            return series;
-        }
-    }
 }
 </script>
 
 <style scoped>
     .chart-top {
         display: grid;
-        grid-template-columns: 24.5% repeat(3, 21.5%);
+        /*grid-template-columns: 30% repeat(3, 21.5%);*/
+        grid-template-columns: 10% repeat(4, 21%);
     }
 
     .categories-top {
-        padding-top: 8px;
+        padding-top: 7.5px;
         text-align: right;
     }
 
     .categories-top p {
         font-size: 17px;
-        margin: 5.7px auto 5.7px;
+        margin: 5.3px auto 5.3px;
     }
 
     .chart-bottom {
         display: grid;
-        grid-template-columns: 24.5% repeat(3, 21.5%);
+        /*grid-template-columns: 30% repeat(3, 21.5%);*/
+        grid-template-columns: 10% repeat(4, 21%);
     }
 
     .categories-bottom {
-        padding-top: 12px;
+        padding-top: 13.5px;
         text-align: right;
     }
 
     .categories-bottom p {
         font-size: 17px;
-        margin: 6.2px auto 6.2px;
+        margin: 7.3px auto 7.3px;
     }
 </style>
