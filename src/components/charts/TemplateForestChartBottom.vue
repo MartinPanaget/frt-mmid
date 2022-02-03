@@ -116,9 +116,7 @@ export default{
                     errorbar: {
                         stemWidth: 3, 
                         whiskerLength: 0,
-                        tooltip: {
-                            enabled: false
-                        }
+                        enableMouseTracking: false
                     }
                 },
                 credits: {
