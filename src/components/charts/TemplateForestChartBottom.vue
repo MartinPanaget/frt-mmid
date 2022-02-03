@@ -111,15 +111,17 @@ export default{
                     }
                     },
                     errorbar: {
-                    tooltip: {
-                        enabled: false
-                    }
+                        stemWidth: 3, 
+                        whiskerLength: 0,
+                        tooltip: {
+                            enabled: false
+                        }
                     }
                 },
                 credits: {
                     enabled: false
                 },
-                series: this.addErrorbars()
+                series: this.attributesBottom
             }
         }
     },

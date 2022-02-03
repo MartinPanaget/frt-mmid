@@ -143,37 +143,39 @@ export default {
                 },
                 plotOptions: {
                     scatter: {
-                    marker: {
-                        radius: 8,
-                        states: {
-                        hover: {
-                            enabled: true,
-                            lineColor: 'rgb(100,100,100)'
-                        }
-                        }
-                    },
-                    states: {
-                        hover: {
                         marker: {
-                            enabled: false
+                            radius: 8,
+                            states: {
+                            hover: {
+                                enabled: true,
+                                lineColor: 'rgb(100,100,100)'
+                            }
+                            }
+                        },
+                        states: {
+                            hover: {
+                            marker: {
+                                enabled: false
+                            }
+                            }
+                        },
+                        tooltip: {
+                            headerFormat: '<b>{series.name}</b><br>',
+                            pointFormat: '<strong>{point.name}</strong> <br>{point.x} Match <br>{point.y} CSAT'
                         }
-                        }
-                    },
-                    tooltip: {
-                        headerFormat: '<b>{series.name}</b><br>',
-                        pointFormat: '<strong>{point.name}</strong> <br>{point.x} Match <br>{point.y} CSAT'
-                    }
                     },
                     errorbar: {
-                    tooltip: {
-                        enabled: false
-                    }
+                        stemWidth: 3, 
+                        whiskerLength: 0,
+                        tooltip: {
+                            enabled: false
+                        }
                     }
                 },
                 credits: {
                     enabled: false
                 },
-                series: this.addErrorbars(0)
+                series: this.attributes[0]
             },
             chartOptionsBottom: {
                 chart: {
@@ -262,37 +264,39 @@ export default {
                 },
                 plotOptions: {
                     scatter: {
-                    marker: {
-                        radius: 8,
-                        states: {
-                        hover: {
-                            enabled: true,
-                            lineColor: 'rgb(100,100,100)'
-                        }
-                        }
-                    },
-                    states: {
-                        hover: {
                         marker: {
-                            enabled: false
+                            radius: 8,
+                            states: {
+                            hover: {
+                                enabled: true,
+                                lineColor: 'rgb(100,100,100)'
+                            }
+                            }
+                        },
+                        states: {
+                            hover: {
+                            marker: {
+                                enabled: false
+                            }
+                            }
+                        },
+                        tooltip: {
+                            headerFormat: '<b>{series.name}</b><br>',
+                            pointFormat: '<strong>{point.name}</strong> <br>{point.x} Match <br>{point.y} CSAT'
                         }
-                        }
-                    },
-                    tooltip: {
-                        headerFormat: '<b>{series.name}</b><br>',
-                        pointFormat: '<strong>{point.name}</strong> <br>{point.x} Match <br>{point.y} CSAT'
-                    }
                     },
                     errorbar: {
-                    tooltip: {
-                        enabled: false
-                    }
+                        stemWidth: 3, 
+                        whiskerLength: 0,
+                        tooltip: {
+                            enabled: false
+                        }
                     }
                 },
                 credits: {
                     enabled: false
                 },
-                series: this.addErrorbars(4)
+                series: this.attributes[4]
             }
         }
     },
