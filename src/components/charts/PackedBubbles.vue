@@ -1,10 +1,10 @@
 <template>
     <div>
         <div class="BubbleCharts">
-            <PackedBubbleChart v-bind:series="series.Phone" height="350" title="Smartphone Usage" minSize="90" maxSize="124"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.Phone" height="350"  title="Smartphone Usage" minSize="90" maxSize="124"></PackedBubbleChart>
             <PackedBubbleChart v-bind:series="series.PersonCheck" height="350" title="Custom Control, security checks at airport" minSize="70" maxSize="89"></PackedBubbleChart>
             <PackedBubbleChart v-bind:series="series.SmartDevice" height="350" title="Smart devices and gadgets" minSize="61" maxSize="91"></PackedBubbleChart>
-            <PackedBubbleChart v-bind:series="series.IdCheck" height="350" title="Identity verification for financial matters" minSize="62" maxSize="72"></PackedBubbleChart>
+            <PackedBubbleChart v-bind:series="series.IdCheck"  height="350" title="Identity verification for financial matters" minSize="62" maxSize="72"></PackedBubbleChart>
             <PackedBubbleChart v-bind:series="series.Transport" height="350" title="Railway, Subway Stations" minSize="53" maxSize="90"></PackedBubbleChart>
         </div>
         <div class="BubbleCharts">
@@ -24,6 +24,9 @@ export default {
     name: 'PackedBubbles',
     components:{
         PackedBubbleChart
+    },
+    props: {
+        // label: Boolean
     },
     data() {
         return {

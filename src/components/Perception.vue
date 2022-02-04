@@ -18,22 +18,22 @@
             <img id="glow-edges" :src='glowEdges'>
             <div class="x-Axis">
                 <div class="first"> 
-                    <img :src='de' style="width:25px">
+                    <img :src='ch' style="width:25px">
                     <img :src='uk' style="width:25px">
                     <img :src='usa' style="width:25px">
-                    <img :src='ch' style="width:25px"> 
+                    <img :src='de' style="width:25px"> 
                 </div>
                 <div class="second"> 
-                    <img :src='de' style="width:25px">
+                    <img :src='ch' style="width:25px">
                     <img :src='uk' style="width:25px">
                     <img :src='usa' style="width:25px">
-                    <img :src='ch' style="width:25px"> 
+                    <img :src='de' style="width:25px"> 
                 </div>
                 <div class="third"> 
-                    <img :src='de' style="width:25px">
+                    <img :src='ch' style="width:25px">
                     <img :src='uk' style="width:25px">
                     <img :src='usa' style="width:25px">
-                    <img :src='ch' style="width:25px"> 
+                    <img :src='de' style="width:25px"> 
                 </div>
             </div>
         <LollipopSeries></LollipopSeries>
@@ -236,5 +236,6 @@ export default {
         top: 204px;
         left: 325px;
         z-index: 30;
+        pointer-events: none;
     }
 </style>

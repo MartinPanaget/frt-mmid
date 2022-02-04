@@ -109,10 +109,10 @@ export default {
   background-image: url("./assets/backgrounds/hg-infodesign-v5.png");
 }
 #section6 {
-  background-image: url("./assets/backgrounds/hg-infodesign-v5.png");
+  background-image: url("./assets/backgrounds/hg-infodesign-v6.png");
 }
 #section7{
-  background-image: url("./assets/backgrounds/hg-infodesign-v6.png");
+  background-image: url("./assets/backgrounds/hg-infodesign-v7.png");
 }
 
 

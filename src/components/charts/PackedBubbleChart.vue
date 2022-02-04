@@ -29,7 +29,6 @@ export default {
                     type: 'packedbubble',
                     width: '300',
                     height: this.height,
-                    // backgroundColor: '#5F5E5E',
                     margin: [10,0],
                     backgroundColor: '#3C3C3C',
                     style:{
