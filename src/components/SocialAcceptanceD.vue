@@ -1,13 +1,7 @@
 <template>
     <Wrapper id="section6">
-        <h2 id="headline6">Acceptance towards FRT</h2>
+        <h2 id="headline6">Odds Ratio: Acceptance of genereal use of frt</h2>
         <div class="detail">
-                <!--<div class="countries-icon">
-                    <img :src='ch'/>
-                    <img :src='de'/>
-                    <img :src='gb'/>
-                    <img :src='us'/>
-                </div>-->
             <div class="top">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1542.386" height="85.517" viewBox="0 0 1542.386 85.517" id="buttonsTop">
                     <path id="Pfad_74" data-name="Pfad 74" d="M0,0V37.377H77.115" transform="translate(1538.386 85.517) rotate(180)" fill="none" stroke="aqua" stroke-width="8"/>
@@ -118,12 +112,6 @@
 import Wrapper from './Wrapper.vue';
 import ForestChart from './charts/ForestChart.vue';
 
-// country round icon
-import ch from '../assets/icons/flagge-china.png';
-import de from '../assets/icons/flagge-de.png';
-import gb from '../assets/icons/flagge-uk.png';
-import us from '../assets/icons/flagge-usa.png';
-
 export default {
   name: 'SocialAcceptanceD',
   components: {
@@ -132,11 +120,6 @@ export default {
   },
   data() {
     return {
-        //country circle
-        ch: ch,
-        de: de,
-        gb: gb,
-        us: us,
         // Hier sind die Daten für die Detailseite
         attributes: [[{showInLegend:false, name: 'CH',dataLabels: {enabled: true,color: '#00FFFF',style: {textOutline: "0px",},align: 'left',position: 'top',formatter: function() {return this.point.name;}},data: [{x: 0,y:1,color: '#EFF3FF',name: '**'}, {x: 1,y: 2,color: '#B2DBFF',name: '**'}, {x: 2,y: 3,color: '#6C93ED',name: '**'}, {x: 3,y: 1,color: '#6C93ED',}, {x: 4,y:1,color: '#4DD1F0'}, {x: 5,y:3,color: '#4DD1F0'}, {x: 6,y:0.5,color: '#39DECD'}, {x: 7,y:4,color: '#00A5C3'}, {x: 8,y:4,color: '#086DD3'}, {x: 9,y:4,color: '#086DD3'}, {x: 10,y:4,color: '#086DD3'}, {x: 11,y:4,color: '#086DD3'}, {x: 12,y:4,color: '#086DD3'},]},
                       {type: 'errorbar',color: '#EFF3FF',data: [[0.5, 2]]}, {type: 'errorbar',color: '#B2DBFF',data: [null, [1.5, 2.3]],}, {type: 'errorbar', color: '#6C93ED',data: [null, null, [2.8,3.1]],}, {type: 'errorbar', color: '#6C93ED',data: [null, null, null,[0.9,1.5]],}],

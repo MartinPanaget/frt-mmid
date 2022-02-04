@@ -10,6 +10,7 @@ export default{
     name: 'TemplateForestChart',
     props: {
         attributesTop: Array,
+        img: String
     },
     data() {
         return {
@@ -19,7 +20,7 @@ export default{
                     //width: 320,
                     //height: '380',
                     width: 300,
-                    height: '390',
+                    height: '400',
                     marginBottom: 27,
                     inverted: true,
                     plotBackgroundColor: '#676767',
@@ -37,13 +38,18 @@ export default{
                     }
                 },
                 title: {
-                    text: undefined
+                    text: this.img,
+                    align: 'center',
+                    useHTML: true,
+                    floating: true,
+                    x: 0,
+                    y: 7
                 },
                 subtitle: {
                     text: undefined
                 },
                 xAxis: {
-                    min: 0,
+                    min: -1,
                     max: 12,
                     categories: ['Age', 'Gender', 'Income Medium', 'Income High', 'Education medium', 'Education high', 'Ethnical minority', 'City', 'Exposure', 'Exposure frequency public', 'Exposure frequency private', 'Exposure & frequency public', 'Exposure & frequency private'],
                     title: {
