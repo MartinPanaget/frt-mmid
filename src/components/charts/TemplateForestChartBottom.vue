@@ -19,7 +19,7 @@ export default{
                     //width: 320,
                     //height: '210',
                     width: 300,
-                    height: '210',
+                    height: '200',
                     inverted: true,
                     plotBackgroundColor: '#999999',
                     backgroundColor: '#3C3C3C',
