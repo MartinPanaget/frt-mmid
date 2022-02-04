@@ -1,6 +1,6 @@
 <template>
     <Wrapper id="section5">
-        <h2>Acceptance towards FRT</h2>
+        <h2>Acceptance rate of Facial Recognition Technologies</h2>
         <div class="overview">
             <div class="general">
                 <p>ACCEPTANCE RATE</p>
@@ -70,8 +70,12 @@ export default {
 
 <style scoped>
 
+    #section5 h2 {
+        margin-bottom: 5%;
+    }
+    
     h3 {
-        font-size: 30px;
+        font-size: 40px;
         font-weight: normal;
     }
 
@@ -83,17 +87,28 @@ export default {
         display: grid;
         grid-template-columns: 10% repeat(4, 20%);
         grid-column-gap: 1%;
-        height: 7vh;
+        /*height: 7vh;*/
     }
 
     .general p {
         text-align: right;
         text-shadow: rgba(0,255,255,0.9) 0px 0px 9px;
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .general p {
+            text-align: right;
+            text-shadow: rgba(0,255,255,0.9) 0px 0px 9px;
+            font-size: 32px;
+            margin-top: 10px;
+        }
     }
 
     .general h3 {
         margin: 0 auto;
-        margin-bottom: 10px; 
+        margin-bottom: 2%; 
     }
 
     .countries {

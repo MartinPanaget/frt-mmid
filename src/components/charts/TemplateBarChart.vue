@@ -16,8 +16,11 @@ export default {
                 chart: {
                     type: 'bar',
                     width: 300,
-                    height: '300',
+                    height: '350',
                     backgroundColor: '#3C3C3C',
+                    style: {
+                        fontFamily: 'futura-pt-condensed'
+                    }
                 },
                 title: {
                     text: undefined
@@ -46,11 +49,11 @@ export default {
                     formatter: function() {
                         let categories = ['Strongly agree', 'Somewhat agree', 'Neither agree nor oppose', 'Somewhat oppose', 'Strongly oppose'];
                         let points = this.points;
-                        let result = '<span style="font-size:10px">' + categories[points[0].key] + '</span><table>';
+                        let result = '<span style="font-size:17px">' + categories[points[0].key] + '</span><table>';
 
                         points.forEach(p => {
-                            result += '<tr><td style="padding:0">' + p.series.name + ': </td>' +
-                            '<td style="padding:0"><b>' + p.y + '%</b></td></tr>';
+                            result += '<tr><td style="padding:0;font-size:17px">' + p.series.name + ': </td>' +
+                            '<td style="padding:0;font-size:17px"><b>' + p.y + '%</b></td></tr>';
                         });
 
                         result += '</table>';
@@ -70,6 +73,8 @@ export default {
                                 'border-style' : 0,
                                 color: '#222222',
                                 textOutline: "0px",
+                                fontSize: '17px',
+                                fontStyle: 'medium'
                             },
                             format: '{y}%'
                         },
