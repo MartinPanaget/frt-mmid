@@ -77,6 +77,12 @@ export default {
                     }
                 },
                 title: {
+                    /*text: '<img src="https://www.highcharts.com/samples/graphics/sun.png" />',
+                    align: 'low',
+                    useHTML: true,
+                    rotation: 0,
+                    reserveSpace: false,
+                    y: 40*/
                     text: undefined
                 },
                 subtitle: {
