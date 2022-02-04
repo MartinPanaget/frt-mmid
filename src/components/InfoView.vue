@@ -1,13 +1,13 @@
 <template>
    <Wrapper id="section2">
      <h2>Scientific Model of acceptance of Facial Recognition Technologies </h2>
-     <img id="info-accept" :src='info' :class="{hoveringAc: isHoveringAc}">
-     <img id="info-socio" :src='infoBlue' :class="{hoveringSo: isHoveringSo}">
-     <img id="info-experience" :src='infoBlue' :class="{hoveringEx: isHoveringEx}">
-     <img id="info-1" :src='info' :class="{hoveringRi: isHoveringRi}">
-     <img id="info-2" :src='info' :class="{hoveringBe: isHoveringBe}">
-     <img id="info-3" :src='info' :class="{hoveringRe: isHoveringRe}">
-     <img id="info-4" :src='info' :class="{hoveringUs: isHoveringUs}">
+     <img id="info-accept" :src='infoAcceptance' :class="{hoveringAc: isHoveringAc}">
+     <img id="info-socio" :src='infoSociodemographic' :class="{hoveringSo: isHoveringSo}">
+     <img id="info-experience" :src='infoExperience' :class="{hoveringEx: isHoveringEx}">
+     <img id="info-1" :src='infoRisks' :class="{hoveringRi: isHoveringRi}">
+     <img id="info-2" :src='infoBenefits' :class="{hoveringBe: isHoveringBe}">
+     <img id="info-3" :src='infoReliability' :class="{hoveringRe: isHoveringRe}">
+     <img id="info-4" :src='indoUsefulness' :class="{hoveringUs: isHoveringUs}">
 
      <svg id="svg-human" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1050" height="902" viewBox="0 0 1116 902">
       <!-- <defs>
@@ -413,6 +413,13 @@
 
 <script>
 import info from '../assets/data/v2/info.svg'
+import infoAcceptance from '../assets/data/v2/info-acceptance.svg'
+import infoSociodemographic from '../assets/data/v2/info-sociodemographic.svg'
+import infoExperience from '../assets/data/v2/info-experience.svg'
+import infoRisks from '../assets/data/v2/info-risks.svg'
+import infoBenefits from '../assets/data/v2/info-benefits.svg'
+import infoReliability from '../assets/data/v2/info-reliability.svg'
+import indoUsefulness from '../assets/data/v2/info-usefulness.svg'
 import infoBlue from '../assets/data/v2/info-blue.svg'
 import Wrapper from './Wrapper.vue'
 export default {
@@ -420,6 +427,13 @@ export default {
   name: 'InfoView',
   data() {
     return {
+       infoAcceptance:infoAcceptance,
+       infoSociodemographic:infoSociodemographic,
+       infoExperience:infoExperience,
+       infoRisks:infoRisks,
+       infoBenefits:infoBenefits,
+       infoReliability:infoReliability,
+       indoUsefulness:indoUsefulness,
        info: info,
        infoBlue: infoBlue,
        isHoveringAc: true,
@@ -444,29 +458,29 @@ export default {
 
 #info-accept{
   position: absolute;
-  top: 94px;
+  top: 110px;
   left: 221px;
   right: 0px;
 }
 
 #info-socio{
   position: absolute;
-  top: 448px;
+  top: 519px;
   left: 208px;
   right: 0px;
 }
 
 #info-experience{
   position: absolute;
-  top: 448px;
-  left: 1437px;
+  top: 340px;
+  left: 1449px;
   right: 0px;
 }
 
 #info-1{
   position: absolute;
-  top: 301px;
-  left: 1376px;
+  top: 290px;
+  left: 1406px;
   right: 0px;
 }
 #info-1.hoveringRi, #info-2.hoveringBe, #info-3.hoveringRe, #info-4.hoveringUs, 
@@ -476,26 +490,26 @@ export default {
 
 #info-2{
   position: absolute;
-  top: 94px;
-  left: 1345px;
+  top: 74px;
+  left: 1385px;
   right: 0px;
 }
 #info-3{
   position: absolute;
-  top: 94px;
-  left: 252px;
+  top: 107px;
+  left: 235px;
   right: 0px;
 }
 #info-4{
   position: absolute;
-  top: 301px;
-  left: 226px;
+  top: 286px;
+  left: 196px;
   right: 0px;
 }
 
 #svg-human{
   position: absolute;
-  left:0;
+  left:142px;
   right: 0;
   bottom:-50px;
   margin-right: auto;
@@ -553,7 +567,7 @@ export default {
 
 /* acceptance */
 .cls-6{
-  stroke: rgb(199, 247, 0);
+  stroke: #c4f500;
   filter: drop-shadow(0 0 6px rgb(199 247 0 / 0));
 }
 
@@ -569,7 +583,7 @@ export default {
 	}
 
 	70% {
-    filter: drop-shadow(0 0 10px rgb(199 247 0 / 1));
+    filter: drop-shadow(0 0 10px #ccff01);
 	}
 
 	100% {

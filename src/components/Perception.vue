@@ -15,6 +15,7 @@
                     <img src="../assets/icons/flagge-de-kontur.png">
                 </a>
             </div>
+            <img id="glow-edges" :src='glowEdges'>
             <div class="x-Axis">
                 <div class="first"> 
                     <img :src='de' style="width:25px">
@@ -44,6 +45,7 @@ import de from '../assets/icons/flagge-de.png';
 import uk from '../assets/icons/flagge-uk.png';
 import usa from '../assets/icons/flagge-usa.png';
 import ch from '../assets/icons/flagge-china.png';
+import glowEdges from '../assets/data/v3/v3-glow-ecken-mit-schrift.svg'
 import Wrapper from './Wrapper.vue';
 import LollipopSeries from './charts/LollipopSeries.vue';
 
@@ -55,6 +57,7 @@ export default {
   },
   data(){
       return{
+          glowEdges:glowEdges,
           de: de,
           uk:uk,
           usa:usa,
@@ -225,5 +228,13 @@ export default {
         padding:1rem;
         border: 7px solid #0CBAF7;
         box-shadow: #0CBAF7 0px 0px 9px, inset #0CBAF7 0px 0px 9px;
+    }
+
+    #glow-edges{
+        position: absolute;
+        width: 1334px;
+        top: 204px;
+        left: 325px;
+        z-index: 30;
     }
 </style>

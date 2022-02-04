@@ -72,23 +72,27 @@ export default {
     text-decoration-color: #00FFFF;
   }
   .highlight-blue {
+    position: absolute;
     background-image: url('../assets/data/imprint/glow-blue.svg');
-    /* background-position: center; */
+    width: 739px;
+    height: 500px;
+    top: 419px;
+    left: 1040px;
     background-size:contain;
     background-repeat: no-repeat;
   }
   .headline-studyinfortion{
     /* text-align: center; */
-    padding-left: 140px;
+    padding-left: 198px;
     font-size: 61px;
     text-transform:uppercase;
-    margin-top: 112px;
+    margin-top: 135px;
     margin-bottom: 50px;
     text-shadow: rgba(0,0,0,0.2) 0px 5px 5px;
   }  
   .study-information{
     font-size: 28px;
-    padding-left: 143px;
+    padding-left: 163px;
   }
   .footer-content {
     display: grid;
