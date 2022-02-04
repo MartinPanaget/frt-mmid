@@ -16,8 +16,10 @@ export default{
             chartOptions: {
                 chart: {
                     type: 'scatter',
-                    width: 350,
-                    height: '400',
+                    //width: 320,
+                    //height: '380',
+                    width: 300,
+                    height: '390',
                     marginBottom: 27,
                     inverted: true,
                     plotBackgroundColor: '#676767',
@@ -41,8 +43,9 @@ export default{
                     text: undefined
                 },
                 xAxis: {
-                    /*min: 0,
-                    max: 12,*/
+                    min: 0,
+                    max: 12,
+                    categories: ['Age', 'Gender', 'Income Medium', 'Income High', 'Education medium', 'Education high', 'Ethnical minority', 'City', 'Exposure', 'Exposure frequency public', 'Exposure frequency private', 'Exposure & frequency public', 'Exposure & frequency private'],
                     title: {
                         enabled: false,
                     },
@@ -109,16 +112,14 @@ export default{
                             }
                         },
                         tooltip: {
-                            headerFormat: '<b>{series.name}</b><br>',
-                            pointFormat: '<strong>{point.name}</strong> <br>{point.x} Match <br>{point.y} CSAT'
+                            headerFormat: '<strong>{series.name}</strong><br>',
+                            pointFormat: '<br>Wert: {point.y}{point.name}'
                         }
                     },
                     errorbar: {
                         stemWidth: 3, 
                         whiskerLength: 0,
-                        tooltip: {
-                            enabled: false
-                        }
+                        enableMouseTracking: false
                     }
                 },
                 credits: {

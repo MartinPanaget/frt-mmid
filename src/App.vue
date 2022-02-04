@@ -6,8 +6,8 @@
       <InfoView></InfoView>
       <Perception></Perception>
       <Awareness></Awareness>
-      <SocialAcceptance></SocialAcceptance>
-      <SocialAcceptance></SocialAcceptance>
+      <SocialAcceptanceO></SocialAcceptanceO>
+      <SocialAcceptanceD></SocialAcceptanceD>
       <Footer></Footer>
     </full-page>
   </div>
@@ -20,7 +20,8 @@ import InfoView from './components/InfoView.vue'
 import Footer from './components/Footer.vue'
 import Perception from './components/Perception.vue'
 import Awareness from './components/Awareness.vue'
-import SocialAcceptance from './components/SocialAcceptance.vue'
+import SocialAcceptanceO from './components/SocialAcceptanceO.vue'
+import SocialAcceptanceD from './components/SocialAcceptanceD.vue'
 import 'fullpage.js/dist/fullpage.css'
 import { EventBus } from './others/eventBus'
 
@@ -35,7 +36,8 @@ export default {
     InfoView,
     Perception,
     Awareness,
-    SocialAcceptance,
+    SocialAcceptanceO,
+    SocialAcceptanceD,
     Footer
   },
   data() {
@@ -106,7 +108,10 @@ export default {
 #section5{
   background-image: url("./assets/backgrounds/hg-infodesign-v5.png");
 }
-#section6{
+#section6 {
+  background-image: url("./assets/backgrounds/hg-infodesign-v5.png");
+}
+#section7{
   background-image: url("./assets/backgrounds/hg-infodesign-v6.png");
 }
 

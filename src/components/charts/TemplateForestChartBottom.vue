@@ -16,7 +16,9 @@ export default{
             chartOptions: {
                 chart: {
                     type: 'scatter',
-                    width: 350,
+                    //width: 320,
+                    //height: '210',
+                    width: 300,
                     height: '200',
                     inverted: true,
                     plotBackgroundColor: '#999999',
@@ -40,8 +42,9 @@ export default{
                     text: undefined
                 },
                 xAxis: {
-                    /*min: 0,
-                    max: 5,*/
+                    min: 0,
+                    max: 5,
+                    categories: ['Convenience', 'Privacy violations', 'Efficiency', 'Discrimination', 'Security', 'Surveillance',],
                     title: {
                         enabled: false,
                     },
@@ -106,16 +109,14 @@ export default{
                         }
                     },
                     tooltip: {
-                        headerFormat: '<b>{series.name}</b><br>',
-                        pointFormat: '<strong>{point.name}</strong> <br>{point.x} Match <br>{point.y} CSAT'
+                        headerFormat: '<strong>{series.name}</strong><br>',
+                        pointFormat: '<br>Wert: {point.y}{point.name}'
                     }
                     },
                     errorbar: {
                         stemWidth: 3, 
                         whiskerLength: 0,
-                        tooltip: {
-                            enabled: false
-                        }
+                        enableMouseTracking: false
                     }
                 },
                 credits: {

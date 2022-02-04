@@ -1,5 +1,5 @@
 <template>
-    <Wrapper id="section6" class="footer">
+    <Wrapper id="section7" class="footer">
       <div class="frame">
           <p class="big">IMPRINT<p>
           <div class="footer-content">

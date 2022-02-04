@@ -70,11 +70,11 @@ export default {
     }
 
     .labels {
-        padding-top: 10px;
         text-align: right;
     }
 
     .labels p{
-        margin: 20px auto 30px;
+        margin: 36px auto 36px;
+        font-size: 20px;
     }
 </style>
