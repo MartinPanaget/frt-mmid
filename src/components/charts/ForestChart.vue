@@ -17,9 +17,9 @@
                 <p class="exposure">Exposure & frequency private</p>
             </div>
             <highcharts :options="chartOptionsTop"></highcharts>
-            <TemplateForestChart v-bind:attributesTop="attributes[1]"></TemplateForestChart>
-            <TemplateForestChart v-bind:attributesTop="attributes[2]"></TemplateForestChart>
-            <TemplateForestChart v-bind:attributesTop="attributes[3]"></TemplateForestChart>
+            <TemplateForestChart v-bind:attributesTop="attributes[1]" v-bind:img="countries[0]"></TemplateForestChart>
+            <TemplateForestChart v-bind:attributesTop="attributes[2]" v-bind:img="countries[1]"></TemplateForestChart>
+            <TemplateForestChart v-bind:attributesTop="attributes[3]" v-bind:img="countries[2]"></TemplateForestChart>
         </div>
         <div class="chart-bottom">
             <div class="categories-bottom">
@@ -53,13 +53,14 @@ export default {
     },
     data() {
         return {
+            countries: ['<img src="/flagge-uk-kontur.png" style="width: 30px;"/>', '<img src="/flagge-usa-kontur.png" style="width: 30px;"/>', '<img src="/flagge-de-kontur.png" style="width: 30px;"/>'],
             chartOptionsTop: {
                 chart: {
                     type: 'scatter',
                     //width: 440,
                     //height: '380',
                     width: 300,
-                    height: '390',
+                    height: '400',
                     marginBottom: 27,
                     inverted: true,
                     plotBackgroundColor: '#676767',
@@ -77,26 +78,25 @@ export default {
                     }
                 },
                 title: {
-                    /*text: '<img src="https://www.highcharts.com/samples/graphics/sun.png" />',
-                    align: 'low',
+                    text: '<img src="/flagge-china-kontur.png" style="width: 30px;"/>',
+                    align: 'center',
                     useHTML: true,
                     rotation: 0,
-                    reserveSpace: false,
-                    y: 40*/
-                    text: undefined
+                    floating: true,
+                    x: 0,
+                    y: 7
                 },
                 subtitle: {
                     text: undefined
                 },
                 xAxis: {
-                    min: 0,
+                    min: -1,
                     max: 12,
                     categories: ['Age', 'Gender', 'Income Medium', 'Income High', 'Education medium', 'Education high', 'Ethnical minority', 'City', 'Exposure', 'Exposure frequency public', 'Exposure frequency private', 'Exposure & frequency public', 'Exposure & frequency private'],
                     title: {
                         enabled: false,
                     },
-                    startOnTick: true,
-                    endOnTick: true,
+                    tickPositions: [0,1,2,3,4,5,6,7,8,9,10,11,12],
                     tickmarkPlacement: 'on',
                     tickColor: 'white',
                     tickWidth: 1,
@@ -329,13 +329,13 @@ export default {
     }
 
     .categories-top {
-        padding-top: 7.5px;
+        padding-top: 33px;
         text-align: right;
     }
 
     .categories-top p {
         font-size: 17px;
-        margin: 5.3px auto 5.3px;
+        margin: 4px auto 4px;
     }
 
     .chart-bottom {
