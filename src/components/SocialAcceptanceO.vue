@@ -3,7 +3,10 @@
         <h2>Acceptance rate of Facial Recognition Technologies</h2>
         <div class="overview">
             <div class="general">
-                <p>ACCEPTANCE RATE</p>
+                <div>
+                    <p>ACCEPTANCE RATE</p>
+                    <p>= Strongly + Somewhat agree</p>
+                </div>
                 <h3 @mouseover='changeColor(1, $event)' @mouseleave='changeColorBack(1, $event)' style="color: #C7F700;cursor:default;">CH 67%</h3>
                 <h3 @mouseover='changeColor(2, $event)' @mouseleave='changeColorBack(2, $event)' style="color: #70E6AB;cursor:default;">UK 50%</h3>
                 <h3 @mouseover='changeColor(3, $event)' @mouseleave='changeColorBack(3, $event)' style="color: #0CBAF7;cursor:default;">US 47%</h3>
@@ -90,19 +93,26 @@ export default {
         /*height: 7vh;*/
     }
 
-    .general p {
+    .general p:last-child {
+        text-align: right;
+        margin-top: 3px;
+    }
+
+    .general p:first-child {
         text-align: right;
         text-shadow: rgba(0,255,255,0.9) 0px 0px 9px;
         font-size: 25px;
         margin-top: 10px;
+        margin-bottom: 0
     }
 
     @media only screen and (max-width: 1000px) {
-        .general p {
+        .general p:first-child {
             text-align: right;
             text-shadow: rgba(0,255,255,0.9) 0px 0px 9px;
             font-size: 32px;
             margin-top: 10px;
+            margin-bottom: 0
         }
     }
 

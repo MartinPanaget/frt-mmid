@@ -33,25 +33,25 @@ export default {
                     borderColor: '#5F5E5E',
                     showInLegend: false,
                     name: 'CH',
-                    data: [18, 49, 25, {dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 7}, {dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 1}]
+                    data: [18, 49, 25, 7, {dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 1}]
                 }],
                 UK : [{
                     borderColor: '#5F5E5E',
                     showInLegend: false,
                     name: 'UK',
-                    data: [15, 35, 28, 14, {dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 9}]
+                    data: [15, 35, 28, 14, 9]
                 }],
                 US : [{
                     borderColor: '#5F5E5E',
                     showInLegend: false,
                     name: 'US',
-                    data: [16, 31, 28, 17, {dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 8}]
+                    data: [16, 31, 28, 17, 8]
                 }],
                 DE : [{
                     borderColor: '#5F5E5E',
                     showInLegend: false,
                     name: 'DE',
-                    data: [{dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 8}, {y:30}, {y:31}, {y:18}, {y:14}]
+                    data: [8, 30, 31, 18, 14]
                 }],
             },
         }
