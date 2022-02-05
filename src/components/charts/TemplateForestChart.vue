@@ -62,19 +62,19 @@ export default{
                         enabled: false,
                     },
                     plotLines: [
-                    {color: '#F6F6F6',width: 1,value: 0},
-                    {color: '#F6F6F6',width: 1,value: 1},
-                    {color: '#F6F6F6',width: 1,value: 2},
-                    {color: '#F6F6F6',width: 1,value: 3},
-                    {color: '#F6F6F6',width: 1,value: 4},
-                    {color: '#F6F6F6',width: 1,value: 5},
-                    {color: '#F6F6F6',width: 1,value: 6},
-                    {color: '#F6F6F6',width: 1,value: 7},
-                    {color: '#F6F6F6',width: 1,value: 8},
-                    {color: '#F6F6F6',width: 1,value: 9},
-                    {color: '#F6F6F6',width: 1,value: 10},
-                    {color: '#F6F6F6',width: 1,value: 11},
-                    {color: '#F6F6F6',width: 1,value: 12}
+                    {color: '#999999',width: 1,value: 0},
+                    {color: '#999999',width: 1,value: 1},
+                    {color: '#999999',width: 1,value: 2},
+                    {color: '#999999',width: 1,value: 3},
+                    {color: '#999999',width: 1,value: 4},
+                    {color: '#999999',width: 1,value: 5},
+                    {color: '#999999',width: 1,value: 6},
+                    {color: '#999999',width: 1,value: 7},
+                    {color: '#999999',width: 1,value: 8},
+                    {color: '#999999',width: 1,value: 9},
+                    {color: '#999999',width: 1,value: 10},
+                    {color: '#999999',width: 1,value: 11},
+                    {color: '#999999',width: 1,value: 12}
                     ]
                 },
                 yAxis: {

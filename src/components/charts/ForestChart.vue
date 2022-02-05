@@ -10,11 +10,11 @@
                 <p class="education">Education high</p>
                 <p class="ethnic">Ethnical minority</p>
                 <p class="city">City</p>
-                <p class="exposure">Exposure</p>
-                <p class="exposure">Exposure frequency public</p>
-                <p class="exposure">Exposure frequency private</p>
-                <p class="exposure">Exposure & frequency public</p>
-                <p class="exposure">Exposure & frequency private</p>
+                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure</p>
+                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure frequency public</p>
+                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure frequency private</p>
+                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure & frequency public</p>
+                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure & frequency private</p>
             </div>
             <highcharts :options="chartOptionsTop"></highcharts>
             <TemplateForestChart v-bind:attributes="attributes" v-bind:attributesTop="attributes[1]" v-bind:img="countries[0]"></TemplateForestChart>
@@ -41,6 +41,7 @@
 <script>
 import TemplateForestChart from './TemplateForestChart.vue';
 import TemplateForestChartBottom from './TemplateForestChartBottom.vue';
+import info from '../../assets/icons/v6-info.png';
 
 export default {
     name: 'ForestChart',
@@ -54,6 +55,7 @@ export default {
     data() {
         const component = this;
         return {
+            info: info,
             countries: ['<img src="/flagge-uk-kontur.png" style="width: 30px;"/>', '<img src="/flagge-usa-kontur.png" style="width: 30px;"/>', '<img src="/flagge-de-kontur.png" style="width: 30px;"/>'],
             chartOptionsTop: {
                 chart: {
@@ -97,7 +99,7 @@ export default {
                     },
                     tickPositions: [0,1,2,3,4,5,6,7,8,9,10,11,12],
                     tickmarkPlacement: 'on',
-                    tickColor: '#F6F6F6',
+                    tickColor: '#999999',
                     tickWidth: 1,
                     tickInterval: 1,
                     lineWidth: 0,
@@ -106,19 +108,19 @@ export default {
                         enabled: false,
                     },
                     plotLines: [
-                    {color: '#F6F6F6',width: 1,value: 0},
-                    {color: '#F6F6F6',width: 1,value: 1},
-                    {color: '#F6F6F6',width: 1,value: 2},
-                    {color: '#F6F6F6',width: 1,value: 3},
-                    {color: '#F6F6F6',width: 1,value: 4},
-                    {color: '#F6F6F6',width: 1,value: 5},
-                    {color: '#F6F6F6',width: 1,value: 6},
-                    {color: '#F6F6F6',width: 1,value: 7},
-                    {color: '#F6F6F6',width: 1,value: 8},
-                    {color: '#F6F6F6',width: 1,value: 9},
-                    {color: '#F6F6F6',width: 1,value: 10},
-                    {color: '#F6F6F6',width: 1,value: 11},
-                    {color: '#F6F6F6',width: 1,value: 12}
+                    {color: '#999999',width: 1,value: 0},
+                    {color: '#999999',width: 1,value: 1},
+                    {color: '#999999',width: 1,value: 2},
+                    {color: '#999999',width: 1,value: 3},
+                    {color: '#999999',width: 1,value: 4},
+                    {color: '#999999',width: 1,value: 5},
+                    {color: '#999999',width: 1,value: 6},
+                    {color: '#999999',width: 1,value: 7},
+                    {color: '#999999',width: 1,value: 8},
+                    {color: '#999999',width: 1,value: 9},
+                    {color: '#999999',width: 1,value: 10},
+                    {color: '#999999',width: 1,value: 11},
+                    {color: '#999999',width: 1,value: 12}
                     ]
                 },
                 yAxis: {
@@ -341,6 +343,11 @@ export default {
     .categories-top p {
         font-size: 17px;
         margin: 4px auto 4px;
+    }
+
+    .categories-top p img{
+        margin-right: 3px;
+        height: 14px;
     }
 
     .chart-bottom {
