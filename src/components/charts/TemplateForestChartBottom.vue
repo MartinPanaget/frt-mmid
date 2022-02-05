@@ -9,15 +9,15 @@
 export default{
     name: 'TemplateForestChartBottom',
     props: {
+        attributes: Array,
         attributesBottom: Array,
     },
     data() {
+        const component = this;
         return {
             chartOptions: {
                 chart: {
                     type: 'scatter',
-                    //width: 320,
-                    //height: '210',
                     width: 300,
                     height: '200',
                     inverted: true,
@@ -55,19 +55,19 @@ export default{
                         enabled: false,
                     },
                     plotLines: [
-                    {color: 'white',width: 1,value: 0},
-                    {color: 'white',width: 1,value: 1},
-                    {color: 'white',width: 1,value: 2},
-                    {color: 'white',width: 1,value: 3},
-                    {color: 'white',width: 1,value: 4},
-                    {color: 'white',width: 1,value: 5},
-                    {color: 'white',width: 1,value: 6},
-                    {color: 'white',width: 1,value: 7},
-                    {color: 'white',width: 1,value: 8},
-                    {color: 'white',width: 1,value: 9},
-                    {color: 'white',width: 1,value: 10},
-                    {color: 'white',width: 1,value: 11},
-                    {color: 'white',width: 1,value: 12}
+                    {color: '#F6F6F6',width: 1,value: 0},
+                    {color: '#F6F6F6',width: 1,value: 1},
+                    {color: '#F6F6F6',width: 1,value: 2},
+                    {color: '#F6F6F6',width: 1,value: 3},
+                    {color: '#F6F6F6',width: 1,value: 4},
+                    {color: '#F6F6F6',width: 1,value: 5},
+                    {color: '#F6F6F6',width: 1,value: 6},
+                    {color: '#F6F6F6',width: 1,value: 7},
+                    {color: '#F6F6F6',width: 1,value: 8},
+                    {color: '#F6F6F6',width: 1,value: 9},
+                    {color: '#F6F6F6',width: 1,value: 10},
+                    {color: '#F6F6F6',width: 1,value: 11},
+                    {color: '#F6F6F6',width: 1,value: 12}
                     ]
                 },
                 yAxis: {
@@ -77,14 +77,14 @@ export default{
                     title: {
                     text: undefined
                     },
-                    tickColor: 'white',
+                    tickColor: '#F6F6F6',
                     tickWidth:2,
                     tickLength: 8,
                     tickInterval: 1,
                     lineWidth: 0,
                     gridLineColor: '',
                     plotLines: [
-                    {color: 'white',width: 2,value: 1},
+                    {color: '#F6F6F6',width: 2,value: 1},
                     ],
                     labels: {
                         enabled: false
@@ -108,10 +108,6 @@ export default{
                         }
                         }
                     },
-                    tooltip: {
-                        headerFormat: '<strong>{series.name}</strong><br>',
-                        pointFormat: '<br>Wert: {point.y}{point.name}'
-                    }
                     },
                     errorbar: {
                         stemWidth: 3, 
@@ -119,23 +115,28 @@ export default{
                         enableMouseTracking: false
                     }
                 },
+                tooltip: {
+                    formatter: function() {
+                        let tooltip = '<strong>Odds Ratio</strong><br>'
+                        tooltip += '<hr>'
+                        tooltip += '<b>'+ this.series.name+ ': ' + this.y
+                        tooltip += this.point.name !== undefined ? this.point.name : '' 
+                        tooltip += '</b><br/>'
+                        for(let i = 4; i < 8; i++) {
+                            if (this.series.name !== component.attributes[i][0].name) {
+                                tooltip += '<em>'+component.attributes[i][0].name + ': ' + component.attributes[i][0].data[this.point.x].y 
+                                tooltip +=  component.attributes[i][0].data[this.point.x].name !== undefined ? component.attributes[i][0].data[this.point.x].name : ''
+                                tooltip += '</em><br/>'
+                            }
+                        }
+                        return tooltip
+                    },
+                },
                 credits: {
                     enabled: false
                 },
                 series: this.attributesBottom
             }
-        }
-    },
-    methods: {
-        addErrorbars: function () {
-            let series = [{name: this.attributesBottom[0].name, colorByPoint: true, showInLegend: false, data: this.attributesBottom[0].data,}];
-            for (let i = 1; i < this.attributesBottom.length; i++) {
-                let errorbar = {type: 'errorbar', stemWidth: 3, whiskerLength: 0};
-                errorbar["color"] = this.attributesBottom[i].color;
-                errorbar["data"] = this.attributesBottom[i].data;
-                series.push(errorbar);
-            }
-            return series;
         }
     }
 }

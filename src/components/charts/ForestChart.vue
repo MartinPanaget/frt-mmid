@@ -10,16 +10,16 @@
                 <p class="education">Education high</p>
                 <p class="ethnic">Ethnical minority</p>
                 <p class="city">City</p>
-                <p class="exposure">Exposure</p>
-                <p class="exposure">Exposure frequency public</p>
-                <p class="exposure">Exposure frequency private</p>
-                <p class="exposure">Exposure & frequency public</p>
-                <p class="exposure">Exposure & frequency private</p>
+                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure</p>
+                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure frequency public</p>
+                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure frequency private</p>
+                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure & frequency public</p>
+                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure & frequency private</p>
             </div>
             <highcharts :options="chartOptionsTop"></highcharts>
-            <TemplateForestChart v-bind:attributesTop="attributes[1]" v-bind:img="countries[0]"></TemplateForestChart>
-            <TemplateForestChart v-bind:attributesTop="attributes[2]" v-bind:img="countries[1]"></TemplateForestChart>
-            <TemplateForestChart v-bind:attributesTop="attributes[3]" v-bind:img="countries[2]"></TemplateForestChart>
+            <TemplateForestChart v-bind:attributes="attributes" v-bind:attributesTop="attributes[1]" v-bind:img="countries[0]"></TemplateForestChart>
+            <TemplateForestChart v-bind:attributes="attributes" v-bind:attributesTop="attributes[2]" v-bind:img="countries[1]"></TemplateForestChart>
+            <TemplateForestChart v-bind:attributes="attributes" v-bind:attributesTop="attributes[3]" v-bind:img="countries[2]"></TemplateForestChart>
         </div>
         <div class="chart-bottom">
             <div class="categories-bottom">
@@ -31,9 +31,9 @@
                 <p class="surveillance">Surveillance</p>
             </div>
             <highcharts :options="chartOptionsBottom"></highcharts>
-            <TemplateForestChartBottom v-bind:attributesBottom="attributes[5]"></TemplateForestChartBottom>
-            <TemplateForestChartBottom v-bind:attributesBottom="attributes[6]"></TemplateForestChartBottom>
-            <TemplateForestChartBottom v-bind:attributesBottom="attributes[7]"></TemplateForestChartBottom>
+            <TemplateForestChartBottom v-bind:attributes="attributes" v-bind:attributesBottom="attributes[5]"></TemplateForestChartBottom>
+            <TemplateForestChartBottom v-bind:attributes="attributes" v-bind:attributesBottom="attributes[6]"></TemplateForestChartBottom>
+            <TemplateForestChartBottom v-bind:attributes="attributes" v-bind:attributesBottom="attributes[7]"></TemplateForestChartBottom>
         </div>
     </div>
 </template>
@@ -41,6 +41,7 @@
 <script>
 import TemplateForestChart from './TemplateForestChart.vue';
 import TemplateForestChartBottom from './TemplateForestChartBottom.vue';
+import info from '../../assets/icons/v6-info.png';
 
 export default {
     name: 'ForestChart',
@@ -52,13 +53,13 @@ export default {
         attributes: Array,
     },
     data() {
+        const component = this;
         return {
+            info: info,
             countries: ['<img src="/flagge-uk-kontur.png" style="width: 30px;"/>', '<img src="/flagge-usa-kontur.png" style="width: 30px;"/>', '<img src="/flagge-de-kontur.png" style="width: 30px;"/>'],
             chartOptionsTop: {
                 chart: {
                     type: 'scatter',
-                    //width: 440,
-                    //height: '380',
                     width: 300,
                     height: '400',
                     marginBottom: 27,
@@ -98,39 +99,28 @@ export default {
                     },
                     tickPositions: [0,1,2,3,4,5,6,7,8,9,10,11,12],
                     tickmarkPlacement: 'on',
-                    tickColor: 'white',
+                    tickColor: '#999999',
                     tickWidth: 1,
                     tickInterval: 1,
                     lineWidth: 0,
                     showLastLabel: true,
                     labels: {
-                        /*useHTML:true,
-                        style:{
-                            width:'146px',
-                            whiteSpace:'normal',
-                            color: '#F6F6F6',
-                            fontSize: '17px',
-                        },
-                        step: 1,
-                        formatter: function () {
-                            return '<div align="center" style="word-wrap: break-word;word-break: break-all;width:146px;text-align:right">' + this.value + '</div>';
-                        },*/
                         enabled: false,
                     },
                     plotLines: [
-                    {color: 'white',width: 1,value: 0},
-                    {color: 'white',width: 1,value: 1},
-                    {color: 'white',width: 1,value: 2},
-                    {color: 'white',width: 1,value: 3},
-                    {color: 'white',width: 1,value: 4},
-                    {color: 'white',width: 1,value: 5},
-                    {color: 'white',width: 1,value: 6},
-                    {color: 'white',width: 1,value: 7},
-                    {color: 'white',width: 1,value: 8},
-                    {color: 'white',width: 1,value: 9},
-                    {color: 'white',width: 1,value: 10},
-                    {color: 'white',width: 1,value: 11},
-                    {color: 'white',width: 1,value: 12}
+                    {color: '#999999',width: 1,value: 0},
+                    {color: '#999999',width: 1,value: 1},
+                    {color: '#999999',width: 1,value: 2},
+                    {color: '#999999',width: 1,value: 3},
+                    {color: '#999999',width: 1,value: 4},
+                    {color: '#999999',width: 1,value: 5},
+                    {color: '#999999',width: 1,value: 6},
+                    {color: '#999999',width: 1,value: 7},
+                    {color: '#999999',width: 1,value: 8},
+                    {color: '#999999',width: 1,value: 9},
+                    {color: '#999999',width: 1,value: 10},
+                    {color: '#999999',width: 1,value: 11},
+                    {color: '#999999',width: 1,value: 12}
                     ]
                 },
                 yAxis: {
@@ -139,14 +129,14 @@ export default {
                     title: {
                     text: undefined
                     },
-                    tickColor: 'white',
+                    tickColor: '#F6F6F6',
                     tickWidth:2,
                     tickLength: 8,
                     tickInterval: 1,
                     lineWidth: 0,
                     gridLineColor: '',
                     plotLines: [
-                    {color: 'white',width: 2,value: 1},
+                    {color: '#F6F6F6',width: 2,value: 1},
                     ],
                     labels: {
                         style: {
@@ -173,16 +163,29 @@ export default {
                             }
                             }
                         },
-                        tooltip: {
-                            headerFormat: '<strong>{series.name}</strong><br>',
-                            pointFormat: '<br>Wert: {point.y}{point.name}'
-                        }
                     },
                     errorbar: {
                         stemWidth: 3, 
                         whiskerLength: 0,
                         enableMouseTracking: false
                     }
+                },
+                tooltip: {
+                    formatter: function() {
+                        let tooltip = '<strong>Odds Ratio</strong><br>'
+                        tooltip += '<hr>'
+                        tooltip += '<b>'+ this.series.name+ ': ' + this.y
+                        tooltip += this.point.name !== undefined ? this.point.name : '' 
+                        tooltip += '</b><br/>'
+                        for(let i = 0; i < 4; i++) {
+                            if (this.series.name !== component.attributes[i][0].name) {
+                                tooltip += '<em>'+component.attributes[i][0].name + ': ' + component.attributes[i][0].data[this.point.x].y 
+                                tooltip +=  component.attributes[i][0].data[this.point.x].name !== undefined ? component.attributes[i][0].data[this.point.x].name : ''
+                                tooltip += '</em><br/>'
+                            }
+                        }
+                        return tooltip
+                    },
                 },
                 credits: {
                     enabled: false
@@ -192,8 +195,6 @@ export default {
             chartOptionsBottom: {
                 chart: {
                     type: 'scatter',
-                    //width: 440,
-                    //height: '210',
                     width: 300,
                     height: '200',
                     inverted: true,
@@ -227,39 +228,28 @@ export default {
                     startOnTick: true,
                     endOnTick: true,
                     tickmarkPlacement: 'on',
-                    tickColor: 'white',
+                    tickColor: '#F6F6F6',
                     tickWidth: 1,
                     tickInterval: 1,
                     lineWidth: 0,
                     showLastLabel: true,
                     labels: {
                         enabled: false,
-                        /*useHTML:true,
-                        style:{
-                            width:'145px',
-                            whiteSpace:'normal',
-                            color: '#F6F6F6',
-                            fontSize: '17px',
-                        },
-                        step: 1,
-                        formatter: function () {
-                            return '<div align="center" style="word-wrap: break-word;word-break: break-all;width:145px;text-align:right">' + this.value + '</div>';
-                        },*/
                     },
                     plotLines: [
-                    {color: 'white',width: 1,value: 0},
-                    {color: 'white',width: 1,value: 1},
-                    {color: 'white',width: 1,value: 2},
-                    {color: 'white',width: 1,value: 3},
-                    {color: 'white',width: 1,value: 4},
-                    {color: 'white',width: 1,value: 5},
-                    {color: 'white',width: 1,value: 6},
-                    {color: 'white',width: 1,value: 7},
-                    {color: 'white',width: 1,value: 8},
-                    {color: 'white',width: 1,value: 9},
-                    {color: 'white',width: 1,value: 10},
-                    {color: 'white',width: 1,value: 11},
-                    {color: 'white',width: 1,value: 12}
+                    {color: '#F6F6F6',width: 1,value: 0},
+                    {color: '#F6F6F6',width: 1,value: 1},
+                    {color: '#F6F6F6',width: 1,value: 2},
+                    {color: '#F6F6F6',width: 1,value: 3},
+                    {color: '#F6F6F6',width: 1,value: 4},
+                    {color: '#F6F6F6',width: 1,value: 5},
+                    {color: '#F6F6F6',width: 1,value: 6},
+                    {color: '#F6F6F6',width: 1,value: 7},
+                    {color: '#F6F6F6',width: 1,value: 8},
+                    {color: '#F6F6F6',width: 1,value: 9},
+                    {color: '#F6F6F6',width: 1,value: 10},
+                    {color: '#F6F6F6',width: 1,value: 11},
+                    {color: '#F6F6F6',width: 1,value: 12}
                     ]
                 },
                 yAxis: {
@@ -269,7 +259,7 @@ export default {
                     title: {
                     text: undefined
                     },
-                    tickColor: 'white',
+                    tickColor: '#F6F6F6',
                     tickWidth:2,
                     tickLength: 8,
                     tickInterval: 1,
@@ -311,6 +301,23 @@ export default {
                         enableMouseTracking: false
                     }
                 },
+                tooltip: {
+                    formatter: function() {
+                        let tooltip = '<strong>Odds Ratio</strong><br>'
+                        tooltip += '<hr>'
+                        tooltip += '<b>'+ this.series.name+ ': ' + this.y
+                        tooltip += this.point.name !== undefined ? this.point.name : '' 
+                        tooltip += '</b><br/>'
+                        for(let i = 4; i < 8; i++) {
+                            if (this.series.name !== component.attributes[i][0].name) {
+                                tooltip += '<em>'+component.attributes[i][0].name + ': ' + component.attributes[i][0].data[this.point.x].y 
+                                tooltip +=  component.attributes[i][0].data[this.point.x].name !== undefined ? component.attributes[i][0].data[this.point.x].name : ''
+                                tooltip += '</em><br/>'
+                            }
+                        }
+                        return tooltip
+                    },
+                },
                 credits: {
                     enabled: false
                 },
@@ -336,6 +343,11 @@ export default {
     .categories-top p {
         font-size: 17px;
         margin: 4px auto 4px;
+    }
+
+    .categories-top p img{
+        margin-right: 3px;
+        height: 14px;
     }
 
     .chart-bottom {
