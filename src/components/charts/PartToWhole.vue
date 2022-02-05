@@ -7,8 +7,8 @@
             <p>Somewhat oppose</p>
             <p>Strongly oppose</p>
         </div>
-        <TemplateBarChart v-bind:series="series.CH" v-bind:color="ChColor"></TemplateBarChart>
-        <TemplateBarChart v-bind:series="series.UK" v-bind:color="UkColor"></TemplateBarChart>
+        <TemplateBarChart v-bind:series="series.CN" v-bind:color="ChColor"></TemplateBarChart>
+        <TemplateBarChart v-bind:series="series.GB" v-bind:color="UkColor"></TemplateBarChart>
         <TemplateBarChart v-bind:series="series.US" v-bind:color="UsColor"></TemplateBarChart>
         <TemplateBarChart v-bind:series="series.DE" v-bind:color="DeColor"></TemplateBarChart>
     </div>
@@ -29,16 +29,16 @@ export default {
             UkColor: ['#70E6AB'],
             UsColor: ['#0CBAF7'],
             series: {
-                CH : [{
+                CN : [{
                     borderColor: '#5F5E5E',
                     showInLegend: false,
-                    name: 'CH',
+                    name: 'CN',
                     data: [18, 49, 25, {dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 7}, {dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 1}]
                 }],
-                UK : [{
+                GB : [{
                     borderColor: '#5F5E5E',
                     showInLegend: false,
-                    name: 'UK',
+                    name: 'GB',
                     data: [15, 35, 28, 14, {dataLabels: {inside: false,style: {color: '#E6E6E6'}}, y: 9}]
                 }],
                 US : [{

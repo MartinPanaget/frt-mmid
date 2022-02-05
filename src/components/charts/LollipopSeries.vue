@@ -35,7 +35,7 @@ export default {
                     {//start Datagroup
                     showInLegend:false,
                     visible: true, //wenn per default sichtbar, dann auf true setzen
-                    name:'CH', //erscheint im Tooltip
+                    name:'CN', //erscheint im Tooltip
                     color: '#23EFEF', //Farbe der Kugel
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
@@ -68,7 +68,7 @@ export default {
                     }, {
                     showInLegend:false,
                     visible: true,
-                    name:'USA',
+                    name:'US',
                     color: '#0CBAF7',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
@@ -100,7 +100,7 @@ export default {
                 Efficiency:[{
                     showInLegend:false,
                     visible: true,
-                    name:'CH',
+                    name:'CN',
                     color: '#23EFEF',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
@@ -130,7 +130,7 @@ export default {
                     }, {
                     showInLegend:false,
                     visible: true,
-                    name:'USA',
+                    name:'US',
                     color: '#0CBAF7',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
@@ -162,7 +162,7 @@ export default {
                 Security:[{
                     showInLegend:false,
                     visible: true,
-                    name:'CH',
+                    name:'CN',
                     color: '#23EFEF',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
@@ -192,7 +192,7 @@ export default {
                     }, {
                     showInLegend:false,
                     visible: true,
-                    name:'USA',
+                    name:'US',
                     color: '#0CBAF7',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
@@ -224,7 +224,7 @@ export default {
                 PrivacyViolation:[{
                     showInLegend:false,
                     visible: true,
-                    name:'CH',
+                    name:'CN',
                     color: '#23EFEF',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
@@ -254,7 +254,7 @@ export default {
                     }, {
                     showInLegend:false,
                     visible: true,
-                    name:'USA',
+                    name:'US',
                     color: '#0CBAF7',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
@@ -286,7 +286,7 @@ export default {
                 Discrimination:[{
                     showInLegend:false,
                     visible: true,
-                    name:'CH',
+                    name:'CN',
                     color: '#23EFEF',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
@@ -316,7 +316,7 @@ export default {
                     }, {
                     showInLegend:false,
                     visible: true,
-                    name:'USA',
+                    name:'US',
                     color: '#0CBAF7',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
@@ -348,7 +348,7 @@ export default {
                 Surveillance:[{
                     showInLegend:false,
                     visible: true,
-                    name:'CH',
+                    name:'CN',
                     color: '#23EFEF',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
@@ -378,7 +378,7 @@ export default {
                     }, {
                     showInLegend:false,
                     visible: true,
-                    name:'USA',
+                    name:'US',
                     color: '#0CBAF7',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,

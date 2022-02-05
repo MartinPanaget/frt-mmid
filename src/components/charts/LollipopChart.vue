@@ -40,7 +40,7 @@ export default{
                 },
 
                 tooltip: {
-                    enabled:false,
+                    enabled:true,
                     shared: false,
                     formatter: function(){
                         if(this.y < 0 || this.y > 0){

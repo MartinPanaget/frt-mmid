@@ -49,14 +49,14 @@ export default {
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'Smartphone USA',
+                    name: 'Smartphone US',
                     color: '#0CBAF7',
                     data:[59],
                     },
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'Smartphone CH',
+                    name: 'Smartphone CN',
                     color: '#C7F700',
                     data:[78],// Datensatz mit größtem Wert in der Gruppe Phone
                     },
@@ -71,7 +71,7 @@ export default {
                 PersonCheck:[{
                     showInLegend: false,
                     visible: true,
-                    name: 'Customs Control, Security Checks at Airport USA',
+                    name: 'Customs Control, Security Checks at Airport US',
                     color: '#0CBAF7',
                     data:[29],
                     },
@@ -85,7 +85,7 @@ export default {
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'Customs Control, Security Checks at Airport CH',
+                    name: 'Customs Control, Security Checks at Airport CN',
                     color: '#C7F700',
                     data:[42],
                     },
@@ -121,14 +121,14 @@ export default {
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'mart Devices and Gadgets USA',
+                    name: 'mart Devices and Gadgets US',
                     color: '#0CBAF7',
                     data:[47],
                     },
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'mart Devices and Gadgets CH',
+                    name: 'mart Devices and Gadgets CN',
                     color: '#C7F700',
                     data:[47],
                     },
@@ -150,7 +150,7 @@ export default {
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'Identification Verification for Financial Matters USA',
+                    name: 'Identification Verification for Financial Matters US',
                     color: '#0CBAF7',
                     data:[23],
                     },
@@ -164,7 +164,7 @@ export default {
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'Identification Verification for Financial Matters CH',
+                    name: 'Identification Verification for Financial Matters CN',
                     color: '#C7F700',
                     data:[33],
                     },
@@ -179,7 +179,7 @@ export default {
                 Transport:[{
                     showInLegend: false,
                     visible: true,
-                    name: 'Railway Subway Situations USA',
+                    name: 'Railway Subway Situations US',
                     color: '#0CBAF7',
                     data:[10],
                     },
@@ -200,7 +200,7 @@ export default {
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'Railway Subway Situations CH',
+                    name: 'Railway Subway Situations CN',
                     color: '#C7F700',
                     data:[45],
                     },
@@ -215,7 +215,7 @@ export default {
                 Mall:[{
                     showInLegend: false,
                     visible: true,
-                    name: 'Shopping Malls USA',
+                    name: 'Shopping Malls US',
                     color: '#0CBAF7',
                     data:[14],
                     },
@@ -236,7 +236,7 @@ export default {
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'Shopping Malls CH',
+                    name: 'Shopping Malls CN',
                     color: '#C7F700',
                     data:[30],
                     },
@@ -251,14 +251,14 @@ export default {
                 Street:[{
                     showInLegend: false,
                     visible: true,
-                    name: 'Public Street CH',
+                    name: 'Public Street CN',
                     color: '#C7F700',
                     data:[10],
                     },  
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'Public Street USA',
+                    name: 'Public Street US',
                     color: '#0CBAF7',
                     data:[14],
                     },
@@ -301,14 +301,14 @@ export default {
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'Schools or Universities USA',
+                    name: 'Schools or Universities US',
                     color: '#0CBAF7',
                     data:[13],
                     },
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'Schools or Universities CH',
+                    name: 'Schools or Universities CN',
                     color: '#C7F700',
                     data:[21],
                     },
@@ -337,14 +337,14 @@ export default {
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'Private Households CH',
+                    name: 'Private Households CN',
                     color: '#C7F700',
                     data:[8],
                     },  
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'Private Households USA',
+                    name: 'Private Households US',
                     color: '#0CBAF7',
                     data:[11],
                     }, 
@@ -359,7 +359,7 @@ export default {
                 Tourism:[{
                     showInLegend: false,
                     visible: true,
-                    name: 'Tourist Attractions USA',
+                    name: 'Tourist Attractions US',
                     color: '#0CBAF7',
                     data:[11],
                     },
@@ -373,7 +373,7 @@ export default {
                     {
                     showInLegend: false,
                     visible: true,
-                    name: 'Tourist Attractions CH',
+                    name: 'Tourist Attractions CN',
                     color: '#C7F700',
                     data:[15],
                     },
