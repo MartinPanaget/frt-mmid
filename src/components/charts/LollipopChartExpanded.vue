@@ -23,24 +23,27 @@ export default{
                     backgroundColor: '#3C3C3C',
                     type: 'lollipop',
                     inverted: false,
-                    width: 450,
-                    height: 335,
+                    width: 400,
+                    height: 300,
                     opacity: '50%',
                     style:{
                         fontFamily: 'futura-pt-condensed, sans-serif'
                     }
                 },
                 title: {
+                    useHTML:true,
+                    x:50,
                     style:{
                        color:'#00FFFF',
                         fontSize:'28px',
-                        fontWeight: 'bolder'
+                        fontWeight: 'bolder',
                     },
                     text: this.title,
                     verticalAlign: this.titleAlign,
                 },
 
                 tooltip: {
+                    enabled:false,
                     shared: false,
                     formatter: function(){
                         if(this.y < 0 || this.y > 0){
@@ -60,6 +63,7 @@ export default{
                     offset: 50,
                     min: this.min,
                     max: this.max,
+                    tickInterval: 20,
                     labels:{
                         enabled: true,
                         formatter: function() { 
@@ -82,16 +86,8 @@ export default{
                 },
                 xAxis: {
                     visible: false,
-                    type: 'category',
-                    labels:{
-                        // y:-85,
-                        enabled: true,
-                        useHTML: true,
-                        allowOverlap: true,
-                        formatter: function(){
-                            return '<img src="../../assets/icons/flagge-usa.png" style="width:10px">';
-                        }
-                    }
+                    min:-0.25,
+                    max:3.25
                 },
                 plotOptions:{
                     lollipop:{
@@ -107,7 +103,23 @@ export default{
                         {
                             color: this.color // Values from 10 (including) and up have the color red
                         }
-                        ]
+                        ],
+                        dataLabels:{
+                            enabled: true,
+                            inside: false,
+                            padding: 10,
+                            style: {
+                                color: '#f6f6f6',
+                                textOutline: 'none',
+                                fontWeight: 'normal',
+                                fontSize: '18px'
+                            },
+                            formatter:function(){
+                                if (Math.abs(this.y) > 0){
+                                    return Math.abs(this.y);
+                                }
+                            }
+                        }
                     }
                 },
                 credits: {

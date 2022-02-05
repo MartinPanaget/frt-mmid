@@ -62,32 +62,6 @@ export default {
                                 }
                             }
                         }
-                        // point:{
-                        //     events:{
-                        //         // mouseOver: function(){
-                        //         //     this.series.data[0].visible = true;  
-                        //         //     this.series.data[2].visible = true; 
-                        //         //     this.series.data[3].visible = true; 
-                        //         //     this.series.options.layoutAlgorithm.bubblePadding = 5;
-                        //         // },
-                        //         // mouseOut: function(){
-                        //         //     this.series.data[0].visible = false;  
-                        //         //     this.series.data[2].visible = false; 
-                        //         //     this.series.data[3].visible = false;  
-                        //         //     this.series.options.layoutAlgorithm.bubblePadding = -100;
-                        //         // },
-                        //         cursor: 'pointer',
-                        //         click: function(){
-                        //             // console.log(typeof this);
-                        //             this.series.data[0].visible = true;  
-                        //             this.series.data[1].visible = true; 
-                        //             this.series.data[2].visible = true; 
-                        //             this.series.data[3].visible = true; 
-                        //             // console.log(this.series.options.layoutAlgorithm.bubblePadding);
-                        //             this.series.options.layoutAlgorithm.bubblePadding = 5;
-                        //         }
-                        //     }
-                        // }
                     },
                 },
                 title: {

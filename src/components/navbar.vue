@@ -129,40 +129,126 @@
                         <polygon class="cls-2" points="0 71.99 108.6 70.19 108.6 68.19 0 69.99 0 71.99"/>
                         </g>
                         <!-- Info Button  -->
-                        <circle id="more" @mouseover="infoIn" @mouseout="infoOut" class="cls-4 info" cx="191.3" cy="1049.9" r="14.7"/>
+                        <circle id="more" @click="infoIn" class="cls-4 info" cx="191.3" cy="1049.9" r="14.7"/>
+                        <text id="info-i" x="191.3" y="1049.9" text-anchor="middle" stroke="#222222" stroke-width="1px" alignment-baseline="middle">i</text>
                     </g>
                 </g>
                 <polygon class="cls-2" points="174.5 0 171.5 0 94.8 68.8 114.1 158.7 83.6 249.1 83.6 249.3 82.4 345.6 45.1 430.5 45 430.7 60.4 549.7 0 890.9 0 900.41 62.4 549.9 47 431.1 84.3 346.2 84.4 346 85.6 249.6 116.1 159.1 116.2 158.8 97 69.5 174.5 0"/>
                 <g>
                      <!-- nav 1 -->
-                    <a href="#firstPage"><circle data-menuanchor="firstPage" @mouseover="start = true" @mouseout="start = false" class="cls-1 nav-item nav1 active" cx="102.9" cy="70.3" r="18.1"/></a>
+                    <a href="#firstPage"><circle id="p1" data-menuanchor="firstPage" @mouseover="start = true" @mouseout="start = false" class="cls-1 nav-item nav1 active" cx="102.9" cy="70.3" r="18.1"/></a>
                     <!-- nav 2 -->
-                    <a href="#secondPage"><circle data-menuanchor="secondPage" @mouseover="info = true" @mouseout="info = false" class="cls-1 nav-item nav2" cx="114.2" cy="163.3" r="18.1"/></a>
+                    <a href="#secondPage"><circle id="p2" data-menuanchor="secondPage" @mouseover="info = true" @mouseout="info = false" class="cls-1 nav-item nav2" cx="114.2" cy="163.3" r="18.1"/></a>
                     <!-- nav 3 -->
-                    <a href="#thirdPage"><circle data-menuanchor="thirdPage" @mouseover="riskandbenefits = true" @mouseout="riskandbenefits = false" class="cls-1 nav-item nav3" cx="87" cy="251.7" r="18.1"/></a>
+                    <a href="#thirdPage"><circle id="p3" data-menuanchor="thirdPage" @mouseover="riskandbenefits = true" @mouseout="riskandbenefits = false" class="cls-1 nav-item nav3" cx="87" cy="251.7" r="18.1"/></a>
                     <!-- nav 4 -->
-                    <a href="#fourthPage"><circle data-menuanchor="fourthPage" @mouseover="occurances = true" @mouseout="occurances = false" class="cls-1 nav-item nav4" cx="82.5" cy="349.2" r="18.1"/></a>
+                    <a href="#fourthPage"><circle id="p4" data-menuanchor="fourthPage" @mouseover="occurances = true" @mouseout="occurances = false" class="cls-1 nav-item nav4" cx="82.5" cy="349.2" r="18.1"/></a>
                     <!-- nav 5 -->
-                    <a href="#fifthPage"><circle data-menuanchor="fifthPage" @mouseover="acceptanceA = true" @mouseout="acceptanceA = false" class="cls-1 nav-item nav5" cx="46.2" cy="433.13" r="18.14"/></a>
+                    <a href="#fifthPage"><circle id="p5" data-menuanchor="fifthPage" @mouseover="acceptanceA = true" @mouseout="acceptanceA = false" class="cls-1 nav-item nav5" cx="46.2" cy="433.13" r="18.14"/></a>
                     <!-- nav 6 -->
-                    <a href="#sixthPage"><circle data-menuanchor="sixthPage" @mouseover="acceptanceB = true" @mouseout="acceptanceB = false" class="cls-1 nav-item nav6" cx="61.1" cy="547.6" r="18.1"/></a>
+                    <a href="#sixthPage"><circle id="p6" data-menuanchor="sixthPage" @mouseover="acceptanceB = true" @mouseout="acceptanceB = false" class="cls-1 nav-item nav6" cx="61.1" cy="547.6" r="18.1"/></a>
                     <!-- nav 7 -->
-                    <a href="#seventhPage"><circle data-menuanchor="seventhPage" @mouseover="imprint = true" @mouseout="imprint = false" class="cls-1 nav-item nav7" cx="44.3" cy="644.2" r="18.1"/></a>
+                    <a href="#seventhPage"><circle id="p7" data-menuanchor="seventhPage" @mouseover="imprint = true" @mouseout="imprint = false" class="cls-1 nav-item nav7" cx="44.3" cy="644.2" r="18.1"/></a>
                 </g>
             </g>
             </svg>
 
-        <div id="info-div" v-show="infoActive">
+         <transition name="fade">
+            <div id="info-div" v-show="isInfo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="237.766" height="289.834" viewBox="0 0 237.766 289.834">
+                    <g id="Gruppe_980" data-name="Gruppe 980" transform="translate(-194.592 -848.58)">
+                        <rect id="Rechteck_146" data-name="Rechteck 146" class="cls-16" width="233" height="285" transform="translate(197 850.914)"/>
+                        <g id="Gruppe_409" @click="infoOut" data-name="Gruppe 409" class="cross" transform="translate(402.858 866.867) rotate(45)">
+                            <path id="Linie_291" data-name="Linie 291" class="cls-22" d="M0,25.108a1,1,0,0,1-1-1V0A1,1,0,0,1,0-1,1,1,0,0,1,1,0V24.108A1,1,0,0,1,0,25.108Z" transform="translate(12.054 0)"/>
+                            <path id="Linie_292" data-name="Linie 292" class="cls-22" d="M0,25.108a1,1,0,0,1-1-1V0A1,1,0,0,1,0-1,1,1,0,0,1,1,0V24.108A1,1,0,0,1,0,25.108Z" transform="translate(24.108 12.054) rotate(90)"/>
+                        </g>
+                        <g id="Gruppe_410" data-name="Gruppe 410" transform="translate(197.092 880.08)">
+                            <path id="Pfad_131" data-name="Pfad 131" class="cls-22" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(0 207.834)"/>
+                            <path id="Pfad_243" data-name="Pfad 243" class="cls-22" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(184.766 255.834) rotate(-90)"/>
+                            <path id="Pfad_244" data-name="Pfad 244" class="cls-22" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(232.766 19) rotate(180)"/>
+                            <path id="Pfad_245" data-name="Pfad 245" class="cls-22" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(48 -29) rotate(90)"/>
+                        </g>
+                    </g>
+                </svg>
+                <p id="p-p1" v-show="startInfo">
+                    Welcome!<br>This Info Button gives you different information on the topic depending on which page you are.
+                    <br><br>Enjoy your exploration.
+                </p>
 
-        </div>
+                <p id="p-p2" v-show="infoInfo">
+                    All variables from <br>
+                    2 - 3.4 relate to the 
+                    subjective perception
+                    of citizens towards FRTs.
+                    <br><br>
+                    FRT = Facial Recognition 
+                    Technology
+                </p>
+
+                <p id="p-p3" v-show="riskandbenefitsInfo">
+                    The graph shows<br> 
+                    perceived benefits and 
+                    risks of FRTs  by citizens 
+                    (CHN, UK, US, GER).
+                    <br><br>
+                    FRT = Facial Recognition 
+                    Technology
+                </p>
+
+                <div id="p-p4" v-show="occurancesInfo">
+                    <ul id="country-list">
+                        <li class="list-item de">Germany</li>
+                        <li class="list-item us">US</li>
+                        <li class="list-item uk">UK</li>
+                        <li class="list-item ch">China</li>
+                    </ul>
+                    <p>FRT = Facial Recognition 
+                    Technology</p>
+                </div>
+
+                <p id="p-p5" v-show="acceptanceAInfo">
+                    <br>
+                    The acceptance rate 
+                    consists of the sum  
+                    of the two categories
+                    “Strongly accept” 
+                    and “Somewhat accept”
+                </p>
+
+                <div id="p-p6" v-show="acceptanceBInfo">
+                    <p>
+                        The Odds Ratio scale 
+                        displays the chance of 
+                        the acceptance rate of 
+                        FRTs to be influenced by 
+                        given factors.
+                    </p>
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2938757/" target="_blank">Explaining Odds Ratios</a>
+                    
+                </div>
+
+                <p id="p-p7" v-show="imprintInfo">
+                    Thank you for visiting! <br>
+                    Follow the link on this page to read more about the study
+                </p>
+            </div>
+        </transition>
     </div>
 </template>
 
 <script>
 export default {
   name: 'Navbar',
-   data(){
+  data(){
       return{
+          isInfo:false,
+          imprintInfo:false,
+          acceptanceBInfo:false,
+          acceptanceAInfo:false,
+          occurancesInfo:false,
+          infoInfo:false,
+          startInfo:false,
+          riskandbenefitsInfo:false,
           infoActive: false,
           start: false,
           info: false,
@@ -173,13 +259,85 @@ export default {
           imprint:false,
       }
   },
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
   methods:{
     infoIn: function(){
-            this.infoActive = true;   
+        var activeNav = document.querySelectorAll('.nav-item');
+        activeNav.forEach(element => {
+            if(element.classList.contains('active')){
+                this.isInfo = !this.isInfo;
+                switch(element.id){
+                    case 'p1':
+                        this.startInfo = !this.startInfo;
+                        break;
+                    case 'p2':
+                        this.infoInfo =  !this.infoInfo;
+                        break;
+                    case 'p3':
+                        this.riskandbenefitsInfo =  !this.riskandbenefitsInfo;
+                        break;
+                    case 'p4':
+                        this.occurancesInfo =  !this.occurancesInfo;
+                        break;
+                    case 'p5':
+                        this.acceptanceAInfo =  !this.acceptanceAInfo;
+                        break;
+                    case 'p6':
+                        this.acceptanceBInfo =  !this.acceptanceBInfo;
+                        break;
+                    case 'p7':
+                        this.imprintInfo =  !this.imprintInfo;
+                        break;
+                    default:
+                        // this.imprintInfo = true;
+                        break;
+
+                }
+            }
+        }
+        );   
         },
     infoOut: function(){
-           this.infoActive = false;    
+           var activeNav = document.querySelectorAll('.nav-item');
+        activeNav.forEach(element => {
+            if(element.classList.contains('active')){
+                this.isInfo = false;
+                switch(element.id){
+                    case 'p1':
+                        this.startInfo = false;
+                        break;
+                    case 'p2':
+                        this.infoInfo = false;
+                        break;
+                    case 'p3':
+                        this.riskandbenefitsInfo = false;
+                        break;
+                    case 'p4':
+                        this.occurancesInfo = false;
+                        break;
+                    case 'p5':
+                        this.acceptanceAInfo = false;
+                        break;
+                    case 'p6':
+                        this.acceptanceBInfo = false;
+                        break;
+                    case 'p7':
+                        this.imprintInfo = false;
+                        break;
+                    default:
+                        // this.imprintInfo = true;
+                        break;
+
+                }
+            }
         }
+        );
+        },
+    handleScroll(event) {
+      console.log(event);
+    },
   }
 }
 
@@ -193,9 +351,15 @@ export default {
     bottom: 55px;
     left: 65px;
     z-index: 20;
-    width: 200px;
-    height: 210px;
+    width: 233px;
+    height: 285px;
     background-color: #5F5E5E;
+}
+
+#info-div p{
+    padding-left: 15px;
+    font-size:28px;
+    margin:0px;
 }
 
 #navbar{
@@ -257,7 +421,124 @@ export default {
 }
 
 #more:hover{
+    cursor: pointer;
     filter: drop-shadow(0 0 6px rgb(0 255 255 / 0.8));
     
+}
+
+#info-i{
+    pointer-events: none;
+}
+
+.nav1:hover, .nav2:hover, .nav3:hover, .nav4:hover, .nav5:hover, .nav6:hover, .nav7:hover{
+     filter: drop-shadow(0 0 6px rgb(0 255 255 / 0.8));    
+}
+
+.list-item{
+    list-style: none;
+    font-size: 28px;
+}
+.list-item.de:before {
+    color: #C7F700;
+    content:"·";
+    font-size:180px;
+    vertical-align:middle;
+    line-height:20px;
+    padding-right: 10px;
+}
+.list-item.us:before {
+    color: #0CBAF7;
+    content:"·";
+    font-size:180px;
+    vertical-align:middle;
+    line-height:20px;
+    padding-right: 10px;
+}
+.list-item.uk:before {
+    color: #70E6AB;
+    content:"·";
+    font-size:180px;
+    vertical-align:middle;
+    line-height:20px;
+    padding-right: 10px;
+}
+.list-item.ch:before {
+    color: #00FFFF;
+    content:"·";
+    font-size:180px;
+    vertical-align:middle;
+    line-height:20px;
+    padding-right: 10px;
+}
+
+#info-forest a{
+    color: #23EFEF;
+    text-decoration-color: #23EFEF;
+}
+
+#p-p1, #p-p2, #p-p3,#p-p4, #p-p5,#p-p7{
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+}
+
+#p-p1{
+    padding-top: 18px;
+}
+
+#p-p2{
+    padding-top: 20px;
+}
+
+#p-p3{
+    padding-top: 30px;
+}
+
+#p-p4{
+    padding-top: 10px;
+}
+
+#country-list{
+    padding: 0 15px;
+}
+
+#p-p6{
+    position: absolute;
+    top: 0;
+    padding-top: 35px;
+    pointer-events: none;
+}
+
+#p-p6 a{
+    pointer-events: all;
+    font-size: 28px;
+    padding-left: 15px;
+}
+
+#p-p7{
+    padding-top: 40px;
+}
+
+.cls-16 {
+    fill: #5f5e5e;
+}
+
+.cls-22 {
+    fill: aqua;
+}
+
+.cross{
+    cursor: pointer;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s
+}
+
+.fade-enter,
+.fade-leave-to
+{
+  opacity: 0
 }
 </style>

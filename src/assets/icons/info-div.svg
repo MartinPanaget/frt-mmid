@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="237.766" height="289.834" viewBox="0 0 237.766 289.834">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5f5e5e;
+      }
+
+      .cls-2 {
+        fill: aqua;
+      }
+    </style>
+  </defs>
+  <g id="Gruppe_980" data-name="Gruppe 980" transform="translate(-194.592 -848.58)">
+    <rect id="Rechteck_146" data-name="Rechteck 146" class="cls-1" width="233" height="285" transform="translate(197 850.914)"/>
+    <g id="Gruppe_409" data-name="Gruppe 409" transform="translate(402.858 866.867) rotate(45)">
+      <path id="Linie_291" data-name="Linie 291" class="cls-2" d="M0,25.108a1,1,0,0,1-1-1V0A1,1,0,0,1,0-1,1,1,0,0,1,1,0V24.108A1,1,0,0,1,0,25.108Z" transform="translate(12.054 0)"/>
+      <path id="Linie_292" data-name="Linie 292" class="cls-2" d="M0,25.108a1,1,0,0,1-1-1V0A1,1,0,0,1,0-1,1,1,0,0,1,1,0V24.108A1,1,0,0,1,0,25.108Z" transform="translate(24.108 12.054) rotate(90)"/>
+    </g>
+    <g id="Gruppe_410" data-name="Gruppe 410" transform="translate(197.092 880.08)">
+      <path id="Pfad_131" data-name="Pfad 131" class="cls-2" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(0 207.834)"/>
+      <path id="Pfad_243" data-name="Pfad 243" class="cls-2" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(184.766 255.834) rotate(-90)"/>
+      <path id="Pfad_244" data-name="Pfad 244" class="cls-2" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(232.766 19) rotate(180)"/>
+      <path id="Pfad_245" data-name="Pfad 245" class="cls-2" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(48 -29) rotate(90)"/>
+    </g>
+  </g>
+</svg>

@@ -154,13 +154,6 @@ export default {
   }
 }
 
-var maxButton = document.getElementById('c-max');
-// var minButton = document.getElementById('c-min');
-// var avrgButton = document.getElementById('c-avrg');
-// var allButton = document.getElementById('c-all');
-
-console.log(maxButton);
-
 
 </script>
 
@@ -223,11 +216,25 @@ text{
     margin-right: auto; */
     border: 0px solid transparent;
     border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0);
+    transition-property: box-shadow;
+    transition-duration: .2s;
+    transition-timing-function: linear;
 }
 
 #reset:hover{
     /* border: 5px solid rgb(0, 255, 255); */
     border-radius: 50%;
     box-shadow: 0 0 10px rgb(0, 255, 255);
+}
+
+#c-all:hover, #c-min:hover, #c-max:hover, #c-avrg:hover{
+    filter: drop-shadow(0 0 6px rgb(0 255 255 / 0));
+    transition-property: filter;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+}
+#c-all:hover, #c-min:hover, #c-max:hover, #c-avrg:hover{
+    filter: drop-shadow(0 0 6px rgb(0 255 255 / 0.8));
 }
 </style>

@@ -36,13 +36,18 @@ export default {
                     showInLegend:false,
                     visible: true, //wenn per default sichtbar, dann auf true setzen
                     name:'CH', //erscheint im Tooltip
-                    color: '#C7F700', //Farbe der Kugel
+                    color: '#23EFEF', //Farbe der Kugel
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[65], //erscheint im Tooltip
+                    data:[
+                        {
+                        x:0,
+                        y:65
+                        }
+                        ], //erscheint im Tooltip
                     marker: {
                         symbol: 'circle',
-                        radius: 10, //Radius der Kugel in mm
+                        radius: 12, //Radius der Kugel in mm
                     }
                     }, //ende Datagroup
                     {
@@ -52,10 +57,13 @@ export default {
                     color: '#70E6AB',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[0],
+                    data:[{
+                        x:1,
+                        y:0
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }, {
                     showInLegend:false,
@@ -64,22 +72,28 @@ export default {
                     color: '#0CBAF7',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[0],
+                    data:[{
+                        x:2,
+                        y:0
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     },{
                     showInLegend:false,
                     visible: true,
                     name:'DE',
-                    color: '#23EFEF',
+                    color: '#C7F700',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[23],
+                    data:[{
+                        x:3,
+                        y:23
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }
                 ],//ende Gruppe
@@ -87,13 +101,16 @@ export default {
                     showInLegend:false,
                     visible: true,
                     name:'CH',
-                    color: '#C7F700',
+                    color: '#23EFEF',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[56],
+                    data:[{
+                        x:0,
+                        y:56
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }, {
                     showInLegend:false,
@@ -102,10 +119,13 @@ export default {
                     color: '#70E6AB',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[0],
+                    data:[{
+                        x:1,
+                        y:0
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }, {
                     showInLegend:false,
@@ -114,22 +134,28 @@ export default {
                     color: '#0CBAF7',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[0],
+                    data:[{
+                        x:2,
+                        y:0
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     },{
                     showInLegend:false,
                     visible: true,
                     name:'DE',
-                    color: '#23EFEF',
+                    color: '#C7F700',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[21],
+                    data:[{
+                        x:3,
+                        y:21
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }
                 ],
@@ -137,13 +163,16 @@ export default {
                     showInLegend:false,
                     visible: true,
                     name:'CH',
-                    color: '#C7F700',
+                    color: '#23EFEF',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[62],
+                    data:[{
+                        x:0,
+                        y:62
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }, {
                     showInLegend:false,
@@ -152,10 +181,13 @@ export default {
                     color: '#70E6AB',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[0],
+                    data:[{
+                        x:1,
+                        y:0
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }, {
                     showInLegend:false,
@@ -164,22 +196,28 @@ export default {
                     color: '#0CBAF7',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[0],
+                    data:[{
+                        x:2,
+                        y:0
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     },{
                     showInLegend:false,
                     visible: true,
                     name:'DE',
-                    color: '#23EFEF',
+                    color: '#C7F700',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[55],
+                    data:[{
+                        x:3,
+                        y:55
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }
                 ],
@@ -187,13 +225,16 @@ export default {
                     showInLegend:false,
                     visible: true,
                     name:'CH',
-                    color: '#C7F700',
+                    color: '#23EFEF',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[-31],
+                    data:[{
+                        x:0,
+                        y:-31
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }, {
                     showInLegend:false,
@@ -202,10 +243,13 @@ export default {
                     color: '#70E6AB',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[0],
+                    data:[{
+                        x:1,
+                        y:0
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }, {
                     showInLegend:false,
@@ -214,22 +258,28 @@ export default {
                     color: '#0CBAF7',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[0],
+                    data:[{
+                        x:2,
+                        y:0
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     },{
                     showInLegend:false,
                     visible: true,
                     name:'DE',
-                    color: '#23EFEF',
+                    color: '#C7F700',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[-49],
+                    data:[{
+                        x:3,
+                        y:-49
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }
                 ],
@@ -237,13 +287,16 @@ export default {
                     showInLegend:false,
                     visible: true,
                     name:'CH',
-                    color: '#C7F700',
+                    color: '#23EFEF',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[-3],
+                    data:[{
+                        x:0,
+                        y:-3
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }, {
                     showInLegend:false,
@@ -252,10 +305,13 @@ export default {
                     color: '#70E6AB',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[0],
+                    data:[{
+                        x:1,
+                        y:0
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }, {
                     showInLegend:false,
@@ -264,22 +320,28 @@ export default {
                     color: '#0CBAF7',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[0],
+                    data:[{
+                        x:2,
+                        y:0
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     },{
                     showInLegend:false,
                     visible: true,
                     name:'DE',
-                    color: '#23EFEF',
+                    color: '#C7F700',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[-15],
+                    data:[{
+                        x:3,
+                        y:-15
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }
                 ],
@@ -287,13 +349,16 @@ export default {
                     showInLegend:false,
                     visible: true,
                     name:'CH',
-                    color: '#C7F700',
+                    color: '#23EFEF',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[-27],
+                    data:[{
+                        x:0,
+                        y:-27
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }, {
                     showInLegend:false,
@@ -302,10 +367,13 @@ export default {
                     color: '#70E6AB',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[0],
+                    data:[{
+                        x:1,
+                        y:0
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }, {
                     showInLegend:false,
@@ -314,22 +382,28 @@ export default {
                     color: '#0CBAF7',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[0],
+                    data:[{
+                        x:2,
+                        y:0
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     },{
                     showInLegend:false,
                     visible: true,
                     name:'DE',
-                    color: '#23EFEF',
+                    color: '#C7F700',
                     connectorColor: '#F6F6F6',
                     connectorWidth: 2,
-                    data:[-63],
+                    data:[{
+                        x:3,
+                        y:-63
+                        }],
                     marker: {
                         symbol: 'circle',
-                        radius: 10
+                        radius: 12
                     }
                     }
                 ]
@@ -344,10 +418,10 @@ export default {
         position: absolute;
         display: flex;
         justify-content: space-between;
-        width: 50%;
-        left: -160px; 
+        width: 55%;
+        left: 32px; 
         right: 0; 
-        top: 125px;
+        top: 133px;
         margin-left: auto; 
         margin-right: auto; 
         padding-top: 100px;
