@@ -155,82 +155,83 @@
 
          <transition name="fade">
             <div id="info-div" v-show="isInfo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="237.766" height="289.834" viewBox="0 0 237.766 289.834">
-                    <g id="Gruppe_980" data-name="Gruppe 980" transform="translate(-194.592 -848.58)">
-                        <rect id="Rechteck_146" data-name="Rechteck 146" class="cls-16" width="233" height="285" transform="translate(197 850.914)"/>
-                        <g id="Gruppe_409" @click="infoOut" data-name="Gruppe 409" class="cross" transform="translate(402.858 866.867) rotate(45)">
-                            <path id="Linie_291" data-name="Linie 291" class="cls-22" d="M0,25.108a1,1,0,0,1-1-1V0A1,1,0,0,1,0-1,1,1,0,0,1,1,0V24.108A1,1,0,0,1,0,25.108Z" transform="translate(12.054 0)"/>
-                            <path id="Linie_292" data-name="Linie 292" class="cls-22" d="M0,25.108a1,1,0,0,1-1-1V0A1,1,0,0,1,0-1,1,1,0,0,1,1,0V24.108A1,1,0,0,1,0,25.108Z" transform="translate(24.108 12.054) rotate(90)"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="237.766" height="289.834" viewBox="-10 0 260.766 289.834">
+                        <g id="Gruppe_980" data-name="Gruppe 980" transform="translate(-194.592 -848.58)">
+                            <rect id="Rechteck_146" data-name="Rechteck 146" class="cls-16" width="233" height="285" transform="translate(197 850.914)"/>
+                            <g id="Gruppe_409" @click="infoOut" data-name="Gruppe 409" class="cross" transform="translate(402.858 866.867) rotate(45)">
+                                <path id="Linie_291" data-name="Linie 291" class="cls-22" d="M0,25.108a1,1,0,0,1-1-1V0A1,1,0,0,1,0-1,1,1,0,0,1,1,0V24.108A1,1,0,0,1,0,25.108Z" transform="translate(12.054 0)"/>
+                                <path id="Linie_292" data-name="Linie 292" class="cls-22" d="M0,25.108a1,1,0,0,1-1-1V0A1,1,0,0,1,0-1,1,1,0,0,1,1,0V24.108A1,1,0,0,1,0,25.108Z" transform="translate(24.108 12.054) rotate(90)"/>
+                            </g>
+                            <g id="Gruppe_410" data-name="Gruppe 410" transform="translate(197.092 880.08)">
+                                <path id="Pfad_131" data-name="Pfad 131" class="cls-22" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(0 207.834)"/>
+                                <path id="Pfad_243" data-name="Pfad 243" class="cls-22" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(184.766 255.834) rotate(-90)"/>
+                                <path id="Pfad_244" data-name="Pfad 244" class="cls-22" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(232.766 19) rotate(180)"/>
+                                <path id="Pfad_245" data-name="Pfad 245" class="cls-22" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(48 -29) rotate(90)"/>
+                            </g>
                         </g>
-                        <g id="Gruppe_410" data-name="Gruppe 410" transform="translate(197.092 880.08)">
-                            <path id="Pfad_131" data-name="Pfad 131" class="cls-22" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(0 207.834)"/>
-                            <path id="Pfad_243" data-name="Pfad 243" class="cls-22" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(184.766 255.834) rotate(-90)"/>
-                            <path id="Pfad_244" data-name="Pfad 244" class="cls-22" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(232.766 19) rotate(180)"/>
-                            <path id="Pfad_245" data-name="Pfad 245" class="cls-22" d="M48,50.5H-2.5V0h5V45.5H48Z" transform="translate(48 -29) rotate(90)"/>
-                        </g>
-                    </g>
-                </svg>
-                <p id="p-p1" v-show="startInfo">
-                    Welcome!<br>This Info Button gives you different information on the topic depending on which page you are.
-                    <br><br>Enjoy your exploration.
-                </p>
-
-                <p id="p-p2" v-show="infoInfo">
-                    All variables from <br>
-                    2 - 3.4 relate to the 
-                    subjective perception
-                    of citizens towards FRTs.
-                    <br><br>
-                    FRT = Facial Recognition 
-                    Technology
-                </p>
-
-                <p id="p-p3" v-show="riskandbenefitsInfo">
-                    The graph shows<br> 
-                    perceived benefits and 
-                    risks of FRTs  by citizens 
-                    (CHN, UK, US, GER).
-                    <br><br>
-                    FRT = Facial Recognition 
-                    Technology
-                </p>
-
-                <div id="p-p4" v-show="occurancesInfo">
-                    <ul id="country-list">
-                        <li class="list-item de">Germany</li>
-                        <li class="list-item us">US</li>
-                        <li class="list-item uk">UK</li>
-                        <li class="list-item ch">China</li>
-                    </ul>
-                    <p>FRT = Facial Recognition 
-                    Technology</p>
-                </div>
-
-                <p id="p-p5" v-show="acceptanceAInfo">
-                    <br>
-                    The acceptance rate 
-                    consists of the sum  
-                    of the two categories
-                    “Strongly accept” 
-                    and “Somewhat accept”
-                </p>
-
-                <div id="p-p6" v-show="acceptanceBInfo">
-                    <p>
-                        The Odds Ratio scale 
-                        displays the chance of 
-                        the acceptance rate of 
-                        FRTs to be influenced by 
-                        given factors.
+                    </svg>
+                    <p id="p-p1" v-show="startInfo">
+                        Welcome!<br>This Info Button gives you different information on the topic depending on which page you are.
+                        <br><br>Enjoy your exploration.
                     </p>
-                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2938757/" target="_blank">Explaining Odds Ratios</a>
-                    
-                </div>
 
-                <p id="p-p7" v-show="imprintInfo">
-                    Thank you for visiting! <br>
-                    Follow the link on this page to read more about the study
-                </p>
+                    <p id="p-p2" v-show="infoInfo">
+                        All variables from <br>
+                        2 - 3.4 relate to the 
+                        subjective perception
+                        of citizens towards FRTs.
+                        <br><br>
+                        FRT = Facial Recognition 
+                        Technology
+                    </p>
+
+                    <p id="p-p3" v-show="riskandbenefitsInfo">
+                        The graph shows<br> 
+                        perceived benefits and 
+                        risks of FRTs  by citizens 
+                        (CHN, UK, US, GER).
+                        <br><br>
+                        FRT = Facial Recognition 
+                        Technology
+                    </p>
+
+                    <div id="p-p4" v-show="occurancesInfo">
+                        <ul id="country-list">
+                            <li class="list-item de">Germany</li>
+                            <li class="list-item us">US</li>
+                            <li class="list-item uk">UK</li>
+                            <li class="list-item ch">China</li>
+                        </ul>
+                        <p>FRT = Facial Recognition 
+                        Technology</p>
+                    </div>
+
+                    <p id="p-p5" v-show="acceptanceAInfo">
+                        <br>
+                        The acceptance rate 
+                        consists of the sum  
+                        of the two categories
+                        “Strongly accept” 
+                        and “Somewhat accept”
+                    </p>
+
+                    <div id="p-p6" v-show="acceptanceBInfo">
+                        <p>
+                            The Odds Ratio scale 
+                            displays the chance of 
+                            the acceptance rate of 
+                            FRTs to be influenced by 
+                            given factors.
+                        </p>
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2938757/" target="_blank">Explaining Odds Ratios</a>
+                        
+                    </div>
+
+                    <p id="p-p7" v-show="imprintInfo">
+                        <br>
+                        Thank you for visiting! <br>
+                        Follow the link on this page to read more about the study.
+                    </p>
             </div>
         </transition>
     </div>
@@ -346,22 +347,6 @@ export default {
 
 <style scoped>
 
-#info-div{
-    position: fixed;
-    bottom: 55px;
-    left: 65px;
-    z-index: 20;
-    width: 233px;
-    height: 285px;
-    background-color: #5F5E5E;
-}
-
-#info-div p{
-    padding-left: 15px;
-    font-size:28px;
-    margin:0px;
-}
-
 #navbar{
   position: fixed;
   top: 0;
@@ -413,7 +398,40 @@ export default {
     opacity: 0.1;
 }
 
+
+.nav1:hover, .nav2:hover, .nav3:hover, .nav4:hover, .nav5:hover, .nav6:hover, .nav7:hover{
+     filter: drop-shadow(0 0 6px rgb(0 255 255 / 0.8));    
+}
+
 /* info button  */
+
+#info-div{
+    position: fixed;
+    bottom: 55px;
+    left: 65px;
+    z-index: 20;
+    width: 243px;
+    height: 295px;
+    padding: 10px 10px;
+}
+
+#info-div svg{
+    width:269px;
+    height:310px
+}
+
+#info-content{
+   width: 243px;
+   height: 295px; 
+}
+
+#info-div p{
+    padding-top: 40px;
+    padding-left: 36px;
+    font-size:28px;
+    margin:0px;
+}
+
 .cls-4{
     fill:aqua;
     filter: drop-shadow(0 0 6px rgb(0 255 255 / 0));
@@ -428,10 +446,6 @@ export default {
 
 #info-i{
     pointer-events: none;
-}
-
-.nav1:hover, .nav2:hover, .nav3:hover, .nav4:hover, .nav5:hover, .nav6:hover, .nav7:hover{
-     filter: drop-shadow(0 0 6px rgb(0 255 255 / 0.8));    
 }
 
 .list-item{
@@ -471,11 +485,6 @@ export default {
     padding-right: 10px;
 }
 
-#info-forest a{
-    color: #23EFEF;
-    text-decoration-color: #23EFEF;
-}
-
 #p-p1, #p-p2, #p-p3,#p-p4, #p-p5,#p-p7{
     position: absolute;
     top: 0;
@@ -495,11 +504,15 @@ export default {
 }
 
 #p-p4{
-    padding-top: 10px;
+    padding-top: 20px;
+}
+
+#p-p4 p{
+    padding-top: 20px;
 }
 
 #country-list{
-    padding: 0 15px;
+    padding: 0 30px;
 }
 
 #p-p6{
@@ -510,13 +523,11 @@ export default {
 }
 
 #p-p6 a{
+    color: #23EFEF;
+    text-decoration-color: #23EFEF;
     pointer-events: all;
     font-size: 28px;
-    padding-left: 15px;
-}
-
-#p-p7{
-    padding-top: 40px;
+    padding-left: 35px;
 }
 
 .cls-16 {
@@ -525,6 +536,7 @@ export default {
 
 .cls-22 {
     fill: aqua;
+    filter: drop-shadow(0 0 4px rgb(0 255 255 / 0.8));
 }
 
 .cross{
