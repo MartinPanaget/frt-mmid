@@ -288,6 +288,11 @@ export default {
         right: 7.3%;
     }
 
+    #reload:hover{
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgb(0, 255, 255);
+    }
+
     .bottom svg{
         display: block;
         width: 98%
