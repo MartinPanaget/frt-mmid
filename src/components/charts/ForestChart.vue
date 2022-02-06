@@ -332,7 +332,7 @@ export default {
     .chart-top {
         display: grid;
         /*grid-template-columns: 30% repeat(3, 21.5%);*/
-        grid-template-columns: 10% repeat(4, 21%);
+        grid-template-columns: 11% repeat(4, 21%);
     }
 
     .categories-top {
@@ -353,7 +353,7 @@ export default {
     .chart-bottom {
         display: grid;
         /*grid-template-columns: 30% repeat(3, 21.5%);*/
-        grid-template-columns: 10% repeat(4, 21%);
+        grid-template-columns: 11% repeat(4, 21%);
     }
 
     .categories-bottom {

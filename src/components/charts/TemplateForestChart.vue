@@ -132,10 +132,12 @@ export default{
                         tooltip += this.point.name !== undefined ? this.point.name : '' 
                         tooltip += '</b><br/>'
                         for(let i = 0; i < 4; i++) {
-                            if (this.series.name !== component.attributes[i][0].name) {
-                                tooltip += '<em>'+component.attributes[i][0].name + ': ' + component.attributes[i][0].data[this.point.x].y 
-                                tooltip +=  component.attributes[i][0].data[this.point.x].name !== undefined ? component.attributes[i][0].data[this.point.x].name : ''
-                                tooltip += '</em><br/>'
+                            if (component.attributes[i][0].data !== undefined || component.attributes[i][0].data.length !== 0) {
+                                if (this.series.name !== component.attributes[i][0].name) {
+                                    tooltip += '<em>'+component.attributes[i][0].name + ': ' + component.attributes[i][0].data[this.point.x].y 
+                                    tooltip +=  component.attributes[i][0].data[this.point.x].name !== undefined ? component.attributes[i][0].data[this.point.x].name : ''
+                                    tooltip += '</em><br/>'
+                                }
                             }
                         }
                         return tooltip

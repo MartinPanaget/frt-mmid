@@ -238,6 +238,8 @@
 </template>
 
 <script>
+import { EventBus } from '../others/eventBus';
+
 export default {
   name: 'Navbar',
   data(){
@@ -261,7 +263,42 @@ export default {
       }
   },
   created() {
-    window.addEventListener('scroll', this.handleScroll);
+    EventBus.$on('sectionChange', () => {
+        var activeNav = document.querySelectorAll('.nav-item');
+        activeNav.forEach(element => {
+            if(element.classList.contains('active')){
+                this.isInfo = false;
+                switch(element.id){
+                    case 'p1':
+                        this.startInfo = false;
+                        break;
+                    case 'p2':
+                        this.infoInfo = false;
+                        break;
+                    case 'p3':
+                        this.riskandbenefitsInfo = false;
+                        break;
+                    case 'p4':
+                        this.occurancesInfo = false;
+                        break;
+                    case 'p5':
+                        this.acceptanceAInfo = false;
+                        break;
+                    case 'p6':
+                        this.acceptanceBInfo = false;
+                        break;
+                    case 'p7':
+                        this.imprintInfo = false;
+                        break;
+                    default:
+                        // this.imprintInfo = true;
+                        break;
+
+                }
+            }
+        }
+        );
+    })
   },
   methods:{
     infoIn: function(){
@@ -299,9 +336,9 @@ export default {
             }
         }
         );   
-        },
+    },
     infoOut: function(){
-           var activeNav = document.querySelectorAll('.nav-item');
+        var activeNav = document.querySelectorAll('.nav-item');
         activeNav.forEach(element => {
             if(element.classList.contains('active')){
                 this.isInfo = false;
@@ -335,10 +372,7 @@ export default {
             }
         }
         );
-        },
-    handleScroll(event) {
-      console.log(event);
-    },
+    }
   }
 }
 

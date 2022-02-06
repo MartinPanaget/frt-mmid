@@ -17,41 +17,54 @@
                         <circle id="Ellipse_693" data-name="Ellipse 693" cx="5.5" cy="5.5" r="5.5" transform="translate(1466 205)" fill="#fff"/>
                     </g>
                     <g id="Gruppe_871" data-name="Gruppe 871" transform="translate(-1390.497 -369.778)">
-                        <rect id="v5-button-1" width="125" height="42" rx="21" transform="translate(1673 398)" fill="#eff3ff" v-on:click="addOrRemoveTop(age, 'ageButton')" ref="ageButton" style="cursor:pointer;"/>
+                        <rect id="v6-button-1" width="125" height="42" rx="21" transform="translate(1673 398)" fill="#eff3ff" v-on:click="addOrRemoveTop(age, 'ageButton')" ref="ageButton" style="cursor:pointer;"/>
                         <text id="Age" transform="translate(1725 426)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" v-on:click="addOrRemoveTop(age, 'ageButton')" style="cursor:pointer;">Age</tspan></text>
                     </g>
                     <g id="Gruppe_872" data-name="Gruppe 872" transform="translate(-1225.497 -422.778)">
-                        <rect id="v5-button-2" width="125" height="42" rx="21" transform="translate(1673 451)" fill="#b2dbff" v-on:click="addOrRemoveTop(gender, 'genderButton')" ref="genderButton" style="cursor:pointer;"/>
+                        <rect id="v6-button-2" width="125" height="42" rx="21" transform="translate(1673 451)" fill="#b2dbff" v-on:click="addOrRemoveTop(gender, 'genderButton')" ref="genderButton" style="cursor:pointer;"/>
                         <text id="Gender" transform="translate(1715.5 479)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500" v-on:click="addOrRemoveTop(gender, 'genderButton')" style="cursor:pointer;"><tspan x="0" y="0">Gender</tspan></text>
                     </g>
                     <g id="Gruppe_873" data-name="Gruppe 873" transform="translate(-1051.497 -476.778)">
-                        <rect id="v5-button-3" width="125" height="42" rx="21" transform="translate(1664 505)" fill="#6c93ed" v-on:click="addOrRemoveTop(incomeHigh, 'incomeButton'); addOrRemoveTop(incomeMedium, 'incomeButton');" ref="incomeButton" style="cursor:pointer;"/>
+                        <rect id="v6-button-3" width="125" height="42" rx="21" transform="translate(1664 505)" fill="#6c93ed" v-on:click="addOrRemoveTop(incomeHigh, 'incomeButton'); addOrRemoveTop(incomeMedium, 'incomeButton');" ref="incomeButton" style="cursor:pointer;"/>
                         <text id="Income" transform="translate(1706.5 533)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500" ><tspan x="0" y="0" v-on:click="addOrRemoveTop(incomeHigh, 'incomeButton'); addOrRemoveTop(incomeMedium, 'incomeButton');" style="cursor:pointer;">Income</tspan></text>
                     </g>
                     <g id="Gruppe_874" data-name="Gruppe 874" transform="translate(-886.497 -530.874)">
-                        <rect id="v5-button-4" width="125" height="42" rx="21" transform="translate(1664 559)" fill="#4dd1f0" style="cursor:pointer;"/>
+                        <rect id="v6-button-4" width="125" height="42" rx="21" transform="translate(1664 559)" fill="#4dd1f0" ref="educationButton" style="cursor:pointer;"/>
                         <text id="Education_" data-name="Education " transform="translate(1697 587)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" style="cursor:pointer;">Education </tspan></text>
                     </g>
                     <g id="Gruppe_875" data-name="Gruppe 875" transform="translate(-694.497 -584.778)">
-                        <rect id="Rechteck_334" data-name="Rechteck 334" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#9d9d9d" style="cursor:pointer;"/>
-                        <text id="Minority_City" data-name="Minority/City" transform="translate(1663 643)" fill="#222" font-size="24" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" style="cursor:pointer;">Minority/City</tspan></text>
-                        <rect id="v5-button-5" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#39decd" style="cursor:pointer;"/>
+                        <rect id="Rechteck_334" data-name="Rechteck 334" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#9d9d9d"/>
+                        <text id="Minority_City" data-name="Minority/City" transform="translate(1663 643)" fill="#222" font-size="24" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0">Minority/City</tspan></text>
+                        <rect id="v6-button-5" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#39decd" ref="ethnicButton" style="cursor:pointer;"/>
                         <text id="Ethnical_minority" data-name="Ethnical minority" transform="translate(1655.5 641)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" style="cursor:pointer;">Ethnical minority</tspan></text>
                     </g>
                     <g id="Gruppe_876" data-name="Gruppe 876" transform="translate(-384.497 -476.778)">
-                        <path id="v5-button-7" d="M21,0h83a21,21,0,0,1,0,42H21A21,21,0,0,1,21,0Z" transform="translate(1664 505)" fill="#086dd3" style="cursor:pointer;"/>
+                        <path id="v6-button-7" d="M21,0h83a21,21,0,0,1,0,42H21A21,21,0,0,1,21,0Z" transform="translate(1664 505)" fill="#086dd3" ref="exposureButton" style="cursor:pointer;"/>
                         <text id="Exposure" transform="translate(1706.5 533)" fill="#f6f6f6" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" style="cursor:pointer;">Exposure</tspan></text>
                     </g>
                     <g id="Gruppe_877" data-name="Gruppe 877" transform="translate(-529.497 -584.741)">
                         <rect id="Rechteck_334-2" data-name="Rechteck 334" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#9d9d9d" style="cursor:pointer;"/>
                         <text id="Minority_City-2" data-name="Minority/City" transform="translate(1663 643)" fill="#222" font-size="24" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" style="cursor:pointer;">Minority/City</tspan></text>
-                        <rect id="v5-button-6" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#00a5c3" style="cursor:pointer;"/>
+                        <rect id="v6-button-6" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#00a5c3" ref="cityButton" style="cursor:pointer;"/>
                         <text id="City" transform="translate(1693 641.5)" fill="#f6f6f6" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" style="cursor:pointer;">City</tspan></text>
                     </g>
                 </svg>
             </div>
                 
             <ForestChart v-bind:attributes="attributes"></ForestChart>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="34.645" height="34.645" viewBox="0 0 34.645 34.645" id="reload">
+                <g id="v6-reset-button" transform="translate(-1734 -313)" v-on:click="deleteAttributes">
+                <g id="mülleimer" transform="translate(1734 313)">
+                    <circle id="Ellipse_618" data-name="Ellipse 618" cx="17.322" cy="17.322" r="17.322" transform="translate(0 0)" fill="#e6e6e6"/>
+                    <line id="Linie_461" data-name="Linie 461" y1="10.829" transform="translate(14.205 13.232)" fill="none" stroke="#e6e6e6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+                    <line id="Linie_462" data-name="Linie 462" y1="10.829" transform="translate(17.576 13.232)" fill="none" stroke="#e6e6e6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+                    <line id="Linie_463" data-name="Linie 463" y1="10.829" transform="translate(20.947 13.232)" fill="none" stroke="#e6e6e6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+                    <path id="Pfad_586" data-name="Pfad 586" d="M21.676,13.014c6.189.208,8.812,4.705,8.687,8.744s-3.092,8.738-8.687,8.616A8.739,8.739,0,0,1,15.4,15.654" transform="translate(-4.354 -4.343)" fill="none" stroke="#3c3c3c" stroke-linecap="round" stroke-width="3"/>
+                    <path id="Pfad_587" data-name="Pfad 587" d="M0,3.118,3.118,0,6.236,3.118" transform="matrix(0.899, 0.438, -0.438, 0.899, 8.685, 8.67)" fill="none" stroke="#3c3c3c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                </g>
+                </g>
+            </svg>
 
             <div class="bottom">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1547.771" height="93.771" viewBox="0 0 1547.771 93.771" id="buttonsBottom">
@@ -70,31 +83,31 @@
                         <g id="Gruppe_882" data-name="Gruppe 882" transform="translate(-10722.244 10968.941)">
                         <g id="Gruppe_866" data-name="Gruppe 866">
                             <g id="Gruppe_839" data-name="Gruppe 839" transform="translate(-1100.746 531.576)">
-                            <path id="v5-button-8" d="M21,0h83a21,21,0,0,1,0,42H21A21,21,0,0,1,21,0Z" transform="translate(1673 398)" fill="#cdf2d8" v-on:click="addOrRemoveBottom(convenience, 'convenienceButton')" ref="convenienceButton" style="cursor:pointer;"/>
+                            <path id="v6-button-8" d="M21,0h83a21,21,0,0,1,0,42H21A21,21,0,0,1,21,0Z" transform="translate(1673 398)" fill="#cdf2d8" v-on:click="addOrRemoveBottom(convenience, 'convenienceButton')" ref="convenienceButton" style="cursor:pointer;"/>
                             <text id="Convenience" transform="translate(1701 426)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" v-on:click="addOrRemoveBottom(convenience, 'convenienceButton')" style="cursor:pointer;">Convenience</tspan></text>
                             </g>
                             <g id="Gruppe_840" data-name="Gruppe 840" transform="translate(-936.746 478.744)">
-                            <rect id="v5-button-9" width="125" height="42" rx="21" transform="translate(1673 451)" fill="#8ee5a9" style="cursor:pointer;"/>
+                            <rect id="v6-button-9" width="125" height="42" rx="21" transform="translate(1673 451)" fill="#8ee5a9" ref="privacyButton" style="cursor:pointer;"/>
                             <text id="Privacy_Violation" data-name="Privacy Violation" transform="translate(1689 479)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" style="cursor:pointer;">Privacy Violation</tspan></text>
                             </g>
                             <g id="Gruppe_841" data-name="Gruppe 841" transform="translate(-762.746 424.574)">
-                            <rect id="v5-button-10" width="125" height="42" rx="21" transform="translate(1664 505)" fill="#8bffbc" style="cursor:pointer;"/>
+                            <rect id="v6-button-10" width="125" height="42" rx="21" transform="translate(1664 505)" fill="#8bffbc" ref="efficiencyButton" style="cursor:pointer;"/>
                             <text id="Efficiency" transform="translate(1700.5 533)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" style="cursor:pointer;">Efficiency</tspan></text>
                             </g>
                             <g id="Gruppe_842" data-name="Gruppe 842" transform="translate(-599 370.576)">
-                            <rect id="v5-button-11" width="125" height="42" rx="21" transform="translate(1664 559)" fill="#67eb68" style="cursor:pointer;"/>
+                            <rect id="v6-button-11" width="125" height="42" rx="21" transform="translate(1664 559)" fill="#67eb68" ref="discriminationButton" style="cursor:pointer;"/>
                             <text id="Discrimination" transform="translate(1687 587)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" style="cursor:pointer;">Discrimination</tspan></text>
                             </g>
                             <g id="Gruppe_843" data-name="Gruppe 843" transform="translate(-405 317.576)">
                             <rect id="Rechteck_334" data-name="Rechteck 334" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#9d9d9d" style="cursor:pointer;"/>
                             <text id="Minority_City" data-name="Minority/City" transform="translate(1663 643)" fill="#222" font-size="24" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" style="cursor:pointer;">Minority/City</tspan></text>
-                            <rect id="v5-button-12" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#00881f" style="cursor:pointer;"/>
+                            <rect id="v6-button-12" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#00881f" ref="securityButton" style="cursor:pointer;"/>
                             <text id="Security" transform="translate(1681.5 641.5)" fill="#f6f6f6" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" style="cursor:pointer;">Security</tspan></text>
                             </g>
                             <g id="Gruppe_844" data-name="Gruppe 844" transform="translate(-240 316.576)">
                             <rect id="Rechteck_334-2" data-name="Rechteck 334" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#9d9d9d" style="cursor:pointer;"/>
                             <text id="Minority_City-2" data-name="Minority/City" transform="translate(1663 643)" fill="#222" font-size="24" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" style="cursor:pointer;">Minority/City</tspan></text>
-                            <rect id="v5-button-13" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#016228" style="cursor:pointer;"/>
+                            <rect id="v6-button-13" width="125" height="42" rx="21" transform="translate(1641 613)" fill="#016228" ref="surveillanceButton" style="cursor:pointer;"/>
                             <text id="Surveillance" transform="translate(1670 641.5)" fill="#f6f6f6" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500"><tspan x="0" y="0" style="cursor:pointer;">Surveillance</tspan></text>
                             </g>
                         </g>
@@ -199,14 +212,20 @@ export default {
         }
     },
     deleteAttributes : function () {
-        this.attributes.splice(0, this.attributes.length);
-        this.attributeList.forEach((attribute) => {
-            attribute[Object.keys(attribute)[0]].forEach((specificAttribute) => {
-                if(specificAttribute.selected) {
-                    specificAttribute.selected = false;
+        this.attributes.forEach((attribute)=> {
+            attribute.forEach((object, indexObject)=> {
+                //object.data.splice(0, object.data.length)
+                if (indexObject === 0) {
+                    object.data.splice(0, object.data.length);
                 }
             })
-        });
+            attribute.splice(1, attribute.length);
+        })
+        for (let i = 1; i < 14; i++) {
+            document.getElementById('v6-button-'+i).setAttribute('fill', '#9D9D9D');
+            let refs = this.$refs;
+            this.addOrRemoveColorCategory(true, Object.keys(refs)[i-1]);
+        }
     }
   }
 }
@@ -260,11 +279,17 @@ export default {
 
     .top svg{
         display: block;
-        width: 95%
+        width: 98%
+    }
+
+    #reload {
+        position: absolute;
+        top: 30%;
+        right: 7.3%;
     }
 
     .bottom svg{
         display: block;
-        width: 95%
+        width: 98%
     }
 </style>

@@ -7,8 +7,8 @@
                     <p>ACCEPTANCE RATE</p>
                     <p>= Strongly + Somewhat agree</p>
                 </div>
-                <h3 @mouseover='changeColor(1, $event)' @mouseleave='changeColorBack(1, $event)' style="color: #C7F700;cursor:default;">CH 67%</h3>
-                <h3 @mouseover='changeColor(2, $event)' @mouseleave='changeColorBack(2, $event)' style="color: #70E6AB;cursor:default;">UK 50%</h3>
+                <h3 @mouseover='changeColor(1, $event)' @mouseleave='changeColorBack(1, $event)' style="color: #C7F700;cursor:default;">CN 67%</h3>
+                <h3 @mouseover='changeColor(2, $event)' @mouseleave='changeColorBack(2, $event)' style="color: #70E6AB;cursor:default;">GB 50%</h3>
                 <h3 @mouseover='changeColor(3, $event)' @mouseleave='changeColorBack(3, $event)' style="color: #0CBAF7;cursor:default;">US 47%</h3>
                 <h3 @mouseover='changeColor(4, $event)' @mouseleave='changeColorBack(4, $event)' style="color: #23EFEF;cursor:default;">DE 38%</h3>
             </div>
