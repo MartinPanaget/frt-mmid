@@ -10,11 +10,11 @@
                 <p class="education">Education high</p>
                 <p class="ethnic">Ethnical minority</p>
                 <p class="city">City</p>
-                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure</p>
-                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure frequency public</p>
-                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure frequency private</p>
-                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure & frequency public</p>
-                <p class="exposure"><img :src='info' title="bliblablub"/>Exposure & frequency private</p>
+                <p class="exposure"><img :src='info' title="Perceived FRTs exposure occasions"/>Exposure</p>
+                <p class="exposure"><img :src='info' title="Frequency to which citizens perceived to be exposed to FRTs in public"/>Exposure frequency public</p>
+                <p class="exposure"><img :src='info' title="Frequency on which citizens used FRTs in private"/>Exposure frequency private</p>
+                <p class="exposure"><img :src='info' title="Interkorrelation of perceived exposure occasions and frequency of FRTs in public"/>Exposure & frequency public</p>
+                <p class="exposure"><img :src='info' title="Interkorrelation of occasions and frequency of FRTs in private use"/>Exposure & frequency private</p>
             </div>
             <highcharts :options="chartOptionsTop"></highcharts>
             <TemplateForestChart v-bind:attributes="attributes" v-bind:attributesTop="attributes[1]" v-bind:img="countries[0]"></TemplateForestChart>
@@ -219,14 +219,13 @@ export default {
                     text: undefined
                 },
                 xAxis: {
-                    min: 0,
+                    min: -0.2,
                     max: 5,
                     categories: ['Convenience', 'Privacy violations', 'Efficiency', 'Discrimination', 'Security', 'Surveillance',],
                     title: {
                     enabled: false,
                     },
-                    startOnTick: true,
-                    endOnTick: true,
+                    tickPositions: [0,1,2,3,4,5],
                     tickmarkPlacement: 'on',
                     tickColor: '#F6F6F6',
                     tickWidth: 1,
@@ -357,12 +356,12 @@ export default {
     }
 
     .categories-bottom {
-        padding-top: 13.5px;
+        padding-top: 20px;
         text-align: right;
     }
 
     .categories-bottom p {
         font-size: 17px;
-        margin: 7.3px auto 7.3px;
+        margin: 5px auto 5px;
     }
 </style>

@@ -42,7 +42,7 @@ export default{
                     text: undefined
                 },
                 xAxis: {
-                    min: 0,
+                    min: -0.2,
                     max: 5,
                     categories: ['Convenience', 'Privacy violations', 'Efficiency', 'Discrimination', 'Security', 'Surveillance',],
                     title: {

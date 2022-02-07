@@ -54,7 +54,7 @@
             <ForestChart v-bind:attributes="attributes"></ForestChart>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="34.645" height="34.645" viewBox="0 0 34.645 34.645" id="reload">
-                <g id="v6-reset-button" transform="translate(-1734 -313)" v-on:click="deleteAttributes">
+                <g id="v6-reset-button" transform="translate(-1734 -313)" v-on:click="deleteAttributes" style="cursor: pointer;">
                 <g id="mülleimer" transform="translate(1734 313)">
                     <circle id="Ellipse_618" data-name="Ellipse 618" cx="17.322" cy="17.322" r="17.322" transform="translate(0 0)" fill="#e6e6e6"/>
                     <line id="Linie_461" data-name="Linie 461" y1="10.829" transform="translate(14.205 13.232)" fill="none" stroke="#e6e6e6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
