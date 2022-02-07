@@ -2,14 +2,14 @@
     <div>
         <div class="chart-top">
             <div class="categories-top">
-                <p class="age">Age</p>
-                <p class="gender">Gender</p>
-                <p class="income">Income Medium</p>
-                <p class="income">Income High</p>
-                <p class="education">Education medium</p>
-                <p class="education">Education high</p>
-                <p class="ethnic">Ethnical minority</p>
-                <p class="city">City</p>
+                <p class="age"><img :src='info' title="18 - 65 years"/>Age</p>
+                <p class="gender"><img :src='info' title="female and male"/>Gender</p>
+                <p class="income"><img :src='info' title="UK, US, GER: 1001 - 2501 local currency  / month, CHN: 2101 - 4201 CNY"/>Income Medium</p>
+                <p class="income"><img :src='info' title="UK, US, GER: 1001 - 2501 local currency  / month, CHN: 2101 - 4201 CNY"/>Income High</p>
+                <p class="education"><img :src='info' title="High school diploma or equivalent, vocational training"/>Education medium</p>
+                <p class="education"><img :src='info' title="Bachelor's degree, Master's or Doctorate's degree"/>Education high</p>
+                <p class="ethnic"><img :src='info' title=""/>Ethnical minority</p>
+                <p class="city"><img :src='info' title="Living area"/>City</p>
                 <p class="exposure"><img :src='info' title="Perceived FRTs exposure occasions"/>Exposure</p>
                 <p class="exposure"><img :src='info' title="Frequency to which citizens perceived to be exposed to FRTs in public"/>Exposure frequency public</p>
                 <p class="exposure"><img :src='info' title="Frequency on which citizens used FRTs in private"/>Exposure frequency private</p>
@@ -23,12 +23,12 @@
         </div>
         <div class="chart-bottom">
             <div class="categories-bottom">
-                <p class="convenience">Convenience</p>
-                <p class="privacy">Privacy violations</p>
-                <p class="efficiency">Efficiency</p>
-                <p class="discrimination">Discrimination</p>
-                <p class="security">Security</p>
-                <p class="surveillance">Surveillance</p>
+                <p class="convenience"><img :src='info' title="Convenience as a possible benefit of FRTs"/>Convenience</p>
+                <p class="privacy"><img :src='info' title="Privacy violation as a possible risk of FRTs"/>Privacy violations</p>
+                <p class="efficiency"><img :src='info' title="Efficiency as a possible benefit of FRTs"/>Efficiency</p>
+                <p class="discrimination"><img :src='info' title="Discrimination as a possible risk of FRTs"/>Discrimination</p>
+                <p class="security"><img :src='info' title="Security as a possible benefit of FRTs"/>Security</p>
+                <p class="surveillance"><img :src='info' title="Surveillance as a possible risk of FRTs"/>Surveillance</p>
             </div>
             <highcharts :options="chartOptionsBottom"></highcharts>
             <TemplateForestChartBottom v-bind:attributes="attributes" v-bind:attributesBottom="attributes[5]"></TemplateForestChartBottom>
@@ -363,5 +363,10 @@ export default {
     .categories-bottom p {
         font-size: 17px;
         margin: 5px auto 5px;
+    }
+
+    .categories-bottom p img{
+        margin-right: 3px;
+        height: 14px;
     }
 </style>
