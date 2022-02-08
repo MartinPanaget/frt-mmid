@@ -8,7 +8,7 @@
                 <p class="income"><img :src='info' title="UK, US, GER: 1001 - 2501 local currency  / month, CHN: 2101 - 4201 CNY"/>Income High</p>
                 <p class="education"><img :src='info' title="High school diploma or equivalent, vocational training"/>Education medium</p>
                 <p class="education"><img :src='info' title="Bachelor's degree, Master's or Doctorate's degree"/>Education high</p>
-                <p class="ethnic"><img :src='info' title=""/>Ethnical minority</p>
+                <p class="ethnic"><img :src='info' title="Group of people who differ in race/color or national/religious/cultural origin from dominant group"/>Ethnical minority</p>
                 <p class="city"><img :src='info' title="Living area"/>City</p>
                 <p class="exposure"><img :src='info' title="Perceived FRTs exposure occasions"/>Exposure</p>
                 <p class="exposure"><img :src='info' title="Frequency to which citizens perceived to be exposed to FRTs in public"/>Exposure frequency public</p>
