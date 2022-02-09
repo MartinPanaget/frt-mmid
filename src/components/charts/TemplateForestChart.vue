@@ -102,7 +102,7 @@ export default{
                 plotOptions: {
                     scatter: {
                         marker: {
-                            radius: 8,
+                            radius: 6,
                             states: {
                             hover: {
                                 enabled: true,
@@ -126,17 +126,16 @@ export default{
                 },
                 tooltip: {
                     formatter: function() {
-                        let tooltip = '<strong>Odds Ratio</strong><br>'
-                        tooltip += '<hr>'
-                        tooltip += '<b>'+ this.series.name+ ': ' + this.y
+                        let tooltip = '<span style="font-size:17px;font-style:regular"><strong>Odds Ratio</strong></span><br>'
+                        tooltip += '<span style="font-size:17px;font-style:regular"><b>'+ this.series.name+ ': ' + this.y
                         tooltip += this.point.name !== undefined ? this.point.name : '' 
-                        tooltip += '</b><br/>'
+                        tooltip += '</b></span><br/>'
                         for(let i = 0; i < 4; i++) {
                             if (component.attributes[i][0].data !== undefined || component.attributes[i][0].data.length !== 0) {
                                 if (this.series.name !== component.attributes[i][0].name) {
-                                    tooltip += '<em>'+component.attributes[i][0].name + ': ' + component.attributes[i][0].data[this.point.x].y 
+                                    tooltip += '<span style="font-size:17px;font-style:regular"><em>'+component.attributes[i][0].name + ': ' + component.attributes[i][0].data[this.point.x].y 
                                     tooltip +=  component.attributes[i][0].data[this.point.x].name !== undefined ? component.attributes[i][0].data[this.point.x].name : ''
-                                    tooltip += '</em><br/>'
+                                    tooltip += '</em></span><br/>'
                                 }
                             }
                         }
