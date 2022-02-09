@@ -4,7 +4,7 @@
           <p class="big">IMPRINT<p>
           <div class="footer-content">
             <div class="highlight-green">
-              <p class="headline-projectinformation">PROJECTINFORMATIONS:</p> 
+              <p class="headline-projectinformation">PROJECT INFORMATION:</p> 
               <p class="project-information">
                 SEMESTER PROJECT "INTERACTIVE INFORMATIONSDESIGN" <br> 
                 LECTURER DIPL.-DES. LOTHAR B. BLUM <br>

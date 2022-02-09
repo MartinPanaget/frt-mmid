@@ -57,6 +57,10 @@ export default {
       }
     };
   },
+  mounted(){
+    this.onLoad();
+
+  },
   methods: {
     leaveSection(origin, destination) {
 			const event = {
@@ -73,13 +77,19 @@ export default {
       }
 			EventBus.$emit('slideChange', event)
 			/*eslint no-unused-vars: 0*/
+    },
+    onLoad(){
+      sessionStorage.removeItem('p2-visited');
+      sessionStorage.removeItem('p3-visited');
+      sessionStorage.removeItem('p4-visited');
+      sessionStorage.removeItem('p5-visited');
+      sessionStorage.removeItem('p6-visited');
     }
   },
 }
 </script>
 
 <style>
-/* @import url('https://use.typekit.net/mqc1poj.css'); */
 @import url('https://use.typekit.net/zez5hmn.css');
 
 
@@ -185,46 +195,5 @@ h2 {
   font-size: 22px;
 }
 
-/*.highlight-green{
-  width: 95%;
-  padding: 3rem 4rem 3rem;
-  position: relative;
-  margin: 20px;
-  box-sizing: content-box;
-  border: 2px solid transparent;
-
-}
-.highlight-green::before, .highlight-green::after, .highlight-span::before, .highlight-span::after {
-    display: block;
-    content: "";
-    width: 50px;
-    height: 50px;
-    position: absolute;
-}
-
-.highlight-green::before {
-    top: -2px;
-    left: -2px;
-    border-top: 15px solid #D6E637;
-    border-left: 15px solid #D6E637;
-}
-.highlight-green::after {
-    top: -2px;
-    right: -2px;
-    border-top: 15px solid #D6E637;
-    border-right: 15px solid #D6E637;
-}
-.highlight-green .highlight-span::before {
-    bottom: -2px;
-    left: -2px;
-    border-bottom: 15px solid #D6E637;
-    border-left: 15px solid #D6E637;
-}
-.highlight-green .highlight-span::after {
-    bottom: -2px;
-    right: -2px;
-    border-bottom: 15px solid #D6E637;
-    border-right: 15px solid #D6E637;
-} */
 
 </style>

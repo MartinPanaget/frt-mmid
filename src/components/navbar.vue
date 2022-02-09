@@ -189,7 +189,7 @@
                         The graph shows<br> 
                         perceived benefits and 
                         risks of FRTs  by citizens 
-                        (CHN, UK, US, GER).
+                        (CN, GB, US, DE).
                         <br><br>
                         FRT = Facial Recognition 
                         Technology
@@ -263,28 +263,59 @@ export default {
       }
   },
   created() {
-    EventBus.$on('sectionChange', () => {
+    EventBus.$on('sectionChange', (value) => {
         var activeNav = document.querySelectorAll('.nav-item');
+        console.log(value);
         activeNav.forEach(element => {
             if(element.classList.contains('active')){
                 this.isInfo = false;
                 switch(element.id){
                     case 'p1':
+                        var visited2 = sessionStorage.getItem('p2-visited');
                         this.startInfo = false;
+                        if(!visited2 && value.destination == 'secondPage'){
+                            this.isInfo = true;
+                            this.infoInfo = true;
+                        }
                         break;
                     case 'p2':
+                        var visited3 = sessionStorage.getItem('p3-visited');
+                        sessionStorage.setItem('p2-visited', '1');
                         this.infoInfo = false;
+                        if(!visited3 && value.destination == 'thirdPage'){
+                            this.isInfo = true;
+                            this.riskandbenefitsInfo = true;
+                        }
                         break;
                     case 'p3':
+                        var visited4 = sessionStorage.getItem('p4-visited');
+                        sessionStorage.setItem('p3-visited', '1');
                         this.riskandbenefitsInfo = false;
+                        if(!visited4 && value.destination == 'fourthPage'){
+                            this.isInfo = true;
+                            this.occurancesInfo = true;
+                        }
                         break;
                     case 'p4':
+                        var visited5 = sessionStorage.getItem('p5-visited');
+                        sessionStorage.setItem('p4-visited', '1');
                         this.occurancesInfo = false;
+                        if(!visited5 && value.destination == 'fifthPage'){
+                            this.isInfo = true;
+                            this.acceptanceAInfo = true;
+                        }
                         break;
                     case 'p5':
+                        var visited6 = sessionStorage.getItem('p6-visited');
+                        sessionStorage.setItem('p5-visited', '1');
                         this.acceptanceAInfo = false;
+                        if(!visited6 && value.destination == 'sixthPage'){
+                            this.isInfo = true;
+                            this.acceptanceBInfo = true;
+                        }
                         break;
                     case 'p6':
+                        sessionStorage.setItem('p6-visited', '1');
                         this.acceptanceBInfo = false;
                         break;
                     case 'p7':

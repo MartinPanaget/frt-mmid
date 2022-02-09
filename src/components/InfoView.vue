@@ -458,7 +458,7 @@ export default {
 
 #info-accept{
   position: absolute;
-  top: 110px;
+  top: 125px;
   left: 221px;
   right: 0px;
 }
@@ -496,7 +496,7 @@ export default {
 }
 #info-3{
   position: absolute;
-  top: 107px;
+  top: 130px;
   left: 235px;
   right: 0px;
 }

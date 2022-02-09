@@ -246,8 +246,8 @@ export default {
     position: absolute;
     display: flex;
     justify-content: space-between;
-    width: 12.8%;
-    left: 572px; 
+    width: 12.6%;
+    left: 576px; 
     right: 0; 
     top: 522.5px;
     z-index: 20;
@@ -266,7 +266,7 @@ export default {
     position: absolute;
     display: flex;
     justify-content: space-between;
-    width: 12.8%;
+    width: 12.5%;
     left: 1235px; 
     right: 0; 
     top: 522.5px;
