@@ -46,6 +46,10 @@ export default {
                     valueSuffix: '%',
                     shared: true,
                     useHTML: true,
+                    backgroundColor: 'rgba(95, 94, 94, 0.9)',
+                    style: {
+                        color: '#F6F6F6',
+                    },
                     formatter: function() {
                         let categories = ['Strongly agree', 'Somewhat agree', 'Neither agree nor oppose', 'Somewhat oppose', 'Strongly oppose'];
                         let points = this.points;

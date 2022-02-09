@@ -42,6 +42,7 @@ export default{
                 tooltip: {
                     enabled:true,
                     shared: false,
+                    backgroundColor: 'rgba(95, 94, 94, 0.9)',
                     formatter: function(){
                         if(this.y < 0 || this.y > 0){
                             return '<strong>'+this.series.name+'</strong>'+': '+Math.abs(this.y)+'%'
@@ -50,7 +51,8 @@ export default{
                         }
                     },
                     style:{
-                        fontSize: '18px'
+                        fontSize: '18px',
+                        color: '#F6F6F6',
                     },
                 },
                 yAxis:{
