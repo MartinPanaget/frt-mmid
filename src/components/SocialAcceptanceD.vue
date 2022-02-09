@@ -25,8 +25,8 @@
                         <text id="Gender" transform="translate(1715.5 479)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500" v-on:click="addOrRemoveTop(gender, 'genderButton')" style="cursor:pointer;"><tspan x="0" y="0">Gender</tspan></text>
                     </g>
                     <g id="Gruppe_873" data-name="Gruppe 873" transform="translate(-1051.497 -476.778)">
-                        <rect id="v6-button-3" width="125" height="42" rx="21" transform="translate(1664 505)" fill="#6c93ed" v-on:click="addOrRemoveTop(incomeHigh, 'incomeButton'); addOrRemoveTop(incomeMedium, 'incomeButton');" ref="incomeButton" style="cursor:pointer;"/>
-                        <text id="Income" transform="translate(1706.5 533)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500" ><tspan x="0" y="0" v-on:click="addOrRemoveTop(incomeHigh, 'incomeButton'); addOrRemoveTop(incomeMedium, 'incomeButton');" style="cursor:pointer;">Income</tspan></text>
+                        <rect id="v6-button-3" width="125" height="42" rx="21" transform="translate(1664 505)" fill="#6c93ed" v-on:click="addOrRemoveTop(incomeMedium, 'incomeButton'); addOrRemoveTop(incomeHigh, 'incomeButton');" ref="incomeButton" style="cursor:pointer;"/>
+                        <text id="Income" transform="translate(1706.5 533)" fill="#3c3c3c" font-size="20" font-family="FuturaPTCond-Medium, Futura PT Cond" font-weight="500" ><tspan x="0" y="0" v-on:click="addOrRemoveTop(incomeMedium, 'incomeButton'); addOrRemoveTop(incomeHigh, 'incomeButton');" style="cursor:pointer;">Income</tspan></text>
                     </g>
                     <g id="Gruppe_874" data-name="Gruppe 874" transform="translate(-886.497 -530.874)">
                         <rect id="v6-button-4" width="125" height="42" rx="21" transform="translate(1664 559)" fill="#4dd1f0" v-on:click="addOrRemoveTop(educationMedium, 'educationButton'); addOrRemoveTop(educationHigh, 'educationButton')" ref="educationButton" style="cursor:pointer;"/>
@@ -184,7 +184,7 @@ export default {
         }
     },
     addOrRemoveTop : function (attribute, ref) {
-        let hasAttribute = this.attributes[0][0].data.some( attr => attr.color + attr.y === attribute[0][0].color + attribute[0][0].y )
+        let hasAttribute = this.attributes[0][0].data.some( attr => attr.color + attr.x === attribute[0][0].color + attribute[0][0].x )
         if (hasAttribute) {
             this.addOrRemoveColorCategory(hasAttribute, ref);
             this.$refs[ref].setAttribute('fill', '#9D9D9D');
@@ -204,7 +204,7 @@ export default {
         }
     },
     addOrRemoveBottom : function (attribute, ref) {
-        let hasAttribute = this.attributes[4][0].data.some( attr => attr.color + attr.y === attribute[0][0].color + attribute[0][0].y )
+        let hasAttribute = this.attributes[4][0].data.some( attr => attr.color + attr.x === attribute[0][0].color + attribute[0][0].x )
         if (hasAttribute) {
             this.addOrRemoveColorCategory(hasAttribute, ref);
             this.$refs[ref].setAttribute('fill', '#9D9D9D');
