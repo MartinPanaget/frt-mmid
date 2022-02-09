@@ -23,7 +23,7 @@ export default{
                     height: '400',
                     marginBottom: 27,
                     inverted: true,
-                    plotBackgroundColor: '#676767',
+                    plotBackgroundColor: '#515151',
                     backgroundColor: '#3C3C3C',
                     zoomType: 'xy',
                     events: {
@@ -125,6 +125,10 @@ export default{
                     }
                 },
                 tooltip: {
+                    backgroundColor: 'rgba(95, 94, 94, 0.9)',
+                    style: {
+                        color: '#F6F6F6',
+                    },
                     formatter: function() {
                         let tooltip = '<span style="font-size:17px;font-style:regular"><strong>Odds Ratio</strong></span><br>'
                         tooltip += '<span style="font-size:17px;font-style:regular"><b>'+ this.series.name+ ': ' + this.y

@@ -116,6 +116,10 @@ export default{
                     }
                 },
                 tooltip: {
+                    backgroundColor: 'rgba(95, 94, 94, 0.9)',
+                    style: {
+                        color: '#F6F6F6',
+                    },
                     formatter: function() {
                         let tooltip = '<span style="font-size:17px;font-style:regular"><strong>Odds Ratio</strong></span><br>'
                         tooltip += '<span style="font-size:17px;font-style:regular"><b>'+ this.series.name+ ': ' + this.y
