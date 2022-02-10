@@ -91,12 +91,7 @@ export default {
     created() {
         EventBus.$on('sectionChange', value => {
             if(value.destination === 'fourthPage') {
-                this.chartOptions.series = this.series;
-            }else if(value.origin === 'fourthPage') {
-                const x = this
-                setTimeout(function(){ 
-                    x.chartOptions.series = []
-                }, 700);
+                this.chartOptions.title = this.title;
             }
         })
     }

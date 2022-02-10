@@ -268,61 +268,51 @@ export default {
         console.log(value);
         activeNav.forEach(element => {
             if(element.classList.contains('active')){
-                this.isInfo = false;
-                switch(element.id){
-                    case 'p1':
+                console.log(element.id);
+                this.allOut();
+                switch(value.destination){
+                    case 'secondPage':
                         var visited2 = sessionStorage.getItem('p2-visited');
-                        this.startInfo = false;
-                        if(!visited2 && value.destination == 'secondPage'){
+                        if(!visited2){
                             this.isInfo = true;
                             this.infoInfo = true;
                         }
-                        break;
-                    case 'p2':
-                        var visited3 = sessionStorage.getItem('p3-visited');
                         sessionStorage.setItem('p2-visited', '1');
-                        this.infoInfo = false;
-                        if(!visited3 && value.destination == 'thirdPage'){
+                        break;
+                    case 'thirdPage':
+                        var visited3 = sessionStorage.getItem('p3-visited');
+                        if(!visited3){
                             this.isInfo = true;
                             this.riskandbenefitsInfo = true;
                         }
-                        break;
-                    case 'p3':
-                        var visited4 = sessionStorage.getItem('p4-visited');
                         sessionStorage.setItem('p3-visited', '1');
-                        this.riskandbenefitsInfo = false;
-                        if(!visited4 && value.destination == 'fourthPage'){
+                        break;
+                    case 'fourthPage':
+                        var visited4 = sessionStorage.getItem('p4-visited');
+                        if(!visited4){
                             this.isInfo = true;
                             this.occurancesInfo = true;
                         }
-                        break;
-                    case 'p4':
-                        var visited5 = sessionStorage.getItem('p5-visited');
                         sessionStorage.setItem('p4-visited', '1');
-                        this.occurancesInfo = false;
-                        if(!visited5 && value.destination == 'fifthPage'){
+                        break;
+                    case 'fifthPage':
+                        var visited5 = sessionStorage.getItem('p5-visited');
+                        if(!visited5){
                             this.isInfo = true;
                             this.acceptanceAInfo = true;
                         }
-                        break;
-                    case 'p5':
-                        var visited6 = sessionStorage.getItem('p6-visited');
                         sessionStorage.setItem('p5-visited', '1');
-                        this.acceptanceAInfo = false;
-                        if(!visited6 && value.destination == 'sixthPage'){
+                        break;
+                    case 'sixthPage':
+                        var visited6 = sessionStorage.getItem('p6-visited');
+                        if(!visited6){
                             this.isInfo = true;
                             this.acceptanceBInfo = true;
                         }
-                        break;
-                    case 'p6':
                         sessionStorage.setItem('p6-visited', '1');
-                        this.acceptanceBInfo = false;
-                        break;
-                    case 'p7':
-                        this.imprintInfo = false;
                         break;
                     default:
-                        // this.imprintInfo = true;
+                        console.log('default');
                         break;
 
                 }
@@ -403,6 +393,15 @@ export default {
             }
         }
         );
+    },
+    allOut: function(){
+        this.isInfo = false;
+        this.startInfo = false;
+        this.acceptanceBInfo=false;
+        this.acceptanceAInfo=false;
+        this.occurancesInfo=false;
+        this.infoInfo=false;
+        this.riskandbenefitsInfo=false;
     }
   }
 }
