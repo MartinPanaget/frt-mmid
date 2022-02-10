@@ -343,7 +343,7 @@ export default {
 
     .categories-top p {
         font-size: 17px;
-        margin: 4px auto 4px;
+        margin: 4.4px auto 4.4px;
     }
 
     .categories-top p img{
@@ -364,7 +364,7 @@ export default {
 
     .categories-bottom p {
         font-size: 17px;
-        margin: 5px auto 5px;
+        margin: 5.4px auto 5.4px;
     }
 
     .categories-bottom p img{
